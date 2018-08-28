@@ -1,0 +1,144 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Creative - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/courses.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="{% static 'magnific-popup/magnific-popup.css' %}">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{% static 'css/creative.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ellip.css' %}">
+
+
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/">EVL</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Catálogo de Cursos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Adesão Institucional</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Validação de Documentos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Fale Conosco</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    
+    </nav>
+    
+    
+    <div class="container page-content">
+      <h1 class="titulo-sessao">Catálogo de Cursos</h1>
+      <p class="subtitulo-sessao">
+        Os cursos da EVL são dividos por temáticas. Cada temática contém uma lista de cursos relacionados a esse tema e que poderão ser de seu interesse.
+      </p>
+      <div class="row">
+        <div class="col-4">
+          <div class="list-group" id="list-tab" role="tablist">
+            {% for categoria in categorias %}
+            {% if categoria.id == 1 %}
+            <a class="list-group-item list-group-item-light active show" id="list-home-list" data-toggle="list" href="#{{categoria.id}}" role="tab" aria-controls="home">{{categoria.name}}</a>
+            {% endif %}
+              {% if categoria.id != 1 %}
+                <a class="list-group-item list-group-item-light" id="list-home-list" data-toggle="list" href="#{{categoria.id}}" role="tab" aria-controls="home">{{categoria.name}}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="tab-content" id="nav-tabContent">
+            {% for categoria in categorias %}
+              {% if categoria.id == 1 %}
+                <div class="tab-pane fade active show" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
+              {% endif %}
+
+              {% if categoria.id != 1 %}
+                <div class="tab-pane fade" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
+              {% endif %}
+
+              {% for curso in cursos %}
+              {% if curso.id_category.id == categoria.id %}
+                <ul class="courseboxes" >
+                  <li class=" course-information">
+                    <div >
+                      <h5>{{curso.name}}</h5>
+                      <p class="box box--fixed two-lines">{{curso.course_description}}</p>
+                      <a href="{{ curso.course_url }}" class="btn btn-dark" style="text-align: center">Inscreva-se</a>
+                    </div>
+                    <div>
+                      <img src="https://evg.gov.br/img/catalogo_curso/Gestao_de_Docs_Inf_e_Conh/Banner_SeiUsar.svg" alt="Logo do Curso Sistema Eletrônico de Informações - SEI! USAR">
+                                                                                                                                    <dl>
+                        <dt>Certificador:</dt>
+                        <dd>ENAP</dd>
+                      </dl>
+                                                                                                                                    <dl>
+                        <dt>Conteudista:</dt>
+                        <dd>Unicorreios</dd>
+                      </dl>
+                      <dl>
+                        <dt>Carga Horária:</dt>
+                        <dd>
+                          <input value="357" hidden="">
+                            20h
+                        </dd>
+                      </dl>
+                    </div>
+                  </li>
+                {% endif %}
+                </ul>
+              {% endfor %}
+              </div>
+            {% endfor %}
+          </div>    
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/creative.min.js' %}"></script>
+    <script src="{% static 'js/jquery.ellipsis.js'%}"></script>
+    <script>
+      $('.two-lines').ellipsis({ lines: 9 });
+      $( ".list-group-item" ).on("click", function() {
+        $( ".course-information" ).css("width", 0);
+        $( ".course-information" ).animate({
+          width: "100%"
+        }, 500);
+      });
+    </script>
+
+  </body>
+
+</html>
