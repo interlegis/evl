@@ -70,6 +70,28 @@ h6 {
   background-color: #212529 !important;
 }
 
+footer{
+  background-color: black;
+  font-size: 80%;
+  padding: 50px;
+}
+
+footer p{
+  color: white;
+}
+
+footer h5{
+  color: white;
+}
+
+.col-md-3.links{
+  text-align: right;
+}
+
+.btn.inscrevase{
+  border-radius: 0%;
+}
+
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
 }
