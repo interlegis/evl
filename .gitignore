@@ -5,6 +5,8 @@ include/
 __pycache__/
 *.py[cod]
 *$py.class
+share/
+pip-selfcheck.json
 
 # C extensions
 *.so
