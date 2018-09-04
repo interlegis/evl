@@ -31,7 +31,7 @@ class CourseCategories(models.Model):
 
 
 class Courses(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.BigIntegerField(primary_key=True)
     name = models.CharField(max_length=100, blank=True, null=True)
     created_at = models.DateTimeField()
     updated_at = models.DateTimeField()
@@ -50,7 +50,7 @@ class DjangoMigrations(models.Model):
 
 
 class OauthAccessGrants(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.BigIntegerField(primary_key=True)
     resource_owner_id = models.IntegerField()
     application = models.ForeignKey('OauthApplications', models.DO_NOTHING)
     token = models.CharField(unique=True, max_length=10)
@@ -65,7 +65,7 @@ class OauthAccessGrants(models.Model):
 
 
 class OauthAccessTokens(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.BigIntegerField(primary_key=True)
     resource_owner_id = models.IntegerField(blank=True, null=True)
     application = models.ForeignKey('OauthApplications', models.DO_NOTHING, blank=True, null=True)
     token = models.CharField(unique=True, max_length=10)
@@ -81,7 +81,7 @@ class OauthAccessTokens(models.Model):
 
 
 class OauthApplications(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.BigIntegerField(primary_key=True)
     name = models.CharField(max_length=1)
     uid = models.CharField(unique=True, max_length=1)
     secret = models.CharField(max_length=1)
@@ -96,7 +96,7 @@ class OauthApplications(models.Model):
 
 
 class OauthOpenidRequests(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.BigIntegerField(primary_key=True)
     access_grant = models.ForeignKey(OauthAccessGrants, models.DO_NOTHING)
     nonce = models.CharField(max_length=1)
 
@@ -105,7 +105,7 @@ class OauthOpenidRequests(models.Model):
 
 
 class Roles(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.BigIntegerField(primary_key=True)
     name = models.CharField(max_length=1, blank=True, null=True)
     created_at = models.DateTimeField()
     updated_at = models.DateTimeField()
@@ -131,7 +131,7 @@ class Schools(models.Model):
 
 
 class Users(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.BigIntegerField(primary_key=True)
     username = models.CharField(max_length=1)
     email = models.CharField(max_length=1)
     cpf = models.CharField(max_length=1)
