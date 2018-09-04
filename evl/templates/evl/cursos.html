@@ -67,10 +67,10 @@
           <div class="list-group" id="list-tab" role="tablist">
             {% for categoria in categorias %}
             {% if categoria.id == 1 %}
-            <a class="list-group-item list-group-item-light active show" id="list-home-list" data-toggle="list" href="#{{categoria.id}}" role="tab" aria-controls="home">{{categoria.name}}</a>
+            <a class="list-group-item list-group-item-light active show" id="a-{{categoria.id}}" data-toggle="list" href="#{{categoria.id}}" role="tab" aria-controls="home">{{categoria.name}}</a>
             {% endif %}
               {% if categoria.id != 1 %}
-                <a class="list-group-item list-group-item-light" id="list-home-list" data-toggle="list" href="#{{categoria.id}}" role="tab" aria-controls="home">{{categoria.name}}</a>
+                <a class="list-group-item list-group-item-light" id="a-{{categoria.id}}" data-toggle="list" href="#{{categoria.id}}" role="tab" aria-controls="home">{{categoria.name}}</a>
               {% endif %}
             {% endfor %}
           </div>
@@ -88,7 +88,7 @@
 
               {% for curso in cursos %}
               {% if curso.id_category.id == categoria.id %}
-                <ul class="courseboxes" >
+                <ul class="courseboxes" id="ul-{{ categoria.id }}">
                   <li class=" course-information">
                     <div >
                       <h5>{{curso.name}}</h5>
@@ -115,8 +115,8 @@
                     </div>
                   </li>
                 {% endif %}
-                </ul>
-              {% endfor %}
+                {% endfor %}
+              </ul>
               </div>
             {% endfor %}
           </div>    
@@ -217,11 +217,17 @@
       });
 
       $( ".list-group-item" ).on("click", function() {
-        $( ".course-information" ).css("width", 0);
-        $( ".course-information" ).animate({
-          width: "100%"
-        }, 500);
-        // $( ".course-information" ).toggle(0);
+        console.log($(this).attr('id'));
+        console.log("id = " + $(this).attr('id').substr(2,2))
+        var id = $(this).attr('id').substr(2,2);
+        
+        $("#ul-" + id).toggle(200);
+        $("#ul-" + id).animate({
+          height: "toggle",
+          width: "toggle",
+          opacity: "toggle"
+        }, 400);
+        // $( "#ul-" + id).toggle(500);
         // $( ".course-information" ).toggle(500);
       });
     </script>
