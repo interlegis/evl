@@ -1,0 +1,33 @@
+{% extends 'evl/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Fale <strong>Conosco</strong></h2>
+    <form id="form_fale_conosco" method="POST" action="https://evg.gov.br/fale-conosco">
+        <input name="_token" value="IUyGEnCjjXy5m9vkzO8fxdvufgjQjhCSxqDLRyAK" type="hidden">
+        <div>
+            <label>Nome</label>
+            <span class="required">*</span>
+            <input id="nome" name="nome" required="" type="text">
+        </div>
+        <div>
+            <label>E-mail</label>
+            <span class="required">*</span>
+            <input id="email" name="email" required="" type="email">
+        </div>
+        <div>
+            <label>CPF</label>
+            <span class="required">*</span>
+            <input id="cpf" class="form-control cpf" name="cpf" required="" maxlength="14" autocomplete="off" type="text">
+        </div>
+        <div>
+            <label>Descreva sua dúvida</label>
+            <span class="required">*</span>
+            <textarea id="duvida" name="duvida" rows="4" cols="50" required=""></textarea>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-success">Enviar mensagem</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

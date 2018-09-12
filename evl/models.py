@@ -8,6 +8,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from datetime import datetime
 
 
 class Course(models.Model):
@@ -152,3 +153,15 @@ class Users(models.Model):
     class Meta:
         db_table = 'users'
         unique_together = (('username', 'email', 'cpf'),)
+
+class ContactUs(models.Model):
+    name = models.CharField(max_length=100, blank=False)
+    email = models.CharField(max_length=100, blank=False)
+    cpf = models.CharField(max_length=11, unique=True, blank=False)
+    course_name = models.CharField(max_length=100, blank=False, null=True)
+    contact_type = models.CharField(max_length=100, blank=True)
+    description = models.CharField(max_length=5000, blank=False)
+    date =  models.DateField(default=datetime.today)
+
+    class Meta:
+        db_table = 'contact_us'

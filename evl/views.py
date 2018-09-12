@@ -16,3 +16,12 @@ def cursos(request):
     cursos_json = serializers.serialize("json", cursos)
     categorias = CourseCategories.objects.all()
     return render(request, 'evl/cursos.html', {'cursos' : cursos, 'categorias' : categorias, 'cursos_json' : cursos_json})
+
+def fale_conosco(resquest):
+    if request.method == "POST":
+        form = ContactUsForm(request.Post)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+        else:
+            return redirect('fale_conosco')
