@@ -87,13 +87,13 @@
               {% endif %}
 
               {% for curso in cursos %}
-              {% if curso.id_category.id == categoria.id %}
+              {% if curso.course_category_id == categoria.id %}
                 <ul class="courseboxes" id="ul-{{ categoria.id }}">
                   <li class=" course-information">
                     <div >
                       <h5>{{curso.name}}</h5>
-                      <p class="course-p">{{curso.course_description}}</p>
-                      <a href="{{ curso.course_url }}" class="btn btn-dark inscrevase" style="text-align: center">Inscreva-se</a>
+                      <p class="course-p">{{curso.description}}</p>
+                      <a href="{{ curso.url }}" class="btn btn-dark inscrevase" style="text-align: center">Inscreva-se</a>
                     </div>
                     <div>
                       <img src="https://evg.gov.br/img/catalogo_curso/Gestao_de_Docs_Inf_e_Conh/Banner_SeiUsar.svg" alt="Logo do Curso Sistema Eletrônico de Informações - SEI! USAR">
