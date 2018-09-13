@@ -13,6 +13,8 @@ def home(request):
 
 def cursos(request):
     cursos = Courses.objects.all()
-    cursos_json = serializers.serialize("json", cursos)
     categorias = CourseCategories.objects.all()
-    return render(request, 'evl/cursos.html', {'cursos' : cursos, 'categorias' : categorias, 'cursos_json' : cursos_json})
+    return render(request, 'evl/cursos.html', {'cursos' : cursos, 'categorias' : categorias})
+
+def login(request):
+    return render(request, 'evl/login.html')
