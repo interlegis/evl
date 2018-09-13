@@ -9,6 +9,11 @@
   height: 50px;
   line-height: 50px;
 }
+
+.navbar-expand-lg>.container{
+    font-size: 15px !important;
+}
+
 .main-div {
   background: #ffffff none repeat scroll 0 0;
   border: 1px solid rgba(0, 0, 0, 0.192);
@@ -48,3 +53,12 @@
 }
 .back { text-align: left; margin-top:10px;}
 .back a {color: #444444; font-size: 13px;text-decoration: none;}
+
+.login-div{
+    margin-top: 30px;
+}
+
+footer{
+    margin-top: 50px;
+}
+
