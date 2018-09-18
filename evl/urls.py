@@ -18,6 +18,7 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^login/$', views.login, name='login'),
     url(r'^cursos/$', views.cursos, name='cursos'),
     url(r'^fale_conosco/$', views.fale_conosco, name='fale_conosco')
 ]
