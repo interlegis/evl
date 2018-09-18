@@ -31,3 +31,6 @@ def cursos(request):
 
 def login(request):
     return render(request, 'evl/login.html')
+
+def cadastro(request):
+    return render(request, 'evl/cadastro.html')

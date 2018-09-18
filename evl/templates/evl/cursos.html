@@ -11,10 +11,10 @@
           <div class="list-group" id="list-tab" role="tablist">
             {% for categoria in categorias %}
             {% if categoria == categorias.0 %}
-            <a class="list-group-item list-group-item-light active show" id="a-{{ forloop.counter }}" data-toggle="list" href="#{{i}}" role="tab" aria-controls="home">{{categoria.0.nome}}</a>
+            <a class="list-group-item list-group-item-light active show" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
             {% endif %}
               {% if categoria != categorias.0 %}
-                <a class="list-group-item list-group-item-light" id="a-{{ forloop.counter }}" data-toggle="list" href="#{{i}}" role="tab" aria-controls="home">{{categoria.0.nome}}</a>
+                <a class="list-group-item list-group-item-light" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
               {% endif %}
 
             {% endfor %}
@@ -25,20 +25,20 @@
           <div class="tab-content" id="nav-tabContent">
             {% for categoria in categorias %}
               {% if categoria == categorias.0 %}
-                <div class="tab-pane fade active show" id="{{ forloop.counter }}" role="tabpanel" aria-labelledby="list-profile-list">
+                <div class="tab-pane fade active show" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
               {% endif %}
 
-              {% if forloop.counter  != 1 %}
-                <div class="tab-pane fade" id="{{ forloop.counter }}" role="tabpanel" aria-labelledby="list-profile-list">
+              {% if categoria.id  != 1 %}
+                <div class="tab-pane fade" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
               {% endif %}
 
               {% for curso in cursos %}
-              <!-- {% if curso.course_category_id == categoria_id %} -->
+              {% if curso.categoria == categoria_id %}
                 <ul class="courseboxes" id="ul-{{ forloop.counter }}">
                   <li class=" course-information">
                     <div >
-                      <h5>{{curso.0.nome}}</h5>
-                      <p class="course-p">Silvio Santos Ipsum  fcil ou no am? Patrciaaammmm... Luiz Ricardouaaammmmmm. Mah voc no consegue n Moiss? Voc no consegueam. Voc veio da caravana de ondeammm? Ma! Ao adquirir o carn do Ba, voc estar concorrendo a um prmio de cem mil reaisam. Mah ooooee vem pra c. Vem pra c. Ma tem ou no tem o celular do milhouamm? Ha haeeee. Hi hi. Boca sujuam... sem vergonhuamm. Mah roda a roduamm. Ma vai pra l. Ma vale drreaisam?</p>
+                      <h5>{{curso.nome}}</h5>
+                      <p class="course-p">{{ curso.descrição }}</p>
                       <a href="#" class="btn btn-dark inscrevase" style="text-align: center">Inscreva-se</a>
                     </div>
                     <div>
@@ -60,7 +60,7 @@
                       </dl>
                     </div>
                   </li>
-                <!-- {% endif %} -->
+                {% endif %}
                 {% endfor %}
               </ul>
               </div>
