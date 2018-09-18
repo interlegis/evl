@@ -28,13 +28,13 @@
                 <div class="tab-pane fade active show" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
               {% endif %}
 
-              {% if categoria.id  != 1 %}
+              {% if categoria  != categorias.0 %}
                 <div class="tab-pane fade" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
               {% endif %}
 
               {% for curso in cursos %}
-              {% if curso.categoria == categoria_id %}
-                <ul class="courseboxes" id="ul-{{ forloop.counter }}">
+              {% if curso.categoria == categoria.id %}
+                <ul class="courseboxes" id="ul-{{ categoria.id }}">
                   <li class=" course-information">
                     <div >
                       <h5>{{curso.nome}}</h5>

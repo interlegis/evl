@@ -2,16 +2,14 @@
 
 {% block content %}
     <div class="container">
-        
-        <h1 class="form-heading">login Form</h1>
-        
+
         <div class="login-form">
             <div class="main-div login-div">
                 <div class="panel">
                 <h1>Cadastro</h1>
                 <p>Por favor, insira email e senha</p>
                 </div>
-                <form id="signup" method="post" action="/users">
+                <form id="signup" method="post" action="/users" onsubmit="return testandoCPF();">
 
                     <div class="form-group">
                         <label>Nome de Usuário</label>
@@ -25,8 +23,9 @@
 
                     <div class="form-group">
                         <label>CPF</label>
-                        <input required type="text" class="form-control" placeholder="CPF">
+                        <input type="text" class="form-control" name="cpf" placeholder="CPF">
                     </div>
+                    <label style="display: none;" id="-error-cpf" class="error" for="">CPF inválido</label>
 
                     <div class="form-group">
                         <label>Primeiro Nome</label>
@@ -50,12 +49,12 @@
 
                     <div class="form-group">
                         <label>Senha</label>
-                        <input required name="password" type="password" class="form-control"  placeholder="Senha">
+                        <input id="password" required name="password" type="password" class="form-control"  placeholder="Senha">
                     </div>
 
                     <div class="form-group">
                         <label>Repetir Senha</label>
-                        <input required name="password_again" type="password" class="form-control"  placeholder="Senha">
+                        <input id="password_again" required name="password_again" type="password" class="form-control"  placeholder="Senha">
                     </div>
                     <br>
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
