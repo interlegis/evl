@@ -1,6 +1,6 @@
 {% extends 'evl/base.html' %}
 
-{% block content %} 
+{% block content %}
     <div class="container page-content">
       <h1 class="titulo-sessao">Catálogo de Cursos</h1>
       <p class="subtitulo-sessao">
@@ -11,10 +11,10 @@
           <div class="list-group" id="list-tab" role="tablist">
             {% for categoria in categorias %}
             {% if categoria == categorias.0 %}
-            <a class="list-group-item list-group-item-light active show" id="a-{{ forloop.counter }}" data-toggle="list" href="#{{i}}" role="tab" aria-controls="home">{{categoria.0.nome}}</a>
+            <a class="list-group-item list-group-item-light active show" id="a-{{ forloop.counter }}" data-toggle="list" href="#{{i}}" role="tab" aria-controls="home">{{categoria.1.nome}}</a>
             {% endif %}
               {% if categoria != categorias.0 %}
-                <a class="list-group-item list-group-item-light" id="a-{{ forloop.counter }}" data-toggle="list" href="#{{i}}" role="tab" aria-controls="home">{{categoria.0.nome}}</a>
+                <a class="list-group-item list-group-item-light" id="a-{{ forloop.counter }}" data-toggle="list" href="#{{i}}" role="tab" aria-controls="home">{{categoria.1.nome}}</a>
               {% endif %}
 
             {% endfor %}
@@ -37,7 +37,7 @@
                 <ul class="courseboxes" id="ul-{{ forloop.counter }}">
                   <li class=" course-information">
                     <div >
-                      <h5>{{curso.0.nome}}</h5>
+                      <h5>{{curso.1.nome}}</h5>
                       <p class="course-p">Silvio Santos Ipsum  fcil ou no am? Patrciaaammmm... Luiz Ricardouaaammmmmm. Mah voc no consegue n Moiss? Voc no consegueam. Voc veio da caravana de ondeammm? Ma! Ao adquirir o carn do Ba, voc estar concorrendo a um prmio de cem mil reaisam. Mah ooooee vem pra c. Vem pra c. Ma tem ou no tem o celular do milhouamm? Ha haeeee. Hi hi. Boca sujuam... sem vergonhuamm. Mah roda a roduamm. Ma vai pra l. Ma vale drreaisam?</p>
                       <a href="#" class="btn btn-dark inscrevase" style="text-align: center">Inscreva-se</a>
                     </div>
@@ -65,7 +65,7 @@
               </ul>
               </div>
             {% endfor %}
-          </div>    
+          </div>
         </div>
       </div>
     </div>

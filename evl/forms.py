@@ -1,5 +1,5 @@
 from django import forms
-from .models import ContactUs, Courses
+from .models import ContactUs
 from urllib.request import urlopen
 import json
 
@@ -90,7 +90,3 @@ class ContactUsForm(forms.ModelForm):
     class Meta:
         model = ContactUs
         fields = ('name', 'email', 'cpf', 'course_name', 'contact_type', 'course_category', 'description',)
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['course_category'].queryset = Courses.objects.none()
