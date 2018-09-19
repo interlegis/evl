@@ -24,8 +24,6 @@ def cursos(request):
     response_cursos = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos')
     response_categorias = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos')
 
-    # print(cursos['cursos'][0][0])
-
     cursos = response_cursos.json()
     cursos = json.loads(json.dumps(cursos))
     cursos = cursos['cursos']
@@ -41,23 +39,13 @@ def login(request):
 
 def fale_conosco(request):
     if request.method == "POST":
-
-        name = request.POST.get('name')
-        cpf = request.POST.get('cpf')
-        email = request.POST.get('email')
-        contato = request.POST.get('contato')
-        telefone = request.POST.get('telefone')
-        curso = request.POST.get('curso')
-        descricao = request.POST.get('mensagem')
-        dia = datetime.today;
-
-        assunto = "Descrição: \n" + descricao + "\nAutor: " + name + "\ncpf: " + cpf
-
-        contact = ContactUs(name = name, email = email, cpf = cpf, course_name = curso, contact_type = contato, description = descricao)
-        email = EmailMessage(curso, assunto, to=['roberto.matheus@bol.com.br'])
-        email.send()
-
-        return render_to_response('evl/home.html')
+        form = ContactUsForm(request.POST)
+        if form.is_valid():
+            assunto = "\nDescrição: " + form.data['description'] + "\nAutor: " + form.data['name'] + "\ncpf: " + form.data['cpf']
+            return render_to_response('evl/home.html')
+            # contact = ContactUs(name = name, email = email, cpf = cpf, course_name = curso, contact_type = contato, description = descricao)
+            # email = EmailMessage(curso, assunto, to=['roberto.matheus@bol.com.br'])
+            # email.send()
     else:
         form = ContactUsForm()
         return render(request, 'evl/fale_conosco.html', {'form': form})

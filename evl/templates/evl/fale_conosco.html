@@ -1,52 +1,46 @@
 {% extends 'evl/base.html' %}
+{# {% load widget_tweaks %} #}
 
 {% block content %}
 <div class="container">
   <div class="col-md-12">
     <div class="form-area">
         <form method="POST" role="form">
+          {% csrf_token %}
           <br style="clear:both">
-              <h1 class="titulo-sessao">Fale Conosco</h1>
-      				<div class="form-group">
-  						<input type="text" class="form-control" id="name" name="name" placeholder="Nome" required>
+            <h1 class="titulo-sessao">Fale Conosco</h1>
+    				<div class="form-group">
+              {{ form.name }}
   					</div>
   					<div class="form-group">
-  						<input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+              {{ form.email }}
   					</div>
             <div class="form-group">
-              <input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF" required>
+              {{ form.cpf}}
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="mobile" name="telefone" placeholder="Número Celular" required>
+              {{ form.phone_number}}
             </div>
             <div class="row">
-                <div class="col-6">
-                  <div class="form-group">
-                    <select class="form-control" name="contato">
-                      <option disabled selected value> -- Selecione o tipo de contato -- </option>
-                      <option value="Contato1"> Contato1 </option>
-                      <option value="Contato2"> Contato2 </option>
-                      <option value="Contato3"> Contato3 </option>
-                      <option value="Contato4"> Contato4 </option>
-                    </select>
-                  </div>
+              <div class="col-6">
+                <div class="form-group">
+                  {{ form.course_category}}
                 </div>
-                <div class="col-6">
-                  <select class="form-control" name="curso">
-                    <option disabled selected value> -- Selecione um curso -- </option>
-                    <option value="Curso1"> Curso1 </option>
-                    <option value="Curso2"> Curso2 </option>
-                    <option value="Curso3"> Curso3 </option>
-                    <option value="Curso4"> Curso4 </option>
-                  </select>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  {{ form.course_name }}
                 </div>
+              </div>
+            </div>
+            <div class="form-group">
+              {{ form.contact_type}}
             </div>
   					<div class="form-group">
-  						<input type="text" class="form-control" id="assunto" name="assunto" placeholder="Assunto" required>
+              {{ form.subject}}
   					</div>
               <div class="form-group">
-              <textarea class="form-control" type="textarea" id="mensagem" name="mensagem" placeholder="Mensagem" maxlength="140" rows="7"></textarea>
-                  <span class="help-block"><p id="characterLeft" class="help-block "></p></span>
+                {{ form.description }}
               </div>
           <button type="submit" id="submit" name="submit" class="pull-right form-group save">Enviar Mensagem</button>
         </form>

@@ -217,6 +217,7 @@ class ContactUs(models.Model):
     email = models.CharField(max_length=100, blank=False)
     cpf = models.CharField(max_length=11, unique=True, blank=False)
     course_name = models.CharField(max_length=100, blank=False, null=True)
+    course_category = models.CharField(max_length=100, blank=False, null=True)
     contact_type = models.CharField(max_length=100, blank=True)
     description = models.CharField(max_length=5000, blank=False)
     date =  models.DateField(default=datetime.today)
