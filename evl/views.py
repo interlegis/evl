@@ -18,6 +18,8 @@ from datetime import datetime
 from urllib.request import urlopen
 import urllib.parse
 import urllib.request
+from django.contrib import messages
+from django.template import context
 
 def home(request):
     return render(request, 'evl/home.html')
@@ -45,17 +47,18 @@ def fale_conosco(request):
         if form.is_valid():
             print("FOrma = ", form.data)
 
-            assunto = "\nDescrição: " + form.data['description'] + "\nAutor: " + form.data['name'] + "\ncpf: " + form.data['cpf']
-
-            # post_data = [('name','Gladys'),]     # a sequence of two element tuples
             print("JSON", json.dumps(form.data))
             req = urllib.request.Request('http://localhost:3000/api/v1/fale_conosco/adicionar')
             req.add_header('Content-Type', 'application/json; charset=utf-8')
             result = urlopen(req, json.dumps(form.data).encode('utf-8'))
-            return render_to_response('evl/home.html')
+            return render(request, 'evl/home.html', context={'messagem_fale_conosco': "A mensagem foi enviada com sucesso"})
             # contact = ContactUs(name = name, email = email, cpf = cpf, course_name = curso, contact_type = contato, description = descricao)
             # email = EmailMessage(curso, assunto, to=['roberto.matheus@bol.com.br'])
             # email.send()
+        else:
+            print("ERROS =", form.errors)
+            return render(request, 'evl/fale_conosco.html', {'form': form})
+
     else:
         form = ContactUsForm()
         return render(request, 'evl/fale_conosco.html', {'form': form})

@@ -1,6 +1,12 @@
 {% extends 'evl/base.html' %}
 
 {% block content %}
+
+{% if messagem_fale_conosco %}
+  <div class="alert alert-success" style="margin: 0 auto;">
+    <strong>{{ messagem_fale_conosco }}</strong>
+  </div>
+{% endif %}
 <header class="masthead text-center text-white d-flex">
   <div class="container my-auto">
     <div class="row">
