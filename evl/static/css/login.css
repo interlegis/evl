@@ -10,6 +10,10 @@
   line-height: 50px;
 }
 
+#-error{
+  color: red;
+}
+
 .navbar-expand-lg>.container{
     font-size: 15px !important;
 }
@@ -19,8 +23,13 @@
   border: 1px solid rgba(0, 0, 0, 0.192);
   border-radius: 2px;
   margin: 10px auto 30px;
-  max-width: 38%;
   padding: 50px 70px 70px 71px;
+}
+
+@media screen and (min-width: 800px) {
+  .main-div {
+    max-width: 50%;
+  }
 }
 
 .login-form .form-group {

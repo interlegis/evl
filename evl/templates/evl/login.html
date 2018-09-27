@@ -1,58 +1,6 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html>
-  <head>
+{% extends 'evl/base.html' %}   
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Creative - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/courses.css' %}">
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="{% static 'magnific-popup/magnific-popup.css' %}">
-
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="{% static 'css/creative.css' %}">
-    <link rel="stylesheet" href="{% static 'css/ellip.css' %}">
-</head>
-
-<body id="LoginForm">
-
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="/">EVL</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="/cursos">Catálogo de Cursos</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#services">Adesão Institucional</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#portfolio">Validação de Documentos</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#contact">Fale Conosco</a>
-                </li>
-            </ul>
-            </div>
-        </div>
-        
-    </nav>
+{% block content %}
     <div class="container">
         
         <h1 class="form-heading">login Form</h1>
@@ -78,84 +26,14 @@
 
                     </div>
                     <div class="forgot">
-                    <a href="reset.html">Esqueceu sua senha?</a>
+                        <a href="reset.html">Esqueceu sua senha?</a>
+                        <a href="/cadastro">Cadastro</a>
                     </div>
                     <button type="submit" class="btn btn-primary">Login</button>
 
                 </form>
             </div>
-            <p class="botto-text"> Designed by Sunil Rajput</p>
         </div>
     </div>
 </div>
-
-<footer class="page-footer font-small blue pt-4">
-    <!-- Footer Links -->
-    <div class="container-fluid text-center text-md-left">
-
-        <!-- Grid row -->
-        <div class="row">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mt-md-0 mt-3">
-        
-            <!-- Content -->
-            <h5 class="text-uppercase"><strong>EVL</strong> | Escola Virtual do Legislativo</h5>
-            <p>Uma solução para a oferta de capacitação a distância no serviço público brasileiro.</p>
-
-        </div>
-
-        <div class="col-md-3 mt-md-0 mt-3"></div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none pb-3">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3 links">
-
-            <!-- Links -->
-            <h5 class="text-uppercase">Sobre a Escola</h5>
-
-            <ul class="list-unstyled">
-                <li>
-                <a href="#!">Catálogo de Cursos</a>
-                </li>
-                <li>
-                <a href="#!">Adesão Institucional</a>
-                </li>
-                <li>
-                <a href="#!">Instituiçoes Participantes</a>
-                </li>
-            </ul>
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3 links">
-
-            <!-- Links -->
-            <h5 class="text-uppercase">Utilidades</h5>
-
-            <ul class="list-unstyled">
-                <li>
-                <a href="#!">Validação de Documentos</a>
-                </li>
-                <li>
-                <a href="#!">Outros</a>
-                </li>
-            </ul>
-
-            </div>
-            <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-    </div>
-
-
-</footer>
-
-</body>
-</html>
+{% endblock %}

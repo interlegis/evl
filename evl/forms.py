@@ -18,7 +18,7 @@ lista_cursos = [('-1', '-- Selecione um curso --')]
 for curso in cursos:
     lista_cursos.append((curso['id'], curso['nome']))
 
-requisicao_escola = urlopen("http://localhost:3000/api/v1/escolas")
+requisicao_escola = urlopen("http://escolamodelows.interlegis.leg.br/api/v1/escolas")
 response_escolas = json.load(requisicao_escola)
 escolas = response_escolas['escolas']
 lista_escolas = [('-1', '-- Selecione uma escola --')]
