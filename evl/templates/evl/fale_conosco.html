@@ -1,0 +1,105 @@
+{% extends 'evl/base.html' %}
+{# {% load widget_tweaks %} #}
+
+{% block content %}
+<script type="text/javascript">
+FORM_RULES = {
+  '{{ form.name }}': 'required'
+};
+
+FORM_MESSAGES = {
+  '{{ form.name }}': 'This field is required'
+};
+
+$(document).ready(function() {
+  $('form').validate({
+    rules: FORM_RULES,
+    messages: FORM_MESSAGES
+  });
+});
+</script>
+<div class="container">
+  <div class="col-md-12">
+    <div class="form-area">
+        <form method="POST" role="form" novalidate>
+          {% csrf_token %}
+          <br style="clear:both">
+            <h1 class="titulo-sessao">Fale Conosco</h1>
+    				<div class="form-group">
+              <small class="text-danger">
+                {{ form.name.errors.as_text }}
+              </small>
+              {{ form.name }}
+  					</div>
+  					<div class="form-group">
+              <small class="text-danger">
+                {{ form.email.errors.as_text}}
+              </small>
+              {{ form.email }}
+  					</div>
+            <div class="form-group">
+              <small class="text-danger">
+                {{ form.cpf.errors.as_text}}
+              </small>
+              {{ form.cpf}}
+            </div>
+            <div class="form-group">
+              <small class="text-danger">
+                {{ form.phone_number.errors.as_text}}
+              </small>
+              {{ form.phone_number}}
+            </div>
+            <div class="form-group">
+              <small class="text-danger">
+                {{ form.school_initials.errors.as_text}}
+              </small>
+              {{ form.school_initials }}
+            </div>
+            <div class="row">
+                <div class="col-6">
+                  <small class="text-danger">
+                    {{ form.course_category_id.errors.as_text}}
+                  </small>
+                </div>
+                <div class="col-6">
+                  <small class="text-danger">
+                    {{ form.course_id.errors.as_text}}
+                  </small>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  {{ form.course_category_id}}
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  {{ form.course_id }}
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <small class="text-danger">
+                {{ form.type_conversation.errors.as_text}}
+              </small>
+              {{ form.type_conversation}}
+            </div>
+            <div class="form-group">
+              <small class="text-danger">
+                {{ form.title.errors.as_text}}
+              </small>
+              {{ form.title }}
+            </div>
+            <div class="form-group">
+              <small class="text-danger">
+                {{ form.description.errors.as_text}}
+              </small>
+              {{ form.description }}
+            </div>
+          <button type="submit" id="submit" name="submit" class="pull-right form-group save">Enviar Mensagem</button>
+        </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
