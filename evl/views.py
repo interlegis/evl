@@ -49,13 +49,9 @@ def fale_conosco(request):
 
             print("JSON", json.dumps(form.data))
             req = urllib.request.Request('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/adicionar')
-            # req = urllib.request.Request('http://localhost:3000/api/v1/fale_conosco/adicionar')
             req.add_header('Content-Type', 'application/json; charset=utf-8')
             result = urlopen(req, json.dumps(form.data).encode('utf-8'))
             return render(request, 'evl/home.html', context={'messagem_fale_conosco': "A mensagem foi enviada com sucesso"})
-            # contact = ContactUs(name = name, email = email, cpf = cpf, course_name = curso, type_conversation = contato, description = descricao)
-            # email = EmailMessage(curso, assunto, to=['roberto.matheus@bol.com.br'])
-            # email.send()
         else:
             print("ERROS =", form.errors)
             return render(request, 'evl/fale_conosco.html', {'form': form})
