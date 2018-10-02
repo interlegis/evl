@@ -79,14 +79,17 @@ $(document).ready(function() {
                 </div>
               </div>
             </div>
-  					<div class="form-group">
-              {{ form.subject}}
-  					</div>
             <div class="form-group">
               <small class="text-danger">
-                {{ form.contact_type.errors.as_text}}
+                {{ form.type_conversation.errors.as_text}}
               </small>
-              {{ form.contact_type}}
+              {{ form.type_conversation}}
+            </div>
+            <div class="form-group">
+              <small class="text-danger">
+                {{ form.title.errors.as_text}}
+              </small>
+              {{ form.title }}
             </div>
             <div class="form-group">
               <small class="text-danger">

@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 'crispy_forms',
     'localflavor',
-    'evl'
+    'evl',
+    'reset_migrations'
 ]
 # CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -85,24 +86,24 @@ WSGI_APPLICATION = 'evl_admin.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'moodlews',
-#         # 'NAME': os.path.join(BASE_DIR, 'mydb'),
-#         'USER': 'escolamodelows',
-#         'PASSWORD': 'escolamodelo',
-#         'HOST': 'campeirohsabereslb.interlegis.leg.br',
-#         'PORT': '5432', # 8000 is default
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'mydatabase',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'moodlews',
+        # 'NAME': os.path.join(BASE_DIR, 'mydb'),
+        'USER': 'escolamodelows',
+        'PASSWORD': 'escolamodelo',
+        'HOST': 'campeirohsabereslb.interlegis.leg.br',
+        'PORT': '5432', # 8000 is default
+    }
+}
 
 
 # Password validation

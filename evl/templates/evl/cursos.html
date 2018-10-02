@@ -11,10 +11,10 @@
           <div class="list-group" id="list-tab" role="tablist">
             {% for categoria in categorias %}
             {% if categoria == categorias.0 %}
-            <a class="list-group-item list-group-item-light active show" id="a-{{ forloop.counter }}" data-toggle="list" href="#{{i}}" role="tab" aria-controls="home">{{categoria.1.nome}}</a>
+            <a class="list-group-item list-group-item-light active show" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
             {% endif %}
               {% if categoria != categorias.0 %}
-                <a class="list-group-item list-group-item-light" id="a-{{ forloop.counter }}" data-toggle="list" href="#{{i}}" role="tab" aria-controls="home">{{categoria.1.nome}}</a>
+                <a class="list-group-item list-group-item-light" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
               {% endif %}
 
             {% endfor %}

@@ -9,28 +9,29 @@ response_categorias = json.load(requisicao_categoria)
 categorias = response_categorias['categorias_cursos']
 lista_categorias = [('-1', '-- Selecione uma categoria --')]
 for categoria in categorias:
-    lista_categorias.append((categoria['id'], categoria['nome']))
+    if categoria['id'] != None:
+        lista_categorias.append((categoria['id'], categoria['nome']))
 
 requisicao_curso = urlopen("https://escolamodelows.interlegis.leg.br/api/v1/cursos")
 response_cursos = json.load(requisicao_curso)
 cursos = response_cursos['cursos']
 lista_cursos = [('-1', '-- Selecione um curso --')]
 for curso in cursos:
-    lista_cursos.append((curso['id'], curso['nome']))
+    if curso['id'] != None:
+        lista_cursos.append((curso['id'], curso['nome']))
 
 requisicao_escola = urlopen("http://escolamodelows.interlegis.leg.br/api/v1/escolas")
 response_escolas = json.load(requisicao_escola)
 escolas = response_escolas['escolas']
 lista_escolas = [('-1', '-- Selecione uma escola --')]
 for escola in escolas:
-    lista_escolas.append((escola['initials'], escola['nome']))
+    if escola['initials'] != None:
+        lista_escolas.append((escola['initials'], escola['nome']))
 
 
 lista_contatos = (('-1', '-- Selecione o tipo de contato --'), ('0', 'Reclamação'), ('1', 'Dúvida'), ('2', 'Sugestão'), ('3', 'Elogio'))
 
 class ContactUsForm(forms.ModelForm):
-
-
     name = forms.CharField(
         error_messages={'required': 'Este campo é obrigatório! Preencha este campo com o seu nome.'},
         widget=forms.TextInput(
@@ -74,14 +75,6 @@ class ContactUsForm(forms.ModelForm):
             }
         )
     )
-    subject = forms.CharField(
-        widget=forms.TextInput(
-            attrs={
-                'class' : 'form-control',
-                'placeholder' : 'Assunto',
-            }
-        )
-    )
     course_id = forms.ChoiceField(
         choices = lista_cursos,
         widget = forms.Select(
@@ -91,6 +84,7 @@ class ContactUsForm(forms.ModelForm):
         )
     )
     school_initials = forms.ChoiceField(
+        error_messages={'required': 'Este campo é obrigatório! Escolha a sua escola.'},
         choices = lista_escolas,
         widget = forms.Select(
             attrs={
@@ -98,7 +92,7 @@ class ContactUsForm(forms.ModelForm):
             }
         )
     )
-    contact_type = forms.ChoiceField(
+    type_conversation = forms.ChoiceField(
         choices = lista_contatos,
         widget = forms.Select(
             attrs={
@@ -126,37 +120,32 @@ class ContactUsForm(forms.ModelForm):
             }
         )
     )
+    title = forms.CharField(
+        error_messages={'required': 'Este campo é obrigatório! Preencha este campo com o título.'},
+        widget=forms.TextInput(
+            attrs={
+                'class' : 'form-control',
+                'placeholder' : 'Título',
+            }
+        )
+    )
 
     class Meta:
         model = ContactUs
         # fields = ('name', 'email', 'cpf', 'description',)
-        fields = ('name', 'email', 'cpf', 'course_id', 'contact_type', 'course_category_id', 'description', 'school_initials')
-
+        fields = ('name', 'email', 'cpf', 'course_id', 'type_conversation', 'course_category_id', 'title', 'description', 'school_initials')
 
     def clean_school_initials(self, *args, **kwargs):
         school_initials = self.cleaned_data.get("school_initials")
+        print("INICIAIS = ", school_initials)
         if "-1" in school_initials:
-            raise forms.ValidationError("Selecione uma escola")
+            raise forms.ValidationError("Este campo é obrigatório! Selecione uma escola.")
         else:
             return school_initials
 
-    def clean_course_id(self, *args, **kwargs):
-        course_id = self.cleaned_data.get("course_id")
-        if "-1" in course_id:
-            raise forms.ValidationError("Selecione um curso")
+    def clean_type_conversation(self, *args, **kwargs):
+        type_conversation = self.cleaned_data.get("type_conversation")
+        if "-1" in type_conversation:
+            raise forms.ValidationError("Este campo é obrigatório! Selecione um tipo de contato.")
         else:
-            return course_id
-
-    def clean_course_category_id(self, *args, **kwargs):
-        course_category_id = self.cleaned_data.get("course_category_id")
-        if "-1" in course_category_id:
-            raise forms.ValidationError("Selecione uma categoria")
-        else:
-            return course_category_id
-
-    def clean_contact_type(self, *args, **kwargs):
-        contact_type = self.cleaned_data.get("contact_type")
-        if "-1" in contact_type:
-            raise forms.ValidationError("Selecione um tipo de contato")
-        else:
-            return contact_type
+            return type_conversation
