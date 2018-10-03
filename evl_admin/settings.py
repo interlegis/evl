@@ -25,7 +25,7 @@ SECRET_KEY = 'v=m91$ei*h!h&l23*_6yjx!l9_l+y#^!e)gtiay*tw0!5^xa9p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Email configurations
 
