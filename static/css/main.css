@@ -116,6 +116,7 @@
     .divResolucaoSmall{
         display: contents;
     }
+
 }
 
 @media screen and
@@ -137,7 +138,9 @@
     .marginTopHome{
         margin-top: 5%;
     }
-
+    .marginTopCursos{
+        margin-top: 5% !important;
+    }
 }
 
 
@@ -176,16 +179,33 @@
     margin-top: 1%;
 }
 .titleFontProperties{
-    color: white;
+    color: #eff1f3;
     font-weight: bold;
-    text-shadow: 1px 2px 13px rgba(154, 150, 150, 1);
-
+    text-shadow: 0 0 30px rgba(0,0,0,.5);
+}
+.subtitleFontProperties{
+    color: #eff1f3;
+    font-weight: bold;
+    text-shadow: 0 0 30px rgba(0,0,0,.5);
+    font-size: 1.5rem !important;
+}
+.titleFontProperties2{
+    font-weight: bold;
+    text-shadow: 0 0 30px rgba(0,0,0,.5);
+}
+.subtitleFontProperties2{
+    font-weight: bold;
+    text-shadow: 0 0 30px rgba(0,0,0,.5);
+    font-size: 1.0rem !important;
 }
 
 .backgroundSmall{
     background-color: #f5f5f5;
 }
 
+.backgroundGreyGradient{
+    background-image: linear-gradient(grey, white);
+}
 .box {
     margin: 30px;
     height: 50px;
@@ -407,6 +427,7 @@ section{
      padding: 0px !important;
  }
 
- .marginTopCursos{
-     margin-top: 6% !important;
- }
+
+.gradientBackgroundTitle{
+    background-image: linear-gradient(#e9ecef, white) !important;
+}
