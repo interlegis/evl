@@ -1,0 +1,75 @@
+{% include 'evl/imports.html' %}
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Pagina Aluno</title>
+</head>
+<body>
+
+<header class="divResolucaoLarge">
+    <nav class="navbar navbar-expand-lg navColor fixed-top-nav textBasicOrientation">
+        <div class="container">
+        <div class="collapse navbar-collapse " id="navbarTogglerDemo02" >
+            <ul class="navbar-nav mt-2 mt-lg-0 textBasicOrientationNav widthItensNavbar ">
+                <a style="margin-bottom: auto; margin-top: auto;" href="{% url 'home' %}">
+                    <img class="logoProperties" src="../static/img/logo.svg" alt="EVL">
+                </a>
+                <li class="nav-item active textBasicOrientation marginTopTextNav">
+                    <a class="nav-link titlePropertiesNavbar" href="#">Catálogo de Cursos <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item textBasicOrientation marginTopTextNav">
+                    <a class="nav-link titlePropertiesNavbar" href="#">Adesão Institucional</a>
+                </li>
+                <li class="nav-item textBasicOrientation marginTopTextNav">
+                    <a class="nav-link titlePropertiesNavbar " href="#">Validação de Documentos</a>
+                </li>
+                <li class="nav-item textBasicOrientation marginTopTextNav">
+                    <a class="nav-link titlePropertiesNavbar" href="#">Fale Conosco</a>
+                </li>
+                <li class="nav-item textBasicOrientation marginTopTextNav">
+                    <a class="nav-link titlePropertiesNavbar" href="/login">Login</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+</header>
+
+<div class="divResolucaoSmall backgroundSmall" id="navbarSmall">
+    <nav class="navbar navbar-expand-md backgroundSmall navbar-light">
+        <div class="container">
+            <img class="logoProperties" src="../static/img/logo.svg" alt="EVL">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-expanded="false">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item active textBasicOrientation marginTopTextNav visibilityItemMenu">
+                        <a class="nav-link titlePropertiesNavbar navColor" href="#">Catálogo de Cursos <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item textBasicOrientation marginTopTextNav visibilityItemMenu">
+                        <a class="nav-link titlePropertiesNavbar navColor" href="#">Adesão Institucional</a>
+                    </li>
+                    <li class="nav-item textBasicOrientation marginTopTextNav visibilityItemMenu">
+                        <a class="nav-link titlePropertiesNavbar navColor " href="#">Validação de Documentos</a>
+                    </li>
+                    <li class="nav-item textBasicOrientation marginTopTextNav visibilityItemMenu">
+                        <a class="nav-link titlePropertiesNavbar navColor" href="#">Fale Conosco</a>
+                    </li>
+                    <li class="nav-item textBasicOrientation marginTopTextNav visibilityItemMenu">
+                        <a class="nav-link titlePropertiesNavbar navColor" href="{% url 'login' %}">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+</body>
+
+</html>

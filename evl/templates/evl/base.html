@@ -1,188 +1,29 @@
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-
+{% include 'evl/imports.html' %}
+<html lang="pt-br">
   <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Creative - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/courses.css' %}">
-    <link rel="stylesheet" href="{% static 'css/fale_conosco.css' %}">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="{% static 'magnific-popup/magnific-popup.css' %}">
-
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="{% static 'css/creative.css' %}">
-    <link rel="stylesheet" href="{% static 'css/ellip.css' %}">
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
-
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
-  <body id="page-top">
+  <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="/">EVL</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/cursos">Catálogo de Cursos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Adesão Institucional</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Validação de Documentos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/fale_conosco">Fale Conosco</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/login">Login</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-</nav>
+    <header>
+        {% include 'evl/header.html' %}
+    </header>
 
-{% block content %}
-{% endblock %}
+    {% block content %}
+    {% endblock %}
 
-<!-- Footer -->
-  <footer class="page-footer font-small blue pt-4">
+    <!-- Footer -->
+    <footer style="padding: 0px !important;">
+        {% include 'evl/footer.html' %}
+    </footer>
 
-      <!-- Footer Links -->
-      <div class="container-fluid text-center text-md-left">
-
-        <!-- Grid row -->
-        <div class="row">
-
-          <!-- Grid column -->
-          <div class="col-md-3 mt-md-0 mt-3">
-
-            <!-- Content -->
-            <h5 class="text-uppercase"><strong>EVL</strong> | Escola Virtual do Legislativo</h5>
-            <p>Uma solução para a oferta de capacitação a distância no serviço público brasileiro.</p>
-
-          </div>
-
-          <div class="col-md-3 mt-md-0 mt-3"></div>
-          <!-- Grid column -->
-
-          <hr class="clearfix w-100 d-md-none pb-3">
-
-          <!-- Grid column -->
-          <div class="col-md-3 mb-md-0 mb-3 links">
-
-              <!-- Links -->
-              <h5 class="text-uppercase">Sobre a Escola</h5>
-
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!">Catálogo de Cursos</a>
-                </li>
-                <li>
-                  <a href="#!">Adesão Institucional</a>
-                </li>
-                <li>
-                  <a href="#!">Instituiçoes Participantes</a>
-                </li>
-              </ul>
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3 links">
-
-              <!-- Links -->
-              <h5 class="text-uppercase">Utilidades</h5>
-
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!">Validação de Documentos</a>
-                </li>
-                <li>
-                  <a href="#!">Outros</a>
-                </li>
-              </ul>
-
-            </div>
-            <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-      </div>
-
-
-  </footer>
     <!-- Footer -->
 
-    <!-- Custom scripts for this template -->
-    <script src="{% static 'js/popper.min.js' %}"></script>
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/creative.min.js' %}"></script>
-    <script src="{% static 'js/jquery.ellipsis.js'%}"></script>
-    <script src="{% static 'js/fale_conosco.js' %}"></script>
-    <script src="{% static 'js/validation.js'%}"></script>
-    <script>
-
-      $(document).ready(function(){
-        var paragraph = $(".course-p").text();
-        var n = $(".course-p").length;
 
 
-        $(".course-p").each(function(){
-          // console.log($(this).text());
-          if($(this).text().length > 300){
-            var new_p = $(this).text().substr(0, 299) + "...";
-            $(this).text(new_p);
-          }
-        });
-      });
-
-      $( ".list-group-item" ).on("click", function() {
-        console.log($(this).attr('id'));
-        console.log("id = " + $(this).attr('id').substr(2,2))
-        var id = $(this).attr('id').substr(2,2);
-
-        $("#ul-" + id).toggle(200);
-        $("#ul-" + id).animate({
-          height: "toggle",
-          width: "toggle",
-          opacity: "toggle"
-        }, 400);
-        // $( "#ul-" + id).toggle(500);
-        // $( ".course-information" ).toggle(500);
-      });
-
-      $( "#signup" ).validate({
-        rules: {
-          password: "required",
-          password_again: {
-            equalTo: "#password"
-          }
-        }
-      });
-    </script>
-    <script src="{% static 'js/valida_cpf.js'%}"></script>
 </body>
-
 </html>

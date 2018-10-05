@@ -1,0 +1,412 @@
+.containerTamanho{
+    margin: 0 auto;
+    width: 100%;
+}
+.navColor {
+    color: #000000 !important;
+    background-color: whitesmoke !important;
+}
+
+.page-footer {
+    color: #000000 !important;
+    background-color: whitesmoke !important;
+}
+
+.widthItensNavbar{
+    width: 100%;
+    display: inline;
+}
+.divResolucaoLarge{
+    display: contents;
+}
+
+.divResolucaoSmall{
+    display: none;
+}
+@media screen and
+(min-width: 200px) and
+(max-width: 640px){
+    .logoProperties {
+        width: 100px;
+        height: 40px;
+        margin-left: 1% !important;
+        margin-top: 1%;
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
+
+    }
+
+    .widthLogoNavbar{
+        width: 100%;
+    }
+    .textBasicOrientationNav{
+        text-align: center !important;
+        vertical-align: middle;
+    }
+
+    .marginTopHome{
+        margin-top: 0% !important;
+    }
+    .fixed-top-nav {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .widthItensNavbarInterno{
+        width: 20% !important;
+    }
+    .divResolucaoLarge{
+        display: none;
+    }
+    .divResolucaoSmall{
+        display: contents;
+    }
+}
+.widthItensNavbarInterno{
+    width: 20% !important;
+}
+
+@media screen and
+(min-width: 641px) and
+(max-width: 991px){
+    .logoProperties {
+        width: 100px;
+        height: 40px !important;
+        margin-left: 1% !important;
+        margin-top: 1%;
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
+
+    }
+    .textBasicOrientationNav{
+        text-align: center !important;
+        vertical-align: middle;
+    }
+    .marginTopHome{
+        margin-top: 0px !important;
+    }
+
+    .fixed-top-nav {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .widthItensNavbarInterno{
+        width: 20% !important;
+    }
+
+    .divResolucaoLarge{
+        display: none;
+    }
+    .divResolucaoSmall{
+        display: contents;
+    }
+}
+
+@media screen and
+(min-width: 992px) and
+(max-width: 4080px){
+    .logoProperties{
+        margin: 1% !important;
+        width: 100px;
+        height: 40px;
+    }
+
+    .fixed-top-nav {
+        position: fixed !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .marginTopHome{
+        margin-top: 5%;
+    }
+
+}
+
+
+.textBasicOrientationNav{
+    text-align: left;
+}
+.containerTamanho {
+    width: 100%;
+}
+
+.texto-cinza{
+    color: #4F4F4F !important;
+}
+
+.texto-cinza-claro{
+    color: #696969 !important;
+}
+.layoutBasicOrientation{
+    padding: 1%;
+}
+.columnOrientations{
+    max-width: 33%;
+}
+.titlePropertiesNavbar{
+    font-weight: bold;
+    font-size: large;
+    color: black;
+    text-shadow: 1px 2px 13px rgba(154, 150, 150, 1);
+}
+
+.textBasicOrientation{
+    text-align: center;
+    vertical-align: middle !important;
+}
+.marginTopTextNav{
+    margin-top: 1%;
+}
+.titleFontProperties{
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 2px 13px rgba(154, 150, 150, 1);
+
+}
+
+.backgroundSmall{
+    background-color: #f5f5f5;
+}
+
+.box {
+    margin: 30px;
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+}
+.box.horizTranslate {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    margin-left: 50% !important;
+}
+
+.footerTextProperties{
+    font-size: 12px !important;
+    text-align: justify !important;
+}
+
+.footerTitleProperties{
+    font-size: 15px !important;
+}
+
+.botoesMenuAluno{
+    width: 30% !important;
+}
+.marginBotoesMenuAluno{
+    margin-right: 5% !important;
+}
+.marginBottomPosNav{
+    margin-bottom: 10% !important;
+}
+.verticalAlignText{
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
+.bgHome{
+    background-image: url(../img/home.jpg) !important;
+}
+.bgMeusCursos{
+    background-image: url(../img/meus-cursos.jpg) !important;
+}
+.bgHomepage{
+    background-image: url(../img/homepage.jpg) !important;
+}
+.bgComprovantes{
+    background-image: url(../img/comprovantes.jpg) !important;
+}
+.bgCertificados{
+    background-image: url(../img/certificados.jpg) !important;
+}
+
+
+.display-2-edited {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.container70p{
+    width: 70% !important;
+    margin-left: 15% !important;
+    margin-right: 15% !important;
+}
+.displayInline{
+    display: inline !important;
+}
+
+.visibilityItemMenu{
+    visibility: visible !important;
+}
+
+/* CSS MENU START */
+
+body,html{
+    height: 100%;
+}
+
+nav.sidebar, .main{
+    -webkit-transition: margin 200ms ease-out;
+    -moz-transition: margin 200ms ease-out;
+    -o-transition: margin 200ms ease-out;
+    transition: margin 200ms ease-out;
+}
+
+.main{
+    padding: 10px 10px 0 10px;
+}
+
+@media (min-width: 765px) {
+
+    .main{
+        position: absolute;
+        width: calc(100% - 40px);
+        margin-left: 40px;
+        float: right;
+    }
+
+    nav.sidebar:hover + .main{
+        margin-left: 200px;
+    }
+
+    nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+        margin-left: 0px;
+    }
+
+    nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+        text-align: center;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    nav.sidebar a{
+        padding-right: 13px;
+    }
+
+    nav.sidebar .navbar-nav > li:first-child{
+        border-top: 1px #e5e5e5 solid;
+    }
+
+    nav.sidebar .navbar-nav > li{
+        border-bottom: 1px #e5e5e5 solid;
+    }
+
+    nav.sidebar .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+        padding: 0 0px 0 0px;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+        color: #777;
+    }
+
+    nav.sidebar{
+        width: 240px;
+        height: 500px !important;
+        margin-left: -210px;
+        float: left;
+        margin-bottom: 0px;
+    }
+
+    nav.sidebar li {
+        width: 100%;
+    }
+
+    nav.sidebar:hover{
+        margin-left: 0px;
+    }
+
+    .forAnimate{
+        opacity: 0;
+    }
+}
+
+@media (min-width: 1330px) {
+
+    .main{
+        width: calc(100% - 200px);
+        margin-left: 200px;
+    }
+
+    nav.sidebar{
+        margin-left: 0px;
+        float: left;
+    }
+
+    nav.sidebar .forAnimate{
+        opacity: 1;
+    }
+}
+
+nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+    color: #CCC;
+    background-color: transparent;
+}
+
+nav:hover .forAnimate{
+    opacity: 1;
+}
+section{
+    padding-left: 15px;
+}
+
+.tamNavBar{
+    width: 90% !important;
+}
+
+.mobile {
+    opacity: 1; /* Esconde no desktop. */
+    height: auto;
+}
+
+@media only screen and (max-width: 765px) {
+    .mobile {
+        display: none !important;
+        opacity: 0; /* Só aparece no mobile. */
+        height: 0 !important;
+
+    }
+}
+
+/* CSS MENU END   */
+ .textTop{
+     position:relative;
+     top:-50%;
+ }
+
+ .nopaddingFooter{
+     padding: 0px !important;
+ }
+
+ .marginTopCursos{
+     margin-top: 6% !important;
+ }

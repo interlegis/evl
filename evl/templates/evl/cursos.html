@@ -1,74 +1,79 @@
 {% extends 'evl/base.html' %}
 
 {% block content %}
-    <div class="container page-content">
-      <h1 class="titulo-sessao">Catálogo de Cursos</h1>
-      <p class="subtitulo-sessao">
-        Os cursos da EVL são dividos por temáticas. Cada temática contém uma lista de cursos relacionados a esse tema e que poderão ser de seu interesse.
-      </p>
-      <div class="row">
-        <div class="col-4">
-          <div class="list-group" id="list-tab" role="tablist">
-            {% for categoria in categorias %}
-            {% if categoria == categorias.0 %}
-            <a class="list-group-item list-group-item-light active show" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
-            {% endif %}
-              {% if categoria != categorias.0 %}
-                <a class="list-group-item list-group-item-light" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
-              {% endif %}
 
-            {% endfor %}
-          </ul>
-          </div>
+
+
+<div class="container page-content marginTopCursos">
+    <h1 class="titulo-sessao">Catálogo de Cursos</h1>
+    <p class="subtitulo-sessao">
+        Os cursos da EVL são dividos por temáticas. Cada temática contém uma lista de cursos relacionados a esse tema e que poderão ser de seu interesse.
+    </p>
+    <div class="row">
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+                {% for categoria in categorias %}
+                {% if categoria == categorias.0 %}
+                <a class="list-group-item list-group-item-light active show" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
+                {% endif %}
+                {% if categoria != categorias.0 %}
+                <a class="list-group-item list-group-item-light" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
+                {% endif %}
+
+                {% endfor %}
+                </ul>
+            </div>
         </div>
         <div class="col-8">
-          <div class="tab-content" id="nav-tabContent">
-            {% for categoria in categorias %}
-              {% if categoria == categorias.0 %}
+            <div class="tab-content" id="nav-tabContent">
+                {% for categoria in categorias %}
+                {% if categoria == categorias.0 %}
                 <div class="tab-pane fade active show" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
-              {% endif %}
+                    {% endif %}
 
-              {% if categoria  != categorias.0 %}
-                <div class="tab-pane fade" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
-              {% endif %}
+                    {% if categoria  != categorias.0 %}
+                    <div class="tab-pane fade" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
+                        {% endif %}
 
-              {% for curso in cursos %}
-              {% if curso.categoria == categoria.id %}
-                <ul class="courseboxes" id="ul-{{ categoria.id }}">
-                  <li class=" course-information">
-                    <div >
-                      <h5>{{curso.nome}}</h5>
-                      <p class="course-p">{{ curso.descrição }}</p>
-                      <a href="#" class="btn btn-dark inscrevase" style="text-align: center">Inscreva-se</a>
+                        {% for curso in cursos %}
+                        {% if curso.categoria == categoria.id %}
+                        <ul class="courseboxes" id="ul-{{ categoria.id }}">
+                            <li class=" course-information">
+                                <div >
+                                    <h5>{{curso.nome}}</h5>
+                                    <p class="course-p">{{ curso.descrição }}</p>
+                                    <a href="#" class="btn btn-dark inscrevase" style="text-align: center">Inscreva-se</a>
+                                </div>
+                                <div>
+                                    <img src="https://evg.gov.br/img/catalogo_curso/Gestao_de_Docs_Inf_e_Conh/Banner_SeiUsar.svg" alt="Logo do Curso Sistema Eletrônico de Informações - SEI! USAR">
+                                    <dl>
+                                        <dt>Certificador:</dt>
+                                        <dd>ENAP</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Conteudista:</dt>
+                                        <dd>Unicorreios</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Carga Horária:</dt>
+                                        <dd>
+                                            <input value="357" hidden="">
+                                            20h
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
                     </div>
-                    <div>
-                      <img src="https://evg.gov.br/img/catalogo_curso/Gestao_de_Docs_Inf_e_Conh/Banner_SeiUsar.svg" alt="Logo do Curso Sistema Eletrônico de Informações - SEI! USAR">
-                                                                                                                                    <dl>
-                        <dt>Certificador:</dt>
-                        <dd>ENAP</dd>
-                      </dl>
-                                                                                                                                    <dl>
-                        <dt>Conteudista:</dt>
-                        <dd>Unicorreios</dd>
-                      </dl>
-                      <dl>
-                        <dt>Carga Horária:</dt>
-                        <dd>
-                          <input value="357" hidden="">
-                            20h
-                        </dd>
-                      </dl>
-                    </div>
-                  </li>
-                {% endif %}
-                {% endfor %}
-              </ul>
-              </div>
-            {% endfor %}
-          </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
+</div>
+
+
 {% endblock %}

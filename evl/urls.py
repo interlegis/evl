@@ -22,4 +22,9 @@ urlpatterns = [
     url(r'^cursos/$', views.cursos, name='cursos'),
     url(r'^fale_conosco/$', views.fale_conosco, name='fale_conosco'),
     url(r'^cadastro/$', views.cadastro, name='cadastro'),
+    url(r'^meuscursos/', views.meusCursos, name='meusCursos'),
+    url(r'^certificados/', views.certificados, name='certificados'),
+    url(r'^comprovantes/', views.comprovantes, name='comprovantes'),
+    url(r'^aluno', views.homeAluno, name='homealuno'),
+    url(r'^baseCursos', views.baseCursos, name='baseCursos'),
 ]

@@ -1,0 +1,103 @@
+{% extends 'evl/base.html' %}
+{% block content %}
+
+<div class="view hm-white-light jarallax marginTopHome bgMeusCursos" data-jarallax='{"speed": 0.2}'>
+        <div class="full-bg-img">
+            <div class="container flex-center ">
+                <div class="row container70p">
+                    <div class="col-md-12 wow fadeIn">
+                        <div class="text-center titleFontProperties">
+                            <h3 class="display-2-edited mb-2 wow fadeInDown marginBottomPosNav" data-wow-delay="0.3s">
+
+
+                                <div id="cursos" style="display:none">
+                                    <div id="emAndamento"> Cursos Em Andamento</div>
+                                    <div id="trancados">Cursos Trancados</div>
+                                    <div id="finalizados">Cursos Finalizados</div>
+                                    <hr class="my-4">
+                                </div>
+                            </h3>
+
+
+                            <div class="row displayInline">
+                                <button type="button" class="btn btn-success" onclick="mostrar_itens(this); MudarEstado('cursos'); MudarEstado('mensagemCurso')" id="emAndamento_click"><i class="fa fa-play"></i>  Em Andamento</button>
+                                <button type="button" class="btn btn-warning" onclick="mostrar_itens(this);" id="trancados_click"><i class="fas fa-lock"></i> Trancados</button>
+                                <button type="button" class="btn btn-danger" onclick="mostrar_itens(this);" id="finalizados_click"><i class="fas fa-check-square"></i> Finalizados</button>
+                            </div>
+
+
+                            <div id="mensagemCurso" style="display:none">
+                                <div class="alert alert-warning" role="alert"
+                                     id="emAndamento_message">
+                                    Você não possui nenhum curso em andamento.
+                                </div>
+                                <div class="alert alert-warning" role="alert"
+                                     id="trancados_message">
+                                    Você não possui nenhum curso trancado.
+                                </div>
+                                <div class="alert alert-warning" role="alert"
+                                     id="finalizados_message">
+                                    Você não possui nenhum curso finalizado.
+                                </div>
+                            </div>
+
+
+
+
+                           </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function mostrar_itens(obj) {
+            document.getElementById('emAndamento').hidden="none";
+            document.getElementById('trancados').hidden="true";
+            document.getElementById('finalizados').hidden="true";
+            document.getElementById('emAndamento_message').hidden="none";
+            document.getElementById('trancados_message').hidden="none";
+            document.getElementById('finalizados_message').hidden="none";
+            switch (obj.id) {
+                case 'emAndamento_click':
+                    document.getElementById('emAndamento').hidden = false;
+                    document.getElementById('trancados').hidden = true;
+                    document.getElementById('finalizados').hidden = true;
+                    document.getElementById('emAndamento_message').hidden = false;
+                    document.getElementById('trancados_message').hidden = true;
+                    document.getElementById('finalizados_message').hidden = true;
+                    break;
+                case 'trancados_click':
+                    document.getElementById('emAndamento').hidden = true;
+                    document.getElementById('trancados').hidden = false;
+                    document.getElementById('finalizados').hidden = true;
+                    document.getElementById('emAndamento_message').hidden = true;
+                    document.getElementById('trancados_message').hidden = false;
+                    document.getElementById('finalizados_message').hidden = true;
+                    break;
+                case 'finalizados_click':
+                    document.getElementById('emAndamento').hidden = true;
+                    document.getElementById('trancados').hidden = true;
+                    document.getElementById('finalizados').hidden = false;
+                    document.getElementById('emAndamento_message').hidden = true;
+                    document.getElementById('trancados_message').hidden = true;
+                    document.getElementById('finalizados_message').hidden = false;
+                    break;
+
+            }
+        }
+
+        function MudarEstado(el) {
+            var display = document.getElementById(el).style.display;
+            if (display == "none")
+                document.getElementById(el).style.display = 'block';
+        }
+
+    </script>
+
+
+
+{% endblock %}

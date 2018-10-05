@@ -62,3 +62,18 @@ def fale_conosco(request):
 
 def cadastro(request):
     return render(request, 'evl/cadastro.html')
+
+def meusCursos(request):
+    return render(request, 'evl/meusCursos.html')
+
+def certificados(request):
+    return render(request, 'evl/certificados.html')
+
+def comprovantes(request):
+    return render(request, 'evl/comprovantes.html')
+
+def homeAluno(request):
+    return render(request, 'evl/homeAluno.html')
+
+def baseCursos(request):
+    return render(request, 'evl/baseCursos.html')
