@@ -509,3 +509,30 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
 .widthItensNavbarInterno{
     width: 20% !important;
 }
+.paddingDiv{
+    padding-right: 5%;
+    padding-left: 5%;
+}
+.cards-cursos{
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.course-titulo{
+    font-weight: bold !important;
+}
+
+.margin-padding-fale-conosco{
+    margin-left: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    margin-top: 0px !important;
+    padding-left: 2%;
+    padding-bottom:  2%;
+    padding-right: 2%;
+    padding-top: 0px !important;
+}
+.ajustestitlefaleconosco{
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}

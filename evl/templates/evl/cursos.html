@@ -3,12 +3,12 @@
 {% block content %}
 
 
-<div class="gradientBackgroundTitle jumbotron marginTopCursos" style="box-shadow: none">
+<div class="paddingDiv gradientBackgroundTitle jumbotron marginTopCursos" style="box-shadow: none">
     <h1 class="display-4 textBasicOrientation">
         <h1 class="display-4 titleFontProperties2 textBasicOrientation">Catálogo de Cursos</h1>
     </h1>
     <hr class="my-4">
-    <p class="lead subtitleFontProperties2 textBasicOrientation">Os cursos da EVL são dividos por temáticas. Cada temática contém uma lista de cursos relacionados a esse tema e que poderão ser de seu interesse.</p>
+    <p class="lead subtitleFontProperties2 textBasicOrientation paddingDiv">Os cursos da EVL são dividos por temáticas. Cada temática contém uma lista de cursos relacionados a esse tema e que poderão ser de seu interesse.</p>
     </p>
 </div>
 
@@ -29,8 +29,9 @@
                 </ul>
             </div>
         </div>
+
         <div class="col-8">
-            <div class="tab-content" id="nav-tabContent">
+            <div id="nav-tabContent">
                 {% for categoria in categorias %}
                 {% if categoria == categorias.0 %}
                 <div class="tab-pane fade active show" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
@@ -43,9 +44,9 @@
                         {% for curso in cursos %}
                         {% if curso.categoria == categoria.id %}
                         <ul class="courseboxes" id="ul-{{ categoria.id }}">
-                            <li class=" course-information">
+                            <li class="cards-cursos backgroundForm course-information">
                                 <div >
-                                    <h5>{{curso.nome}}</h5>
+                                    <h5 class="course-titulo">{{curso.nome}}</h5>
                                     <p class="course-p">{{ curso.descrição }}</p>
                                     <a href="#" class="btn btn-dark inscrevase" style="text-align: center">Inscreva-se</a>
                                 </div>

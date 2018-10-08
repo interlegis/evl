@@ -18,13 +18,22 @@ $(document).ready(function() {
   });
 });
 </script>
-<div class="container">
+
+<div class="ajustestitlefaleconosco paddingDiv gradientBackgroundTitle jumbotron marginTopCursos" style="box-shadow: none;">
+  <h1 class="display-4 textBasicOrientation">
+    <h1 class="display-4 titleFontProperties2 textBasicOrientation">Fale Conosco</h1>
+  </h1>
+  <hr class="my-4">
+  </p>
+</div>
+
+<div class="margin-padding-fale-conosco container">
   <div class="col-md-12">
     <div class="form-area">
         <form method="POST" role="form" novalidate>
           {% csrf_token %}
           <br style="clear:both">
-            <h1 class="titulo-sessao">Fale Conosco</h1>
+
     				<div class="form-group">
               <small class="text-danger">
                 {{ form.name.errors.as_text }}
