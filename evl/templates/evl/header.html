@@ -44,14 +44,16 @@
 <div class="divResolucaoSmall backgroundSmall" id="navbarSmall">
     <nav class="navbar navbar-expand-md backgroundSmall navbar-light">
         <div class="container">
-            <img class="logoProperties" src="../static/img/logo.svg" alt="EVL">
+            <a style="margin-bottom: auto; margin-top: auto;" href="{% url 'home' %}">
+                <img class="logoProperties" src="../static/img/logo.svg" alt="EVL">
+            </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-expanded="false">
                 <span class="navbar-toggler-icon "></span>
             </button>
             <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item active textBasicOrientation marginTopTextNav visibilityItemMenu">
-                        <a class="nav-link titlePropertiesNavbar navColor" href="#">Catálogo de Cursos <span class="sr-only">(current)</span></a>
+                        <a class="nav-link titlePropertiesNavbar navColor" href="/cursos">Catálogo de Cursos <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item textBasicOrientation marginTopTextNav visibilityItemMenu">
                         <a class="nav-link titlePropertiesNavbar navColor" href="#">Adesão Institucional</a>
@@ -60,10 +62,10 @@
                         <a class="nav-link titlePropertiesNavbar navColor " href="#">Validação de Documentos</a>
                     </li>
                     <li class="nav-item textBasicOrientation marginTopTextNav visibilityItemMenu">
-                        <a class="nav-link titlePropertiesNavbar navColor" href="#">Fale Conosco</a>
+                        <a class="nav-link titlePropertiesNavbar navColor" href="/fale_conosco">Fale Conosco</a>
                     </li>
                     <li class="nav-item textBasicOrientation marginTopTextNav visibilityItemMenu">
-                        <a class="nav-link titlePropertiesNavbar navColor" href="{% url 'login' %}">Login</a>
+                        <a class="nav-link titlePropertiesNavbar navColor" href="/login">Login</a>
                     </li>
                 </ul>
             </div>
