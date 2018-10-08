@@ -41,12 +41,31 @@
 
 
 <div class="view hm-white-light jarallax marginTopHome bgCertificados"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
-        <div class="full-bg-img">
-            <div class="container flex-center">
-                <div class="row textTop">
-                    <div class="col-md-12 wow fadeIn">
-                        <div class="text-center titleFontProperties">
+    <div class="full-bg-img">
+        <div class="container flex-center">
+            <div class="row" style="width: 90% !important;">
+                <div class="col-md-12 wow fadeIn">
+                    <div class="text-center titleFontProperties">
                             <h1 class="display-2-edited mb-2 wow fadeInDown" data-wow-delay="0.3s">Certificados</h1>
+                            <table class="table table-hover">
+                                <thead>
+                                <tr class="table-light">
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Data de Emissão</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for cert in certs.certificados %}
+                                <tr class="table-light">
+
+                                    <td>{{ cert.id }}</td>
+                                    <td>{{ cert.data.de.emissão }}</td>
+
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
 
                             </div>
                     </div>

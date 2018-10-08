@@ -67,7 +67,9 @@ def meusCursos(request):
     return render(request, 'evl/meusCursos.html')
 
 def certificados(request):
-    return render(request, 'evl/certificados.html')
+    req = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/certificados?cpf=000.000.000-00')
+    certs = json.loads(req.content)
+    return render(request, 'evl/certificados.html', {'certs': certs})
 
 def comprovantes(request):
     return render(request, 'evl/comprovantes.html')
