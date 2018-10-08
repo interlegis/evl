@@ -1,5 +1,13 @@
-{% extends "base.html" %}
-{% block conteudo %}
+{% include 'evl/imports.html' %}
+
+<head>
+    <header>
+        {% include 'evl/header.html' %}
+    </header>
+    <meta charset="UTF-8">
+    <title>Aluno</title>
+</head>
+   <body>
     <div class="view hm-white-light jarallax marginTopHome bgComprovantes" data-jarallax='{"speed": 0.2}'>
         <div class="full-bg-img">
             <div class="container flex-center">
@@ -46,16 +54,17 @@
                                 </tr>
                                 </tbody>
                             </table>
-
-
-
-
-
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-{% endblock %}
+    <footer style="padding: 0px !important;">
+        {% include 'evl/footer.html' %}
+    </footer>
+   </body>
+
+<script src="https://headervideo.github.io/hvheadervideo/js/mdb.min.js"></script>
+<script src="https://headervideo.github.io/hvheadervideo/js/jarallax.js"></script>
+<script src="https://headervideo.github.io/hvheadervideo/js/jarallax-video.js"></script>

@@ -2,7 +2,8 @@
 
 <html lang="pt-br">
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 <head>
     <header>
@@ -29,7 +30,7 @@
                         <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
                     </a>
                 </li>
-                <hr class="my-4">
+
                 <li ><a href="{% url 'meusCursos' %}">Cursos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>
                 <li ><a href="{% url 'comprovantes' %}">Comprovantes<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon far fa-file"></span></a></li>
                 <li ><a href="{% url 'certificados' %}">Certificados<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon fa fa-graduation-cap"></span></a></li>
@@ -37,7 +38,6 @@
         </div>
     </div>
 </nav>
-
 
 <div class="view hm-white-light jarallax marginTopHome bgHome" data-jarallax='{"speed": 0.2}'>
     <div class="full-bg-img">
