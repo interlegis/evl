@@ -473,8 +473,8 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
     text-decoration: underline;
 }
 .login-form  .btn.btn-primary {
-    background: #f0ad4e none repeat scroll 0 0;
-    border-color: #f0ad4e;
+    background: #4082f0;
+    border-color: #4082f0;
     color: #ffffff;
     font-size: 14px;
     width: 100%;
@@ -535,4 +535,9 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
 .ajustestitlefaleconosco{
     margin-bottom: 0px !important;
     padding-bottom: 0px !important;
+}
+
+.loginButton{
+    background-color: transparent !important;
+    border-color: transparent !important;
 }
