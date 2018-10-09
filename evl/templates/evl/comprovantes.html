@@ -13,122 +13,95 @@
     <title>Aluno</title>
 </head>
 
-<nav class="mobile navbar navbar-default sidebar" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+<body>
+    <nav class="mobile navbar navbar-default sidebar" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                <ul class="nav navbar-nav tamNavBar">
+                    <li class="active">
+                        <a href="#{% url 'home' %}">Home
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
+                        </a>
+                    </li>
+                    <li ><a href="{% url 'meusCursos' %}">Cursos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>
+                    <li ><a href="{% url 'comprovantes' %}">Comprovantes<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon far fa-file"></span></a></li>
+                    <li ><a href="{% url 'certificados' %}">Certificados<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon fa fa-graduation-cap"></span></a></li>
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-            <ul class="nav navbar-nav tamNavBar">
-                <li class="active">
-                    <a href="#{% url 'home' %}">Home
-                        <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
-                    </a>
-                </li>
-
-                <li ><a href="{% url 'meusCursos' %}">Cursos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>
-                <li ><a href="{% url 'comprovantes' %}">Comprovantes<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon far fa-file"></span></a></li>
-                <li ><a href="{% url 'certificados' %}">Certificados<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon fa fa-graduation-cap"></span></a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-
-<div class="view hm-white-light jarallax marginTopHome bgComprovantes"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
-        <div class="full-bg-img">
-            <div class="container flex-center">
-                <div class="row" style="width: 90% !important;">
-                    <div class="col-md-12 wow fadeIn">
-                        <div class="text-center titleFontProperties">
-                            <h1 class="display-2-edited mb-2 wow fadeInDown" data-wow-delay="0.3s">Comprovantes</h1>
-                        <div class="propriedades-tabela">
-                            <table class="table table-hover" id="minhaTabela">
-                                <thead>
-                                <tr class="table-light">
-                                    <th scope="col">Curso (Oferta)</th>
-                                    <th scope="col">Data de Inscrição</th>
-                                    <th scope="col">Data de Término</th>
-                                    <th scope="col">Carga Horária</th>
-                                    <th scope="col">Situação</th>
-                                    <th scope="col">Opções</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr class="table-light">
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr class="table-light">
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr class="table-light">
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
+    </nav>
+    <div class="view hm-white-light jarallax marginTopHome bgComprovantes"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
+            <div class="full-bg-img">
+                <div class="container flex-center">
+                    <div class="row" style="width: 90% !important;">
+                        <div class="col-md-12 wow fadeIn">
+                            <div class="text-center titleFontProperties">
+                                <h1 class="display-2-edited mb-2 wow fadeInDown" data-wow-delay="0.3s">Comprovantes</h1>
+                            <div class="propriedades-tabela">
+                                <table class="table table-hover" id="minhaTabela">
+                                    <thead>
+                                    <tr class="table-light">
+                                        <th scope="col">Curso (Oferta)</th>
+                                        <th scope="col">Data de Inscrição</th>
+                                        <th scope="col">Data de Término</th>
+                                        <th scope="col">Carga Horária</th>
+                                        <th scope="col">Situação</th>
+                                        <th scope="col">Opções</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="table-light">
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr class="table-light">
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr class="table-light">
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <footer style="padding: 0px !important;">
-        {% include 'evl/footer.html' %}
-    </footer>
+        <footer style="padding: 0px !important;">
+            {% include 'evl/footer.html' %}
+        </footer>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="/static/js/dataTable.js"> </script>
+    <script src="https://headervideo.github.io/hvheadervideo/js/mdb.min.js"></script>
+    <script src="https://headervideo.github.io/hvheadervideo/js/jarallax.js"></script>
+    <script src="https://headervideo.github.io/hvheadervideo/js/jarallax-video.js"></script>
+</body>
 
 
 
 
-<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $('#minhaTabela').DataTable({
-            "language": {
-                "lengthMenu": " ",
-                "zeroRecords": "Nada encontrado",
-                "info": "Mostrando página _PAGE_ de _PAGES_",
-                "infoEmpty": "Nenhum registro disponível",
-                "loadingRecords": "Carregando...",
-                "processing":     "Processando...",
-                "search":         "Pesquisar:",
-                "infoFiltered": "(filtrado de _MAX_ registros no total)",
-                "paginate": {
-                    "first":      "Primeira",
-                    "last":       "Última",
-                    "next":       "Próxima",
-                    "previous":   "Anterior"
-                },
-            }
-        });
-    });
-</script>
-   </body>
-
-
-
-
-<script src="https://headervideo.github.io/hvheadervideo/js/mdb.min.js"></script>
-<script src="https://headervideo.github.io/hvheadervideo/js/jarallax.js"></script>
-<script src="https://headervideo.github.io/hvheadervideo/js/jarallax-video.js"></script>
