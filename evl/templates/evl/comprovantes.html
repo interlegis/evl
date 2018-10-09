@@ -1,8 +1,11 @@
 {% include 'evl/imports.html' %}
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script type="text/javascript" src="../../../static/js/sorttable.js"></script>
+<link href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet">
 
 <head>
+    <link href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="//https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
     <header>
         {% include 'evl/header.html' %}
     </header>
@@ -44,8 +47,8 @@
                     <div class="col-md-12 wow fadeIn">
                         <div class="text-center titleFontProperties">
                             <h1 class="display-2-edited mb-2 wow fadeInDown" data-wow-delay="0.3s">Comprovantes</h1>
-
-                            <table class="table table-hover sortable">
+                        <div class="propriedades-tabela">
+                            <table class="table table-hover" id="minhaTabela">
                                 <thead>
                                 <tr class="table-light">
                                     <th scope="col">Curso (Oferta)</th>
@@ -84,6 +87,7 @@
                                 </tbody>
                             </table>
                         </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -92,7 +96,38 @@
     <footer style="padding: 0px !important;">
         {% include 'evl/footer.html' %}
     </footer>
+
+
+
+
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#minhaTabela').DataTable({
+            "language": {
+                "lengthMenu": " ",
+                "zeroRecords": "Nada encontrado",
+                "info": "Mostrando página _PAGE_ de _PAGES_",
+                "infoEmpty": "Nenhum registro disponível",
+                "loadingRecords": "Carregando...",
+                "processing":     "Processando...",
+                "search":         "Pesquisar:",
+                "infoFiltered": "(filtrado de _MAX_ registros no total)",
+                "paginate": {
+                    "first":      "Primeira",
+                    "last":       "Última",
+                    "next":       "Próxima",
+                    "previous":   "Anterior"
+                },
+            }
+        });
+    });
+</script>
    </body>
+
+
+
 
 <script src="https://headervideo.github.io/hvheadervideo/js/mdb.min.js"></script>
 <script src="https://headervideo.github.io/hvheadervideo/js/jarallax.js"></script>

@@ -541,3 +541,11 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
     background-color: transparent !important;
     border-color: transparent !important;
 }
+
+.propriedades-tabela{
+    padding: 2%;
+    background:rgba(255,255,255,0.5);
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
