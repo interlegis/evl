@@ -1,9 +1,6 @@
 {% include 'evl/imports.html' %}
-
-
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../static/js/sorttable.js"></script>
 
 <head>
     <header>
@@ -47,11 +44,14 @@
                 <div class="col-md-12 wow fadeIn">
                     <div class="text-center titleFontProperties">
                             <h1 class="display-2-edited mb-2 wow fadeInDown" data-wow-delay="0.3s">Certificados</h1>
-                            <table class="table table-hover">
+                            <table class="table table-hover sortable">
                                 <thead>
                                 <tr class="table-light">
                                     <th scope="col">ID</th>
                                     <th scope="col">Data de Emissão</th>
+                                    <th scope="col">Nota</th>
+                                    <th scope="col">Curso</th>
+                                    <th scope="col">Escola</th>
 
                                 </tr>
                                 </thead>
@@ -60,7 +60,10 @@
                                 <tr class="table-light">
 
                                     <td>{{ cert.id }}</td>
-                                    <td>{{ cert.data.de.emissão }}</td>
+                                    <td>{{ cert.data_de_emissao }}</td>
+                                    <td>{{ cert.nota }}</td>
+                                    <td>{{ cert.curso }}</td>
+                                    <td>{{ cert.escola }}</td>
 
                                 </tr>
                                 {% endfor %}

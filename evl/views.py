@@ -20,6 +20,7 @@ import urllib.parse
 import urllib.request
 from django.contrib import messages
 from django.template import context
+from datetime import datetime
 
 def home(request):
     return render(request, 'evl/home.html')
@@ -70,6 +71,8 @@ def certificados(request):
     req = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/certificados?cpf=000.000.000-00')
     certs = json.loads(req.content)
     return render(request, 'evl/certificados.html', {'certs': certs})
+
+
 
 def comprovantes(request):
     return render(request, 'evl/comprovantes.html')
