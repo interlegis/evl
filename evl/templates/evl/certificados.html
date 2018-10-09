@@ -1,43 +1,17 @@
 {% include 'evl/imports.html' %}
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script type="text/javascript" src="../../../static/js/sorttable.js"></script>
+
 
 <head>
-    <link href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="//https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
     <header>
-        {% include 'evl/header.html' %}
+        {% include 'evl/headerAluno.html' %}
     </header>
     <meta charset="UTF-8">
     <title>Aluno</title>
 </head>
 
 <body>
-    <nav class="mobile navbar navbar-default sidebar" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-                <ul class="nav navbar-nav tamNavBar">
-                    <li class="active">
-                        <a href="{% url 'home' %}">Home
-                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
-                        </a>
-                    </li>
-
-                    <li ><a href="{% url 'meusCursos' %}">Cursos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>
-                    <li ><a href="{% url 'comprovantes' %}">Comprovantes<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon far fa-file"></span></a></li>
-                    <li ><a href="{% url 'certificados' %}">Certificados<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon fa fa-graduation-cap"></span></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+{% include 'evl/navbarMenuAlunoLogado.html' %}
     <div class="view hm-white-light jarallax marginTopHome bgCertificados"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
         <div class="full-bg-img">
             <div class="container flex-center">
@@ -45,7 +19,7 @@
                     <div class="col-md-12 wow fadeIn">
                         <div class="text-center titleFontProperties">
                                 <h1 class="display-2-edited mb-2 wow fadeInDown" data-wow-delay="0.3s">Certificados</h1>
-                            <div class="propriedades-tabela">
+                            <div class="propriedades-tabela" style="color: black !important;">
                             <table class="table table-hover sortable" id="minhaTabela">
                                     <thead>
                                     <tr class="table-light">
@@ -79,11 +53,6 @@
     <footer style="padding: 0px !important;">
         {% include 'evl/footer.html' %}
     </footer>
-    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-    <script src="/static/js/dataTable.js"> </script>
-    <script src="https://headervideo.github.io/hvheadervideo/js/mdb.min.js"></script>
-    <script src="https://headervideo.github.io/hvheadervideo/js/jarallax.js"></script>
-    <script src="https://headervideo.github.io/hvheadervideo/js/jarallax-video.js"></script>
+<script src="/static/js/dataTable.js"></script>
 </body>
 

@@ -1,0 +1,86 @@
+{% include 'evl/imports.html' %}
+<style>
+
+    @media screen and
+    (min-width: 200px) and
+    (max-width: 640px){
+        .left {
+
+            min-width: 6% !important;
+
+        }
+    }
+    @media screen and
+    (min-width: 992px) and
+    (max-width: 4080px){
+
+    }
+
+    .left,
+    .right {
+        top: 50%;
+        float: left;
+        transform: translateY(3%);
+    }
+
+    .left {
+        background: white;
+        display: inline-block;
+        white-space: nowrap;
+        width: 2%;
+        transition: width .5s;
+    }
+
+    .right {
+        background: #fff;
+        width: 350px;
+        transition: width 1s;
+        border-style: solid;
+        border-color: #ccc;
+        border-width: 1px;
+    }
+
+    .left:hover {
+        width: 250px;
+    }
+
+    .item:hover {
+        background-color: whitesmoke;
+    }
+
+    .left .fas {
+        margin: 15px;
+        width: 20px;
+        color: black;
+    }
+
+    i.fas {
+        font-size: 17px;
+        vertical-align: middle !important;
+    }
+
+    .item {
+        height: 50px;
+        overflow: hidden;
+        color: black;
+    }
+
+</style>
+
+<div class="left">
+    <div class="item">
+        <i class="fas fa-fw fa-bars"></i>
+    </div>
+    <div class="item active">
+        <i class="fas fa-fw fa-map-marked-alt"></i>   Map
+    </div>
+    <div class="item">
+        <i class="fas fa-fw fa-columns"></i>   Split
+    </div>
+    <div class="item">
+        <i class="fas fa-fw fa-th"></i>   Grid
+    </div>
+    <div class="item">
+        <i class="fas fa-fw fa-user-circle"></i>   Dash
+    </div>
+</div>
