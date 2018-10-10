@@ -1,5 +1,5 @@
-{% include 'evl/imports.html' %}
 {% extends 'evl/base.html' %}
+{% include 'evl/imports.html' %}
 {# {% load widget_tweaks %} #}
 
 {% block content %}
@@ -19,7 +19,12 @@ $(document).ready(function() {
   });
 });
 </script>
-
+<div class="bc-icons-2">
+    <ol class="breadcrumb blue-grey lighten-4 bcAdditionalProperties">
+        <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+        <li class="breadcrumb-item active">Fale Conosco</li>
+    </ol>
+</div>
 <div class="ajustestitlefaleconosco paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none;">
   <h1 class="display-4 textBasicOrientation">
     <h1 class="display-4 titleFontProperties2 textBasicOrientation">Fale Conosco</h1>
