@@ -757,9 +757,10 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
     content: none;
 }
 .bc-icons-2 .breadcrumb-item.active {
-    color: whitesmoke !important;
+    color: darkgrey;
 }
 .bcAdditionalProperties{
     margin-bottom: 0px !important;
+    background-color: whitesmoke !important;
 }
 
