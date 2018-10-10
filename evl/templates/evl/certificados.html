@@ -4,23 +4,26 @@
 <head>
 
     <header>
-        {% include 'evl/headerAluno.html' %}
+        {% include 'evl/header.html' %}
     </header>
     <meta charset="UTF-8">
     <title>Aluno</title>
 </head>
 
 <body>
-{% include 'evl/navbarMenuAlunoLogado.html' %}
     <div class="view hm-white-light jarallax marginTopHome bgCertificados"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
         <div class="full-bg-img">
-            <div class="container flex-center">
-                <div class="row" style="width: 90% !important;">
+            <div class="container flex-center" style="max-width: 100%">
+                <div class="row tamanhoBg">
                     <div class="col-md-12 wow fadeIn">
                         <div class="text-center titleFontProperties">
                                 <h1 class="display-2-edited mb-2 wow fadeInDown" data-wow-delay="0.3s">Certificados</h1>
                             <div class="propriedades-tabela" style="color: black !important;">
-                            <table class="table table-hover sortable" id="minhaTabela">
+
+
+
+
+                                <table class="table table-hover table-responsive sortable" id="minhaTabela" style="max-width: 100%;">
                                     <thead>
                                     <tr class="table-light">
                                         <th scope="col">ID</th>
@@ -42,6 +45,12 @@
                                     </tr>
                                     {% endfor %}
                                     </tbody>
+
+
+
+
+
+
                                 </table>
                             </div>
                                 </div>
