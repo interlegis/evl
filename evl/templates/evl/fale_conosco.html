@@ -20,7 +20,15 @@ $(document).ready(function() {
 });
 </script>
 
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#cpf").mask("999.999.999-99");
+    });
+</script>
+
+
 <title>EVL - Fale Conosco</title>
+{% include 'evl/imports.html' %}
 <div class="bc-icons-2">
     <ol class="breadcrumb bcAdditionalProperties">
         <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
@@ -118,7 +126,10 @@ $(document).ready(function() {
               </small>
               {{ form.description }}
             </div>
-          <button type="submit" id="submit" name="submit" class="pull-right form-group save">Enviar Mensagem</button>
+          <div class="marginBottomBotaoEnviarContact">
+            <button type="submit" id="submit" name="submit" class="pull-right btn btn-success">Enviar Mensagem</button>
+          </div>
+
         </form>
     </div>
   </div>

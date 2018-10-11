@@ -1,12 +1,6 @@
-
-<html lang="pt-br">
-<head>
-    <header>
-        {% include 'evl/header.html' %}
-    </header>
-    <meta charset="UTF-8">
+{% extends 'evl/base.html' %}
+{% block content %}
     <title>EVL - Página do Aluno</title>
-</head>
 <body>
 {% include 'evl/imports.html' %}
 <div class="bc-icons-2">
@@ -34,11 +28,4 @@
     </div>
 </div>
 
-
-<footer style="padding: 0px !important;">
-    {% include 'evl/footer.html' %}
-</footer>
-</body>
-
-
-</html>
+{% endblock %}

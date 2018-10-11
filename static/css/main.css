@@ -19,6 +19,7 @@
     .widthLogoNavbar{
         width: 100%;
     }
+
     .textBasicOrientationNav{
         text-align: center !important;
         vertical-align: middle;
@@ -27,6 +28,7 @@
     .marginTopHome{
         margin-top: 0% !important;
     }
+
     .fixed-top-nav {
         position: absolute !important;
         top: 0;
@@ -34,12 +36,15 @@
         left: 0;
         z-index: 1030;
     }
+
     .widthItensNavbarInterno{
         width: 20% !important;
     }
+
     .divResolucaoLarge{
         display: none;
     }
+
     .divResolucaoSmall{
         display: contents;
     }
@@ -50,6 +55,10 @@
         margin: 10px auto 30px;
         max-width: 90% !important;
         padding: 20px 60px 4px 39px;
+    }
+
+    .marginBottomBotaoEnviarContact{
+        margin-bottom: 19% !important;
     }
 
 }
@@ -75,6 +84,7 @@
     .widthLogoNavbar{
         width: 100%;
     }
+
     .textBasicOrientationNav{
         text-align: center !important;
         vertical-align: middle;
@@ -83,6 +93,7 @@
     .marginTopHome{
         margin-top: 0% !important;
     }
+
     .fixed-top-nav {
         position: absolute !important;
         top: 0;
@@ -90,12 +101,15 @@
         left: 0;
         z-index: 1030;
     }
+
     .widthItensNavbarInterno{
         width: 20% !important;
     }
+
     .divResolucaoLarge{
         display: none;
     }
+
     .divResolucaoSmall{
         display: contents;
     }
@@ -107,7 +121,9 @@
         max-width: 90% !important;
         padding: 20px 60px 4px 39px;
     }
-
+    .marginBottomBotaoEnviarContact{
+        margin-bottom: 12% !important;
+    }
 }
 
 @media screen and
@@ -159,6 +175,9 @@
         margin: 10px auto 30px;
         max-width: 70% !important;
         padding: 20px 60px 4px 39px;
+    }
+    .marginBottomBotaoEnviarContact{
+        margin-bottom: 12% !important;
     }
 }
 
@@ -214,7 +233,6 @@
     }
 }
 
-
 @media screen and
 (min-width: 1024px) and
 (max-width: 1279px){
@@ -231,9 +249,7 @@
         left: 0;
         z-index: 1030;
     }
-
 }
-
 
 @media screen and
 (min-width: 1280px) and
@@ -251,7 +267,6 @@
         left: 0;
         z-index: 1030;
     }
-
 }
 
 @media screen and
@@ -327,9 +342,14 @@
     }
 }
 
+.tamanhoBotoesMeusCursos{
+    width: 200px;
+}
+
 .textBasicOrientationNav{
     text-align: left;
 }
+
 .containerTamanho {
     width: 100%;
 }
@@ -341,12 +361,15 @@
 .texto-cinza-claro{
     color: #696969 !important;
 }
+
 .layoutBasicOrientation{
     padding: 1%;
 }
+
 .columnOrientations{
     max-width: 33%;
 }
+
 .titlePropertiesNavbar{
     font-weight: bold;
     font-size: large;
@@ -359,24 +382,29 @@
     text-align: center;
     vertical-align: middle !important;
 }
+
 .marginTopTextNav{
     margin-top: 1%;
 }
+
 .titleFontProperties{
     color: #eff1f3;
     font-weight: bold;
     text-shadow: 0 0 30px rgba(0,0,0,.5);
 }
+
 .subtitleFontProperties{
     color: #eff1f3;
     font-weight: bold;
     text-shadow: 0 0 30px rgba(0,0,0,.5);
     font-size: 1.5rem !important;
 }
+
 .titleFontProperties2{
     font-weight: bold;
     text-shadow: 0 0 30px rgba(0,0,0,.5);
 }
+
 .subtitleFontProperties2{
     font-weight: bold;
     text-shadow: 0 0 30px rgba(0,0,0,.5);
@@ -390,12 +418,14 @@
 .backgroundGreyGradient{
     background-image: linear-gradient(grey, white);
 }
+
 .box {
     margin: 30px;
     height: 50px;
     width: 50px;
     background-color: blue;
 }
+
 .box.horizTranslate {
     -webkit-transition: 3s;
     -moz-transition: 3s;
@@ -417,28 +447,36 @@
 .botoesMenuAluno{
     width: 30% !important;
 }
+
 .marginBotoesMenuAluno{
     margin-right: 5% !important;
 }
+
 .marginBottomPosNav{
     margin-bottom: 10% !important;
 }
+
 .verticalAlignText{
     margin-top: auto !important;
     margin-bottom: auto !important;
 }
+
 .bgHome{
     background-image: url(../img/home.jpg) !important;
 }
+
 .bgMeusCursos{
     background-image: url(../img/meus-cursos.jpg) !important;
 }
+
 .bgHomepage{
     background-image: url(../img/homepage.jpg) !important;
 }
+
 .bgComprovantes{
     background-image: url(../img/comprovantes.jpg) !important;
 }
+
 .bgCertificados{
     background-image: url(../img/certificados.jpg) !important;
 }
@@ -449,20 +487,20 @@
     font-weight: 300;
     line-height: 1.2;
 }
+
 .container70p{
     width: 70% !important;
     margin-left: 15% !important;
     margin-right: 15% !important;
 }
-.displayInline{
+
+.display-Inline{
     display: inline !important;
 }
 
 .visibilityItemMenu{
     visibility: visible !important;
 }
-
-/* CSS MENU START */
 
 body,html{
     height: 100%;
@@ -579,6 +617,7 @@ nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav
 nav:hover .forAnimate{
     opacity: 1;
 }
+
 section{
     padding-left: 15px;
 }
@@ -588,20 +627,19 @@ section{
 }
 
 .mobile {
-    opacity: 1; /* Esconde no desktop. */
+    opacity: 1;
     height: auto;
 }
 
 @media only screen and (max-width: 765px) {
     .mobile {
         display: none !important;
-        opacity: 0; /* Só aparece no mobile. */
+        opacity: 0;
         height: 0 !important;
 
     }
 }
 
-/* CSS MENU END   */
  .textTop{
      position:relative;
      top:-50%;
@@ -640,6 +678,7 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
 .login-form .form-group {
     margin-bottom:10px;
 }
+
 .login-form{ text-align:center;}
 .forgot a {
     color: #777777;
@@ -722,6 +761,7 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
     border-radius: 9px;
+    color: black !important;
 }
 .propertiesNavbarAluno{
     font-family: Roboto,sans-serif !important;
@@ -756,11 +796,18 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
 .bc-icons-2 .breadcrumb-item + .breadcrumb-item::before {
     content: none;
 }
+
 .bc-icons-2 .breadcrumb-item.active {
     color: darkgrey;
 }
+
 .bcAdditionalProperties{
     margin-bottom: 0px !important;
     background-color: whitesmoke !important;
 }
+
+.marginBottomBotaoEnviarContact{
+    margin-bottom: 7%;
+}
+
 

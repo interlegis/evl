@@ -1,12 +1,6 @@
-<head>
-
-
-    <header>
-        {% include 'evl/header.html' %}
-    </header>
-    <meta charset="UTF-8">
+{% extends 'evl/base.html' %}
+{% block content %}
     <title>EVL - Meus Cursos</title>
-</head>
 <body>
 {% include 'evl/imports.html' %}
 <div class="bc-icons-2">
@@ -21,7 +15,7 @@
             <div class="container flex-center ">
                 <div class="row container70p">
                     <div class="col-md-12 wow fadeIn">
-                        <div class="text-center titleFontProperties">
+                        <div class="text-center titleFontProperties" style="display: inline-block;">
                             <h3 class="display-2-edited mb-2 wow fadeInDown marginBottomPosNav" data-wow-delay="0.3s">
 
 
@@ -34,10 +28,10 @@
                             </h3>
 
 
-                            <div class="row displayInline">
-                                <button type="button" class="btn btn-success" onclick="mostrar_itens(this); MudarEstado('cursos'); MudarEstado('mensagemCurso')" id="emAndamento_click"><i class="fa fa-play"></i>  Em Andamento</button>
-                                <button type="button" class="btn btn-warning" onclick="mostrar_itens(this);" id="trancados_click"><i class="fas fa-lock"></i> Trancados</button>
-                                <button type="button" class="btn btn-danger" onclick="mostrar_itens(this);" id="finalizados_click"><i class="fas fa-check-square"></i> Finalizados</button>
+                            <div class="row" style="display: inline-block;">
+                                <button type="button" class="btn btn-success tamanhoBotoesMeusCursos" onclick="mostrar_itens(this); MudarEstado('cursos'); MudarEstado('mensagemCurso')" id="emAndamento_click"><i class="fa fa-play"></i>  Em Andamento</button>
+                                <button type="button" class="btn btn-warning tamanhoBotoesMeusCursos" onclick="mostrar_itens(this);" id="trancados_click"><i class="fas fa-lock"></i> Trancados</button>
+                                <button type="button" class="btn btn-danger  tamanhoBotoesMeusCursos" onclick="mostrar_itens(this);" id="finalizados_click"><i class="fas fa-check-square"></i> Finalizados</button>
                             </div>
 
 
@@ -67,9 +61,7 @@
     </div>
 
 
-<footer style="padding: 0px !important;">
-    {% include 'evl/footer.html' %}
-</footer>
+
 </body>
 
 
@@ -118,5 +110,6 @@
         }
 
     </script>
+{% endblock %}
 
 

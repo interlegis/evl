@@ -56,8 +56,9 @@ class ContactUsForm(forms.ModelForm):
         error_messages={'required': 'Este campo é obrigatório! Preencha este campo com o seu cpf.'},
         widget=forms.TextInput(
             attrs={
-                'class' : 'form-control',
-                'placeholder' : 'CPF',
+                'class': 'form-control',
+                'placeholder': 'CPF',
+
             }
         )
     )

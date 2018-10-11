@@ -1,12 +1,6 @@
-
-<head>
-
-    <header>
-        {% include 'evl/header.html' %}
-    </header>
-    <meta charset="UTF-8">
+{% extends 'evl/base.html' %}
+{% block content %}
     <title>EVL - Meus Certificados</title>
-</head>
 
 <body>
 {% include 'evl/imports.html' %}
@@ -19,17 +13,13 @@
 </div>
     <div class="view hm-white-light jarallax marginTopHome bgCertificados"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
         <div class="full-bg-img">
-            <div class="container flex-center" style="max-width: 100%">
-                <div class="row tamanhoBg">
+            <div class="container flex-center">
+                <div class="row" style="width: 90% !important;">
                     <div class="col-md-12 wow fadeIn">
                         <div class="text-center titleFontProperties">
                                 <h1 class="display-2-edited mb-2 wow fadeInDown" data-wow-delay="0.3s">Certificados</h1>
-                            <div class="propriedades-tabela" style="color: black !important;">
-
-
-
-
-                                <table class="table table-hover table-responsive sortable" id="minhaTabela" style="max-width: 100%;">
+                            <div style="overflow: auto;" class="propriedades-tabela">
+                                <table class="table table-hover " id="minhaTabela">
                                     <thead>
                                     <tr class="table-light">
                                         <th scope="col">ID</th>
@@ -51,23 +41,16 @@
                                     </tr>
                                     {% endfor %}
                                     </tbody>
-
-
-
-
-
-
                                 </table>
-                            </div>
+                                    </div>
                                 </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    <footer style="padding: 0px !important;">
-        {% include 'evl/footer.html' %}
-    </footer>
+
 <script src="/static/js/dataTable.js"></script>
 </body>
+{% endblock %}
 
