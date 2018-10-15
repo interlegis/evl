@@ -856,3 +856,45 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
     -moz-box-shadow: 0px 0px 43px -14px rgba(0,0,0,0.66);
     box-shadow: 0px 0px 43px -14px rgba(0,0,0,0.66);
 }
+
+.card_h {
+    margin: 0 auto;
+}
+.card_h .carousel-item {
+    height: 200px;
+}
+.card_h .carousel-caption {
+    padding: 0;
+    right: 0;
+    left: 0;
+    color: #3d3d3d;
+}
+.card_h .carousel-caption h3 {
+    color: #3d3d3d;
+}
+.card_h .carousel-caption p {
+    line-height: 30px;
+}
+.card_h .carousel-caption .col-sm-3 {
+    display: flex;
+    align-items: center;
+}
+.card_h .carousel-caption .col-sm-9 {
+    text-align: left;
+}
+.navi a {
+    text-decoration:none;
+}
+a > .ico {
+    background-color: grey;
+    padding: 10px;
+
+}
+a:hover > .ico {
+    background-color: #666;
+}
+.quote {
+    color: rgba(0,0,0,.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
