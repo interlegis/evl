@@ -664,7 +664,6 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
     border: 1px solid #d4d4d4;
     border-radius: 4px;
     font-size: 14px;
-    height: 50px;
     line-height: 50px;
 }
 .main-div {
@@ -691,7 +690,6 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
     color: #ffffff;
     font-size: 14px;
     width: 100%;
-    height: 50px;
     line-height: 50px;
     padding: 0;
 }
@@ -714,10 +712,6 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
     border-radius: 9px;
-}
-
-.margin-top-login{
-    margin-top: 8% !important;
 }
 .widthItensNavbarInterno{
     width: 20% !important;
@@ -810,4 +804,55 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
     margin-bottom: 7%;
 }
 
+.social{
+    text-align:center;
+    width:70px;
+    height:70px;
+    float:left;
+    background:rgb(255,255,255);
+    border:1px solid rgb(204,204,204);
+    box-shadow:0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+    border-radius:100px;
+    margin:0 10px 10px 0;
+    padding:10px;
+}
+.google-pluse:hover{background:#DD4B39;color:#FFF;}
+.facebook:hover{background:#3b5998;color:#FFF;}
+.twitter:hover{background:#00acee;color:#FFF;}
 
+.or-seperator {
+    margin: 50px 0 15px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+.or-seperator b {
+    padding: 0 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    background: #fff;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    position: relative;
+    top: -22px;
+    z-index: 1;
+}
+.socialMargin{
+    margin-top: 20%;
+}
+.rowSocial{
+    justify-content: center;
+}
+.boxShadowProperties{
+    -webkit-box-shadow: 2px 4px 33px 1px rgba(0,0,0,0.49);
+    -moz-box-shadow: 2px 4px 33px 1px rgba(0,0,0,0.49);
+    box-shadow: 2px 4px 33px 1px rgba(0,0,0,0.49);
+}
+.catalogoCursosBoxProperties{
+    -webkit-box-shadow: 0px 0px 43px -14px rgba(0,0,0,0.66);
+    -moz-box-shadow: 0px 0px 43px -14px rgba(0,0,0,0.66);
+    box-shadow: 0px 0px 43px -14px rgba(0,0,0,0.66);
+}
