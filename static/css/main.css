@@ -60,11 +60,80 @@
     .marginBottomBotaoEnviarContact{
         margin-bottom: 19% !important;
     }
+    .img-fluid{
+        max-width: 24% !important;
+    }
 
 }
 
 @media screen and
 (min-width: 450px) and
+(max-width: 575px){
+    .logoProperties {
+        width: 100px;
+        height: 40px;
+        margin-left: 1% !important;
+        margin-top: 1%;
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
+
+    }
+
+    .widthLogoNavbar{
+        width: 100%;
+    }
+
+    .textBasicOrientationNav{
+        text-align: center !important;
+        vertical-align: middle;
+    }
+
+    .marginTopHome{
+        margin-top: 0% !important;
+    }
+
+    .fixed-top-nav {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .widthItensNavbarInterno{
+        width: 20% !important;
+    }
+
+    .divResolucaoLarge{
+        display: none;
+    }
+
+    .divResolucaoSmall{
+        display: contents;
+    }
+
+    .main-div {
+        background: #ffffff none repeat scroll 0 0;
+        border-radius: 2px;
+        margin: 10px auto 30px;
+        max-width: 90% !important;
+        padding: 20px 60px 4px 39px;
+    }
+    .marginBottomBotaoEnviarContact{
+        margin-bottom: 12% !important;
+    }
+    .img-fluid{
+        max-width: 18% !important;
+    }
+}
+
+@media screen and
+(min-width: 576px) and
 (max-width: 639px){
     .logoProperties {
         width: 100px;
@@ -124,6 +193,7 @@
     .marginBottomBotaoEnviarContact{
         margin-bottom: 12% !important;
     }
+
 }
 
 @media screen and
