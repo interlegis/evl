@@ -15,6 +15,7 @@ $(document).ready(function(){
                 "next":       "Próxima",
                 "previous":   "Anterior"
             },
-        }
+        },
+        "scrollY": "220px"
     });
 });

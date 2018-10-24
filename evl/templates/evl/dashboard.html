@@ -1,0 +1,19 @@
+{% extends 'evl/base.html' %}
+{% block content %}
+<title>EVL - Painel de Indicadores</title>
+
+    <div class="dashboardContainer">
+      <script type="text/javascript">
+        require(['dash!/public/TesteMatheus.wcdf'], 
+
+            function(SampleDash) {
+                var sampleDash = new SampleDash("content1");
+                sampleDash.render();
+                
+            }
+        );         
+      </script>
+      <div id="content1"></div>
+    </div>
+
+{% endblock %}

@@ -1,28 +1,12 @@
 {% extends 'evl/base.html' %}
 {% include 'evl/imports.html' %}
 {# {% load widget_tweaks %} #}
-
+<script src="/static/js/jquery.mask.js"></script>
 {% block content %}
 <script type="text/javascript">
-FORM_RULES = {
-  '{{ form.name }}': 'required'
-};
-
-FORM_MESSAGES = {
-  '{{ form.name }}': 'This field is required'
-};
-
-$(document).ready(function() {
-  $('form').validate({
-    rules: FORM_RULES,
-    messages: FORM_MESSAGES
-  });
-});
-</script>
-
-<script type="text/javascript">
     $(document).ready(function(){
-        $("#cpf").mask("999.999.999-99");
+        $("#id_cpf")val().mask("999.999.999-99?99999");
+        console.log($("#id_cpf").val());
     });
 </script>
 
@@ -84,29 +68,17 @@ $(document).ready(function() {
               </small>
               {{ form.school_initials }}
             </div>
-            <div class="row">
-                <div class="col-6">
-                  <small class="text-danger">
-                    {{ form.course_category_id.errors.as_text}}
-                  </small>
-                </div>
-                <div class="col-6">
-                  <small class="text-danger">
-                    {{ form.course_id.errors.as_text}}
-                  </small>
-                </div>
+            <small class="text-danger">
+              {{ form.course_category_id.errors.as_text}}
+            </small>
+            <div class="form-group">
+              {{ form.course_category_id}}
             </div>
-            <div class="row">
-              <div class="col-6">
-                <div class="form-group">
-                  {{ form.course_category_id}}
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="form-group">
-                  {{ form.course_id }}
-                </div>
-              </div>
+            <small class="text-danger">
+              {{ form.course_id.errors.as_text}}
+            </small>
+            <div class="form-group">
+              {{ form.course_id }}
             </div>
             <div class="form-group">
               <small class="text-danger">

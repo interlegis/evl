@@ -134,7 +134,6 @@ class ContactUsForm(forms.ModelForm):
 
     class Meta:
         model = ContactUs
-        # fields = ('name', 'email', 'cpf', 'description',)
         fields = ('name', 'email', 'cpf', 'course_id', 'type_conversation', 'course_category_id', 'title', 'description', 'school_initials')
 
     def clean_school_initials(self, *args, **kwargs):

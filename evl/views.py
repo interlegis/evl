@@ -6,6 +6,7 @@ import requests
 import json
 from django.http import HttpResponse
 from django.http import JsonResponse
+from django.core import serializers
 from .models import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core import serializers
@@ -42,7 +43,7 @@ def cursos(request):
 def login(request):
     return render(request, 'evl/login.html')
 
-def fale_conosco(request):
+def faleConosco(request):
     if request.method == "POST":
         form = ContactUsForm(request.POST)
         if form.is_valid():
@@ -52,14 +53,26 @@ def fale_conosco(request):
             req = urllib.request.Request('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/adicionar')
             req.add_header('Content-Type', 'application/json; charset=utf-8')
             result = urlopen(req, json.dumps(form.data).encode('utf-8'))
-            return render(request, 'evl/home.html', context={'messagem_fale_conosco': "A mensagem foi enviada com sucesso"})
+            return render(request, 'evl/home.html', context={'messagem_faleConosco': "A mensagem foi enviada com sucesso"})
         else:
             print("ERROS =", form.errors)
-            return render(request, 'evl/fale_conosco.html', {'form': form})
+            return render(request, 'evl/faleConosco.html', {'form': form})
 
     else:
         form = ContactUsForm()
-        return render(request, 'evl/fale_conosco.html', {'form': form})
+        return render(request, 'evl/faleConosco.html', {'form': form})
+
+def mensagensFaleConosco(request):
+    if request.method == "POST":
+        id = request.POST['id']
+        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/mensagens?conversation_id=' + id)
+        # data = json.dumps(req.content.decode(encoding="utf-8"))
+        data = req.content.decode(encoding="utf-8")
+        return HttpResponse(data, content_type='application/json')
+    else:
+        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/conversa?school_initials=SSL&page=1&limit=20&not_answered=false')
+        messages = json.loads(req.content)
+        return render(request, 'evl/mensagensFaleConosco.html', {'messages': messages})
 
 def cadastro(request):
     return render(request, 'evl/cadastro.html')
@@ -82,6 +95,3 @@ def homeAluno(request):
 
 def baseCursos(request):
     return render(request, 'evl/baseCursos.html')
-
-def dashboard(request):
-    return render(request, 'evl/dashboard.html')
