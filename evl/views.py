@@ -82,3 +82,6 @@ def homeAluno(request):
 
 def baseCursos(request):
     return render(request, 'evl/baseCursos.html')
+
+def dashboard(request):
+    return render(request, 'evl/dashboard.html')

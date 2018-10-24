@@ -27,4 +27,5 @@ urlpatterns = [
     url(r'^comprovantes/', views.comprovantes, name='comprovantes'),
     url(r'^aluno', views.homeAluno, name='homealuno'),
     url(r'^baseCursos', views.baseCursos, name='baseCursos'),
+    url(r'^dashboard', views.dashboard, name='dashboard'),
 ]
