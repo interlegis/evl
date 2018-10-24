@@ -551,6 +551,10 @@
     background-image: url(../img/certificados.jpg) !important;
 }
 
+.bgFaleConosco{
+    background-image: url(../img/faleConosco.jpg) !important;
+}
+
 
 .display-2-edited {
     font-size: 2.5rem;
@@ -967,4 +971,31 @@ a:hover > .ico {
     color: rgba(0,0,0,.1);
     text-align: center;
     margin-bottom: 30px;
+}
+
+.tab-content-padding {
+  padding: 0px !important;
+}
+
+.nav-tabs-padding {
+  padding: 17px !important;
+  margin-bottom: -60px !important;
+  margin-left: 2rem !important;
+  box-shadow: none !important;
+}
+
+.nav-item-space {
+  padding: 10px;
+}
+
+.tab {
+  color: black;
+}
+
+a {
+  color: black !important;
+}
+
+a.active {
+  color: blue !important;
 }
