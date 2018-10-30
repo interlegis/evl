@@ -991,11 +991,3 @@ a:hover > .ico {
 .tab {
   color: black;
 }
-
-a {
-  color: black !important;
-}
-
-a.active {
-  color: blue !important;
-}
