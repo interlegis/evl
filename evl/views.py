@@ -18,8 +18,6 @@ from .forms import ContactUsForm
 from django.core.mail import EmailMessage
 from datetime import datetime
 from urllib.request import urlopen
-import urllib.parse
-import urllib.request
 from django.contrib import messages
 from django.template import context
 from datetime import datetime
@@ -31,7 +29,9 @@ def home(request):
 
 def cursos(request):
     response_cursos = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos')
+    # response_cursos = requests.get('http://localhost:3000/api/v1/cursos')
     response_categorias = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos')
+    # response_categorias = requests.get('http://localhost:3000/api/v1/categorias_cursos')
 
     cursos = response_cursos.json()
     cursos = json.loads(json.dumps(cursos))
@@ -54,9 +54,6 @@ def faleConosco(request):
     if request.method == "POST":
         form = ContactUsForm(request.POST)
         if form.is_valid():
-            print("FOrma = ", form.data)
-
-            print("JSON", json.dumps(form.data))
             req = urllib.request.Request('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/adicionar')
             req.add_header('Content-Type', 'application/json; charset=utf-8')
             result = urlopen(req, json.dumps(form.data).encode('utf-8'))
@@ -64,7 +61,6 @@ def faleConosco(request):
         else:
             print("ERROS =", form.errors)
             return render(request, 'evl/faleConosco.html', {'form': form})
-
     else:
         form = ContactUsForm()
         return render(request, 'evl/faleConosco.html', {'form': form})
@@ -77,9 +73,15 @@ def mensagensFaleConosco(request):
         data = req.content.decode(encoding="utf-8")
         return HttpResponse(data, content_type='application/json')
     else:
-        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/conversa?school_initials=SSL&page=1&limit=20&not_answered=false')
+        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/conversa_usuario?cpf=045.232.691-57')
         messages = json.loads(req.content)
         return render(request, 'evl/mensagensFaleConosco.html', {'messages': messages})
+    # else
+    #     data = {}
+    #     data[""]
+    #     req = urllib.request.Request('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/adicionar')
+    #     req.add_header('Content-Type', 'application/json; charset=utf-8')
+    #     result = urlopen(req, json.dumps(form.data).encode('utf-8'))
 
 def cadastro(request):
     return render(request, 'evl/cadastro.html')
