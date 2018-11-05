@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
+from django.conf.urls import include
 from . import views
 
 urlpatterns = [
@@ -29,4 +30,7 @@ urlpatterns = [
     url(r'^aluno', views.homeAluno, name='homealuno'),
     url(r'^baseCursos', views.baseCursos, name='baseCursos'),
     url(r'^dashboard', views.dashboard, name='dashboard'),
+    url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+    url(r'^secret$', views.secret_page, name='secret'),
+   # url(r'^accounts/login/$', views.loginOAuth, name="loginOAuth")
 ]
