@@ -1,0 +1,36 @@
+{% extends 'evl/base.html' %}
+{% block content %}
+    <title>EVL - Validar Certificado</title>
+
+{% if alerta %}
+  <div class="alert alert-danger" style="margin: 0 auto;">
+    <strong>{{ alerta }}</strong>
+  </div>
+{% endif %}
+<div class="bc-icons-2">
+  <ol class="bcAdditionalProperties breadcrumb ">
+    <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+    <li class="breadcrumb-item active">Validação do Certificado</li>
+  </ol>
+</div>
+<body>
+  {% include 'evl/imports.html' %}
+  <div class="row">
+    <h1 class="display-2-edited mb-2 wow fadeInDown titulo-certificado" data-wow-delay="0.3s">Validação de Certificado</h1>
+  </div>
+
+  <form method="POST" role="form" novalidate>
+    {% csrf_token %}
+    <br style="clear:both">
+      <div class="form-group text-center" style="width: 500px; margin: 0 auto; margin-bottom: 30px; margin-top:30px">
+        <small class="text-danger">
+          {{ form.code_id.errors.as_text }}
+        </small>
+        {{ form.code_id }}
+      </div>
+    <div class="marginBottomBotaoEnviarContact" style="text-align: center">
+      <button type="submit" id="submit" name="submit" class="btn btn-success">Validar certificado</button>
+    </div>
+  </form>
+</body>
+{% endblock %}

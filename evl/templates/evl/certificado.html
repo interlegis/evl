@@ -1,0 +1,62 @@
+{% extends 'evl/base.html' %}
+{% block content %}
+    <title>EVL - Validar Certificado</title>
+
+<body>
+  {% include 'evl/imports.html' %}
+  <div class="bc-icons-2">
+      <ol class="bcAdditionalProperties breadcrumb ">
+          <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+          <li class="breadcrumb-item"><a class="black-text" href="{% url 'validarCertificado' %}">Validação do Certificado</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+          <li class="breadcrumb-item active">Certificado</li>
+      </ol>
+  </div>
+  <div class="row">
+    <h1 class="display-2-edited mb-2 wow fadeInDown titulo-certificado" data-wow-delay="0.3s">Certificado</h1>
+  </div>
+  <div class="row align-items-center d-flex justify-content-center" style="margin-top: 30px">
+    <div class="">
+      <div class="card card-size-certificado ">
+        <div class="card-header header-color-certificado">
+          <h1 class="certificado_titles">Nome</h1>
+        </div>
+        <div class="card-body align-items-center d-flex justify-content-center">
+          <h3 class="certificado_atributo">{{ certificado.nome_aluno }}</h3>
+        </div>
+      </div>
+      <div class="card card-size-certificado ">
+        <div class="card-header header-color-certificado">
+          <h1 class="certificado_titles">Cpf</h1>
+        </div>
+        <div class="card-body align-items-center d-flex justify-content-center">
+          <h3 class="certificado_atributo">{{ certificado.cpf }}</h3>
+        </div>
+      </div>
+      <div class="card card-size-certificado ">
+        <div class="card-header header-color-certificado">
+          <h1 class="certificado_titles">Curso</h1>
+        </div>
+        <div class="card-body align-items-center d-flex justify-content-center">
+          <h3 class="certificado_atributo">{{ certificado.curso }}</h3>
+        </div>
+      </div>
+      <div class="card card-size-certificado ">
+        <div class="card-header header-color-certificado">
+          <h1 class="certificado_titles">Duração</h1>
+        </div>
+        <div class="card-body align-items-center d-flex justify-content-center">
+          <h3 class="certificado_atributo">{{ certificado.duracao }}</h3>
+        </div>
+      </div>
+      <div class="card card-size-certificado ">
+        <div class="card-header header-color-certificado">
+          <h1 class="certificado_titles">Escola</h1>
+        </div>
+        <div class="card-body align-items-center d-flex justify-content-center">
+          <h3 class="certificado_atributo">{{ certificado.escola }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}

@@ -1,13 +1,18 @@
 {% extends 'evl/base.html' %}
 {% block content %}
 
+<script type="text/javascript">
+console.log("AQUIIII");
+console.log(document.cookie);
+</script>
+
 <title>EVL</title>
 {% if messagem_fale_conosco %}
   <div class="alert alert-success" style="margin: 0 auto;">
     <strong>{{ messagem_fale_conosco }}</strong>
   </div>
 {% endif %}
-
+<h2>{{ csrf_input }}</h2>
     <body>
     {% include 'evl/imports.html' %}
     <div class="view hm-white-light jarallax marginTopHome bgHomepage" style="background-size:cover !important;" data-jarallax='{"speed": 0.2}'>
@@ -92,5 +97,3 @@
     </body>
     </html>
     {% endblock %}
-
-

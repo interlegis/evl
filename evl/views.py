@@ -13,16 +13,29 @@ from django.core import serializers
 from django.shortcuts import redirect
 from django.shortcuts import render_to_response
 from django.core.validators import validate_email
-from .forms import ContactUsForm
+from .forms import FaleConoscoForm
+from .forms import ValidarCertificadoForm
 from django.core.mail import EmailMessage
 from datetime import datetime
 from urllib.request import urlopen
+import urllib.parse
+import urllib.request
 from django.contrib import messages
 from django.template import context
 from datetime import datetime
+from django.middleware.csrf import get_token
+from django.views.decorators.csrf import requires_csrf_token
+from django.core.exceptions import ObjectDoesNotExist
 
 def home(request):
-    return render(request, 'evl/home.html')
+    print("Request = ", request)
+    csrf_token = get_token(request)
+    csrftoken = request.COOKIES.get("csrftoken") #Para pegar o token
+    if csrftoken != "":
+        print("BOAA")
+        return render(request, 'evl/home.html', {'csrftoken': csrftoken})
+    else:
+        return render(request, 'evl/home.html')
 
 def cursos(request):
     response_cursos = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos')
@@ -45,7 +58,7 @@ def login(request):
 
 def faleConosco(request):
     if request.method == "POST":
-        form = ContactUsForm(request.POST)
+        form = FaleConoscoForm(request.POST)
         if form.is_valid():
             req = urllib.request.Request('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/adicionar')
             req.add_header('Content-Type', 'application/json; charset=utf-8')
@@ -55,7 +68,7 @@ def faleConosco(request):
             print("ERROS =", form.errors)
             return render(request, 'evl/faleConosco.html', {'form': form})
     else:
-        form = ContactUsForm()
+        form = FaleConoscoForm()
         return render(request, 'evl/faleConosco.html', {'form': form})
 
 def mensagensFaleConosco(request):
@@ -69,12 +82,7 @@ def mensagensFaleConosco(request):
         req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/conversa_usuario?cpf=045.232.691-57')
         messages = json.loads(req.content)
         return render(request, 'evl/mensagensFaleConosco.html', {'messages': messages})
-    # else
-    #     data = {}
-    #     data[""]
-    #     req = urllib.request.Request('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/adicionar')
-    #     req.add_header('Content-Type', 'application/json; charset=utf-8')
-    #     result = urlopen(req, json.dumps(form.data).encode('utf-8'))
+
 
 def cadastro(request):
     return render(request, 'evl/cadastro.html')
@@ -86,6 +94,25 @@ def certificados(request):
     req = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/certificados?cpf=000.000.000-00')
     certs = json.loads(req.content)
     return render(request, 'evl/certificados.html', {'certs': certs})
+
+def validarCertificado(request):
+    if request.method == "POST":
+        form = ValidarCertificadoForm(request.POST)
+        if form.is_valid():
+            req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/certificados/detalhar?code_id=' + request.POST['code_id'])
+            certificado = json.loads(req.content)
+            try:
+                print("CERTIFICADO = ", certificado["message"])
+                return render(request, 'evl/validarCertificado.html', {'form': form ,'alerta': certificado["message"]})
+            except Exception as e:
+                return render(request, 'evl/certificado.html', {'certificado': certificado['certificado']})
+        else:
+            print("ERROS =", form.errors)
+            return render(request, 'evl/validarCertificado.html', {'form': form})
+    else:
+        form = ValidarCertificadoForm()
+        return render(request, 'evl/validarCertificado.html', {'form': form})
+
 
 def comprovantes(request):
     return render(request, 'evl/comprovantes.html')
