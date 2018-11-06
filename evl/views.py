@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.shortcuts import render, redirect,get_object_or_404
+from django.contrib.auth.decorators import login_required
 import xlsxwriter
 import requests
 import json
@@ -26,6 +27,7 @@ from datetime import datetime
 from django.middleware.csrf import get_token
 from django.views.decorators.csrf import requires_csrf_token
 from django.core.exceptions import ObjectDoesNotExist
+from django.http.response import HttpResponse
 
 def home(request):
     print("Request = ", request)
@@ -53,10 +55,14 @@ def cursos(request):
 
     return render(request, 'evl/cursos.html', {'cursos' : cursos, 'categorias' : categorias})
 
+#@login_required()
 def login(request):
     return render(request, 'evl/login.html')
+    #return HttpResponse('Secret contents!', status=200)
 
+#@login_required(login_url='https://escolamodelows.interlegis.leg.br/log_in?return=XXX')
 def faleConosco(request):
+
     if request.method == "POST":
         form = FaleConoscoForm(request.POST)
         if form.is_valid():
@@ -117,8 +123,16 @@ def validarCertificado(request):
 def comprovantes(request):
     return render(request, 'evl/comprovantes.html')
 
+#@login_required(login_url='https://escolamodelows.interlegis.leg.br/log_in?return=URL')
 def homeAluno(request):
     return render(request, 'evl/homeAluno.html')
 
 def baseCursos(request):
     return render(request, 'evl/baseCursos.html')
+
+def dashboard(request):
+    return render(request, 'evl/dashboard.html')
+
+#@login_required(login_url='https://escolamodelows.interlegis.leg.br/log_in?return=URL')
+def secret_page(request, *args, **kwargs):
+    return HttpResponse('Secret contents!', status=200)
