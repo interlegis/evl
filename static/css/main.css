@@ -991,3 +991,11 @@ a:hover > .ico {
 .tab {
   color: black;
 }
+
+.corpo_mensagem {
+  margin-bottom: 20px;
+}
+
+.detalhes_mensagem {
+  font-weight: bold;
+}

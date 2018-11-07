@@ -30,14 +30,9 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.http.response import HttpResponse
 
 def home(request):
-    print("Request = ", request)
-    csrf_token = get_token(request)
-    csrftoken = request.COOKIES.get("csrftoken") #Para pegar o token
-    if csrftoken != "":
-        print("BOAA")
-        return render(request, 'evl/home.html', {'csrftoken': csrftoken})
-    else:
-        return render(request, 'evl/home.html')
+    response_analise = requests.get('https://escolamodelows.interlegis.leg.br/analise')
+    analises = response_analise.json()
+    return render(request, 'evl/home.html', {'analises': analises})
 
 def cursos(request):
     response_cursos = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos')
@@ -108,7 +103,7 @@ def validarCertificado(request):
             req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/certificados/detalhar?code_id=' + request.POST['code_id'])
             certificado = json.loads(req.content)
             try:
-                print("CERTIFICADO = ", certificado["message"])
+                print(certificado["message"])
                 return render(request, 'evl/validarCertificado.html', {'form': form ,'alerta': certificado["message"]})
             except Exception as e:
                 return render(request, 'evl/certificado.html', {'certificado': certificado['certificado']})
@@ -118,7 +113,6 @@ def validarCertificado(request):
     else:
         form = ValidarCertificadoForm()
         return render(request, 'evl/validarCertificado.html', {'form': form})
-
 
 def comprovantes(request):
     return render(request, 'evl/comprovantes.html')
