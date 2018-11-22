@@ -7,6 +7,10 @@
     <strong>{{ alerta }}</strong>
   </div>
 {% endif %}
+
+
+
+
 <div class="bc-icons-2">
   <ol class="bcAdditionalProperties breadcrumb ">
     <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
@@ -15,8 +19,11 @@
 </div>
 <body>
   {% include 'evl/imports.html' %}
-  <div class="row">
-    <h1 class="display-2-edited mb-2 wow fadeInDown titulo-certificado" data-wow-delay="0.3s">Validação de Certificado</h1>
+  <div class="paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none; margin-bottom: 0px !important;">
+      <h1 class="display-4 textBasicOrientation">
+          <h1 class="display-4 titleFontProperties2 textBasicOrientation">Validação do Certificado</h1>
+      </h1>
+      </p>
   </div>
 
   <form method="POST" role="form" novalidate>

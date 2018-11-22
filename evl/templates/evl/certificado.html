@@ -1,7 +1,10 @@
 {% extends 'evl/base.html' %}
-{% block content %}
-    <title>EVL - Validar Certificado</title>
 
+{% block content %}
+    {% load static %}
+
+    <title>EVL - Validar Certificado</title>
+    <link rel="stylesheet" href="{% static 'css/card_certificados.css' %}">
 <body>
   {% include 'evl/imports.html' %}
   <div class="bc-icons-2">
@@ -11,52 +14,88 @@
           <li class="breadcrumb-item active">Certificado</li>
       </ol>
   </div>
-  <div class="row">
-    <h1 class="display-2-edited mb-2 wow fadeInDown titulo-certificado" data-wow-delay="0.3s">Certificado</h1>
+
+  <div class="paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none; margin-bottom: 0px !important;">
+      <h1 class="display-4 textBasicOrientation">
+      </h1>
+      </p>
   </div>
-  <div class="row align-items-center d-flex justify-content-center" style="margin-top: 30px">
-    <div class="">
-      <div class="card card-size-certificado ">
-        <div class="card-header header-color-certificado">
-          <h1 class="certificado_titles">Nome</h1>
+
+    <div class="row tamCertificados">
+        <div class="card profile-card-3">
+            <div class="background-block">
+                <img src="https://images.pexels.com/photos/357514/pexels-photo-357514.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="profile-sample1" class="background"/>
+            </div>
+            <div class="profile-thumb-block">
+                <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="profile-image" class="profile"/>
+            </div>
+            <div>
+                <h2>{{ certificado.nome_aluno }}<small>CPF: {{ certificado.cpf }}</small></h2>
+            </div>
+
+            <div class="row tamCertificados">
+                <h3 class="certificado_atributo">{{ certificado.curso }}</h3>
+            </div>
+
+            <div class="row tamCertificados">
+                <h3 class="certificado_atributo">{{ certificado.duracao }}</h3>
+            </div>
+
+            <div class="row tamCertificados">
+                <h3 class="certificado_atributo">{{ certificado.escola }}</h3>
+            </div>
         </div>
-        <div class="card-body align-items-center d-flex justify-content-center">
-          <h3 class="certificado_atributo">{{ certificado.nome_aluno }}</h3>
+    </div>
+
+
+</body>
+{% endblock %}
+    <!--
+    <div class="row align-items-center d-flex justify-content-center" style="margin-top: 30px">
+      <div class="">
+        <div class="card card-size-certificado ">
+          <div class="card-header header-color-certificado">
+            <h1 class="certificado_titles">Nome</h1>
+          </div>
+          <div class="card-body align-items-center d-flex justify-content-center">
+            <h3 class="certificado_atributo">{{ certificado.nome_aluno }}</h3>
+          </div>
         </div>
-      </div>
-      <div class="card card-size-certificado ">
-        <div class="card-header header-color-certificado">
-          <h1 class="certificado_titles">Cpf</h1>
+        <div class="card card-size-certificado ">
+          <div class="card-header header-color-certificado">
+            <h1 class="certificado_titles">Cpf</h1>
+          </div>
+          <div class="card-body align-items-center d-flex justify-content-center">
+            <h3 class="certificado_atributo">{{ certificado.cpf }}</h3>
+          </div>
         </div>
-        <div class="card-body align-items-center d-flex justify-content-center">
-          <h3 class="certificado_atributo">{{ certificado.cpf }}</h3>
+        <div class="card card-size-certificado ">
+          <div class="card-header header-color-certificado">
+            <h1 class="certificado_titles">Curso</h1>
+          </div>
+          <div class="card-body align-items-center d-flex justify-content-center">
+            <h3 class="certificado_atributo">{{ certificado.curso }}</h3>
+          </div>
         </div>
-      </div>
-      <div class="card card-size-certificado ">
-        <div class="card-header header-color-certificado">
-          <h1 class="certificado_titles">Curso</h1>
+        <div class="card card-size-certificado ">
+          <div class="card-header header-color-certificado">
+            <h1 class="certificado_titles">Duração</h1>
+          </div>
+          <div class="card-body align-items-center d-flex justify-content-center">
+            <h3 class="certificado_atributo">{{ certificado.duracao }}</h3>
+          </div>
         </div>
-        <div class="card-body align-items-center d-flex justify-content-center">
-          <h3 class="certificado_atributo">{{ certificado.curso }}</h3>
-        </div>
-      </div>
-      <div class="card card-size-certificado ">
-        <div class="card-header header-color-certificado">
-          <h1 class="certificado_titles">Duração</h1>
-        </div>
-        <div class="card-body align-items-center d-flex justify-content-center">
-          <h3 class="certificado_atributo">{{ certificado.duracao }}</h3>
-        </div>
-      </div>
-      <div class="card card-size-certificado ">
-        <div class="card-header header-color-certificado">
-          <h1 class="certificado_titles">Escola</h1>
-        </div>
-        <div class="card-body align-items-center d-flex justify-content-center">
-          <h3 class="certificado_atributo">{{ certificado.escola }}</h3>
+        <div class="card card-size-certificado ">
+          <div class="card-header header-color-certificado">
+            <h1 class="certificado_titles">Escola</h1>
+          </div>
+          <div class="card-body align-items-center d-flex justify-content-center">
+            <h3 class="certificado_atributo">{{ certificado.escola }}</h3>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
-{% endblock %}
+
+  -->
+
+
