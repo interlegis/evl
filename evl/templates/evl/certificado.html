@@ -21,29 +21,43 @@
       </p>
   </div>
 
-    <div class="row tamCertificados">
-        <div class="card profile-card-3">
-            <div class="background-block">
+    <div class="row tamCertificados ">
+        <div class="card profile-card-3 hoverImg">
+            <div class="background-block marginBottomImg">
                 <img src="https://images.pexels.com/photos/357514/pexels-photo-357514.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="profile-sample1" class="background"/>
             </div>
-            <div class="profile-thumb-block">
+            <div class="row profile-thumb-block">
                 <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="profile-image" class="profile"/>
             </div>
-            <div>
-                <h2>{{ certificado.nome_aluno }}<small>CPF: {{ certificado.cpf }}</small></h2>
-            </div>
 
-            <div class="row tamCertificados">
-                <h3 class="certificado_atributo">{{ certificado.curso }}</h3>
-            </div>
 
-            <div class="row tamCertificados">
-                <h3 class="certificado_atributo">{{ certificado.duracao }}</h3>
-            </div>
+            <table>
+                <tr class="tableProperties">
+                    <td> <h3 class="titleCertificados">Nome: </h3></td>
+                    <td><h3 class="certificado_atributo"> {{ certificado.nome_aluno }}</h3></td>
+                </tr>
+                <tr class="tableProperties">
+                    <td> <h3 class="titleCertificados">CPF: </h3></td>
+                    <td><h3 class="certificado_atributo"> {{ certificado.cpf }}</h3></td>
+                </tr>
+                <tr class="tableProperties">
+                    <td> <h3 class="titleCertificados">Curso: </h3></td>
+                    <td><h3 class="certificado_atributo"> {{ certificado.curso }}</h3></td>
+                </tr>
+                <tr class="tableProperties">
+                    <td> <h3 class="titleCertificados">Duração do curso: </h3></td>
+                    <td> <h3 class="certificado_atributo"> {{ certificado.duracao }}h</h3></td>
+                </tr>
+                <tr class="tableProperties">
+                    <td><h3 class="titleCertificados">Escola do certificado: </h3></td>
+                    <td> <h3 class="certificado_atributo"> {{ certificado.escola }}</h3></td>
+                </tr>
+            </table>
 
-            <div class="row tamCertificados">
-                <h3 class="certificado_atributo">{{ certificado.escola }}</h3>
-            </div>
+
+
+
+
         </div>
     </div>
 

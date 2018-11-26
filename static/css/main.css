@@ -63,7 +63,12 @@
     .img-fluid{
         max-width: 24% !important;
     }
-
+    .marginBottomImg{
+        margin-bottom: 15% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 56% !important;
+    }
 }
 
 @media screen and
@@ -130,6 +135,12 @@
     .img-fluid{
         max-width: 18% !important;
     }
+    .marginBottomImg{
+        margin-bottom: 14% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 56% !important;
+    }
 }
 
 @media screen and
@@ -194,6 +205,12 @@
         margin-bottom: 12% !important;
     }
 
+    .marginBottomImg{
+        margin-bottom: 14% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 56% !important;
+    }
 }
 
 @media screen and
@@ -249,6 +266,16 @@
     .marginBottomBotaoEnviarContact{
         margin-bottom: 12% !important;
     }
+    .nomeAluno{
+        margin-top: 8% !important;
+    }
+
+    .marginBottomImg{
+        margin-bottom: 11% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 56% !important;
+    }
 }
 
 @media screen and
@@ -301,6 +328,15 @@
         max-width: 70% !important;
         padding: 20px 60px 4px 39px;
     }
+    .nomeAluno{
+        margin-top: 7% !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 9% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 49% !important;
+    }
 }
 
 @media screen and
@@ -318,6 +354,15 @@
         right: 0;
         left: 0;
         z-index: 1030;
+    }
+    .nomeAluno{
+        margin-top: 5% !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 7% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 50% !important;
     }
 }
 
@@ -337,6 +382,16 @@
         left: 0;
         z-index: 1030;
     }
+    .nomeAluno{
+        margin-top: 5% !important;
+    }
+
+    .marginBottomImg{
+        margin-bottom: 7% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 50% !important;
+    }
 }
 
 @media screen and
@@ -354,6 +409,15 @@
         right: 0;
         left: 0;
         z-index: 1030;
+    }
+    .nomeAluno{
+        margin-top: 5% !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 5% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 50% !important;
     }
 }
 
@@ -374,6 +438,15 @@
         left: 0;
         z-index: 1030;
     }
+    .nomeAluno{
+        margin-top: 5% !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 5% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 50% !important;
+    }
 }
 
 @media screen and
@@ -392,6 +465,15 @@
         left: 0;
         z-index: 1030;
     }
+    .nomeAluno{
+        margin-top: 5% !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 4% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 50% !important;
+    }
 }
 
 @media screen and
@@ -409,6 +491,15 @@
         right: 0;
         left: 0;
         z-index: 1030;
+    }
+    .nomeAluno{
+        margin-top: 5% !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 4% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 50% !important;
     }
 }
 
@@ -998,4 +1089,41 @@ a:hover > .ico {
 
 .detalhes_mensagem {
   font-weight: bold;
+}
+.titleCertificados{
+    font-weight: bold;
+    font-size: 20px;
+}
+.tableProperties{
+    padding: 1% !important;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {background-color: #f2f2f2;}
+
+.hoverImg {
+    display: inline-block;
+    background: black;
+    padding: 0;
+}
+
+.hoverImg:hover img {
+    opacity: 0.7;
+}
+.hoverImg img {
+    display: block;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
 }
