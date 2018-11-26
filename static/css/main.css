@@ -1127,3 +1127,180 @@ tr:nth-child(odd) {background-color: #f2f2f2;}
     -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
+.list-group-item.active {
+    background-color: #A9A9A9 !important;
+    border-color: #696969 !important;
+
+}
+
+element.style {
+}
+.list-group .list-group-item:last-child {
+    -webkit-border-bottom-left-radius: .125rem;
+    border-bottom-left-radius: .125rem;
+    -webkit-border-bottom-right-radius: .125rem;
+    border-bottom-right-radius: .125rem;
+}
+.list-group .list-group-item:last-child {
+    -webkit-border-bottom-left-radius: .125rem;
+    border-bottom-left-radius: .125rem;
+    -webkit-border-bottom-right-radius: .125rem;
+    border-bottom-right-radius: .125rem;
+}
+.list-group .list-group-item:last-child {
+    -webkit-border-bottom-left-radius: .125rem;
+    border-bottom-left-radius: .125rem;
+    -webkit-border-bottom-right-radius: .125rem;
+    border-bottom-right-radius: .125rem;
+}
+.alert, .author-box, .breadcrumb, .card, .card .card-header, .dropdown-menu, .file-custom, .input-group-addon, .jumbotron, .list-group .list-group-item, .modal-content, .nav .nav-link, .nav-tabs, .navbar, .navbar-toggler, .page-item:first-child .page-link, .page-item:last-child .page-link, .pagination-lg .page-item:first-child .page-link, .pagination-lg .page-item:last-child .page-link, .pagination-sm .page-item:first-child .page-link, .pagination-sm .page-item:last-child .page-link, .popover, .tag, .tooltip-inner, img {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+.alert, .author-box, .breadcrumb, .card, .card .card-header, .dropdown-menu, .file-custom, .input-group-addon, .jumbotron, .list-group .list-group-item, .modal-content, .nav .nav-link, .nav-tabs, .navbar, .navbar-toggler, .page-item:first-child .page-link, .page-item:last-child .page-link, .pagination-lg .page-item:first-child .page-link, .pagination-lg .page-item:last-child .page-link, .pagination-sm .page-item:first-child .page-link, .pagination-sm .page-item:last-child .page-link, .popover, .tag, .tooltip-inner, img {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+.list-group a, .list-group a:hover, .list-group button, .list-group button:hover {
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.list-group a, .list-group a:hover, .list-group button, .list-group button:hover {
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.list-group a, .list-group a:hover, .list-group button, .list-group button:hover {
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.list-group-item, textarea {
+    width: 100%;
+}
+.list-group-item-light {
+    color: #818182;
+    background-color: #fdfdfe;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.list-group-item-light {
+    color: #818182;
+    background-color: #fdfdfe;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.list-group-item, textarea {
+    width: 100%;
+}
+.list-group-item-light {
+    color: #818182;
+    background-color: #fdfdfe;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+a, a.disabled:hover, a:disabled:hover {
+    color: #007bff;
+}
+a {
+    color: #0275d8;
+    cursor: pointer;
+}
+.pswp__container, .pswp__img, .waves-effect, a {
+    -webkit-tap-highlight-color: transparent;
+}
+.btn-flat, a, a:focus, a:hover {
+    text-decoration: none;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+a, a.disabled:hover, a:disabled:hover {
+    color: #007bff;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+a, a.disabled:hover, a:disabled:hover {
+    color: #007bff;
+}
+a {
+    color: #0275d8;
+    cursor: pointer;
+}
+.pswp__container, .pswp__img, .waves-effect, a {
+    -webkit-tap-highlight-color: transparent;
+}
+.btn-flat, a, a:focus, a:hover {
+    text-decoration: none;
+}
+a:hover {
+    color: black !important;
+}

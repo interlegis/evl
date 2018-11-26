@@ -50,7 +50,6 @@
               <div >
                 <h5 class="course-titulo">{{curso.nome}}</h5>
                 <p class="course-p">{{ curso.descrição }}</p>
-                <a href="#" class="btn btn-dark inscrevase" style="text-align: center">Inscreva-se</a>
               </div>
               <div>
                 {% if curso.logo == "" %}
@@ -73,6 +72,7 @@
                     {{ curso.carga_horaria }}h
                   </dd>
                 </dl>
+                  <a href="#" class="btn btn-success inscrevase" style="text-align: center">Inscreva-se</a>
               </div>
             </li>
           {% endif %}
