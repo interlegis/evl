@@ -32,5 +32,6 @@ urlpatterns = [
     url(r'^dashboard', views.dashboard, name='dashboard'),
     url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     url(r'^secret$', views.secret_page, name='secret'),
+    url(r'^oidc/', include('mozilla_django_oidc.urls')),
    # url(r'^accounts/login/$', views.loginOAuth, name="loginOAuth")
 ]

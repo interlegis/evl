@@ -41,6 +41,7 @@ EMAIL_PORT = 587
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'mozilla_django_oidc',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -62,6 +63,7 @@ MIDDLEWARE = [
     #'oauth2_provider.middleware.OAuth2TokenMiddleware',    
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'mozilla_django_oidc.middleware.SessionRefresh',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -113,8 +115,19 @@ AUTHENTICATION_BACKENDS = (
    # 'oauth2_provider.backends.OAuth2Backend',
     # Uncomment following if you want to access the admin
     #'django.contrib.auth.backends.ModelBackend'
-    'django.contrib.auth.backends.ModelBackend',
+    'evl.login.MyOIDCAB',
 )
+
+OIDC_RP_CLIENT_ID = '0949df8a7aaa7fc0a0ddcc290b5a6b9227bc1993536f6afadb7676a740115765'
+OIDC_RP_CLIENT_SECRET = '8f2e3a51e74c484aa8a5526d2a0b780d593f5f990ad38a33a708105fa1e6c2f4'
+OIDC_OP_AUTHORIZATION_ENDPOINT = 'http://localhost:3000/oauth/authorize'
+OIDC_OP_TOKEN_ENDPOINT = 'http://localhost:3000/oauth/token'
+OIDC_OP_USER_ENDPOINT = 'http://localhost:3000/oauth/userinfo'
+OIDC_RP_SIGN_ALGO = 'RS256'
+OIDC_OP_JWKS_ENDPOINT = 'http://localhost:3000/oauth/discovery/keys'
+LOGIN_REDIRECT_URL = '/aluno'
+LOGOUT_REDIRECT_URL = '/'
+OIDC_RP_SCOPES = 'openid profile email'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
