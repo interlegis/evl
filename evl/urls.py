@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^cadastro/$', views.cadastro, name='cadastro'),
     url(r'^meuscursos/', views.meusCursos, name='meusCursos'),
     url(r'^certificados/', views.certificados, name='certificados'),
+    url(r'^validarCertificado/', views.validarCertificado, name='validarCertificado'),
     url(r'^comprovantes/', views.comprovantes, name='comprovantes'),
     url(r'^aluno', views.homeAluno, name='homealuno'),
     url(r'^baseCursos', views.baseCursos, name='baseCursos'),

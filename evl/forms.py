@@ -32,7 +32,7 @@ for escola in escolas:
 
 lista_contatos = (('-1', '-- Selecione o tipo de contato --'), ('0', 'Reclamação'), ('1', 'Dúvida'), ('2', 'Sugestão'), ('3', 'Elogio'))
 
-class ContactUsForm(forms.ModelForm):
+class FaleConoscoForm(forms.ModelForm):
     name = forms.CharField(
         error_messages={'required': 'Este campo é obrigatório! Preencha este campo com o seu nome.'},
         widget=forms.TextInput(
@@ -150,3 +150,14 @@ class ContactUsForm(forms.ModelForm):
             raise forms.ValidationError("Este campo é obrigatório! Selecione um tipo de contato.")
         else:
             return type_conversation
+
+class ValidarCertificadoForm(forms.Form):
+    code_id = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                'class' : 'form-control',
+                'placeholder' : 'Código do certificado',
+                'class': 'text-center'
+            }
+        )
+    )

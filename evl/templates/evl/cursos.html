@@ -22,13 +22,13 @@
 
   <div class="row">
     <div class="col-4">
-      <div class="list-group" id="list-tab" role="tablist">
+      <div class="list-group menuCoursesColor" id="list-tab" role="tablist">
         {% for categoria in categorias %}
           {% if categoria == categorias.0 %}
-            <a class="list-group-item list-group-item-light active show" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
+            <a class="menuCoursesColor list-group-item list-group-item-light active show" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
           {% endif %}
           {% if categoria != categorias.0 %}
-            <a class="list-group-item list-group-item-light" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
+            <a class="menuCoursesColor list-group-item list-group-item-light" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
           {% endif %}
         {% endfor %}
       </ul>
@@ -50,7 +50,6 @@
               <div >
                 <h5 class="course-titulo">{{curso.nome}}</h5>
                 <p class="course-p">{{ curso.descrição }}</p>
-                <a href="#" class="btn btn-dark inscrevase" style="text-align: center">Inscreva-se</a>
               </div>
               <div>
                 {% if curso.logo == "" %}
@@ -73,6 +72,7 @@
                     {{ curso.carga_horaria }}h
                   </dd>
                 </dl>
+                  <a href="#" class="btn btn-success inscrevase" style="text-align: center">Inscreva-se</a>
               </div>
             </li>
           {% endif %}
