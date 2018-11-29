@@ -26,7 +26,6 @@ def validarCertificado(request):
             except Exception as e:
                 return render(request, 'certificado.html', {'certificado': certificado['certificado']})
         else:
-            print("ERROS =", form.errors)
             return render(request, 'validarCertificado.html', {'form': form})
     else:
         form = ValidarCertificadoForm()
