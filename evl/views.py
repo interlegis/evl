@@ -15,6 +15,7 @@ from django.shortcuts import redirect
 from django.shortcuts import render_to_response
 from django.core.validators import validate_email
 from .forms import FaleConoscoForm
+from .forms import AvaliarCursosForm
 from .forms import ValidarCertificadoForm
 from django.core.mail import EmailMessage
 from datetime import datetime
@@ -95,6 +96,33 @@ def certificados(request):
     req = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/certificados?cpf=000.000.000-00')
     certs = json.loads(req.content)
     return render(request, 'evl/certificados.html', {'certs': certs})
+
+def cursosPendentes(request):
+    req = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos/avaliar')
+    cursos = json.loads(req.content)
+    try:
+        cursos = cursos['cursos']
+        return render(request, 'evl/cursosPendentes.html', {'cursos': cursos})
+    except Exception as e:
+        return render(request, 'evl/cursosPendentes.html')
+
+def avaliarCursos(request, id):
+    if request.method == "POST":
+        form = AvaliarCursosForm(request.POST)
+        if form.is_valid():
+            categoria = request.POST['course_category_id']
+            estado = request.POST['status']
+            req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/cursos/avaliar?id='+ id + '&category=' + categoria + '&status=' + estado + '')
+            validar = json.loads(req.content)
+            print(validar["message"])
+            return render(request, 'evl/avaliarCursos.html', {'form': form, 'mensagem_avaliar': validar["message"]})
+        else:
+            print("ERROS =", form.errors)
+            return render(request, 'evl/avaliarCursos.html', {'form': form})
+    else:
+        form = AvaliarCursosForm()
+        return render(request, 'evl/avaliarCursos.html', {'form': form})
+
 
 def validarCertificado(request):
     if request.method == "POST":

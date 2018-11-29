@@ -1,0 +1,15 @@
+{% extends 'evl/base.html' %}
+{% block content %}
+    <title>EVL - Meus Cursos</title>
+<body>
+{% include 'evl/imports.html' %}
+<div class="">
+  {% for curso in cursos %}
+    <h1>Nome curso: {{curso.nome}}</h1>
+    <h1>Estado do curso: {{curso.status}}</h1>
+    <a class="links" href="{% url 'avaliarCursos' curso.id %}">Avaliar curso</a>
+    <h1>---------------------------------------</h1>
+  {% endfor %}
+</div>
+
+{% endblock %}
