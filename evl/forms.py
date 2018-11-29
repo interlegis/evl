@@ -8,7 +8,7 @@ import json
 requisicao_categoria = urlopen("https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos")
 response_categorias = json.load(requisicao_categoria)
 categorias = response_categorias['categorias_cursos']
-lista_categorias = [('-1', '-- Selecione uma categoria --')]
+lista_categorias = [('', '-- Selecione uma categoria --')]
 for categoria in categorias:
     if categoria['id'] != None:
         lista_categorias.append((categoria['id'], categoria['nome']))
@@ -31,6 +31,7 @@ for escola in escolas:
 
 
 lista_contatos = (('-1', '-- Selecione o tipo de contato --'), ('0', 'Reclamação'), ('1', 'Dúvida'), ('2', 'Sugestão'), ('3', 'Elogio'))
+lista_status = (('', '-- Selecione um estado --'), ('Aprovado', 'Aprovado'), ('Reprovado', 'Reprovado'))
 
 class FaleConoscoForm(forms.ModelForm):
     name = forms.CharField(
@@ -161,3 +162,23 @@ class ValidarCertificadoForm(forms.Form):
             }
         )
     )
+
+class AvaliarCursosForm(forms.Form):
+    status = forms.ChoiceField(
+        choices = lista_status,
+        widget = forms.Select(
+            attrs={
+                'class' : 'form-control',
+            }
+        )
+    )
+    course_category_id = forms.ChoiceField(
+        choices = lista_categorias,
+        widget = forms.Select(
+            attrs={
+                'class' : 'form-control',
+            }
+        )
+    )
+    class Meta:
+        fields = ('status', 'course_category_id')
