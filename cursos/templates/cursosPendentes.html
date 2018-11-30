@@ -1,8 +1,8 @@
-{% extends 'evl/base.html' %}
+{% extends 'base.html' %}
 {% block content %}
     <title>EVL - Meus Cursos</title>
 <body>
-{% include 'evl/imports.html' %}
+{% include 'imports.html' %}
 <div class="">
   {% for curso in cursos %}
     <h1>Nome curso: {{curso.nome}}</h1>

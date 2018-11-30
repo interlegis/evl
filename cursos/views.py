@@ -37,9 +37,9 @@ def cursosPendentes(request):
     cursos = json.loads(req.content)
     try:
         cursos = cursos['cursos']
-        return render(request, 'evl/cursosPendentes.html', {'cursos': cursos})
+        return render(request, 'cursosPendentes.html', {'cursos': cursos})
     except Exception as e:
-        return render(request, 'evl/cursosPendentes.html')
+        return render(request, 'cursosPendentes.html')
 
 def avaliarCursos(request, id):
     if request.method == "POST":
@@ -50,10 +50,10 @@ def avaliarCursos(request, id):
             req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/cursos/avaliar?id='+ id + '&category=' + categoria + '&status=' + estado + '')
             validar = json.loads(req.content)
             print(validar["message"])
-            return render(request, 'evl/avaliarCursos.html', {'form': form, 'mensagem_avaliar': validar["message"]})
+            return render(request, 'avaliarCursos.html', {'form': form, 'mensagem_avaliar': validar["message"]})
         else:
             print("ERROS =", form.errors)
-            return render(request, 'evl/avaliarCursos.html', {'form': form})
+            return render(request, 'avaliarCursos.html', {'form': form})
     else:
         form = AvaliarCursosForm()
-        return render(request, 'evl/avaliarCursos.html', {'form': form})
+        return render(request, 'avaliarCursos.html', {'form': form})
