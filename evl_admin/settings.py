@@ -49,6 +49,10 @@ INSTALLED_APPS = [
     'oauth2_provider',
     'corsheaders',
     'evl',
+    'cursos',
+    'fale_conosco',
+    'certificado',
+    'comprovante',
 ]
 # CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -59,7 +63,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    #'oauth2_provider.middleware.OAuth2TokenMiddleware',    
+    #'oauth2_provider.middleware.OAuth2TokenMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -72,6 +76,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -163,4 +168,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-

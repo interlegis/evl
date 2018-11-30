@@ -1,9 +1,9 @@
-{% extends 'evl/base.html' %}
+{% extends 'base.html' %}
 {% block content %}
     <title>EVL - Meus Certificados</title>
 
 <body>
-{% include 'evl/imports.html' %}
+{% include 'imports.html' %}
 <div class="bc-icons-2">
     <ol class="breadcrumb bcAdditionalProperties">
         <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
@@ -32,7 +32,6 @@
                                     <tbody>
                                     {% for cert in certs.certificados %}
                                     <tr class="table-light">
-
                                         <td>{{ cert.id }}</td>
                                         <td>{{ cert.data_de_emissao }}</td>
                                         <td>{{ cert.nota }}</td>
