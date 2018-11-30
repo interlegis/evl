@@ -1,8 +1,8 @@
-{% extends 'evl/base.html' %}
+{% extends 'base.html' %}
 {% block content %}
     <title>EVL - Meus Cursos</title>
 <body>
-{% include 'evl/imports.html' %}
+{% include 'imports.html' %}
 <div class="bc-icons-2">
     <ol class="breadcrumb bcAdditionalProperties">
         <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
@@ -49,11 +49,7 @@
                                     Você não possui nenhum curso finalizado.
                                 </div>
                             </div>
-
-
-
-
-                           </div>
+                         </div>
                     </div>
                 </div>
             </div>
@@ -111,5 +107,3 @@
 
     </script>
 {% endblock %}
-
-

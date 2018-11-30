@@ -1,4 +1,4 @@
-{% extends 'evl/base.html' %}
+{% extends 'base.html' %}
 {% block content %}
     <title>EVL - Validar Certificado</title>
 
@@ -7,10 +7,6 @@
     <strong>{{ alerta }}</strong>
   </div>
 {% endif %}
-
-
-
-
 <div class="bc-icons-2">
   <ol class="bcAdditionalProperties breadcrumb ">
     <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
@@ -18,7 +14,7 @@
   </ol>
 </div>
 <body>
-  {% include 'evl/imports.html' %}
+  {% include 'imports.html' %}
   <div class="paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none; margin-bottom: 0px !important;">
       <h1 class="display-4 textBasicOrientation">
           <h1 class="display-4 titleFontProperties2 textBasicOrientation">Validação do Certificado</h1>
