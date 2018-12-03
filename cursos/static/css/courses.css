@@ -282,3 +282,7 @@ ul.courseboxes {
 tr:hover {
     background-color: #DCDCDC;
 }
+
+a.menuCoursesColor:hover{
+    background-color: #DCDCDC;
+}

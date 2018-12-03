@@ -13,9 +13,9 @@
   <h1 class="display-4 textBasicOrientation">
     <h1 class="display-4 titleFontProperties2 textBasicOrientation">Catálogo de Cursos</h1>
   </h1>
-  <hr class="my-4">
-  <p class="lead subtitleFontProperties2 textBasicOrientation paddingDiv">Os cursos da EVL são dividos por temáticas. Cada temática contém uma lista de cursos relacionados a esse tema e que poderão ser de seu interesse.</p>
+    <p class="lead subtitleFontProperties2 textBasicOrientation paddingDiv">Os cursos da EVL são dividos por temáticas. Cada temática contém uma lista de cursos relacionados a esse tema e que poderão ser de seu interesse.</p>
 </p>
+    <hr class="my-4">
 </div>
 
 <div class="container page-content">
@@ -31,7 +31,6 @@
             <a class="menuCoursesColor list-group-item list-group-item-light" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
           {% endif %}
         {% endfor %}
-      </ul>
     </div>
   </div>
 
