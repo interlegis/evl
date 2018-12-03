@@ -5,4 +5,19 @@ $(document).ready(function() {
     $("#nav-tabContent > *").css("display", "none")
     $("#"+id+"").css("display", "block");
   });
-})
+});
+
+
+
+function selectEstado(select){
+    estado = $("#id_status").val();
+    console.log("ESTADO = ", $("#id_status").val());
+    if($('#id_status').val() == Aprovado)
+
+        $('#sugestao').css({'display': 'block'})
+    else
+        $('#sugestao').css({'display': 'none'})
+
+}
+
+

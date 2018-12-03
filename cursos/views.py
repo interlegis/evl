@@ -8,6 +8,7 @@ import json
 from .models import *
 import urllib.parse
 import urllib.request
+from .forms import AvaliarCursosForm
 
 
 def cursos(request):

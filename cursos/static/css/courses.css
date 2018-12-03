@@ -261,3 +261,24 @@ ul.courseboxes {
         padding-top: 0;
     }
 }
+
+.tamCourses{
+    width: 80% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.curso_atributo{
+    font-size: 20px;
+}
+.tr40{
+    width: 40% !important;
+}
+.tr20{
+    width: 20% !important;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #DCDCDC;
+}
