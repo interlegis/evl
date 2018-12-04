@@ -4,6 +4,12 @@
     {% load staticfiles %}
     <link href="{% static "../static/css/login.css" %}" rel="stylesheet">
 
+    <div class="bc-icons-2">
+        <ol class="bcAdditionalProperties breadcrumb ">
+            <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+            <li class="breadcrumb-item active">Log In</li>
+        </ol>
+    </div>
 
 <div class="container">
     <div class="login-form loginButton ">
