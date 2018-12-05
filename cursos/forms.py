@@ -19,7 +19,7 @@ class AvaliarCursosForm(forms.Form):
         widget = forms.Select(
             attrs={
                 'class' : 'form-control',
-                'onclick' : 'selectEstado(select)',
+                'onclick' : 'selectEstado()',
             }
         )
     )

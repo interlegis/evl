@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
-<link href="../static/css/courses.css" rel="stylesheet">
+<link href="{% static '/css/courses.css' %}" rel="stylesheet">
+
 <title>EVL - Meus Cursos</title>
     <body>
         {% if mensagem_avaliar %}
@@ -31,7 +34,7 @@
                                 </small>
                                 {{ form.status }}
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" id="categoria" style="display: none;">
                                 <small class="text-danger">
                                     {{ form.course_category_id.errors.as_text}}
                                 </small>
