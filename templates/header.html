@@ -1,3 +1,5 @@
+{% load static %}
+
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Bootstrap core CSS -->
@@ -250,7 +252,7 @@
 
 <nav class="navbar navbar-dark navbarBg">
     <a style="margin-bottom: auto; margin-top: auto;" href="{% url 'home' %}">
-        <img class="logoProperties" src="../static/img/transparente_bfg.png" alt="EVL">
+        <img class="logoProperties" src="{% static '/img/transparente_bfg.png' %}" alt="EVL">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent22" aria-controls="navbarSupportedContent22"
             aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon4"><span></span><span></span><span></span></div></button>
