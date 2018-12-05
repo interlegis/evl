@@ -2,7 +2,7 @@
 {% block content %}
 <title>EVL - Login</title>
     {% load staticfiles %}
-    <link href="{% static "../static/css/login.css" %}" rel="stylesheet">
+    <link href="../static/css/login.css" rel="stylesheet">
     <div class="bc-icons-2">
         <ol class="bcAdditionalProperties breadcrumb ">
             <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
@@ -10,8 +10,6 @@
         </ol>
     </div>
     <div class="gradientBackgroundTitle jumbotron" style="box-shadow: none; padding-top: 20px !important;">
-
-
         <div class="container">
             <div class="login-form loginButton ">
                 <div class="main-div backgroundForm boxShadowProperties">
@@ -33,8 +31,6 @@
                                     <i class="fa fa-twitter fa-2x socialMargin"></i>
                                 </div>
                             </div>
-
-
                             <div class="or-seperator"><b>ou</b></div>
                             <div class="form-group">
                                 <input type="email" class="form-control" id="inputEmail" placeholder=" E-Mail">
@@ -53,8 +49,4 @@
             </div>
         </div>
     </div>
-
-
-
-
 {% endblock %}
