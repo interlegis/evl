@@ -6,9 +6,6 @@ $(document).ready(function() {
     $("#"+id+"").css("display", "block");
   });
 });
-
-
-
 function selectEstado(select){
     estado = $("#id_status").val();
     console.log("ESTADO = ", $("#id_status").val());
@@ -19,5 +16,3 @@ function selectEstado(select){
         $('#sugestao').css({'display': 'none'})
 
 }
-
-

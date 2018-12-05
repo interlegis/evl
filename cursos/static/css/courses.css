@@ -1,14 +1,9 @@
-/* CSS Document */
-
-/* courseboxes */
 ul.courseboxes {
     padding-left: 0;
 }
-
 .page-footer.font-small{
     margin-top: 100px;
 }
-
 .courseboxes.flex-container {
     margin-left: -10px;
     margin-right: -10px;
@@ -261,7 +256,6 @@ ul.courseboxes {
         padding-top: 0;
     }
 }
-
 .tamCourses{
     width: 80% !important;
     margin-left: auto !important;
@@ -278,11 +272,9 @@ ul.courseboxes {
     width: 20% !important;
     text-align: center;
 }
-
 tr:hover {
     background-color: #DCDCDC;
 }
-
 a.menuCoursesColor:hover{
     background-color: #DCDCDC;
 }

@@ -3,54 +3,49 @@
 <link href=../static/css/certificados.css" rel="stylesheet">
 {% block content %}
 {% load static %}
-
     <title>EVL - Validar Certificado</title>
     <link rel="stylesheet" href="{% static '/static/css/card_certificados.css' %}">
     <div class="bc-icons-2">
-    <ol class="bcAdditionalProperties breadcrumb ">
-    <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
-    <li class="breadcrumb-item"><a class="black-text" href="{% url 'validarCertificado' %}">Validação do Certificado</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
-    <li class="breadcrumb-item active">Certificado</li>
-    </ol>
-    </div>
-
-    <div class="paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none; margin-bottom: 0px !important;">
-    <h1 class="display-4 textBasicOrientation">
-    </h1>
-    </p>
-    </div>
-
-    <div class="row tamCertificados ">
-    <div class="card profile-card-3 hoverImg">
-    <div class="background-block marginBottomImg">
-    <img src="https://images.pexels.com/photos/357514/pexels-photo-357514.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="profile-sample1" class="background"/>
-    </div>
-    <div class="row profile-thumb-block">
-    <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="profile-image" class="profile"/>
-    </div>
-    <table>
-    <tr class="tableProperties">
-    <td> <h3 class="titleCertificados">Nome: </h3></td>
-    <td><h3 class="certificado_atributo"> {{ certificado.nome_aluno }}</h3></td>
-    </tr>
-    <tr class="tableProperties">
-    <td> <h3 class="titleCertificados">CPF: </h3></td>
-    <td><h3 class="certificado_atributo"> {{ certificado.cpf }}</h3></td>
-    </tr>
-    <tr class="tableProperties">
-    <td> <h3 class="titleCertificados">Curso: </h3></td>
-    <td><h3 class="certificado_atributo"> {{ certificado.curso }}</h3></td>
-    </tr>
-    <tr class="tableProperties">
-    <td> <h3 class="titleCertificados">Duração do curso: </h3></td>
-    <td> <h3 class="certificado_atributo"> {{ certificado.duracao }}h</h3></td>
-    </tr>
-    <tr class="tableProperties">
-    <td><h3 class="titleCertificados">Escola do certificado: </h3></td>
-    <td> <h3 class="certificado_atributo"> {{ certificado.escola }}</h3></td>
-    </tr>
-    </table>
-    </div>
-    </div>
+        <ol class="bcAdditionalProperties breadcrumb ">
+            <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+            <li class="breadcrumb-item"><a class="black-text" href="{% url 'validarCertificado' %}">Validação do Certificado</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+            <li class="breadcrumb-item active">Certificado</li>
+        </ol>
+        </div>
+        <div class="paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none; margin-bottom: 0px !important;">
+            <h1 class="display-4 textBasicOrientation"></h1>
+        </div>
+        <div class="row tamCertificados">
+            <div class="card profile-card-3 hoverImg">
+                <div class="background-block marginBottomImg">
+                    <img src="https://images.pexels.com/photos/357514/pexels-photo-357514.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="profile-sample1" class="background"/>
+                </div>
+                <div class="row profile-thumb-block">
+                    <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="profile-image" class="profile"/>
+                </div>
+                <table>
+                    <tr class="tableProperties">
+                        <td><h3 class="titleCertificados">Nome: </h3></td>
+                        <td><h3 class="certificado_atributo"> {{ certificado.nome_aluno }}</h3></td>
+                    </tr>
+                    <tr class="tableProperties">
+                        <td><h3 class="titleCertificados">CPF: </h3></td>
+                        <td><h3 class="certificado_atributo"> {{ certificado.cpf }}</h3></td>
+                    </tr>
+                    <tr class="tableProperties">
+                        <td><h3 class="titleCertificados">Curso: </h3></td>
+                        <td><h3 class="certificado_atributo"> {{ certificado.curso }}</h3></td>
+                    </tr>
+                    <tr class="tableProperties">
+                        <td><h3 class="titleCertificados">Duração do curso: </h3></td>
+                        <td><h3 class="certificado_atributo"> {{ certificado.duracao }}h</h3></td>
+                    </tr>
+                    <tr class="tableProperties">
+                        <td><h3 class="titleCertificados">Escola do certificado: </h3></td>
+                        <td><h3 class="certificado_atributo"> {{ certificado.escola }}</h3></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </body>
 {% endblock %}

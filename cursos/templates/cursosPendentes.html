@@ -3,58 +3,41 @@
     <link href="../static/css/courses.css" rel="stylesheet">
     <title>EVL - Meus Cursos</title>
 <body>
-{% include 'imports.html' %}
-<!--
-<div class="">
-  {% for curso in cursos %}
-    <h1>Nome curso: {{curso.nome}}</h1>
-    <h1>Estado do curso: {{curso.status}}</h1>
-    <a class="links" href="{% url 'avaliarCursos' curso.id %}">Avaliar curso</a>
-    <h1>---------------------------------------</h1>
-  {% endfor %}
-</div>
-
--->
+    {% include 'imports.html' %}
     <div class="bc-icons-2">
         <ol class="bcAdditionalProperties breadcrumb ">
             <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
-            <li class="breadcrumb-item active">Cursos Pendentes</li>
-
+        <li class="breadcrumb-item active">Cursos Pendentes</li>
         </ol>
     </div>
-<div style="min-height: calc(100% - 279px)">
-    <div>
-        <div class="paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none; margin-bottom: 0px !important;">
-            <h1 class="display-4 textBasicOrientation">
+    <div style="min-height: calc(100% - 279px)">
+        <div>
+            <div class="paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none; margin-bottom: 0px !important;">
+                <h1 class="display-4 textBasicOrientation"></h1>
                 <h1 class="display-4 titleFontProperties2 textBasicOrientation">Cursos Pendentes</h1>
-            </h1>
-            </p>
-        </div>
-
-        <div class="row tamCourses">
-            <div class="card profile-card-3 hoverImg">
-                {% for curso in cursos %}
-                    <table>
-                        <thead>
-                        <tr class="tableProperties" style="background-color: #c4c4c4 !important;">
-                            <th class="tr40"><h3 class="curso_atributo">Nome do Curso</h3></th>
-                            <th class="tr40"><h3 class="curso_atributo"> Status do Curso</h3></th>
-                            <th class="tr20"><h3 class="curso_atributo"> Avaliação</h3></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr class="tableProperties">
-                            <td class="tr40">{{curso.nome}}</td>
-                            <td class="tr40">{{curso.status}}</td>
-                            <td class="tr20"><a class="btn btn-primary btn-block" href="{% url 'avaliarCursos' curso.id %}">Avaliar</a></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                {% endfor %}
-
+            </div>
+            <div class="row tamCourses">
+                <div class="card profile-card-3 hoverImg">
+                    {% for curso in cursos %}
+                        <table>
+                            <thead>
+                                <tr class="tableProperties" style="background-color: #c4c4c4 !important;">
+                                    <th class="tr40"><h3 class="curso_atributo">Nome do Curso</h3></th>
+                                    <th class="tr40"><h3 class="curso_atributo"> Status do Curso</h3></th>
+                                    <th class="tr20"><h3 class="curso_atributo"> Avaliação</h3></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tableProperties">
+                                    <td class="tr40">{{curso.nome}}</td>
+                                    <td class="tr40">{{curso.status}}</td>
+                                    <td class="tr20"><a class="btn btn-primary btn-block" href="{% url 'avaliarCursos' curso.id %}">Avaliar</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
-
-</div>
 {% endblock %}

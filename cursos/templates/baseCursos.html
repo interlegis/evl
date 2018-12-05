@@ -3,30 +3,28 @@
     <link href="../static/css/courses.css" rel="stylesheet">
     <title>EVL - Página do Aluno</title>
 <body>
-{% include 'imports.html' %}
-<div class="bc-icons-2">
-    <ol class="breadcrumb bcAdditionalProperties">
-        <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
-        <li class="breadcrumb-item active">Aluno</li>
-    </ol>
-</div>
-
-<div class="view hm-white-light jarallax marginTopHome bgHome" style="background-size:cover!important;" data-jarallax='{"speed": 0.2}'>
-    <div class="full-bg-img">
-        <div class="container flex-center">
-            <div class="row">
-                <div class="col-md-12 wow fadeIn">
-                    <div class="text-center titleFontProperties">
-                        <h1 class="display-2 mb-2 wow fadeInDown" data-wow-delay="0.3s">Página do Aluno</h1>
-
-                        <a href="{% url 'meusCursos' %}" class="btn btn-primary btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="fa fa-list-ul"></i> Meus Cursos</a>
-                        <a href="{% url 'comprovantes' %}" class="btn btn-success btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="far fa-file"></i> Comprovantes</a>
-                        <a href="{% url 'certificados' %}" class="btn btn-danger btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="fa fa-graduation-cap"></i> Certificados</a>
+    {% include 'imports.html' %}
+    <div class="bc-icons-2">
+        <ol class="breadcrumb bcAdditionalProperties">
+            <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+            <li class="breadcrumb-item active">Aluno</li>
+        </ol>
+    </div>
+    <div class="view hm-white-light jarallax marginTopHome bgHome" style="background-size:cover!important;" data-jarallax='{"speed": 0.2}'>
+        <div class="full-bg-img">
+            <div class="container flex-center">
+                <div class="row">
+                    <div class="col-md-12 wow fadeIn">
+                        <div class="text-center titleFontProperties">
+                            <h1 class="display-2 mb-2 wow fadeInDown" data-wow-delay="0.3s">Página do Aluno</h1>
+                            <a href="{% url 'meusCursos' %}" class="btn btn-primary btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="fa fa-list-ul"></i> Meus Cursos</a>
+                            <a href="{% url 'comprovantes' %}" class="btn btn-success btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="far fa-file"></i> Comprovantes</a>
+                            <a href="{% url 'certificados' %}" class="btn btn-danger btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="fa fa-graduation-cap"></i> Certificados</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
+</body>
 {% endblock %}
