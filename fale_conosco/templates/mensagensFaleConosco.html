@@ -2,51 +2,49 @@
 {% block content %}
 <title>EVL - Dúvidas</title>
 <body>
-  {% include 'imports.html' %}
-  <div class="view hm-white-light jarallax marginTopHome bgFaleConosco"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
-    <div class="full-bg-img">
-      <div class="container flex-center">
-        <div class="row" style="width: 100% !important;" id="tabs">
-          <ul class="nav nav-tabs nav-tabs-padding">
-            <li class="active nav-item nav-item-space"><a id="mensagens" class="active" href="#tab1" data-toggle="tab" >Mensagens</a></li>
-            <li class="nav-item nav-item-space"><a id="detalhes" href="#tab2" data-toggle="tab" >Detalhes</a></li>
-          </ul>
-          <div class="col-md-12 wow fadeIn">
-            <div class="text-center titleFontProperties">
-              <div style="overflow: auto;" class="propriedades-tabela">
-                <div class="tab-content tab-content-padding">
-                  <div id="tab1">
-                    <table class="table table-hover display" id="minhaTabela">
-                      <thead>
-                        <tr class="table-light">
-                          <th scope="col">ID</th>
-                          <th scope="col">Título</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {% for message in messages %}
-                        <tr class="table-light">
-                          <td class="sorting_1">{{ message.id_conversa }}</td>
-                          <td class="sorting_1">{{ message.titulo }}</td>
-                        </tr>
-                        {% endfor %}
-                      </tbody>
-                    </table>
-                  </div>
-                  <div id="tab2">
-                  </div>
+    {% include 'imports.html' %}
+    <div class="view hm-white-light jarallax marginTopHome bgFaleConosco"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
+        <div class="full-bg-img">
+            <div class="container flex-center">
+                <div class="row" style="width: 100% !important;" id="tabs">
+                    <ul class="nav nav-tabs nav-tabs-padding">
+                        <li class="active nav-item nav-item-space"><a id="mensagens" class="active" href="#tab1" data-toggle="tab" >Mensagens</a></li>
+                        <li class="nav-item nav-item-space"><a id="detalhes" href="#tab2" data-toggle="tab" >Detalhes</a></li>
+                    </ul>
+                    <div class="col-md-12 wow fadeIn">
+                        <div class="text-center titleFontProperties">
+                            <div style="overflow: auto;" class="propriedades-tabela">
+                                <div class="tab-content tab-content-padding">
+                                    <div id="tab1">
+                                        <table class="table table-hover display" id="minhaTabela">
+                                            <thead>
+                                                <tr class="table-light">
+                                                    <th scope="col">ID</th>
+                                                    <th scope="col">Título</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for message in messages %}
+                                                <tr class="table-light">
+                                                    <td class="sorting_1">{{ message.id_conversa }}</td>
+                                                    <td class="sorting_1">{{ message.titulo }}</td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="tab2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-
-  <script type="text/javascript">
-  $(document).ready(function(){
+    <script type="text/javascript">
+    $(document).ready(function(){
     $('#minhaTabela tbody').on('click', 'tr', function(){
       var minhaTabela = $("#minhaTabela").DataTable();
       if ( $(this).hasClass('selected') ) {
@@ -122,12 +120,12 @@
         },
       });
     });
-  })
-  </script>
-  <script src="/static/js/jquery-3.3.1.js"></script>
-  <script src="/static/js/dataTable.js"></script>
-  <script type="text/javascript">
-  $.noConflict();
-  </script>
+    })
+    </script>
+    <script src="/static/js/jquery-3.3.1.js"></script>
+    <script src="/static/js/dataTable.js"></script>
+    <script type="text/javascript">
+    $.noConflict();
+    </script>
 </body>
 {% endblock %}

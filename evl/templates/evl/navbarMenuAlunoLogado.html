@@ -1,167 +1,133 @@
-<-- {% include 'imports.html' %}
+{% include 'imports.html' %}
 <style>
-
-    @media screen and
-    (min-width: 200px) and
-    (max-width: 449px){
-        .left {
-            min-width: 10% !important;
-        }
-
-    }
-
-    @media screen and
-    (min-width: 450px) and
-    (max-width: 639px){
-        .left {
-            min-width: 6% !important;
-        }
-
-    }
-
-    @media screen and
-    (min-width: 640px) and
-    (max-width: 799px){
-        .left .fas {
-            padding-top: 10px;
-            margin: 4px;
-            width: 20px;
-            color: black;
-        }
-        .left {
-            min-width: 5% !important;
-        }
-    }
-
-    @media screen and
-    (min-width: 800px) and
-    (max-width: 1023px){
-        .left .fas {
-            padding-top: 10px;
-            margin: 4px;
-            width: 20px;
-            color: black;
-        }
-    }
-
-
-    @media screen and
-    (min-width: 1024px) and
-    (max-width: 1279px){
-        .marginLeftIcons{
-            margin-left: 55px !important;
-        }
-    }
-
-
-    @media screen and
-    (min-width: 1280px) and
-    (max-width: 1365px){
-        .marginLeftIcons{
-            margin-left: 60px !important;
-        }
-
-    }
-
-    @media screen and
-    (min-width: 1366px) and
-    (max-width: 1439px){
-        .marginLeftIcons{
-            margin-left: 60px !important;
-        }
-
-    }
-
-
-    @media screen and
-    (min-width: 1440px) and
-    (max-width: 1599px){
-        .marginLeftIcons{
-            margin-left: 65px !important;
-        }
-
-    }
-
-    @media screen and
-    (min-width: 1600px) and
-    (max-width: 1679px){
-        .marginLeftIcons{
-            margin-left: 67px !important;
-        }
-
-    }
-
-    @media screen and
-    (min-width: 1680px) and
-    (max-width: 1920px){
-        .marginLeftIcons{
-            margin-left: 90px !important;
-        }
-        .left {
-            min-width: 2% !important;
-        }
-
-    }
-
-
-
-
-    .marginLeftIcons{
-        margin-left: 45px;
-    }
-
-    .left,
-    .right {
-        top: 50%;
-        float: left;
-        transform: translateY(3%);
-    }
-
+@media screen and
+(min-width: 200px) and
+(max-width: 449px){
     .left {
-        background: white;
-        display: inline-block;
-        white-space: nowrap;
-        width: 4%;
-        transition: width .5s;
+        min-width: 10% !important;
     }
-
-    .right {
-        background: #fff;
-        width: 350px;
-        transition: width 1s;
-        border-style: solid;
-        border-color: #ccc;
-        border-width: 1px;
+}
+@media screen and
+(min-width: 450px) and
+(max-width: 639px){
+    .left {
+        min-width: 6% !important;
     }
-
-    .left:hover {
-        width: 250px;
-    }
-
-    .item:hover {
-        background-color: whitesmoke;
-    }
-
+}
+@media screen and
+(min-width: 640px) and
+(max-width: 799px){
     .left .fas {
         padding-top: 10px;
-        margin: 8px;
+        margin: 4px;
         width: 20px;
         color: black;
     }
-
-    i.fas {
-        font-size: 17px;
-        vertical-align: middle !important;
+    .left {
+        min-width: 5% !important;
     }
-
-    .item {
-        height: 50px;
-        overflow: hidden;
+}
+@media screen and
+(min-width: 800px) and
+(max-width: 1023px){
+    .left .fas {
+        padding-top: 10px;
+        margin: 4px;
+        width: 20px;
         color: black;
     }
-
+}
+@media screen and
+(min-width: 1024px) and
+(max-width: 1279px){
+    .marginLeftIcons{
+        margin-left: 55px !important;
+    }
+}
+@media screen and
+(min-width: 1280px) and
+(max-width: 1365px){
+    .marginLeftIcons{
+        margin-left: 60px !important;
+    }
+}
+@media screen and
+(min-width: 1366px) and
+(max-width: 1439px){
+    .marginLeftIcons{
+        margin-left: 60px !important;
+    }
+}
+@media screen and
+(min-width: 1440px) and
+(max-width: 1599px){
+    .marginLeftIcons{
+        margin-left: 65px !important;
+    }
+}
+@media screen and
+(min-width: 1600px) and
+(max-width: 1679px){
+    .marginLeftIcons{
+        margin-left: 67px !important;
+    }
+}
+@media screen and
+(min-width: 1680px) and
+(max-width: 1920px){
+    .marginLeftIcons{
+        margin-left: 90px !important;
+    }
+    .left {
+        min-width: 2% !important;
+    }
+}
+.marginLeftIcons{
+    margin-left: 45px;
+}
+.left,
+.right {
+    top: 50%;
+    float: left;
+    transform: translateY(3%);
+}
+.left {
+    background: white;
+    display: inline-block;
+    white-space: nowrap;
+    width: 4%;
+    transition: width .5s;
+}
+.right {
+    background: #fff;
+    width: 350px;
+    transition: width 1s;
+    border-style: solid;
+    border-color: #ccc;
+    border-width: 1px;
+}
+.left:hover {
+    width: 250px;
+}
+.item:hover {
+    background-color: whitesmoke;
+}
+.left .fas {
+    padding-top: 10px;
+    margin: 8px;
+    width: 20px;
+    color: black;
+}
+i.fas {
+    font-size: 17px;
+    vertical-align: middle !important;
+}
+.item {
+    height: 50px;
+    overflow: hidden;
+    color: black;
+}
 </style>
-
 <div class="left">
     <div class="item">
         <i class="fas fa-fw fa-bars"></i>
@@ -175,5 +141,4 @@
     <div class="item">
         <a href="/certificados" class="propertiesNavbarAluno"><i class="fa fa-graduation-cap marginLeftIcons"></i>   Certificados</a>
     </div>
-
 </div>
