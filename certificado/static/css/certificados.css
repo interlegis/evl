@@ -19,3 +19,13 @@
   margin: 0 auto;
   margin-top: 20px;
 }
+.tamanhoInputCodCertificado{
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top:30px;
+}
+.noShadowMargin{
+    box-shadow: none;
+    margin-bottom: 0px !important;
+}
