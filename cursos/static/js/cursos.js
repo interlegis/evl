@@ -6,13 +6,14 @@ $(document).ready(function() {
     $("#"+id+"").css("display", "block");
   });
 });
-function selectEstado(select){
+
+function selectEstado(){
     estado = $("#id_status").val();
     console.log("ESTADO = ", $("#id_status").val());
-    if($('#id_status').val() == Aprovado)
-
-        $('#sugestao').css({'display': 'block'})
-    else
-        $('#sugestao').css({'display': 'none'})
-
+    if($('#id_status').val() == 'Aprovado'){
+      $('#categoria').css({'display': 'block'})
+    }
+    else {
+      $('#categoria').css({'display': 'none'})
+    }
 }
