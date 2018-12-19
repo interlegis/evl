@@ -29,5 +29,6 @@ urlpatterns = [
     path('', include('fale_conosco.urls')),
     path('', include('certificado.urls')),
     path('', include('comprovante.urls')),
+    url(r'^oidc/', include('mozilla_django_oidc.urls')),
    # url(r'^accounts/login/$', views.loginOAuth, name="loginOAuth")
 ]
