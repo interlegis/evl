@@ -11,9 +11,9 @@ import urllib.request
 
 
 def cursos(request):
-    response_cursos = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos')
+    response_cursos = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z')
     # response_cursos = requests.get('http://localhost:3000/api/v1/cursos')
-    response_categorias = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos')
+    response_categorias = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z')
     # response_categorias = requests.get('http://localhost:3000/api/v1/categorias_cursos')
 
     cursos = response_cursos.json()
