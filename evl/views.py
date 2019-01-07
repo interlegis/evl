@@ -9,6 +9,8 @@ import urllib.parse
 import urllib.request
 from django.http.response import HttpResponse
 
+from django.contrib.auth import logout
+
 def home(request):
     response_analise = requests.get('https://escolamodelows.interlegis.leg.br/analise')
     analises = response_analise.json()
@@ -32,3 +34,9 @@ def dashboard(request):
 #@login_required(login_url='https://escolamodelows.interlegis.leg.br/log_in?return=URL')
 def secret_page(request, *args, **kwargs):
     return HttpResponse('Secret contents!', status=200)
+
+
+
+def userLogout(request):
+    logout(request)
+    return redirect('http://localhost:3000/log_out?externo=' + 'http://localhost:8000/') #Alterar essa URL para produção

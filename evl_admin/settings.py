@@ -123,13 +123,13 @@ AUTHENTICATION_BACKENDS = (
     'evl.login.MyOIDCAB',
 )
 
-OIDC_RP_CLIENT_ID = '7001568ef6842b2419d42ab4aa3837f757de9530ead1287d4124fc435e14a62b'
-OIDC_RP_CLIENT_SECRET = '9c2383777624fff0b271cdbabfefacc6c1ddd2ced9ba559ce1aed25e5d169f09'
-OIDC_OP_AUTHORIZATION_ENDPOINT = 'https://escolamodelows.interlegis.leg.br/oauth/authorize'
-OIDC_OP_TOKEN_ENDPOINT = 'https://escolamodelows.interlegis.leg.br/oauth/token'
-OIDC_OP_USER_ENDPOINT = 'https://escolamodelows.interlegis.leg.br/oauth/userinfo'
+OIDC_RP_CLIENT_ID = '0949df8a7aaa7fc0a0ddcc290b5a6b9227bc1993536f6afadb7676a740115765'
+OIDC_RP_CLIENT_SECRET = '8f2e3a51e74c484aa8a5526d2a0b780d593f5f990ad38a33a708105fa1e6c2f4'
+OIDC_OP_AUTHORIZATION_ENDPOINT = 'http://localhost:3000/oauth/authorize'
+OIDC_OP_TOKEN_ENDPOINT = 'http://localhost:3000/oauth/token'
+OIDC_OP_USER_ENDPOINT = 'http://localhost:3000/oauth/userinfo'
 OIDC_RP_SIGN_ALGO = 'RS256'
-OIDC_OP_JWKS_ENDPOINT = 'https://escolamodelows.interlegis.leg.br/oauth/discovery/keys'
+OIDC_OP_JWKS_ENDPOINT = 'http://localhost:3000/oauth/discovery/keys'
 LOGIN_REDIRECT_URL = '/aluno'
 LOGOUT_REDIRECT_URL = '/'
 OIDC_RP_SCOPES = 'openid profile email'

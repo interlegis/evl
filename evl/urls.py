@@ -20,6 +20,7 @@ from . import views
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^login/$', views.login, name='login'),
+    url(r'^logout/$', views.userLogout, name='user_logout'),
     url(r'^cadastro/$', views.cadastro, name='cadastro'),
     url(r'^aluno', views.homeAluno, name='homealuno'),
     url(r'^dashboard', views.dashboard, name='dashboard'),
