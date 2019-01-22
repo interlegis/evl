@@ -27,7 +27,10 @@ def cursos(request):
     return render(request, 'cursos.html', {'cursos' : cursos, 'categorias' : categorias})
 
 def meusCursos(request):
-    return render(request, 'meusCursos.html')
+    user_cursos = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z')
+    cursos = json.loads(user_cursos.content)
+    return render(request, 'meusCursos.html', {'cursos': cursos})
+
 
 def baseCursos(request):
     return render(request, 'baseCursos.html')

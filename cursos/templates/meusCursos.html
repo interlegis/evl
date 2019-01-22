@@ -44,9 +44,22 @@
                                      id="trancados_message">
                                     Você não possui nenhum curso trancado.
                                 </div>
-                                <div class="animated fadeInDown alert alert-warning" role="alert"
+                                <div class="animated fadeInDown alert alert-warning propertiesTableCursosFinalizados" role="alert"
                                      id="finalizados_message">
-                                    Você não possui nenhum curso finalizado.
+                                    <table class="table table-hover " id="minhaTabela2" style="margin-bottom: 0px;">
+                                        <thead>
+                                        <tr class="table-light">
+                                            <th scope="col" class="titleThCourses">Cursos</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for curso in cursos.cursos %}
+                                            <tr class="table-light">
+                                                <td>- {{ curso.nome }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                          </div>
