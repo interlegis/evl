@@ -23,6 +23,11 @@
     <option name="TEMPLATE_FOLDERS">
       <list>
         <option value="$MODULE_DIR$/evl/templates/evl" />
+        <option value="$MODULE_DIR$/cursos/templates" />
+        <option value="$MODULE_DIR$/templates" />
+        <option value="$MODULE_DIR$/certificado/templates" />
+        <option value="$MODULE_DIR$/comprovante/templates" />
+        <option value="$MODULE_DIR$/fale_conosco/templates" />
       </list>
     </option>
   </component>

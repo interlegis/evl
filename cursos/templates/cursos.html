@@ -1,91 +1,170 @@
 {% extends 'base.html' %}
 {% block content %}
-{% include 'imports.html' %}
-<script src="/static/js/cursos.js"></script>
-<title>EVL - Catálogo de Cursos</title>
-<div class="bc-icons-2">
-  <ol class="breadcrumb bcAdditionalProperties">
-    <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
-    <li class="breadcrumb-item active">Catálogo de Cursos</li>
-  </ol>
-</div>
-<div class="paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none">
-  <h1 class="display-4 textBasicOrientation">
-    <h1 class="display-4 titleFontProperties2 textBasicOrientation">Catálogo de Cursos</h1>
-  </h1>
-  <hr class="my-4">
-  <p class="lead subtitleFontProperties2 textBasicOrientation paddingDiv">Os cursos da EVL são dividos por temáticas. Cada temática contém uma lista de cursos relacionados a esse tema e que poderão ser de seu interesse.</p>
-</p>
-</div>
-
-<div class="container page-content">
-
-  <div class="row">
-    <div class="col-4">
-      <div class="list-group menuCoursesColor" id="list-tab" role="tablist">
-        {% for categoria in categorias %}
-          {% if categoria == categorias.0 %}
-            <a class="menuCoursesColor list-group-item list-group-item-light active show" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
-          {% endif %}
-          {% if categoria != categorias.0 %}
-            <a class="menuCoursesColor list-group-item list-group-item-light" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
-          {% endif %}
-        {% endfor %}
-      </ul>
+    {% include 'imports.html' %}
+    <script src="/static/js/cursos.js"></script>
+    <title>EVL - Catálogo de Cursos</title>
+    <div class="bc-icons-2">
+        <ol class="breadcrumb bcAdditionalProperties">
+            <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+            <li class="breadcrumb-item active">Catálogo de Cursos</li>
+        </ol>
     </div>
-  </div>
+    <div class="paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none">
+        <h1 class="display-4 textBasicOrientation">
+            <h1 class="display-4 titleFontProperties2 textBasicOrientation">Catálogo de Cursos</h1>
+        </h1>
+        <hr class="my-4">
+        <p class="lead subtitleFontProperties2 textBasicOrientation paddingDiv">Os cursos da EVL são dividos por temáticas. Cada temática contém uma lista de cursos relacionados a esse tema e que poderão ser de seu interesse.</p>
+        </p>
+    </div>
 
-  <div class="col-8">
-    <div id="nav-tabContent">
-      {% for categoria in categorias %}
-        {% if categoria == categorias.0 %}
-          <div class="tab-pane fade active show" style="display:block" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
-        {% else %}
-          <div class="tab-pane fade active show" style="display:none" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
-        {% endif %}
-        {% for curso in cursos %}
-          {% if curso.categoria == categoria.id %}
-          <ul class="courseboxes" id="ul-{{ categoria.id }}">
-            <li class="catalogoCursosBoxProperties cards-cursos backgroundForm course-information">
-              <div >
-                <h5 class="course-titulo">{{curso.nome}}</h5>
-                <p class="course-p">{{ curso.descrição }}</p>
-              </div>
-              <div>
-                {% if curso.logo == "" %}
-                  <img src="https://saberes.senado.leg.br/theme/image.php/ilb/theme/1539274492/logo_saberes_xl" width="650px" alt="Logo do Curso Sistema Eletrônico de Informações - SEI! USAR" style="margin:50px 0px">
-                {% else %}
-                  <img src="{{ curso.logo }}" width="650px" alt="Logo do Curso Sistema Eletrônico de Informações - SEI! USAR" style="margin:50px 0px">
-                {% endif %}
-                <dl>
-                  <dt>Certificador:</dt>
-                  <dd>{{ curso.certificador }}</dd>
-                </dl>
-                <dl>
-                  <dt>Conteudista:</dt>
-                  <dd>{{ curso.conteudista }}</dd>
-                </dl>
-                <dl>
-                  <dt>Carga Horária:</dt>
-                  <dd>
-                    <input value="357" hidden="">
-                    {{ curso.carga_horaria }}h
-                  </dd>
-                </dl>
-                  <a href="#" class="btn btn-success inscrevase" style="text-align: center">Inscreva-se</a>
-              </div>
-            </li>
-          {% endif %}
-        {% endfor %}
-          </ul>
+    <div class="container page-content">
+
+    <div class="row">
+        <div class="col-3">
+            <div class="list-group menuCoursesColor" id="list-tab" role="tablist">
+                {% for categoria in categorias %}
+                    {% if categoria == categorias.0 %}
+                        <a class="menuCoursesColor list-group-item list-group-item-light active show" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
+                    {% endif %}
+                    {% if categoria != categorias.0 %}
+                        <a class="menuCoursesColor list-group-item list-group-item-light" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
         </div>
-      {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
 
+        <div class="col-9">
+            <div class="row" id="nav-tabContent">
+                {% for categoria in categorias %}
+                    {% if categoria == categorias.0 %}
+                        <div class="tab-pane fade active show" style="display:block" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
+                    {% else %}
+                        <div class="tab-pane fade active show" style="display:none" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
+                    {% endif %}
+                <section class="row" style="max-width: 100%; text-align: center; margin-left: auto; margin-right: auto;">
+
+                    {% for curso in cursos %}
+                        {% if curso.categoria == categoria.id %}
+                            <ul id="ul-{{ categoria.id }}">
+                                <div class="col" style="">
+                                    <div class="" style="margin: 4%; width: 250px !important;">
+                                        <div class="">
+                                            <!--Card-->
+                                            <div class="card hoverable" style="min-height: 449px;">
+                                                <!--Card image-->
+                                                <div style="min-width: 250px; min-height: 90px; padding: 7px;">
+                                                    <img class="img-fluid" src="https://saberes.senado.leg.br/theme/image.php/ilb/theme/1539274492/logo_saberes_xl" alt="Card image cap">
+                                                </div>
+                                                <!--Card content-->
+                                                <div class="card-body" style="padding: 0px !important;">
+                                                    <!--Title-->
+                                                    <h4 class="card-title">{{curso.nome}}</h4>
+                                                    <!--Text-->
+                                                    <p class="card-text">{{ curso.descrição }}</p>
+                                                    <dl>
+                                                        <dt>Certificador:</dt>
+                                                        <dd>{{ curso.certificador }}</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>Conteudista:</dt>
+                                                        <dd>{{ curso.conteudista }}</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>Carga Horária:</dt>
+                                                        <dd>
+                                                            <input value="357" hidden="">
+                                                            {{ curso.carga_horaria }}h
+                                                        </dd>
+                                                    </dl>
+                                                    <a href="#" class="btn btn-success inscrevase" style="text-align: center">Inscreva-se</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                    </section>
+                {% endfor %}
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!--
+    <div class="col-8">
+        <div id="nav-tabContent">
+            {% for categoria in categorias %}
+                {% if categoria == categorias.0 %}
+                    <div class="tab-pane fade active show" style="display:block" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
+                {% else %}
+                    <div class="tab-pane fade active show" style="display:none" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
+                {% endif %}
+            {% for curso in cursos %}
+                {% if curso.categoria == categoria.id %}
+                    <ul class="courseboxes" id="ul-{{ categoria.id }}">
+                    <li class="catalogoCursosBoxProperties cards-cursos backgroundForm course-information">
+                        <div >
+                            <h5 class="course-titulo">{{curso.nome}}</h5>
+                            <p class="course-p">{{ curso.descrição }}</p>
+                        </div>
+                        <div>
+                            {% if curso.logo == "" %}
+                                <img src="https://saberes.senado.leg.br/theme/image.php/ilb/theme/1539274492/logo_saberes_xl" width="650px" alt="Logo do Curso Sistema Eletrônico de Informações - SEI! USAR" style="margin:50px 0px">
+                            {% else %}
+                                <img src="{{ curso.logo }}" width="650px" alt="Logo do Curso Sistema Eletrônico de Informações - SEI! USAR" style="margin:50px 0px">
+                            {% endif %}
+                            <dl>
+                                <dt>Certificador:</dt>
+                                <dd>{{ curso.certificador }}</dd>
+                            </dl>
+                            <dl>
+                                <dt>Conteudista:</dt>
+                                <dd>{{ curso.conteudista }}</dd>
+                            </dl>
+                            <dl>
+                                <dt>Carga Horária:</dt>
+                                <dd>
+                                    <input value="357" hidden="">
+                                    {{ curso.carga_horaria }}h
+                                </dd>
+                            </dl>
+                            <a href="#" class="btn btn-success inscrevase" style="text-align: center">Inscreva-se</a>
+                        </div>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+            </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+
+-->
+
+    <style>
+
+        .card{
+            background-color: #f0f0f0;
+        }
+        .card .card-title{
+            color: black;
+        }
+        .card .card-text{
+            font-size: 14px;
+            border:none;
+        }
+
+
+    </style>
 
 {% endblock %}
