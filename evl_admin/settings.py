@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'fale_conosco',
     'certificado',
     'comprovante',
+    'administrador',
 ]
 # CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

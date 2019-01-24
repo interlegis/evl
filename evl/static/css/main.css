@@ -634,6 +634,14 @@
     background-image: url(../img/homepage.jpg) !important;
 }
 
+.bgAdministrador{
+    background-image: url(../img/portfolio/fullsize/5.jpg) !important;
+}
+
+.bgCursosPendentes{
+  background-image: url(../img/portfolio/fullsize/6.jpg) !important;
+}
+
 .bgComprovantes{
     background-image: url(../img/comprovantes.jpg) !important;
 }

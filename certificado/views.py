@@ -15,8 +15,8 @@ def certificados(request):
     return render(request, 'certificados.html', {'certs': certs})
 
 def validarCertificado(request):
-    if request.method == "POST":
-        form = ValidarCertificadoForm(request.POST)
+    if request.method == "GET":
+        form = ValidarCertificadoForm(request.GET)
         if form.is_valid():
             req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/certificados/detalhar?code_id=' + request.POST['code_id'])
             certificado = json.loads(req.content)
@@ -30,3 +30,11 @@ def validarCertificado(request):
     else:
         form = ValidarCertificadoForm()
         return render(request, 'validarCertificado.html', {'form': form})
+def validacaoQrCode(request, code):
+    if code:
+        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/certificados/detalhar?code_id=' + code)
+        certificado = json.loads(req.content)
+        try:
+            print(certificado["message"])
+        except Exception as e:
+            return render(request, 'certificado.html', {'certificado': certificado['certificado']})
