@@ -22,16 +22,18 @@
 
     <div class="row">
         <div class="col-3">
-            <div class="list-group menuCoursesColor" id="list-tab" role="tablist">
-                {% for categoria in categorias %}
-                    {% if categoria == categorias.0 %}
-                        <a class="menuCoursesColor list-group-item list-group-item-light active show" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
-                    {% endif %}
-                    {% if categoria != categorias.0 %}
-                        <a class="menuCoursesColor list-group-item list-group-item-light" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
-                    {% endif %}
-                {% endfor %}
-                </ul>
+            <div style="min-height: 370px;">
+                <div class="list-group menuCoursesColor" id="list-tab" role="tablist">
+                    {% for categoria in categorias %}
+                        {% if categoria == categorias.0 %}
+                            <a class="menuCoursesColor list-group-item list-group-item-light active show" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
+                        {% endif %}
+                        {% if categoria != categorias.0 %}
+                            <a class="menuCoursesColor list-group-item list-group-item-light" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -49,7 +51,7 @@
                         {% if curso.categoria == categoria.id %}
                             <ul id="ul-{{ categoria.id }}">
                                 <div class="col" style="">
-                                    <div class="" style="margin: 4%; width: 250px !important;">
+                                    <div class="marginCards" style="width: 250px !important;">
                                         <div class="">
                                             <!--Card-->
                                             <div class="card hoverable" style="min-height: 449px;">
@@ -78,7 +80,7 @@
                                                             {{ curso.carga_horaria }}h
                                                         </dd>
                                                     </dl>
-                                                    <a href="#" class="btn btn-success inscrevase" style="text-align: center">Inscreva-se</a>
+                                                    <a href="#" class="btn btn-success inscrevase buttonFixedBottom" style="text-align: center">Inscreva-se</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -150,7 +152,7 @@
 
 
 -->
-
+    </div>
     <style>
 
         .card{
@@ -164,6 +166,17 @@
             border:none;
         }
 
+        .buttonFixedBottom{
+            right: 0;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+        }
+
+    .marginCards{
+        margin: 4%;
+        margin-top: 0px !important;
+    }
 
     </style>
 
