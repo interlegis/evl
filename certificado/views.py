@@ -15,8 +15,8 @@ def certificados(request):
     return render(request, 'certificados.html', {'certs': certs})
 
 def validarCertificado(request):
-    if request.method == "GET":
-        form = ValidarCertificadoForm(request.GET)
+    if request.method == "POST":
+        form = ValidarCertificadoForm(request.POST)
         if form.is_valid():
             req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/certificados/detalhar?code_id=' + request.POST['code_id'])
             certificado = json.loads(req.content)
