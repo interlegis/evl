@@ -274,7 +274,7 @@
                 <a class="nav-link titlePropertiesNavbar" href="/faleConosco">Fale Conosco</a>
             </li>
             {% if user.profile %}
-              {% if user.profile.role %}
+              {% if user.profile.role == 1 %}
               <li class="nav-item">
                 <a class="nav-link titlePropertiesNavbar" href="/administrador">Administrador</a>
               </li>
