@@ -45,7 +45,7 @@
     </div>
 </div>
     {% if user.is_authenticated %}
-      <p>Current user: {{ user.profile.cpf }}</p>
+      <p>Current user: {{ user.profile.key }}</p>
       <a href="{% url 'user_logout' %}">Logout</a>
     {% else %}
       <a href="{% url 'oidc_authentication_init' %}">Login</a>

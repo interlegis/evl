@@ -8,6 +8,7 @@ class Profile(models.Model):
     cpf = models.CharField(max_length=20, blank=False, null=False)
     phone = models.CharField(max_length=20, blank=True, null=True)
     key = models.CharField(max_length=100,blank=False, null=False)
+    role = models.IntegerField(blank=False, null=False)
     class Meta:
         db_table = 'evl_profiles'
 

@@ -10,22 +10,35 @@ import urllib.parse
 import urllib.request
 from django.template import context
 from django.http.response import HttpResponse
+from evl import views
 
 
 def administrador(request):
-    return render(request, 'administrador.html')
+    if request.user.profile.role == 1:
+        return render(request, 'administrador.html')
+    else:
+        return redirect(views.homeAluno)
 
 def cursosPendentes(request):
-    req = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos/avaliar')
-    print(req.content)
-    cursos = json.loads(req.content)
-    return render(request, 'cursosPendentes.html', {'cursos': cursos})
+    if request.user.profile.role == 1:
+        req = requests.get('http://localhost:3000/api/v1/cursos/avaliar')
+        print(req.content)
+        cursos = json.loads(req.content)
+        return render(request, 'cursosPendentes.html', {'cursos': cursos})
+    else:
+        return redirect(views.homeAluno)
 
 def aprovar_curso(request, curso, categoria):
-    req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/cursos/avaliar', data={"id": curso, "category": 1, "status": "Aprovado"})
-    return redirect(cursosPendentes)
+    if request.user.profile.role == 1:
+        req = requests.post('http://localhost:3000/api/v1/cursos/avaliar', data={"id": curso, "category": 1, "status": "Aprovado"})
+        return redirect(cursosPendentes)
+    else:
+        return redirect(views.homeAluno)
 
 
 def reprovar_curso(request, curso, categoria):
-    req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/cursos/avaliar', data={"id": curso, "category": 1, "status": "Reprovado"})
-    return redirect(cursosPendentes)
+    if request.user.profile.role == 1:
+        req = requests.post('http://localhost:3000/api/v1/cursos/avaliar', data={"id": curso, "category": 1, "status": "Reprovado"})
+        return redirect(cursosPendentes)
+    else:
+        return redirect(views.homeAluno)

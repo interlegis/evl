@@ -273,14 +273,14 @@
             <li class="nav-item">
                 <a class="nav-link titlePropertiesNavbar" href="/faleConosco">Fale Conosco</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link titlePropertiesNavbar" href="/baseCursos">Página do Aluno</a>
-            </li>
-            {% if user.exists %}
-              {% if user.normal %}
-              {% elif user.admin %}
+            {% if user.profile %}
+              {% if user.profile.role == 1 %}
               <li class="nav-item">
-                  <a class="nav-link titlePropertiesNavbar" href="/admin">Administrador</a>
+                <a class="nav-link titlePropertiesNavbar" href="/administrador">Administrador</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link titlePropertiesNavbar" href="/baseCursos">Página do Aluno</a>
               </li>
               {% endif %}
             {% else %}

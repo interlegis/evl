@@ -8,6 +8,7 @@ import json
 import urllib.parse
 import urllib.request
 from django.http.response import HttpResponse
+from administrador import views
 
 from django.contrib.auth import logout
 
@@ -26,7 +27,10 @@ def cadastro(request):
 
 #@login_required(login_url='https://escolamodelows.interlegis.leg.br/log_in?return=URL')
 def homeAluno(request):
-    return render(request, 'evl/homeAluno.html')
+    if request.user.profile.role == 1:
+        return redirect(views.administrador)
+    else:
+        return render(request, 'evl/homeAluno.html')
 
 def dashboard(request):
     return render(request, 'evl/dashboard.html')
