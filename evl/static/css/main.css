@@ -1321,3 +1321,12 @@ a:hover {
 .menuCoursesColor:hover{
     background-color: #DCDCDC !important;
 }
+.btn-primary:hover{
+    color: white !important;
+}
+.btn-success:hover{
+    color: white !important;
+}
+.btn-danger:hover{
+    color: white !important;
+}
