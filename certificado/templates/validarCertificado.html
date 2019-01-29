@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
+    {% include 'imports.html' %}
+    <script src="/static/css/card_certificados.css"></script>
     <title>EVL - Validar Certificado</title>
 
 {% if alerta %}
@@ -14,7 +16,7 @@
   </ol>
 </div>
 <body>
-  {% include 'imports.html' %}
+
   <div class="paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none; margin-bottom: 0px !important;">
       <h1 class="display-4 textBasicOrientation">
           <h1 class="display-4 titleFontProperties2 textBasicOrientation">Validação do Certificado</h1>
