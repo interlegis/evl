@@ -1316,4 +1316,8 @@ a:hover {
 }
 .menuCoursesColor{
     color: #3b3b3b  !important;
+    background-color: white !important;
+}
+.menuCoursesColor:hover{
+    background-color: #DCDCDC !important;
 }
