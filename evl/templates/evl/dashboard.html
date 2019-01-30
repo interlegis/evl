@@ -1,15 +1,13 @@
-<script type="text/javascript" src="http://10.1.2.234:8080/pentaho/plugin/pentaho-cdf-dd/api/renderer/cde-embed.js"></script> 
+<script type="text/javascript" src="http://10.1.2.234:8080/pentaho/plugin/pentaho-cdf-dd/api/renderer/cde-embed.js"></script>
 
 <title>EVL - Painel de Indicadores</title>
 
 <div class="dashboardContainer">
     <script type="text/javascript">
-      require(['dash!/public/TesteBoxIndicador.wcdf'], 
-
+      require(['dash!/public/TesteBoxIndicador.wcdf'],
           function(SampleDash) {
               var sampleDash = new SampleDash("content1");
               sampleDash.render();
-              
           }
       );         
     </script>
