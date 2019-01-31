@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% include 'imports.html' %}
+    <script src="../static/js/adesao_institucional.js"></script>
+
+    <title>EVL - Catálogo de Cursos</title>
+
+    <div class="bc-icons-2">
+        <ol class="bcAdditionalProperties breadcrumb ">
+            <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+            <li class="breadcrumb-item active">Adesão Institucional</li>
+        </ol>
+    </div>
+<body>
+<div class="teste">
+
+</div>
+
+<div class="paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none; margin-bottom: 0px !important;">
+    <h1 class="display-4 textBasicOrientation">
+        <h1 class="display-4 titleFontProperties2 textBasicOrientation">Adesão Institucional</h1>
+    </h1>
+    </p>
+</div>
+
+<div class="espacamentoProperties">
+    <ul class="gallery_box">
+    {% for escola in escolas.escolas %}
+            <li class="boxproperties">
+                <a href="{{escola.url}}">
+
+                    <div class="box_data">
+                        <img src="{{escola.logo}}" class="imgclass" id="imgLogo">
+                        <span>{{escola.nome}}</span>
+                    </div>
+                </a>
+            </li>
+    {% endfor %}
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+{% endblock %}
