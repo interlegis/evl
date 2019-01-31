@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
+<script src="/static/js/administrador.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/administrador.css">
 
     <title>EVL - Meus Comprovantes</title>
 <body>
@@ -35,8 +37,8 @@
                                         <th scope="row">{{curso.nome}}</th>
                                         <th scope="row">{{curso.descricao}}</th>
                                         <th scope="row">{{curso.carga_horaria}}</th>
-                                        <td><a href="{% url 'aprovar_curso' curso=curso.id categoria=curso.ead_id%}"><i class="check icon"></i></a></td>
-                                        <td><a href="{% url 'reprovar_curso' curso=curso.id categoria=curso.ead_id%}"><i class="delete icon"></i></a></td>
+                                        <td><a data-toggle="modal" class="click-btn" id="{{curso.id}}" myvalue="{{curso.id}}" data-target="#confirm-submit"><i class="check icon"></i></a></td>
+                                        <td><a href="{% url 'reprovar_curso' curso=curso.id categoria=1%}"><i class="delete icon"></i></a></td>
                                     </tr>
                                     {% endfor %}
                                     </tbody>
@@ -48,7 +50,40 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="confirm-submit" tabindex="-1" style="margin-top: 140px;"role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content" style="border-radius: 25px;">
+              <div class="modal-header">
+                <h3 class="modal-title aviso-titulo" style="color: black;">Escolha uma categoria para aprovar o curso: <small style="color: #306345;">{{curso.nome}}</small></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h4 style="text-align: left; margin-bottom:20px;">Categorias</h4>
+                <div class="form-group">
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    {% for categoria in categorias.categorias_cursos %}
+                    <option value={{categoria.id}}>{{categoria.nome}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
+                <a id="enviar-btn" href="{% url 'aprovar_curso' curso=0 categoria=0 %}">
+                  <button type="button" class="btn btn-success">Enviar</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<script src="/static/js/dataTable.js"></script>
 </body>
+<script src="/static/js/dataTable.js"></script>
+<style media="screen">
+.modal-backdrop {
+  z-index: -1;
+}
+</style>
 {% endblock %}
