@@ -288,6 +288,11 @@
                   <a class="nav-link titlePropertiesNavbar"  href="{% url 'oidc_authentication_init' %}">Login</a>
               </li>
             {% endif %}
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link titlePropertiesNavbar" href="{% url 'user_logout' %}">Logout</a>
+            </li>
+            {% endif %}
         </ul>
     </div>
 </nav>
