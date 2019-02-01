@@ -24,7 +24,7 @@ def cursosPendentes(request):
         req1 = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z', data={"key": request.user.profile.key})
         categorias = json.loads(req1.content)
         print(categorias)
-        req2 = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos/avaliar?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z')
+        req2 = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos/aprovar?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z')
         cursos = json.loads(req2.content)
         return render(request, 'cursosPendentes.html', {'cursos': cursos, 'categorias': categorias})
     else:
@@ -32,7 +32,7 @@ def cursosPendentes(request):
 
 def aprovar_curso(request, curso, categoria):
     if request.user.profile.role == 1:
-        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/cursos/avaliar?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z', data={"id": curso, "category": categoria, "status": "Aprovado"})
+        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/cursos/aprovar?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z', data={"id": curso, "category": categoria, "status": "Aprovado"})
         return redirect(cursosPendentes)
     else:
         return redirect(views.homeAluno)
@@ -40,7 +40,7 @@ def aprovar_curso(request, curso, categoria):
 
 def reprovar_curso(request, curso, categoria):
     if request.user.profile.role == 1:
-        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/cursos/avaliar?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z', data={"id": curso, "category": categoria, "status": "Reprovado"})
+        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/cursos/aprovar?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z', data={"id": curso, "category": categoria, "status": "Reprovado"})
         return redirect(cursosPendentes)
     else:
         return redirect(views.homeAluno)
