@@ -1,0 +1,147 @@
+@media screen and
+(min-width: 200px) and
+(max-width: 449px){
+
+}
+
+@media screen and
+(min-width: 450px) and
+(max-width: 575px){
+
+}
+
+@media screen and
+(min-width: 576px) and
+(max-width: 639px){
+
+}
+
+@media screen and
+(min-width: 640px) and
+(max-width: 799px){
+
+
+}
+
+@media screen and
+(min-width: 800px) and
+(max-width: 1023px){
+
+
+}
+
+@media screen and
+(min-width: 1024px) and
+(max-width: 1279px){
+
+
+}
+
+@media screen and
+(min-width: 1280px) and
+(max-width: 1365px){
+
+}
+
+@media screen and
+(min-width: 1366px) and
+(max-width: 1439px){
+
+}
+
+@media screen and
+(min-width: 1440px) and
+(max-width: 1599px){
+
+}
+
+@media screen and
+(min-width: 1600px) and
+(max-width: 1679px){
+
+}
+
+@media screen and
+(min-width: 1680px) and
+(max-width: 4080px){
+
+}
+.espacamentoProperties{
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+img{ max-width:100%;}
+
+.gallery_box li{
+    width:33.333333%;
+    max-width: 100% ;
+    display:inline-block;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.gallery_box{
+    padding:0;
+    display: flow-root;
+}
+
+.gallery_box li:hover img {
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0.9);
+}
+.gallery_box li img{
+    -webkit-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+}
+.gallery_box li:nth-child(even) {
+    height: 250px;
+}
+.gallery_box li:nth-child(odd) {
+    height: 250px;
+}
+.gallery_box li:nth-child(odd) .box_data{
+    background: white;
+}
+.gallery_box li:nth-child(even) .box_data{
+    background: white;
+}
+.gallery_box .box_data{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom:0;
+    color:black;
+    font-weight: 300;
+}
+.gallery_box .box_data span{
+    position:absolute;
+    top: 95%;
+    transform: translateY(-50%);
+    left:0;
+    right:0;
+    font-size:24px;
+    height: 40px;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #efefef ));
+}
+.gallery_box li:hover .box_data{
+    background:transparent
+}
+.boxproperties{
+    border: 1px solid #DCDCDC;
+}
+.imgclass{
+
+}
+#imgLogo{
+    position: relative;
+    top: 35px;
+
+}
