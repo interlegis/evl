@@ -285,7 +285,7 @@
               {% endif %}
             {% else %}
               <li class="nav-item">
-                <a class="nav-link titlePropertiesNavbar" href="/login">Login</a>
+                  <a class="nav-link titlePropertiesNavbar"  href="{% url 'oidc_authentication_init' %}">Login</a>
               </li>
             {% endif %}
         </ul>
