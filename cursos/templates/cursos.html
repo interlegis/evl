@@ -104,9 +104,11 @@
                                                     <dl>
                                                         <dt>Avaliação:</dt>
                                                         <dd>
-                                                            <input value="357" hidden="">
-                                                            {{ curso.rating }}
-                                                        </dd>
+                                                          <div class="stars-outer">
+                                                            <div class="stars-inner" style="width: {{curso.rating_percentage}}%;"></div>
+                                                          </div>
+                                                          <span class="number-rating">{{curso.rating}}</span>
+                                                        <dd>
                                                     </dl>
                                                     <a href="#" class="btn btn-success inscrevase buttonFixedBottom" style="text-align: center">Inscreva-se</a>
                                                 </div>
@@ -134,6 +136,35 @@
 
     </div>
     <style>
+
+      .stars-outer {
+        position: relative;
+        display: inline-block;
+      }
+
+      .stars-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0;
+      }
+
+      .stars-outer::before {
+        content: "\f005 \f005 \f005 \f005 \f005";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #ccc;
+      }
+
+      .stars-inner::before {
+        content: "\f005 \f005 \f005 \f005 \f005";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #f8ce0b;
+      }
+
 
         .card{
             background-color: #f0f0f0;
