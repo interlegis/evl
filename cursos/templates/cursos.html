@@ -105,37 +105,14 @@
                                                             <dt>Avaliação:</dt>
                                                             <dd>
                                                                 <input value="357" hidden="">
-                                                                {{ curso.rating }}
-
-
-
-
-
 
 
 
 
                                                                 <div class="stars-outer">
-                                                                    <div class="stars-inner" style="width: 100%"></div>
+                                                                    <div class="stars-inner" style="width: {{ curso.rating_percentage}}%"></div>
                                                                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                                                {{ curso.rating }}
 
 
 
