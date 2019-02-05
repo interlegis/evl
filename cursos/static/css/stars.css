@@ -1,0 +1,45 @@
+.starrr {
+    display: inline-block; }
+.starrr a {
+    font-size: 16px;
+    padding: 0 1px;
+    cursor: pointer;
+    color: #FFD119;
+    text-decoration: none; }
+
+
+
+
+
+
+
+/*
+
+CHAMADA DOS ARQS
+
+ <script src="/static/js/cursos.js"></script>
+  <script src="/static/js/stars.js"></script>
+ */
+
+
+/*
+CHAMADA DO OBJETO
+
+ <span class="Estrellas"></span>
+ */
+
+
+
+/*
+COLOCAR A CHAMADA NO FIM DA PAGINA HTML
+
+    <script>
+$('.Estrellas').starrr({
+rating:0.8,
+change:function(e,valor){
+alert(valor);
+}
+});
+
+</script>
+  */
