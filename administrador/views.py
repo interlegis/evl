@@ -21,10 +21,10 @@ def administrador(request):
 
 def cursosPendentes(request):
     if request.user.profile.role == 1:
-        req1 = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos?key=' + request.user.profile.key)
+        req1 = requests.get('http://localhost:3000/api/v1/categorias_cursos?key=' + request.user.profile.key)
         categorias = json.loads(req1.content)
         print(categorias)
-        req2 = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos/aprovar?key=' + request.user.profile.key)
+        req2 = requests.get('http://localhost:3000/api/v1/cursos/aprovar?key=' + request.user.profile.key)
         cursos = json.loads(req2.content)
         return render(request, 'cursosPendentes.html', {'cursos': cursos, 'categorias': categorias})
     else:
@@ -32,7 +32,7 @@ def cursosPendentes(request):
 
 def aprovar_curso(request, curso, categoria):
     if request.user.profile.role == 1:
-        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/cursos/aprovar?key=' + request.user.profile.key, data={"id": curso, "category": categoria, "status": "Aprovado"})
+        req = requests.post('http://localhost:3000/api/v1/cursos/aprovar?key=' + request.user.profile.key, data={"id": curso, "category": categoria, "status": "Aprovado"})
         return redirect(cursosPendentes)
     else:
         return redirect(views.homeAluno)
@@ -40,7 +40,7 @@ def aprovar_curso(request, curso, categoria):
 
 def reprovar_curso(request, curso, categoria):
     if request.user.profile.role == 1:
-        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/cursos/aprovar?key=' + request.user.profile.key, data={"id": curso, "category": categoria, "status": "Reprovado"})
+        req = requests.post('http://localhost:3000/api/v1/cursos/aprovar?key=' + request.user.profile.key, data={"id": curso, "category": categoria, "status": "Reprovado"})
         return redirect(cursosPendentes)
     else:
         return redirect(views.homeAluno)

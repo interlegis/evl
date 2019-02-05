@@ -125,22 +125,6 @@ AUTHENTICATION_BACKENDS = (
     'evl.login.MyOIDCAB',
 )
 
-# PRODUCTION
-
-# OIDC_RP_CLIENT_ID = os.environ.get('EVL_TOKEN_APPLICATION_ID') #Production
-# OIDC_RP_CLIENT_SECRET = os.environ.get('EVL_TOKEN_SECRET') #Production
-
-# OIDC_OP_AUTHORIZATION_ENDPOINT = 'https://escolamodelows.interlegis.leg.br/oauth/authorize' #Production
-# OIDC_OP_TOKEN_ENDPOINT = 'https://escolamodelows.interlegis.leg.br/oauth/token' #Production
-# OIDC_OP_USER_ENDPOINT = 'https://escolamodelows.interlegis.leg.br/oauth/userinfo' #Production
-# OIDC_RP_SIGN_ALGO = 'RS256' #Production
-# OIDC_OP_JWKS_ENDPOINT = 'https://escolamodelows.interlegis.leg.br/oauth/discovery/keys' #Production
-# LOGIN_REDIRECT_URL = '/aluno' #Production
-# LOGOUT_REDIRECT_URL = '/' #Production
-# OIDC_RP_SCOPES = 'openid profile email' #Production
-# OIDC_VERIFY_JWT = False #Production
-# OIDC_USE_NONCE = False #Production
-
 # DEVELOPMENT
 
 OIDC_RP_CLIENT_ID = '0949df8a7aaa7fc0a0ddcc290b5a6b9227bc1993536f6afadb7676a740115765' #Local
