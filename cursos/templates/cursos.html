@@ -2,19 +2,20 @@
 {% block content %}
     {% include 'imports.html' %}
     <script src="/static/js/cursos.js"></script>
+    <script src="/static/js/stars2.js"></script>
     <script type="text/javascript">
-        jQuery(document).ready(function(){
+        jQuery(document).ready(function() {
 
             jQuery("#subirTopo").hide();
 
-            jQuery('a#subirTopo').click(function () {
+            jQuery('a#subirTopo').click(function() {
                 jQuery('body,html').animate({
                     scrollTop: 0
                 }, 800);
                 return false;
             });
 
-            jQuery(window).scroll(function () {
+            jQuery(window).scroll(function() {
                 if (jQuery(this).scrollTop() > 1000) {
                     jQuery('#subirTopo').fadeIn();
                 } else {
@@ -41,93 +42,118 @@
 
     <div class="container page-content">
 
-    <div class="row">
-        <div class="col-3">
-            <div style="min-height: 370px;">
-                <div class="list-group menuCoursesColor" id="list-tab" role="tablist">
-                    {% for categoria in categorias %}
-                        {% if categoria == categorias.0 %}
-                            <a class="menuCoursesColor list-group-item list-group-item-light active show" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
-                        {% endif %}
-                        {% if categoria != categorias.0 %}
-                            <a class="menuCoursesColor list-group-item list-group-item-light" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
-                        {% endif %}
-                    {% endfor %}
-                    </ul>
+        <div class="row">
+            <div class="col-3">
+                <div style="min-height: 370px;">
+                    <div class="list-group menuCoursesColor" id="list-tab" role="tablist">
+                        {% for categoria in categorias %}
+                            {% if categoria == categorias.0 %}
+                                <a class="menuCoursesColor list-group-item list-group-item-light active show" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
+                            {% endif %}
+                            {% if categoria != categorias.0 %}
+                                <a class="menuCoursesColor list-group-item list-group-item-light" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
+                            {% endif %}
+                        {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-9">
-            <div class="row" id="nav-tabContent">
-                {% for categoria in categorias %}
-                    {% if categoria == categorias.0 %}
-                        <div class="tab-pane fade active show" style="display:block" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
-                    {% else %}
-                        <div class="tab-pane fade active show" style="display:none" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
-                    {% endif %}
-                <section class="row" style="max-width: 100%; text-align: center; margin-left: auto; margin-right: auto;">
+            <div class="col-9">
+                <div class="row" id="nav-tabContent">
+                    {% for categoria in categorias %}
+                        {% if categoria == categorias.0 %}
+                            <div class="tab-pane fade active show" style="display:block" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
+                        {% else %}
+                            <div class="tab-pane fade active show" style="display:none" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
+                        {% endif %}
+                    <section class="row" style="max-width: 100%; text-align: center; margin-left: auto; margin-right: auto;">
+                        {% for curso in cursos %}
+                            {% if curso.categoria == categoria.id %}
+                                <ul id="ul-{{ categoria.id }}" class="animated bounceInLeft">
+                                    <div class="col" style="">
+                                        <div class="marginCards" style="width: 250px !important;">
+                                            <div class="">
+                                                <!--Card-->
+                                                <div class="card hoverable" style="min-height: 500px;">
+                                                    <!--Card image-->
+                                                    <div style="min-width: 250px; min-height: 90px; padding: 7px;">
+                                                        <img class="img-fluid" src="https://saberes.senado.leg.br/theme/image.php/ilb/theme/1539274492/logo_saberes_xl" alt="Card image cap">
+                                                    </div>
+                                                    <!--Card content-->
+                                                    <div class="card-body" style="padding: 0px !important;">
+                                                        <!--Title-->
+                                                        <h4 class="card-title">{{curso.nome}}</h4>
+                                                        <!--Text-->
+                                                        <p class="card-text">{{ curso.descrição }}</p>
+                                                        <dl>
+                                                            <dt>Certificador:</dt>
+                                                            <dd>{{ curso.certificador }}</dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>Conteudista:</dt>
+                                                            <dd>{{ curso.conteudista }}</dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>Carga Horária:</dt>
+                                                            <dd>
+                                                                <input value="357" hidden="">
+                                                                {{ curso.carga_horaria }}h
+                                                            </dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>Avaliação:</dt>
+                                                            <dd>
+                                                                <input value="357" hidden="">
 
-                    {% for curso in cursos %}
-                        {% if curso.categoria == categoria.id %}
-                            <ul id="ul-{{ categoria.id }}" class="animated bounceInLeft">
-                                <div class="col" style="">
-                                    <div class="marginCards" style="width: 250px !important;">
-                                        <div class="">
-                                            <!--Card-->
-                                            <div class="card hoverable" style="min-height: 500px;">
-                                                <!--Card image-->
-                                                <div style="min-width: 250px; min-height: 90px; padding: 7px;">
-                                                    <img class="img-fluid" src="https://saberes.senado.leg.br/theme/image.php/ilb/theme/1539274492/logo_saberes_xl" alt="Card image cap">
-                                                </div>
-                                                <!--Card content-->
-                                                <div class="card-body" style="padding: 0px !important;">
-                                                    <!--Title-->
-                                                    <h4 class="card-title">{{curso.nome}}</h4>
-                                                    <!--Text-->
-                                                    <p class="card-text">{{ curso.descrição }}</p>
-                                                    <dl>
-                                                        <dt>Certificador:</dt>
-                                                        <dd>{{ curso.certificador }}</dd>
-                                                    </dl>
-                                                    <dl>
-                                                        <dt>Conteudista:</dt>
-                                                        <dd>{{ curso.conteudista }}</dd>
-                                                    </dl>
-                                                    <dl>
-                                                        <dt>Carga Horária:</dt>
-                                                        <dd>
-                                                            <input value="357" hidden="">
-                                                            {{ curso.carga_horaria }}h
-                                                        </dd>
-                                                    </dl>
-                                                    <dl>
-                                                        <dt>Avaliação:</dt>
-                                                        <dd>
-                                                          <div class="stars-outer">
-                                                            <div class="stars-inner" style="width: {{curso.rating_percentage}}%;"></div>
-                                                          </div>
-                                                          <span class="number-rating">{{curso.rating}}</span>
-                                                        <dd>
-                                                    </dl>
-                                                    <a href="#" class="btn btn-success inscrevase buttonFixedBottom" style="text-align: center">Inscreva-se</a>
+
+
+
+                                                                <div class="stars-outer">
+                                                                    <div class="stars-inner" style="width: {{ curso.rating_percentage}}%"></div>
+                                                                </div>
+                                                                {{ curso.rating }}
+
+
+
+                                                            </dd>
+                                                        </dl>
+                                                        <a href="#" class="btn btn-success inscrevase buttonFixedBottom" style="text-align: center">Inscreva-se</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </ul>
-                        {% endif %}
+                                </ul>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                        </section>
                     {% endfor %}
+                    </div>
                 </div>
-                    </section>
-                {% endfor %}
-                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
-
-
         </div>
-    </div>
 
         <a id="subirTopo" class="btn btn-outline-dark">
             Subir
@@ -137,66 +163,41 @@
     </div>
     <style>
 
-      .stars-outer {
-        position: relative;
-        display: inline-block;
-      }
+        .rating-loading{width:25px;height:25px;font-size:0;color:#fff;background:url(../img/loading.gif) top left no-repeat;border:none}.rating-container .rating-stars{position:relative;cursor:pointer;vertical-align:middle;display:inline-block;overflow:hidden;white-space:nowrap}.rating-container .rating-input{position:absolute;cursor:pointer;width:100%;height:1px;bottom:0;left:0;font-size:1px;border:none;background:0 0;padding:0;margin:0}.rating-disabled .rating-input,.rating-disabled .rating-stars{cursor:not-allowed}.rating-container .star{display:inline-block;margin:0 3px;text-align:center}.rating-container .empty-stars{color:#aaa}.rating-container .filled-stars{position:absolute;left:0;top:0;margin:auto;color:#fde16d;white-space:nowrap;overflow:hidden;-webkit-text-stroke:1px #777;text-shadow:1px 1px #999}.rating-rtl{float:right}.rating-animate .filled-stars{transition:width .25s ease;-o-transition:width .25s ease;-moz-transition:width .25s ease;-webkit-transition:width .25s ease}.rating-rtl .filled-stars{left:auto;right:0;-moz-transform:matrix(-1,0,0,1,0,0) translate3d(0,0,0);-webkit-transform:matrix(-1,0,0,1,0,0) translate3d(0,0,0);-o-transform:matrix(-1,0,0,1,0,0) translate3d(0,0,0);transform:matrix(-1,0,0,1,0,0) translate3d(0,0,0)}.rating-rtl.is-star .filled-stars{right:.06em}.rating-rtl.is-heart .empty-stars{margin-right:.07em}.rating-lg{font-size:3.91em}.rating-md{font-size:3.13em}.rating-sm{font-size:2.5em}.rating-xs{font-size:2em}.rating-xl{font-size:4.89em}.rating-container .clear-rating{color:#aaa;cursor:not-allowed;display:inline-block;vertical-align:middle;font-size:60%;padding-right:5px}.clear-rating-active{cursor:pointer!important}.clear-rating-active:hover{color:#843534}.rating-container .caption{color:#999;display:inline-block;vertical-align:middle;font-size:60%;margin-top:-.6em;margin-left:5px;margin-right:0}.rating-rtl .caption{margin-right:5px;margin-left:0}@media print{.rating-container .clear-rating{display:none}}
 
-      .stars-inner {
-        position: absolute;
-        top: 0;
-        left: 0;
-        white-space: nowrap;
-        overflow: hidden;
-        width: 0;
-      }
-
-      .stars-outer::before {
-        content: "\f005 \f005 \f005 \f005 \f005";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        color: #ccc;
-      }
-
-      .stars-inner::before {
-        content: "\f005 \f005 \f005 \f005 \f005";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        color: #f8ce0b;
-      }
-
-
-        .card{
+        .card {
             background-color: #f0f0f0;
         }
-        .card .card-title{
+
+        .card .card-title {
             color: black;
         }
-        .card .card-text{
+
+        .card .card-text {
             font-size: 14px;
-            border:none;
+            border: none;
         }
 
-        .buttonFixedBottom{
+        .buttonFixedBottom {
             right: 0;
             bottom: 0;
             left: 0;
             position: absolute;
         }
 
-    .marginCards{
-        margin: 4%;
-        margin-top: 0px !important;
-    }
+        .marginCards {
+            margin: 4%;
+            margin-top: 0px !important;
+        }
 
-    .list-group-item-light:hover{
-        color: black !important;
-        font-weight: bold;
-    }
+        .list-group-item-light:hover {
+            color: black !important;
+            font-weight: bold;
+        }
 
         #subirTopo {
             text-decoration: none;
-            background: rgba(30,156,161,.9);
+            background: rgba(30, 156, 161, .9);
             bottom: 50px;
             right: 30px;
             color: #fff;
@@ -213,8 +214,36 @@
         }
 
         #subirTopo:hover {
-            opacity:1;
+            opacity: 1;
         }
-    </style>
 
+        .stars-outer {
+            position: relative;
+            display: inline-block;
+        }
+
+        .stars-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+        }
+
+        .stars-outer::before {
+            content: "\f005 \f005 \f005 \f005 \f005";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #ccc;
+        }
+
+        .stars-inner::before {
+            content: "\f005 \f005 \f005 \f005 \f005";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #f8ce0b;
+        }
+
+    </style>
 {% endblock %}
