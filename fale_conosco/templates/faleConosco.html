@@ -33,7 +33,7 @@
         <form method="POST" role="form" novalidate>
           {% csrf_token %}
           <br style="clear:both">
-
+          {% if not user.profile %}
     				<div class="form-group">
               <small class="text-danger">
                 {{ form.name.errors.as_text }}
@@ -58,6 +58,7 @@
               </small>
               {{ form.phone_number}}
             </div>
+          {% endif %}
             <div class="form-group">
               <small class="text-danger">
                 {{ form.school_initials.errors.as_text}}

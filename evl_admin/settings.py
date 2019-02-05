@@ -127,13 +127,13 @@ AUTHENTICATION_BACKENDS = (
 
 # DEVELOPMENT
 
-OIDC_RP_CLIENT_ID = os.environ.get('EVL_TOKEN_APPLICATION_ID') #Local
-OIDC_RP_CLIENT_SECRET = os.environ.get('EVL_TOKEN_SECRET') #Local
-OIDC_OP_AUTHORIZATION_ENDPOINT = 'https://escolamodelows.interlegis.leg.br//oauth/authorize' #Local
-OIDC_OP_TOKEN_ENDPOINT = 'https://escolamodelows.interlegis.leg.br//oauth/token' #Local
-OIDC_OP_USER_ENDPOINT = 'https://escolamodelows.interlegis.leg.br//oauth/userinfo' #Local
+OIDC_RP_CLIENT_ID = '0949df8a7aaa7fc0a0ddcc290b5a6b9227bc1993536f6afadb7676a740115765' #Local
+OIDC_RP_CLIENT_SECRET = '8f2e3a51e74c484aa8a5526d2a0b780d593f5f990ad38a33a708105fa1e6c2f4' #Local
+OIDC_OP_AUTHORIZATION_ENDPOINT = 'http://localhost:3000/oauth/authorize' #Local
+OIDC_OP_TOKEN_ENDPOINT = 'http://localhost:3000/oauth/token' #Local
+OIDC_OP_USER_ENDPOINT = 'http://localhost:3000/oauth/userinfo' #Local
 OIDC_RP_SIGN_ALGO = 'RS256' #Local
-OIDC_OP_JWKS_ENDPOINT = 'https://escolamodelows.interlegis.leg.br//oauth/discovery/keys' #Local
+OIDC_OP_JWKS_ENDPOINT = 'http://localhost:3000/oauth/discovery/keys' #Local
 LOGIN_REDIRECT_URL = '/aluno' #Local
 LOGOUT_REDIRECT_URL = '/' #Local
 OIDC_RP_SCOPES = 'openid profile email' #Local
@@ -181,7 +181,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [

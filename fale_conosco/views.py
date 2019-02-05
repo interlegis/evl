@@ -41,6 +41,6 @@ def mensagensFaleConosco(request):
         return HttpResponse(data, content_type='application/json')
     else:
         # req = requests.post('http://localhost:3000/api/v1/fale_conosco/conversa_usuario?cpf=045.232.691-57')
-        req = requests.post('http://localhost:3000/api/v1/fale_conosco/conversa_usuario?cpf=045.232.691-57')
+        req = requests.post('http://localhost:3000/api/v1/fale_conosco/conversa_usuario?cpf=' + request.user.profile.cpf)
         messages = json.loads(req.content)
         return render(request, 'mensagensFaleConosco.html', {'messages': messages})

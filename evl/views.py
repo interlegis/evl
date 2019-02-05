@@ -44,9 +44,4 @@ def secret_page(request, *args, **kwargs):
 
 def userLogout(request):
     logout(request)
-<<<<<<< HEAD
-    return redirect('https://escolamodelows.interlegis.leg.br//log_out?externo=' + 'https://evl.interlegis.leg.br/') #Alterar essa URL para produção
-=======
-    # return redirect('http://localhost:3000/log_out?externo=' + 'https://evl.interlegis.leg.br/') #Alterar essa URL para produção
     return redirect('http://localhost:3000/log_out?externo=' + 'http://localhost:8000/') #Alterar essa URL para produção
->>>>>>> ca27b3597f80220d9b02362495d1087cfdc52133
