@@ -13,7 +13,8 @@ from administrador import views
 from django.contrib.auth import logout
 
 def home(request):
-    response_analise = requests.get('https://escolamodelows.interlegis.leg.br/analise')
+    # response_analise = requests.get('https://escolamodelows.interlegis.leg.br/analise')
+    response_analise = requests.get('http://localhost:3000/analise')
     analises = response_analise.json()
     return render(request, 'evl/home.html', {'analises': analises})
 
@@ -43,4 +44,5 @@ def secret_page(request, *args, **kwargs):
 
 def userLogout(request):
     logout(request)
+    # return redirect('https://escolamodelows.interlegis.leg.br/log_out?externo=' + 'https://evl.interlegis.leg.br/') #Alterar essa URL para produção
     return redirect('http://localhost:3000/log_out?externo=' + 'http://localhost:8000/') #Alterar essa URL para produção
