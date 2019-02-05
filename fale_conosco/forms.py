@@ -4,7 +4,7 @@ from urllib.request import urlopen
 from localflavor.br.forms import BRCPFField
 import json
 
-requisicao_categoria = urlopen("https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z")
+requisicao_categoria = urlopen("http://localhost:3000/api/v1/categorias_cursos?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z")
 response_categorias = json.load(requisicao_categoria)
 categorias = response_categorias['categorias_cursos']
 lista_categorias = [('-1', '-- Selecione uma categoria --')]
@@ -12,7 +12,7 @@ for categoria in categorias:
     if categoria['id'] != None:
         lista_categorias.append((categoria['id'], categoria['nome']))
 
-requisicao_curso = urlopen("https://escolamodelows.interlegis.leg.br/api/v1/cursos?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z")
+requisicao_curso = urlopen("http://localhost:3000/api/v1/cursos?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z")
 response_cursos = json.load(requisicao_curso)
 cursos = response_cursos['cursos']
 lista_cursos = [('-1', '-- Selecione um curso --')]
@@ -20,7 +20,7 @@ for curso in cursos:
     if curso['id'] != None:
         lista_cursos.append((curso['id'], curso['nome']))
 
-requisicao_escola = urlopen("http://escolamodelows.interlegis.leg.br/api/v1/escolas?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z")
+requisicao_escola = urlopen("http://localhost:3000/api/v1/escolas?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z")
 response_escolas = json.load(requisicao_escola)
 escolas = response_escolas['escolas']
 lista_escolas = [('-1', '-- Selecione uma escola --')]
