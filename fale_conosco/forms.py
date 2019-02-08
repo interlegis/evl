@@ -31,7 +31,62 @@ for escola in escolas:
 
 lista_contatos = (('-1', 'Selecione o tipo de contato'), ('0', 'Reclamação'), ('1', 'Dúvida'), ('2', 'Sugestão'), ('3', 'Elogio'))
 
-class FaleConoscoForm(forms.Form):
+
+class FaleConoscoFormNotLogged(forms.Form):
+    course_id = forms.ChoiceField(
+        choices = lista_cursos,
+        widget = forms.Select(
+            attrs={
+                'class' : 'custom-select',
+            }
+        )
+    )
+    school_initials = forms.ChoiceField(
+        error_messages={'required': 'Este campo é obrigatório! Escolha a sua escola.'},
+        choices = lista_escolas,
+        widget = forms.Select(
+            attrs={
+                'class' : 'custom-select',
+            }
+        )
+    )
+    type_conversation = forms.ChoiceField(
+        choices = lista_contatos,
+        widget = forms.Select(
+            attrs={
+                'class' : 'custom-select',
+            }
+        )
+    )
+    course_category_id = forms.ChoiceField(
+        choices = lista_categorias,
+        widget = forms.Select(
+            attrs={
+                'class' : 'custom-select',
+            }
+        )
+    )
+    description = forms.CharField(
+        error_messages={'required': 'Este campo é obrigatório! Preencha este campo com a sua mensagem.'},
+        widget=forms.Textarea(
+            attrs={
+                'class' : 'form-control',
+                'placeholder' : 'Mensagem',
+                'rows': '10',
+                'cols': '50',
+                'style': 'max-height: 400px; min-height: 50px',
+            }
+        )
+    )
+    title = forms.CharField(
+        error_messages={'required': 'Este campo é obrigatório! Preencha este campo com o título.'},
+        widget=forms.TextInput(
+            attrs={
+                'class' : 'form-control',
+                'placeholder' : 'Título',
+            }
+        )
+    )
     name = forms.CharField(
         error_messages={'required': 'Este campo é obrigatório! Preencha este campo com o seu nome.'},
         widget=forms.TextInput(
@@ -41,7 +96,6 @@ class FaleConoscoForm(forms.Form):
             }
         )
     )
-
     email = forms.EmailField(
         error_messages={'required': 'Este campo é obrigatório! Preencha este campo com o seu email.'},
         widget=forms.TextInput(
@@ -61,12 +115,6 @@ class FaleConoscoForm(forms.Form):
             }
         )
     )
-    forms.CharField(widget=forms.TextInput(
-        attrs={
-            'class' : 'form-control',
-            'placeholder' : 'CPF',
-        }
-    ))
     phone_number = forms.CharField(
         error_messages={'required': 'Este campo é obrigatório! Preencha este campo com o seu telefone.'},
         widget=forms.TextInput(
@@ -76,67 +124,12 @@ class FaleConoscoForm(forms.Form):
             }
         )
     )
-    course_id = forms.ChoiceField(
-        choices = lista_cursos,
-        widget = forms.Select(
-            attrs={
-                'class' : 'custom-select',
-            }
-        )
-    )
-    school_initials = forms.ChoiceField(
-        error_messages={'required': 'Este campo é obrigatório! Escolha a sua escola.'},
-        choices = lista_escolas,
-        widget = forms.Select(
-            attrs={
-                'class' : 'custom-select',
-            }
-        )
-    )
-    type_conversation = forms.ChoiceField(
-        choices = lista_contatos,
-        widget = forms.Select(
-            attrs={
-                'class' : 'custom-select',
-            }
-        )
-    )
-    course_category_id = forms.ChoiceField(
-        choices = lista_categorias,
-        widget = forms.Select(
-            attrs={
-                'class' : 'custom-select',
-            }
-        )
-    )
-    description = forms.CharField(
-        error_messages={'required': 'Este campo é obrigatório! Preencha este campo com a sua mensagem.'},
-        widget=forms.Textarea(
-            attrs={
-                'class' : 'form-control',
-                'placeholder' : 'Mensagem',
-                'rows': '10',
-                'cols': '50',
-                'style': 'max-height: 400px; min-height: 50px',
-            }
-        )
-    )
-    title = forms.CharField(
-        error_messages={'required': 'Este campo é obrigatório! Preencha este campo com o título.'},
-        widget=forms.TextInput(
-            attrs={
-                'class' : 'form-control',
-                'placeholder' : 'Título',
-            }
-        )
-    )
 
     class Meta:
         fields = ('name', 'email', 'cpf', 'course_id', 'type_conversation', 'course_category_id', 'title', 'description', 'school_initials')
 
     def clean_school_initials(self, *args, **kwargs):
         school_initials = self.cleaned_data.get("school_initials")
-        print("INICIAIS = ", school_initials)
         if "-1" in school_initials:
             raise forms.ValidationError("Este campo é obrigatório! Selecione uma escola.")
         else:
@@ -149,7 +142,7 @@ class FaleConoscoForm(forms.Form):
         else:
             return type_conversation
 
-class FaleConoscoFormLogged(forms.Form):
+class FaleConoscoFormLogged(FaleConoscoFormNotLogged):
     name = forms.CharField(
         required = False,
         widget=forms.TextInput(
@@ -179,12 +172,6 @@ class FaleConoscoFormLogged(forms.Form):
             }
         )
     )
-    forms.CharField(widget=forms.TextInput(
-        attrs={
-            'class' : 'form-control',
-            'placeholder' : 'CPF',
-        }
-    ))
     phone_number = forms.CharField(
         required = False,
         widget=forms.TextInput(
@@ -193,75 +180,3 @@ class FaleConoscoFormLogged(forms.Form):
                 'placeholder' : 'Numero Celular',
             }
     ))
-    course_id = forms.ChoiceField(
-        choices = lista_cursos,
-        widget = forms.Select(
-            attrs={
-                'class' : 'custom-select',
-            }
-        )
-    )
-    school_initials = forms.ChoiceField(
-        error_messages={'required': 'Este campo é obrigatório! Escolha a sua escola.'},
-        choices = lista_escolas,
-        widget = forms.Select(
-            attrs={
-                'class' : 'custom-select',
-            }
-        )
-    )
-    type_conversation = forms.ChoiceField(
-        choices = lista_contatos,
-        widget = forms.Select(
-            attrs={
-                'class' : 'custom-select',
-            }
-        )
-    )
-    course_category_id = forms.ChoiceField(
-        choices = lista_categorias,
-        widget = forms.Select(
-            attrs={
-                'class' : 'custom-select',
-            }
-        )
-    )
-    description = forms.CharField(
-        error_messages={'required': 'Este campo é obrigatório! Preencha este campo com a sua mensagem.'},
-        widget=forms.Textarea(
-            attrs={
-                'class' : 'form-control',
-                'placeholder' : 'Mensagem',
-                'rows': '10',
-                'cols': '50',
-                'style': 'max-height: 400px; min-height: 50px',
-            }
-        )
-    )
-    title = forms.CharField(
-        error_messages={'required': 'Este campo é obrigatório! Preencha este campo com o título.'},
-        widget=forms.TextInput(
-            attrs={
-                'class' : 'form-control',
-                'placeholder' : 'Título',
-            }
-        )
-    )
-
-    class Meta:
-        fields = ('course_id', 'type_conversation', 'course_category_id', 'title', 'description', 'school_initials')
-
-    def clean_school_initials(self, *args, **kwargs):
-        school_initials = self.cleaned_data.get("school_initials")
-        print("INICIAIS = ", school_initials)
-        if "-1" in school_initials:
-            raise forms.ValidationError("Este campo é obrigatório! Selecione uma escola.")
-        else:
-            return school_initials
-
-    def clean_type_conversation(self, *args, **kwargs):
-        type_conversation = self.cleaned_data.get("type_conversation")
-        if "-1" in type_conversation:
-            raise forms.ValidationError("Este campo é obrigatório! Selecione um tipo de contato.")
-        else:
-            return type_conversation
