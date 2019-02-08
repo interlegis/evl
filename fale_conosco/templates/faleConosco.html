@@ -10,6 +10,12 @@
     });
 </script>
 
+<style media="screen">
+input[type=text]:disabled {
+  border-bottom: 1px solid #ccc !important;
+}
+</style>
+
 <title>EVL - Fale Conosco</title>
 {% include 'imports.html' %}
 <div class="bc-icons-2">
@@ -34,6 +40,20 @@
           {% csrf_token %}
           <br style="clear:both">
 
+          {% if user.profile %}
+            <div class="form-group">
+              <input type="text" name="name" class="form-control" placeholder={{user.username}} id="id_name" disabled>
+            </div>
+            <div class="form-group">
+              <input type="text" name="email" class="form-control" placeholder={{user.email}} id="id_email" disabled>
+            </div>
+            <div class="form-group">
+              <input type="text" name="phone" class="form-control" placeholder={{user.profile.phone}} id="id_phone" disabled>
+            </div>
+            <div class="form-group">
+              <input type="text" name="cpf" class="form-control" placeholder={{user.profile.cpf}} id="id_cpf" disabled>
+            </div>
+          {% else %}
     				<div class="form-group">
               <small class="text-danger">
                 {{ form.name.errors.as_text }}
@@ -58,6 +78,7 @@
               </small>
               {{ form.phone_number}}
             </div>
+          {% endif %}
             <div class="form-group">
               <small class="text-danger">
                 {{ form.school_initials.errors.as_text}}
