@@ -7,7 +7,7 @@ import requests
 import json
 from .models import *
 from django.shortcuts import render_to_response
-from .forms import FaleConoscoFormNotLogged, FaleConoscoFormLogged
+from .forms import FaleConoscoForm, FaleConoscoLoggedForm
 from urllib.request import urlopen
 import urllib.parse
 import urllib.request
@@ -17,8 +17,18 @@ from django.http.response import HttpResponse
 #@login_required(login_url='http://localhost:3000/log_in?return=XXX')
 def faleConosco(request):
     if request.method == "POST":
-        if request.user.profile:
-            formLogged = FaleConoscoFormLogged(request.POST)
+        if request.user.is_anonymous:
+            formNotLogged = FaleConoscoForm(request.POST)
+            if formNotLogged.is_valid():
+                req = urllib.request.Request('http://localhost:3000/api/v1/fale_conosco/adicionar')
+                req.add_header('Content-Type', 'application/json; charset=utf-8')
+                result = urlopen(req, json.dumps(formNotLogged.data).encode('utf-8'))
+                return render(request, 'evl/home.html', context={'messagem_faleConosco': "A mensagem foi enviada com sucesso"})
+            else:
+                print("ERROS =", formNotLogged.errors)
+                return render(request, 'faleConosco.html', {'form': formNotLogged})
+        else:
+            formLogged = FaleConoscoLoggedForm(request.POST)
             if formLogged.is_valid():
                 formLogged.fields['name'] = request.user.username
                 formLogged.fields['email'] = request.user.email
@@ -32,19 +42,8 @@ def faleConosco(request):
                 print("ERROS =", form.errors)
                 return render(request, 'faleConosco.html', {'form': formLogged})
 
-        else:
-            formNotLogged = FaleConoscoFormNotLogged(request.POST)
-            if formNotLogged.is_valid():
-                req = urllib.request.Request('http://localhost:3000/api/v1/fale_conosco/adicionar')
-                req.add_header('Content-Type', 'application/json; charset=utf-8')
-                result = urlopen(req, json.dumps(formNotLogged.data).encode('utf-8'))
-                return render(request, 'evl/home.html', context={'messagem_faleConosco': "A mensagem foi enviada com sucesso"})
-            else:
-                print("ERROS =", formNotLogged.errors)
-                return render(request, 'faleConosco.html', {'form': formNotLogged})
-
     else:
-        form = FaleConoscoFormNotLogged()
+        form = FaleConoscoForm()
         return render(request, 'faleConosco.html', {'form': form})
 
 def mensagensFaleConosco(request):
