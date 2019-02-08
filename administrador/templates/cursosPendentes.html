@@ -24,6 +24,7 @@
                                 <table class="table table-hover" id="minhaTabela">
                                     <thead>
                                     <tr class="table-light">
+                                        <th scope="col">Escola</th>
                                         <th scope="col">Curso</th>
                                         <th scope="col">Descrição</th>
                                         <th scope="col">Carga Horária</th>
@@ -34,7 +35,8 @@
                                     <tbody>
                                     {% for curso in cursos.cursos %}
                                     <tr class="table-light">
-                                        <th scope="row">{{curso.nome}}</th>
+                                        <th scope="row"><a href={{curso.school_url}}>{{curso.school}}</a></th>
+                                        <th scope="row"><a href={{curso.url}}>{{curso.nome}}</a></th>
                                         <th scope="row">{{curso.descricao}}</th>
                                         <th scope="row">{{curso.carga_horaria}}</th>
                                         <td><a data-toggle="modal" class="click-btn" id="{{curso.id}}" myvalue="{{curso.id}}" data-target="#confirm-submit"><i class="check icon"></i></a></td>
