@@ -13,8 +13,8 @@ from administrador import views
 from django.contrib.auth import logout
 
 def home(request):
-    # response_analise = requests.get('http://localhost:3000/analise')
-    response_analise = requests.get('http://localhost:3000/analise')
+    # response_analise = requests.get('https://escolamodelows.interlegis.leg.br/analise')
+    response_analise = requests.get('https://escolamodelows.interlegis.leg.br/analise')
     analises = response_analise.json()
     return render(request, 'evl/home.html', {'analises': analises})
 
@@ -26,7 +26,7 @@ def login(request):
 def cadastro(request):
     return render(request, 'evl/cadastro.html')
 
-#@login_required(login_url='http://localhost:3000/log_in?return=URL')
+#@login_required(login_url='https://escolamodelows.interlegis.leg.br/log_in?return=URL')
 def homeAluno(request):
     if request.user.profile.role == 1:
         return redirect(views.administrador)
@@ -36,7 +36,7 @@ def homeAluno(request):
 def dashboard(request):
     return render(request, 'evl/dashboard.html')
 
-#@login_required(login_url='http://localhost:3000/log_in?return=URL')
+#@login_required(login_url='https://escolamodelows.interlegis.leg.br/log_in?return=URL')
 def secret_page(request, *args, **kwargs):
     return HttpResponse('Secret contents!', status=200)
 
@@ -44,4 +44,4 @@ def secret_page(request, *args, **kwargs):
 
 def userLogout(request):
     logout(request)
-    return redirect('http://localhost:3000/log_out?externo=' + 'http://localhost:8000/') #Alterar essa URL para produção
+    return redirect('https://escolamodelows.interlegis.leg.br/log_out?externo=' + 'https://evl.interlegis.leg.br/') #Alterar essa URL para produção

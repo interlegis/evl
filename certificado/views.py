@@ -10,7 +10,7 @@ import urllib.parse
 import urllib.request
 
 def certificados(request):
-    req = requests.get('http://localhost:3000/api/v1/certificados?cpf=' + request.user.profile.cpf)
+    req = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/certificados?cpf=' + request.user.profile.cpf)
     certs = json.loads(req.content)
     return render(request, 'certificados.html', {'certs': certs})
 
@@ -18,7 +18,7 @@ def validarCertificado(request):
     if request.method == "POST":
         form = ValidarCertificadoForm(request.POST)
         if form.is_valid():
-            req = requests.get('http://localhost:3000/api/v1/certificados/detalhar?code_id=' + request.POST['code_id'])
+            req = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/certificados/detalhar?code_id=' + request.POST['code_id'])
             certificado = json.loads(req.content)
             try:
                 print(certificado["message"])
@@ -33,6 +33,6 @@ def validarCertificado(request):
 
 def validacaoQrCode(request, code):
     if code:
-        req = requests.get('http://localhost:3000/api/v1/certificados/detalhar?code_id=' + code)
+        req = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/certificados/detalhar?code_id=' + code)
         certificado = json.loads(req.content)
         return render(request, 'certificado.html', {'certificado': certificado['certificado']})

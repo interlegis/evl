@@ -10,8 +10,8 @@ import urllib.parse
 import urllib.request
 
 def cursos(request):
-    response_cursos = requests.get('http://localhost:3000/api/v1/cursos?key=' + request.user.profile.key)
-    response_categorias = requests.get('http://localhost:3000/api/v1/categorias_cursos?key=' + request.user.profile.key)
+    response_cursos = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos?key=' + request.user.profile.key)
+    response_categorias = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos?key=' + request.user.profile.key)
 
     cursos = response_cursos.json()
     cursos = json.loads(json.dumps(cursos))
@@ -24,7 +24,7 @@ def cursos(request):
     return render(request, 'cursos.html', {'cursos' : cursos, 'categorias' : categorias})
 
 def meusCursos(request):
-    user_cursos = requests.get('http://localhost:3000/api/v1/registros?key=' + request.user.profile.key + '&cpf=' + request.user.profile.cpf)
+    user_cursos = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/registros?key=' + request.user.profile.key + '&cpf=' + request.user.profile.cpf)
     cursos = json.loads(user_cursos.content)
     return render(request, 'meusCursos.html', {'cursos': cursos})
 
