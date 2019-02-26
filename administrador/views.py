@@ -32,7 +32,7 @@ def cursosPendentes(request):
 
 def categoriasGestao(request):
     if request.user.profile.role == 1:
-        req1 = requests.get('http://localhost:3000/api/v1/categorias_cursos?key=' + request.user.profile.key)
+        req1 = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos?key=' + request.user.profile.key)
         categorias = json.loads(req1.content)
         return render(request, 'categoriasGestao.html', {'categorias': categorias})
     else:
@@ -40,14 +40,14 @@ def categoriasGestao(request):
 
 def criar_categoria(request, nome):
     if request.user.profile.role == 1:
-        req = requests.post('http://localhost:3000/api/v1/categorias_cursos/adicionar?key=' + request.user.profile.key, data={'name': nome})
+        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos/adicionar?key=' + request.user.profile.key, data={'name': nome})
         return redirect(categoriasGestao)
     else:
         return redirect(views.homeAluno)
 
 def editar_categoria(request, categoria, nome):
     if request.user.profile.role == 1:
-        req = requests.post('http://localhost:3000/api/v1/categorias_cursos/atualizar?key=' + request.user.profile.key, data={"id": categoria, "name": nome})
+        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos/atualizar?key=' + request.user.profile.key, data={"id": categoria, "name": nome})
         return redirect(categoriasGestao)
     else:
         return redirect(views.homeAluno)
