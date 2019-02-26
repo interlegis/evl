@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% block content %}
+<script src="/static/js/administrador.js"></script>
+
+{% include 'imports.html' %}
+<title>EVL - Gestão de categorias</title>
+
+
+{% if alerta %}
+  <div class="alert alert-danger" style="margin: 0 auto;">
+    <strong>{{ alerta }}</strong>
+  </div>
+{% endif %}
+<div class="bc-icons-2">
+  <ol class="bcAdditionalProperties breadcrumb ">
+    <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+    <li class="breadcrumb-item"><a class="black-text" href="{% url 'administrador' %}">Administrador</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+    <li class="breadcrumb-item active">Gestão de categorias</li>
+  </ol>
+</div>
+<body>
+
+  <div class="view hm-white-light jarallax marginTopHome bgCertificados"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
+      <div class="full-bg-img">
+          <div class="container">
+              <div class="row" style="width: 100% !important; height: 65%; margin-top: 40px;">
+                  <div class="col-md-12 wow fadeIn">
+                      <div class="text-center titleFontProperties">
+                        <h1 class="display-2-edited mb-2 wow fadeInDown" data-wow-delay="0.3s">Gestão de categorias</h1>
+                          <div style="overflow: auto;" class="propriedades-tabela">
+                              <table class="table table-hover " id="minhaTabela">
+                                  <thead>
+                                  <tr class="table-light" style="text-align: center;">
+                                      <th scope="col">ID</th>
+                                      <th scope="col">Nome</th>
+                                      <th scope="col">Editar</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                  {% for categoria in categorias.categorias_cursos %}
+                                  <tr class="table-light">
+                                      <td style="text-align: center;">{{ categoria.id }}</td>
+                                      <td style="text-align: center;">{{ categoria.nome }}</td>
+                                      <td style="text-align: center;"><a data-toggle="modal" class="click-btn-categoria" id="{{categoria.id}}" myvalue="{{categoria.nome}}" data-target="#confirm-submit"><i class="pencil icon"></i></a></td>
+                                  </tr>
+                                  {% endfor %}
+                                  </tbody>
+                              </table>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+                <div style="text-align: center; margin-bottom: 80px;">
+                  <button type="submit" data-target="#confirm-submit-novaCategoria" data-toggle="modal" name="submit" class="btn btn-success">Adicionar Categoria</button>
+                </div>
+          </div>
+      </div>
+      <div class="modal fade" id="confirm-submit" tabindex="-1" style="margin-top: 140px;"role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content" style="border-radius: 25px;">
+            <div class="modal-header">
+              <h3 class="modal-title aviso-titulo" style="color: black;">Digite o nome da categoria: <small style="color: #306345;">{{categoria.nome}}</small></h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <input type="name" class="form-control" id="categoriaName" aria-describedby="emailHelp">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
+              <a id="enviar-btn-categoria" href="{% url 'editar_categoria' categoria=0 nome=0 %}">
+                <button type="button" class="btn btn-success">Enviar</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="confirm-submit-novaCategoria" tabindex="-1" style="margin-top: 140px;"role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content" style="border-radius: 25px;">
+            <div class="modal-header">
+              <h3 class="modal-title aviso-titulo" style="color: black;">Digite o nome da nova categoria: <small style="color: #306345;">{{categoria.nome}}</small></h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <input type="name" class="form-control" id="categoriaNameNova" aria-describedby="emailHelp" placeholder="Nome da categoria">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
+              <a id="enviar-btn-categoriaNova" href="{% url 'criar_categoria' nome=0 %}">
+                <button type="button" class="btn btn-success">Enviar</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+<script src="/static/js/dataTable.js"></script>
+<style media="screen">
+.modal-backdrop {
+  z-index: -1;
+}
+</style>
+{% endblock %}
