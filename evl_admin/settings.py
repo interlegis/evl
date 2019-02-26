@@ -27,15 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-# Email configurations
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'matheus456456@gmail.com'
-EMAIL_HOST_PASSWORD = ''
-EMAIL_PORT = 587
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -109,12 +100,12 @@ WSGI_APPLICATION = 'evl_admin.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'moodlews',
+        'NAME': os.environ.get('EVL_DB_NAME'),
         # 'NAME': os.path.join(BASE_DIR, 'mydb'),
-        'USER': 'escolamodelows',
-        'PASSWORD': 'escolamodelo',
-        'HOST': 'campeirohsabereslb.interlegis.leg.br',
-        'PORT': '5432', # 8000 is default
+        'USER': os.environ.get('EVL_DB_USER'),
+        'PASSWORD': os.environ.get('EVL_DB_PASS'),
+        'HOST': os.environ.get('EVL_DB_HOST'),
+        'PORT': os.environ.get('EVL_DB_PORT'), # 8000 is default
     }
 }
 
@@ -125,18 +116,20 @@ AUTHENTICATION_BACKENDS = (
     'evl.login.MyOIDCAB',
 )
 
-OIDC_RP_CLIENT_ID = os.environ.get('EVL_TOKEN_APPLICATION_ID')
-OIDC_RP_CLIENT_SECRET = os.environ.get('EVL_TOKEN_SECRET')
-OIDC_OP_AUTHORIZATION_ENDPOINT = 'https://escolamodelows.interlegis.leg.br/oauth/authorize'
-OIDC_OP_TOKEN_ENDPOINT = 'https://escolamodelows.interlegis.leg.br/oauth/token'
-OIDC_OP_USER_ENDPOINT = 'https://escolamodelows.interlegis.leg.br/oauth/userinfo'
+OIDC_RP_CLIENT_ID = str(os.environ.get('EVL_TOKEN_APPLICATION_ID'))
+OIDC_RP_CLIENT_SECRET = str(os.environ.get('EVL_TOKEN_SECRET'))
+OIDC_OP_AUTHORIZATION_ENDPOINT = str(os.environ.get('EVL_WS_URL_BASE')) + '/oauth/authorize'
+OIDC_OP_TOKEN_ENDPOINT = str(os.environ.get('EVL_WS_URL_BASE')) + '/oauth/token'
+OIDC_OP_USER_ENDPOINT = str(os.environ.get('EVL_WS_URL_BASE')) + '/oauth/userinfo'
 OIDC_RP_SIGN_ALGO = 'RS256'
-OIDC_OP_JWKS_ENDPOINT = 'https://escolamodelows.interlegis.leg.br/oauth/discovery/keys'
+OIDC_OP_JWKS_ENDPOINT = str(os.environ.get('EVL_WS_URL_BASE')) + '/oauth/discovery/keys'
 LOGIN_REDIRECT_URL = '/aluno'
 LOGOUT_REDIRECT_URL = '/'
 OIDC_RP_SCOPES = 'openid profile email'
 OIDC_VERIFY_JWT = False
 OIDC_USE_NONCE = False
+
+APIKEY = os.environ.get('EVL_WS_APIKEY')
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -179,7 +172,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [

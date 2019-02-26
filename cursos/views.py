@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from django.conf import settings 
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 import xlsxwriter
@@ -10,8 +11,8 @@ import urllib.parse
 import urllib.request
 
 def cursos(request):
-    response_cursos = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos?key=' + request.user.profile.key)
-    response_categorias = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos?key=' + request.user.profile.key)
+    response_cursos = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos?key=' + str(settings.APIKEY))
+    response_categorias = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos?key=' + str(settings.APIKEY))
 
     cursos = response_cursos.json()
     cursos = json.loads(json.dumps(cursos))
