@@ -340,6 +340,9 @@
     .profile-card-3 .profile {
         bottom: 49% !important;
     }
+    .sizeTableCursos{
+        height: 350px !important;
+    }
 }
 
 @media screen and
@@ -366,6 +369,9 @@
     }
     .profile-card-3 .profile {
         bottom: 50% !important;
+    }
+    .sizeTableCursos{
+        height: 350px !important;
     }
 }
 
@@ -395,6 +401,9 @@
     .profile-card-3 .profile {
         bottom: 50% !important;
     }
+    .sizeTableCursos{
+        height: 350px !important;
+    }
 }
 
 @media screen and
@@ -421,6 +430,9 @@
     }
     .profile-card-3 .profile {
         bottom: 50% !important;
+    }
+    .sizeTableCursos{
+        height: 350px !important;
     }
 }
 
@@ -450,6 +462,9 @@
     .profile-card-3 .profile {
         bottom: 50% !important;
     }
+    .sizeTableCursos{
+        max-height: 350px !important;
+    }
 }
 
 @media screen and
@@ -477,11 +492,17 @@
     .profile-card-3 .profile {
         bottom: 50% !important;
     }
+    .sizeTableCursos{
+        max-height: 350px !important;
+    }
 }
 
 @media screen and
 (min-width: 1680px) and
 (max-width: 4080px){
+    .sizeTableCursos{
+        max-height: 350px !important;
+    }
     .logoProperties{
         margin: 1% !important;
         width: 100px;
@@ -1337,4 +1358,7 @@ a:hover {
 }
 .dataTable{
     width: 100% !important;
+}
+.sizeTableCursos{
+    height: 350px;
 }
