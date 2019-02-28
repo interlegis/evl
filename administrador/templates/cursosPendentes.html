@@ -1,10 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 <script src="/static/js/administrador.js"></script>
-<link rel="stylesheet" type="text/css" href="/static/css/administrador.css">
-
     <title>EVL - Meus Comprovantes</title>
-<body>
+
 {% include 'imports.html' %}
 <div class="bc-icons-2">
     <ol class="bcAdditionalProperties breadcrumb ">
@@ -13,14 +11,15 @@
         <li class="breadcrumb-item active">Cursos Pendentes</li>
     </ol>
 </div>
+    <body>
     <div class="view hm-white-light jarallax marginTopHome bgCursosPendentes"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
             <div class="full-bg-img">
                 <div class="container flex-center">
-                    <div class="row" style="width: 90% !important;">
+                    <div class="row" style="width: 100% !important; height: 65%; margin-top: -200px;">
                         <div class="col-md-12 wow fadeIn">
                             <div class="text-center titleFontProperties">
                                 <h1 class="display-2-edited mb-2 wow fadeInDown" data-wow-delay="0.3s">Cursos Pendentes</h1>
-                            <div class="propriedades-tabela" style="overflow: auto">
+                                     <div class="propriedades-tabela" style="overflow: auto">
                                 <table class="table table-hover" id="minhaTabela">
                                     <thead>
                                     <tr class="table-light">
