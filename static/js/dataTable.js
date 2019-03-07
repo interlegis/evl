@@ -1,5 +1,9 @@
 $(document).ready(function(){
     $('#minhaTabela').DataTable({
+        colReorder: true,
+        fixedHeader: true,
+        rowReorder: true,
+        responsive: true,
         "language": {
             "lengthMenu": " ",
             "zeroRecords": "Nada encontrado",
