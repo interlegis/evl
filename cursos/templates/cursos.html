@@ -43,7 +43,7 @@
     <div class="container page-content">
 
         <div class="row">
-            <div class="col-3">
+            <div class="sizeCol3">
                 <div style="min-height: 370px;">
                     <div class="list-group menuCoursesColor" id="list-tab" role="tablist">
                         {% for categoria in categorias %}
@@ -59,7 +59,7 @@
                 </div>
             </div>
 
-            <div class="col-9">
+            <div class="sizeCol9">
                 <div class="row" id="nav-tabContent">
                     {% for categoria in categorias %}
                         {% if categoria == categorias.0 %}
@@ -70,9 +70,9 @@
                     <section class="row" style="max-width: 100%; text-align: center; margin-left: auto; margin-right: auto;">
                         {% for curso in cursos %}
                             {% if curso.categoria == categoria.id %}
-                                <ul id="ul-{{ categoria.id }}" class="animated bounceInLeft">
+                                <ul id="ul-{{ categoria.id }}" class="animated bounceInLeft align">
                                     <div class="col" style="">
-                                        <div class="marginCards" style="width: 250px !important;">
+                                        <div class="marginCards widthCard">
                                             <div class="">
                                                 <!--Card-->
                                                 <div class="card hoverable" style="min-height: 500px;">
@@ -106,16 +106,11 @@
                                                             <dd>
                                                                 <input value="357" hidden="">
 
-
-
-
                                                                 <div class="stars-outer">
                                                                     <div class="stars-inner" style="width: {{ curso.rating_percentage }}%"></div>
                                                                 </div>
                                                                 {{ curso.rating }}
                                                                 <!-- {{ curso.url }} -->
-
-
 
                                                             </dd>
                                                         </dl>

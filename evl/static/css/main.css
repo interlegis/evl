@@ -70,11 +70,42 @@
     .profile-card-3 .profile {
         bottom: 56% !important;
     }
+    .sizeCol3{
+        min-width: 70% !important;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .sizeCol9{
+        min-width: 70% !important;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .widthCard{
+        width: 315px !important;
+    }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }
 
 @media screen and
 (min-width: 450px) and
 (max-width: 575px){
+    .widthCard{
+        width: 315px !important;
+    }
+    .sizeCol9{
+        min-width: 70% !important;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .sizeCol3{
+        min-width: 70% !important;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
     .logoProperties {
         width: 100px;
         height: 40px;
@@ -142,6 +173,10 @@
     }
     .profile-card-3 .profile {
         bottom: 56% !important;
+    }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
 }
@@ -214,6 +249,10 @@
     .profile-card-3 .profile {
         bottom: 56% !important;
     }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }
 
 @media screen and
@@ -279,11 +318,19 @@
     .profile-card-3 .profile {
         bottom: 56% !important;
     }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }
 
 @media screen and
 (min-width: 800px) and
 (max-width: 1023px){
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
     .logoProperties {
         width: 100px;
         height: 40px !important;
@@ -1361,4 +1408,18 @@ a:hover {
 }
 .sizeTableCursos{
     height: 350px;
+}
+
+.sizeCol3{
+    max-width: 25%;
+    margin-bottom: 5%
+}
+.sizeCol9{
+    max-width: 75%;
+}
+.widthCard{
+    width: 250px;
+}
+.align{
+    padding: 0px !important;
 }
