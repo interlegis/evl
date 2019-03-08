@@ -40,7 +40,8 @@ def dashboard(request):
 def secret_page(request, *args, **kwargs):
     return HttpResponse('Secret contents!', status=200)
 
-
+def perfilaluno(request):
+    return render(request, 'evl/perfilAluno.html')
 
 def userLogout(request):
     logout(request)

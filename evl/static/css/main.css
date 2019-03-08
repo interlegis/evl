@@ -4,8 +4,7 @@
     .logoProperties {
         width: 100px;
         height: 40px;
-        margin-left: 1% !important;
-        margin-top: 1%;
+
     }
 
     .navbar-expand-lg .navbar-collapse {
@@ -109,8 +108,7 @@
     .logoProperties {
         width: 100px;
         height: 40px;
-        margin-left: 1% !important;
-        margin-top: 1%;
+
     }
 
     .navbar-expand-lg .navbar-collapse {
@@ -187,8 +185,7 @@
     .logoProperties {
         width: 100px;
         height: 40px;
-        margin-left: 1% !important;
-        margin-top: 1%;
+
     }
 
     .navbar-expand-lg .navbar-collapse {
@@ -261,8 +258,7 @@
     .logoProperties {
         width: 100px;
         height: 40px !important;
-        margin-left: 1% !important;
-        margin-top: 1%;
+
     }
 
     .navbar-expand-lg .navbar-collapse {
@@ -334,8 +330,7 @@
     .logoProperties {
         width: 100px;
         height: 40px !important;
-        margin-left: 1% !important;
-        margin-top: 1%;
+
     }
 
     .navbar-expand-lg .navbar-collapse {
@@ -396,7 +391,7 @@
 (min-width: 1024px) and
 (max-width: 1279px){
     .logoProperties{
-        margin: 1% !important;
+
         width: 100px;
         height: 40px;
     }
@@ -420,13 +415,19 @@
     .sizeTableCursos{
         height: 350px !important;
     }
+    .alignNavRight{
+        width: 15% !important;
+    }
+    .alignNavLeft{
+        width: 85% !important;
+    }
 }
 
 @media screen and
 (min-width: 1280px) and
 (max-width: 1365px){
     .logoProperties{
-        margin: 1% !important;
+
         width: 100px;
         height: 40px;
     }
@@ -457,7 +458,6 @@
 (min-width: 1366px) and
 (max-width: 1439px){
     .logoProperties{
-        margin: 1% !important;
         width: 100px;
         height: 40px;
     }
@@ -488,7 +488,6 @@
 (min-width: 1440px) and
 (max-width: 1599px){
     .logoProperties{
-        margin: 1% !important;
         width: 100px;
         height: 40px;
     }
@@ -518,7 +517,6 @@
 (min-width: 1600px) and
 (max-width: 1679px){
     .logoProperties{
-        margin: 1% !important;
         width: 100px;
         height: 40px;
     }
@@ -551,7 +549,6 @@
         max-height: 350px !important;
     }
     .logoProperties{
-        margin: 1% !important;
         width: 100px;
         height: 40px;
     }
@@ -1422,4 +1419,11 @@ a:hover {
 }
 .align{
     padding: 0px !important;
+}
+.alignNavRight{
+    width: 50% !important;
+    text-align: right;
+}
+.alignNavLeft{
+    width: 50% !important;
 }

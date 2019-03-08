@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% include 'imports.html' %}
+{# {% load widget_tweaks %} #}
+
+{% block content %}
+
+
+
+
+    <title>EVL - Fale Conosco</title>
+    <div class="bc-icons-2">
+        <ol class="breadcrumb bcAdditionalProperties">
+            <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+            <li class="breadcrumb-item active">Meu Perfil</li>
+        </ol>
+    </div>
+
+    <div class="ajustestitlefaleconosco paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none;">
+        <h1 class="display-4 textBasicOrientation">
+            <h1 class="display-4  textBasicOrientation">Meu Perfil</h1>
+        </h1>
+        <hr class="my-4">
+        </p>
+    </div>
+
+    <div class="margin-padding-fale-conosco container">
+        <div class="col-md-12">
+            <div class="form-area">
+                <form method="POST" role="form" novalidate>
+
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Nome" id="id_name" disabled>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="email" class="form-control" placeholder="E-Mail" id="id_email" disabled>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="phone" class="form-control" placeholder="CPF" id="id_phone" disabled>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="cpf" class="form-control" placeholder="Data de Nascimento" id="id_cpf" disabled>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="phone" class="form-control" placeholder="Telefone" id="id_phone" disabled>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="phone" class="form-control" placeholder="Senha" id="id_phone" disabled>
+                        </div>
+                        <div class="marginBottomBotaoEnviarContact">
+                            <button type="submit" id="submit" name="submit" class="pull-right btn btn-success">Editar Dados</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

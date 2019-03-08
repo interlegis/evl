@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^dashboard', views.dashboard, name='dashboard'),
     url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     url(r'^secret$', views.secret_page, name='secret'),
+    url(r'^perfilaluno', views.perfilaluno, name='perfilaluno'),
     path('', include('cursos.urls')),
     path('', include('fale_conosco.urls')),
     path('', include('certificado.urls')),
