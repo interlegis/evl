@@ -27,26 +27,35 @@
         <div class="col-md-12">
             <div class="form-area">
                 <form method="POST" role="form" novalidate>
-
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Nome" id="id_name" disabled>
+                        <div class="row">
+                            <div style="width: 150px; margin-right: 1rem;">
+                                <img class="img-circle avatar" alt="chat avatar" src="https://bootdey.com/img/Content/avatar/avatar2.png" style="height: 148px;">
+                            </div>
+                            <div style="width: calc(100% - 150px - 1rem);">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Nome" id="id_nome" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="email" class="form-control" placeholder="E-Mail" id="id_e-mail" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="phone" class="form-control" placeholder="CPF" id="id_cpf" disabled>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="email" class="form-control" placeholder="E-Mail" id="id_email" disabled>
+                        <div class="form-group row">
+                            <input type="text" name="cpf" class="form-control" placeholder="Data de Nascimento" id="id_datanasc" disabled>
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="phone" class="form-control" placeholder="CPF" id="id_phone" disabled>
+                        <div class="form-group row">
+                            <input type="text" name="phone" class="form-control" placeholder="Telefone" id="id_telefone" disabled>
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="cpf" class="form-control" placeholder="Data de Nascimento" id="id_cpf" disabled>
+                        <div class="form-group row">
+                            <input type="text" name="phone" class="form-control" placeholder="Senha" id="id_senha" disabled>
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="phone" class="form-control" placeholder="Telefone" id="id_phone" disabled>
+                        <div class="form-group row">
+                            <input type="text" name="phone" class="form-control" placeholder="Confirmação da Senha" id="id_senhaconf" disabled>
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="phone" class="form-control" placeholder="Senha" id="id_phone" disabled>
-                        </div>
-                        <div class="marginBottomBotaoEnviarContact">
+                        <div class="marginBottomBotaoEnviarContact row">
                             <button type="submit" id="submit" name="submit" class="pull-right btn btn-success">Editar Dados</button>
                         </div>
                 </form>
