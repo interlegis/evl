@@ -49,6 +49,10 @@
         font-size: 12px;
         padding: 10px 15px;
     }
+    .photoColor{
+        color: #006400;
+    }
+
 </style>
 
 
@@ -78,8 +82,8 @@
                                     <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Avatar" class="image img-circle avatar" style="height: 148px;">
                                     <div class="middle">
                                         <div class="text" style="border-radius: 50%;">
-                                            <a class="disabled">
-                                                <i class="fas fa-camera-retro fa-3x" style="color: #2c2c2c;"></i>
+                                            <a class="disabled" id="userPhoto">
+                                                <i class="fas fa-camera-retro fa-3x photoColor"></i>
                                             </a>
 
                                         </div>
@@ -112,7 +116,7 @@
                         </div>
                         <div class="marginBottomBotaoEnviarContact row">
                             <a onClick="habilitar()" class="pull-right btn btn-success" id="editarDadosBtn">Editar Dados</a>
-                            <a onClick="habilitar()" class="pull-right btn btn-success" id="salvarDadosBtn" hidden>Salvar Dados</a>
+                            <a onClick="salvar()" class="pull-right btn btn-success" id="salvarDadosBtn" hidden>Salvar Dados</a>
                         </div>
                 </form>
             </div>
@@ -130,6 +134,23 @@
 
         var objSalvar = document.getElementById("salvarDadosBtn");
         objSalvar.hidden = false;
+
+        var objPhoto = document.getElementById("userPhoto");
+        objPhoto.classList.remove('disabled');
+    }
+    function salvar() {
+        var objtxt = document.getElementsByClassName("enable_btn");
+        for(var i=0; i<7; i++) {
+            objtxt[i].disabled = true;
+        }
+        var objEditar = document.getElementById("editarDadosBtn");
+        objEditar.hidden = false;
+
+        var objSalvar = document.getElementById("salvarDadosBtn");
+        objSalvar.hidden = true;
+
+        var objPhoto = document.getElementById("userPhoto");
+        objPhoto.classList.add('disabled');
     }
 </script>
 
