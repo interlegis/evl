@@ -2,8 +2,10 @@
 (min-width: 200px) and
 (max-width: 449px){
     .logoProperties {
-        width: 100px;
-        height: 40px;
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
 
     }
 
@@ -106,8 +108,10 @@
     }
 
     .logoProperties {
-        width: 100px;
-        height: 40px;
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
 
     }
 
@@ -183,8 +187,10 @@
 (min-width: 576px) and
 (max-width: 639px){
     .logoProperties {
-        width: 100px;
-        height: 40px;
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
 
     }
 
@@ -256,8 +262,10 @@
 (min-width: 640px) and
 (max-width: 799px){
     .logoProperties {
-        width: 100px;
-        height: 40px !important;
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
 
     }
 
@@ -328,8 +336,10 @@
         margin-right: auto !important;
     }
     .logoProperties {
-        width: 100px;
-        height: 40px !important;
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
 
     }
 
@@ -390,10 +400,12 @@
 @media screen and
 (min-width: 1024px) and
 (max-width: 1279px){
-    .logoProperties{
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
 
-        width: 100px;
-        height: 40px;
     }
 
     .fixed-top-nav {
@@ -426,10 +438,12 @@
 @media screen and
 (min-width: 1280px) and
 (max-width: 1365px){
-    .logoProperties{
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
 
-        width: 100px;
-        height: 40px;
     }
 
     .fixed-top-nav {
@@ -457,9 +471,12 @@
 @media screen and
 (min-width: 1366px) and
 (max-width: 1439px){
-    .logoProperties{
-        width: 100px;
-        height: 40px;
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
     }
 
     .fixed-top-nav {
@@ -487,9 +504,12 @@
 @media screen and
 (min-width: 1440px) and
 (max-width: 1599px){
-    .logoProperties{
-        width: 100px;
-        height: 40px;
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
     }
 
     .fixed-top-nav {
@@ -516,9 +536,12 @@
 @media screen and
 (min-width: 1600px) and
 (max-width: 1679px){
-    .logoProperties{
-        width: 100px;
-        height: 40px;
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
     }
 
     .fixed-top-nav {
@@ -548,9 +571,12 @@
     .sizeTableCursos{
         max-height: 350px !important;
     }
-    .logoProperties{
-        width: 100px;
-        height: 40px;
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
     }
 
     .fixed-top-nav {
