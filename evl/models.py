@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 class Profile(models.Model):
     user = models.OneToOneField(User, related_name='profile', on_delete=models.CASCADE)
-    cpf = models.CharField(max_length=20, blank=False, null=False)
+    image = models.CharField(max_length=500)
     phone = models.CharField(max_length=20, blank=True, null=True)
     key = models.CharField(max_length=100,blank=False, null=False)
     role = models.IntegerField(blank=False, null=False)
