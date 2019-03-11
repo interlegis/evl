@@ -131,6 +131,8 @@ OIDC_USE_NONCE = False
 
 APIKEY = os.environ.get('EVL_WS_APIKEY')
 
+
+BASE_URL = 'http://localhost:3000'
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 

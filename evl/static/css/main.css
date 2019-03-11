@@ -2,10 +2,11 @@
 (min-width: 200px) and
 (max-width: 449px){
     .logoProperties {
-        width: 100px;
-        height: 40px;
-        margin-left: 1% !important;
-        margin-top: 1%;
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
     }
 
     .navbar-expand-lg .navbar-collapse {
@@ -62,6 +63,7 @@
     }
     .img-fluid{
         max-width: 24% !important;
+        height: 80px !important;
     }
     .marginBottomImg{
         margin-bottom: 15% !important;
@@ -69,16 +71,48 @@
     .profile-card-3 .profile {
         bottom: 56% !important;
     }
+    .sizeCol3{
+        min-width: 70% !important;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .sizeCol9{
+        min-width: 70% !important;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .widthCard{
+        width: 315px !important;
+    }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }
 
 @media screen and
 (min-width: 450px) and
 (max-width: 575px){
+    .widthCard{
+        width: 315px !important;
+    }
+    .sizeCol9{
+        min-width: 70% !important;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .sizeCol3{
+        min-width: 70% !important;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
     .logoProperties {
-        width: 100px;
-        height: 40px;
-        margin-left: 1% !important;
-        margin-top: 1%;
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
     }
 
     .navbar-expand-lg .navbar-collapse {
@@ -134,6 +168,7 @@
     }
     .img-fluid{
         max-width: 18% !important;
+        height: 80px !important;
     }
     .marginBottomImg{
         margin-bottom: 14% !important;
@@ -141,16 +176,22 @@
     .profile-card-3 .profile {
         bottom: 56% !important;
     }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
 }
 
 @media screen and
 (min-width: 576px) and
 (max-width: 639px){
     .logoProperties {
-        width: 100px;
-        height: 40px;
-        margin-left: 1% !important;
-        margin-top: 1%;
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
     }
 
     .navbar-expand-lg .navbar-collapse {
@@ -211,16 +252,21 @@
     .profile-card-3 .profile {
         bottom: 56% !important;
     }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }
 
 @media screen and
 (min-width: 640px) and
 (max-width: 799px){
     .logoProperties {
-        width: 100px;
-        height: 40px !important;
-        margin-left: 1% !important;
-        margin-top: 1%;
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
     }
 
     .navbar-expand-lg .navbar-collapse {
@@ -276,16 +322,25 @@
     .profile-card-3 .profile {
         bottom: 56% !important;
     }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }
 
 @media screen and
 (min-width: 800px) and
 (max-width: 1023px){
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
     .logoProperties {
-        width: 100px;
-        height: 40px !important;
-        margin-left: 1% !important;
-        margin-top: 1%;
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
     }
 
     .navbar-expand-lg .navbar-collapse {
@@ -337,15 +392,20 @@
     .profile-card-3 .profile {
         bottom: 49% !important;
     }
+    .sizeTableCursos{
+        height: 350px !important;
+    }
 }
 
 @media screen and
 (min-width: 1024px) and
 (max-width: 1279px){
-    .logoProperties{
-        margin: 1% !important;
-        width: 100px;
-        height: 40px;
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
     }
 
     .fixed-top-nav {
@@ -363,16 +423,27 @@
     }
     .profile-card-3 .profile {
         bottom: 50% !important;
+    }
+    .sizeTableCursos{
+        height: 350px !important;
+    }
+    .alignNavRight{
+        width: 15% !important;
+    }
+    .alignNavLeft{
+        width: 85% !important;
     }
 }
 
 @media screen and
 (min-width: 1280px) and
 (max-width: 1365px){
-    .logoProperties{
-        margin: 1% !important;
-        width: 100px;
-        height: 40px;
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
     }
 
     .fixed-top-nav {
@@ -392,15 +463,20 @@
     .profile-card-3 .profile {
         bottom: 50% !important;
     }
+    .sizeTableCursos{
+        height: 350px !important;
+    }
 }
 
 @media screen and
 (min-width: 1366px) and
 (max-width: 1439px){
-    .logoProperties{
-        margin: 1% !important;
-        width: 100px;
-        height: 40px;
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
     }
 
     .fixed-top-nav {
@@ -418,6 +494,9 @@
     }
     .profile-card-3 .profile {
         bottom: 50% !important;
+    }
+    .sizeTableCursos{
+        height: 350px !important;
     }
 }
 
@@ -425,10 +504,12 @@
 @media screen and
 (min-width: 1440px) and
 (max-width: 1599px){
-    .logoProperties{
-        margin: 1% !important;
-        width: 100px;
-        height: 40px;
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
     }
 
     .fixed-top-nav {
@@ -447,15 +528,20 @@
     .profile-card-3 .profile {
         bottom: 50% !important;
     }
+    .sizeTableCursos{
+        max-height: 350px !important;
+    }
 }
 
 @media screen and
 (min-width: 1600px) and
 (max-width: 1679px){
-    .logoProperties{
-        margin: 1% !important;
-        width: 100px;
-        height: 40px;
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
     }
 
     .fixed-top-nav {
@@ -474,15 +560,23 @@
     .profile-card-3 .profile {
         bottom: 50% !important;
     }
+    .sizeTableCursos{
+        max-height: 350px !important;
+    }
 }
 
 @media screen and
 (min-width: 1680px) and
 (max-width: 4080px){
-    .logoProperties{
-        margin: 1% !important;
-        width: 100px;
-        height: 40px;
+    .sizeTableCursos{
+        max-height: 350px !important;
+    }
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
     }
 
     .fixed-top-nav {
@@ -532,7 +626,6 @@
 }
 
 .titlePropertiesNavbar{
-    font-weight: bold;
     font-size: large;
     color: black !important;
     text-shadow: 1px 2px 13px rgba(154, 150, 150, 1);
@@ -1034,7 +1127,7 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
     margin: 0 auto;
 }
 .card_h .carousel-item {
-    height: 200px;
+    height: 240px;
 }
 .card_h .carousel-caption {
     padding: 0;
@@ -1330,4 +1423,88 @@ a:hover {
 .btn-danger:hover{
     color: white !important;
 }
+.dataTables_scrollHeadInner{
+    width: 100% !important;
+}
+.dataTable{
+    width: 100% !important;
+}
+.sizeTableCursos{
+    height: 350px;
+}
 
+.sizeCol3{
+    max-width: 25%;
+    margin-bottom: 5%
+}
+.sizeCol9{
+    max-width: 75%;
+}
+.widthCard{
+    width: 250px;
+}
+.align{
+    padding: 0px !important;
+}
+.alignNavRight{
+    width: 50% !important;
+    text-align: right;
+}
+.alignNavLeft{
+    width: 50% !important;
+}
+.panel-shadow {
+    box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+}
+.panel-white {
+    border: 1px solid #dddddd;
+}
+.panel {
+    font-size: 13px;
+    color: #454545;
+    background: #fafafa;
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'Source Sans Pro', 'Oxygen', sans-serif;
+}
+.panel-white  .panel-heading {
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+}
+.panel-white  .panel-footer {
+    background-color: #fff;
+    border-color: #ddd;
+}
+.bg2 {
+    background-image: url('http://lorempixel.com/560/344/sports/1/');
+}
+.profile-widget {
+    position: relative;
+}
+.profile-widget .image-container {
+    background-size: cover;
+    background-position: center;
+    padding: 190px 0 10px;
+}
+.profile-widget .image-container .profile-background {
+    width: 100%;
+    height: auto;
+}
+.profile-widget .image-container .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto -60px;
+    display: block;
+}
+.profile-widget .details {
+    padding: 50px 15px 15px;
+    text-align: center;
+}
+.avatar {
+    vertical-align: middle;
+    width: 150px;
+    height: 50px;
+    border-radius: 50%;
+}

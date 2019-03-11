@@ -1,47 +1,117 @@
 {% load static %}
-<!-- Local -->
+<!-- Custom -->
 <link rel="stylesheet" href="{% static 'css/main.css' %}">
 <link rel="stylesheet" href="{% static 'css/certificados.css' %}">
 <link rel="stylesheet" href="{% static 'css/courses.css' %}">
 <link rel="stylesheet" href="{% static 'css/stars.css' %}">
 <link rel="stylesheet" href="{% static 'css/card_certificados.css' %}">
 <link rel="stylesheet" href="{% static 'css/adesao_institucional.css' %}">
-
-
-
-<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-<script type="text/javascript" src="../../../static/js/sorttable.js"></script>
 <!-- Semantic-ui -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.css" />
+<link rel="stylesheet" href="{% static 'css/semantic-ui/icon.css' %}">
+<!-- Sorttable -->
+<script type="text/javascript" src="../../../static/js/sorttable.js"></script>
 <!-- Bootstrap v4.1 -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{% static 'css/bootstrap-4.3.1/bootstrap.min.css' %}">
+<script type="text/javascript" src="../static/js/bootstrap-4.3.1/bootstrap.min.js"></script>
 <!-- Jquery v3.3.1-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="/static/js/jquery-3.3.1.js"></script>
-<script src="/static/js/jquery-ui.min.js"></script>
-
+<script src="../static/js/jquery-3margin.3.1/jquery-3.3.1.min.js"></script>
+<script src="../static/js/jquery-3.3.1/jquery-3.3.1.slim.min.js"></script>
+<script src="../static/js/jquery-3.3.1/jquery-ui.min.js"></script>
 <!-- Popper v1.14.3 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<!-- Header Video-->
-<link href="https://headervideo.github.io/hvheadervideo/css/mdb.min.css" rel="stylesheet">
-<link href="https://headervideo.github.io/hvheadervideo/css/style.css" rel="stylesheet">
-<script src="https://headervideo.github.io/hvheadervideo/js/mdb.min.js"></script>
-<script src="https://headervideo.github.io/hvheadervideo/js/jarallax.js"></script>
-<script src="https://headervideo.github.io/hvheadervideo/js/jarallax-video.js"></script>
+<script src="../static/js/popper-1.14.3/popper.js"></script>
 <!-- Favicon-->
-<link rel="shortcut icon" href="../static/img/evg-favicon"/>
+<link rel="shortcut icon" href="../static/img/evl_favicon_bgbranco.ico"/>
+<!-- MDB -->
+<link rel="stylesheet" href="{% static 'css/mdbootstrap/mdb.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/mdbootstrap/jarallax.css' %}">
+<script src="../static/js/mdbootstrap/mdb.min.js"></script>
+<script src="../static/js/mdbootstrap/jarallax-video.js"></script>
+<script src="../static/js/mdbootstrap/jarallax.js"></script>
 <!-- Font Awesome v5.3.1-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/fontawesome-5.3.1/all.css' %}">
 <!-- Data Tables-->
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/af-2.3.2/b-1.5.4/b-colvis-1.5.4/b-flash-1.5.4/b-html5-1.5.4/b-print-1.5.4/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.5.0/r-2.2.2/rg-1.1.0/rr-1.2.4/sc-1.5.0/sl-1.2.6/datatables.min.css"/>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/af-2.3.2/b-1.5.4/b-colvis-1.5.4/b-flash-1.5.4/b-html5-1.5.4/b-print-1.5.4/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.5.0/r-2.2.2/rg-1.1.0/rr-1.2.4/sc-1.5.0/sl-1.2.6/datatables.min.js"></script>
+<link rel="stylesheet" href="{% static 'dataTableProperties/datatables.css' %}">
+<link rel="stylesheet" href="{% static 'css/datatables/jquery.dataTables.min.css' %}">
+<script src="../static/dataTableProperties/datatables.js"></script>
+<script src="../static/dataTableProperties/datatables.min.js"></script>
+<script src="../static/js/datatables/jquery.dataTables.min.js"></script>
+        <!-- ColReorder-1.5.0-->
+        <link rel="stylesheet" href="{% static 'dataTableProperties/ColReorder-1.5.0/css/colReorder.bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/ColReorder-1.5.0/css/colReorder.bootstrap4.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/ColReorder-1.5.0/css/colReorder.dataTables.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/ColReorder-1.5.0/css/colReorder.foundation.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/ColReorder-1.5.0/css/colReorder.jqueryui.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/ColReorder-1.5.0/css/colReorder.semanticui.css' %}">
+        <script src="../static/dataTableProperties/ColReorder-1.5.0/js/colReorder.bootstrap.js"></script>
+        <script src="../static/dataTableProperties/ColReorder-1.5.0/js/colReorder.bootstrap4.js"></script>
+        <script src="../static/dataTableProperties/ColReorder-1.5.0/js/colReorder.dataTables.js"></script>
+        <script src="../static/dataTableProperties/ColReorder-1.5.0/js/colReorder.foundation.js"></script>
+        <script src="../static/dataTableProperties/ColReorder-1.5.0/js/colReorder.jqueryui.js"></script>
+        <script src="../static/dataTableProperties/ColReorder-1.5.0/js/colReorder.semanicui.js"></script>
+        <script src="../static/dataTableProperties/ColReorder-1.5.0/js/colReorder.semanticui.js"></script>
+        <script src="../static/dataTableProperties/ColReorder-1.5.0/js/dataTables.colReorder.js"></script>
+        <!-- DataTables-1.10.18-->
+        <link rel="stylesheet" href="{% static 'dataTableProperties/DataTables-1.10.18/css/dataTables.bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/DataTables-1.10.18/css/dataTables.bootstrap4.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/DataTables-1.10.18/css/dataTables.foundation.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/DataTables-1.10.18/css/dataTables.jqueryui.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/DataTables-1.10.18/css/dataTables.semanticui.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/DataTables-1.10.18/css/jquery.dataTables.css' %}">
+        <script src="../static/dataTableProperties/DataTables-1.10.18/js/dataTables.bootstrap.js"></script>
+        <script src="../static/dataTableProperties/DataTables-1.10.18/js/dataTables.bootstrap4.js"></script>
+        <script src="../static/dataTableProperties/DataTables-1.10.18/js/dataTables.foundation.js"></script>
+        <script src="../static/dataTableProperties/DataTables-1.10.18/js/dataTables.jqueryui.js"></script>
+        <script src="../static/dataTableProperties/DataTables-1.10.18/js/dataTables.semanticui.js"></script>
+        <script src="../static/dataTableProperties/DataTables-1.10.18/js/jquery.dataTables.js"></script>
+        <!-- FixedHeader-3.1.4-->
+        <link rel="stylesheet" href="{% static 'dataTableProperties/FixedHeader-3.1.4/css/fixedHeader.bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/FixedHeader-3.1.4/css/fixedHeader.bootstrap4.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/FixedHeader-3.1.4/css/fixedHeader.dataTables.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/FixedHeader-3.1.4/css/fixedHeader.foundation.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/FixedHeader-3.1.4/css/fixedHeader.jqueryui.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/FixedHeader-3.1.4/css/fixedHeader.semanticui.css' %}">
+        <script src="../static/dataTableProperties/FixedHeader-3.1.4/js/dataTables.fixedHeader.js"></script>
+        <script src="../static/dataTableProperties/FixedHeader-3.1.4/js/fixedHeader.bootstrap.js"></script>
+        <script src="../static/dataTableProperties/FixedHeader-3.1.4/js/fixedHeader.bootstrap4.js"></script>
+        <script src="../static/dataTableProperties/FixedHeader-3.1.4/js/fixedHeader.dataTables.js"></script>
+        <script src="../static/dataTableProperties/FixedHeader-3.1.4/js/fixedHeader.foundation.js"></script>
+        <script src="../static/dataTableProperties/FixedHeader-3.1.4/js/fixedHeader.jqueryui.js"></script>
+        <script src="../static/dataTableProperties/FixedHeader-3.1.4/js/fixedHeader.semanicui.js"></script>
+        <script src="../static/dataTableProperties/FixedHeader-3.1.4/js/fixedHeader.semanticui.js"></script>
+        <!-- JSZip-2.5.0-->
+        <script src="../static/dataTableProperties/JSZip-2.5.0/jszip.js"></script>
+        <!-- pdfmake-0.1.36-->
+        <script src="../static/dataTableProperties/pdfmake-0.1.36/pdfmake.js"></script>
+        <script src="../static/dataTableProperties/pdfmake-0.1.36/vfs_fonts.js"></script>
+        <!-- Responsive-2.2.2-->
+        <link rel="stylesheet" href="{% static 'dataTableProperties/Responsive-2.2.2/css/responsive.bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/Responsive-2.2.2/css/responsive.bootstrap4.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/Responsive-2.2.2/css/responsive.dataTables.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/Responsive-2.2.2/css/responsive.foundation.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/Responsive-2.2.2/css/responsive.jqueryui.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/Responsive-2.2.2/css/responsive.semanticui.css' %}">
+        <script src="../static/dataTableProperties/Responsive-2.2.2/js/dataTables.responsive.js"></script>
+        <script src="../static/dataTableProperties/Responsive-2.2.2/js/responsive.bootstrap.js"></script>
+        <script src="../static/dataTableProperties/Responsive-2.2.2/js/responsive.bootstrap4.js"></script>
+        <script src="../static/dataTableProperties/Responsive-2.2.2/js/responsive.foundation.js"></script>
+        <script src="../static/dataTableProperties/Responsive-2.2.2/js/responsive.jqueryui.js"></script>
+        <script src="../static/dataTableProperties/Responsive-2.2.2/js/responsive.semanticui.js"></script>
+        <!-- RowReorder-1.2.4-->
+        <link rel="stylesheet" href="{% static 'dataTableProperties/RowReorder-1.2.4/css/rowReorder.bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/RowReorder-1.2.4/css/rowReorder.bootstrap4.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/RowReorder-1.2.4/css/rowReorder.dataTables.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/RowReorder-1.2.4/css/rowReorder.foundation.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/RowReorder-1.2.4/css/rowReorder.jqueryui.css' %}">
+        <link rel="stylesheet" href="{% static 'dataTableProperties/RowReorder-1.2.4/css/rowReorder.semanticui.css' %}">
+        <script src="../static/dataTableProperties/RowReorder-1.2.4/js/dataTables.rowReorder.js"></script>
+        <script src="../static/dataTableProperties/RowReorder-1.2.4/js/rowReorder.bootstrap.js"></script>
+        <script src="../static/dataTableProperties/RowReorder-1.2.4/js/rowReorder.bootstrap4.js"></script>
+        <script src="../static/dataTableProperties/RowReorder-1.2.4/js/rowReorder.dataTables.js"></script>
+        <script src="../static/dataTableProperties/RowReorder-1.2.4/js/rowReorder.foundation.js"></script>
+        <script src="../static/dataTableProperties/RowReorder-1.2.4/js/rowReorder.jqueryui.js"></script>
+        <script src="../static/dataTableProperties/RowReorder-1.2.4/js/rowReorder.semanticui.js"></script>
 <!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.12/css/mdb.min.css" rel="stylesheet">
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.12/js/mdb.min.js"></script>
+<link rel="stylesheet" href="{% static 'css/materialdesignb/mdb.min.css' %}">
 <script>
     $(document).ready(function () {
         var trigger = $('.hamburger'),

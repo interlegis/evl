@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% include 'imports.html' %}
+{# {% load widget_tweaks %} #}
+
+{% block content %}
+
+<style>
+    .containerr {
+        position: relative;
+        width: 150px;
+    }
+
+    .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .containerr:hover .image {
+        opacity: 0.3;
+    }
+
+    .containerr:hover .middle {
+        opacity: 1;
+    }
+
+    .fa-camera-retro:hover{
+        opacity: 0.5;
+    }
+    .text {
+        background-color: #e9ecef;
+        color: white;
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    .photoColor{
+        color: #006400;
+    }
+
+</style>
+
+
+    <title>EVL - Fale Conosco</title>
+    <div class="bc-icons-2">
+        <ol class="breadcrumb bcAdditionalProperties">
+            <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+            <li class="breadcrumb-item active">Meu Perfil</li>
+        </ol>
+    </div>
+
+    <div class="ajustestitlefaleconosco paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none;">
+        <h1 class="display-4 textBasicOrientation">
+            <h1 class="display-4  textBasicOrientation">Meu Perfil</h1>
+        </h1>
+        <hr class="my-4">
+        </p>
+    </div>
+
+    <div class="margin-padding-fale-conosco container">
+        <div class="col-md-12">
+            <div class="form-area">
+                <form method="POST" role="form" novalidate>
+                        <div class="row">
+                            <div style="width: 150px; margin-right: 1rem;">
+                                <div class="containerr">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Avatar" class="image img-circle avatar" style="height: 148px;">
+                                    <div class="middle">
+                                        <div class="text" style="border-radius: 50%;">
+                                            <a class="disabled" id="userPhoto">
+                                                <i class="fas fa-camera-retro fa-3x photoColor"></i>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: calc(100% - 150px - 1rem);">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control enable_btn" placeholder="Nome" value="{{user.username}}" id="id_nome" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="email" class="form-control enable_btn" placeholder="E-Mail" value="{{user.email}}" id="id_e-mail" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="phone" class="form-control enable_btn" placeholder="CPF" value="{{user.profile.cpf}}" id="id_cpf" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <input type="text" name="cpf" class="form-control enable_btn" placeholder="Data de Nascimento" id="id_datanasc" disabled>
+                        </div>
+                        <div class="form-group row">
+                            <input type="text" name="phone" class="form-control enable_btn" placeholder="Telefone" value="{{user.profile.phone}}" id="id_telefone" disabled>
+                        </div>
+                        <div class="form-group row">
+                            <input type="text" name="phone" class="form-control enable_btn" placeholder="Senha" id="id_senha" disabled>
+                        </div>
+                        <div class="form-group row">
+                            <input type="text" name="phone" class="form-control enable_btn" placeholder="Confirmação da Senha" id="id_senhaconf" disabled>
+                        </div>
+                        <div class="marginBottomBotaoEnviarContact row">
+                            <a onClick="habilitar()" class="pull-right btn btn-success" id="editarDadosBtn">Editar Dados</a>
+                            <a onClick="salvar()" class="pull-right btn btn-success" id="salvarDadosBtn" hidden>Salvar Dados</a>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<script>
+
+    function habilitar() {
+        var objtxt = document.getElementsByClassName("enable_btn");
+        for(var i=0; i<7; i++) {
+            objtxt[i].disabled = false;
+        }
+        var objEditar = document.getElementById("editarDadosBtn");
+        objEditar.hidden = true;
+
+        var objSalvar = document.getElementById("salvarDadosBtn");
+        objSalvar.hidden = false;
+
+        var objPhoto = document.getElementById("userPhoto");
+        objPhoto.classList.remove('disabled');
+    }
+    function salvar() {
+        var objtxt = document.getElementsByClassName("enable_btn");
+        for(var i=0; i<7; i++) {
+            objtxt[i].disabled = true;
+        }
+        var objEditar = document.getElementById("editarDadosBtn");
+        objEditar.hidden = false;
+
+        var objSalvar = document.getElementById("salvarDadosBtn");
+        objSalvar.hidden = true;
+
+        var objPhoto = document.getElementById("userPhoto");
+        objPhoto.classList.add('disabled');
+    }
+</script>
+
+{% endblock %}

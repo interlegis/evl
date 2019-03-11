@@ -1,18 +1,18 @@
-
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/header/bootstrap.min.css' %}">
 <!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/header/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/fontawesome-5.3.1/all.css' %}">
 <!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.12/css/mdb.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/header/mdb.min.css' %}">
 <!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../static/js/header/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script src="../static/js/header/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="../static/js/header/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.12/js/mdb.min.js"></script>
+<script src="../static/js/header/mdb.min.js"></script>
 <style>
 
     /* Icon 1 */
@@ -87,7 +87,6 @@
         opacity: 0;
         left: -60px;
     }
-
     .animated-icon1.open span:nth-child(3) {
         top: 11px;
         -webkit-transform: rotate(-135deg);
@@ -95,9 +94,6 @@
         -o-transform: rotate(-135deg);
         transform: rotate(-135deg);
     }
-
-    /* Icon 3*/
-
     .animated-icon3 span:nth-child(1) {
         top: 0px;
     }
@@ -135,9 +131,6 @@
         width: 0%;
         left: 50%;
     }
-
-    /* Icon 4 */
-
     .animated-icon4 span:nth-child(1) {
         top: 0px;
         -webkit-transform-origin: left center;
@@ -213,22 +206,7 @@
     #login-dp .form-group {
         margin-bottom: 10px;
     }
-    .btn-fb{
-        color: #fff;
-        background-color:#3b5998;
-    }
-    .btn-fb:hover{
-        color: #fff;
-        background-color:#496ebc
-    }
-    .btn-tw{
-        color: #fff;
-        background-color:#55acee;
-    }
-    .btn-tw:hover{
-        color: #fff;
-        background-color:#59b5fa;
-    }
+
     @media(max-width:768px){
         #login-dp{
             background-color: inherit;
@@ -239,60 +217,101 @@
             border-top:0 none;
         }
     }
+    .vl {
+        border-left: 1px solid #DCDCDC;
+        height: 40px;
+        position: absolute;
+        margin-left: 2%;
 
+    }
+
+    @media screen and
+    (min-width: 200px) and
+    (max-width: 449px) {
+
+    }
+    @media screen and
+    (min-width: 450px) and
+    (max-width: 575px){
+        .col{
+            padding: 0px !important;
+        }
+    }
+
+    @media screen and
+    (min-width: 576px) and
+    (max-width: 639px){
+        .col{
+            padding: 0px !important;
+        }
+    }
+    .imgHover:hover{
+        opacity: 0.5;
+    }
 </style>
-
-
-
 <html>
-
 <body>
+<nav class="navbar navbar-dark navbarBg row" style="margin: 0px;">
+        <a style="margin-top: 5px; width: 20%; align-self: end;" href="{% url 'home' %}">
+            <img class="logoProperties" src="../static/img/transparente_bfg.png" alt="EVL">
+        </a>
+
+        <div style="width: 70%; text-align: right; margin-top: 8px; align-self: end;" class="col">
+            <a href="/perfilaluno" style="margin-right: 3%;" class="imgHover">
+                <img src="../static/img/user.svg" class="fas fa-bars" style="color:black; width: 28px;" alt="Usuário">
+                <label style="color: black;">{{ user.first_name }}</label>
+                <label class="vl"></label>
+            </a>
+
+            <button onclick="widthTransform()" class="navbar-toggler imgHover" type="button" data-toggle="collapse" data-target="#navbarSupportedContent22" aria-controls="navbarSupportedContent22"
+                    aria-expanded="false" aria-label="Toggle navigation"><img src="../static/img/menu.svg" class="fas fa-bars" style="color:black; width: 28px;" alt=""><span></span><span></span><span></span></button>
+            <div class="col">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent22">
+                    <ul class="navbar-nav mr-auto" style="margin-left: -15% !important;">
+                        <li class="nav-item active">
+                            <a class="nav-link titlePropertiesNavbar imgHover" href="/cursos">Catálogo de Cursos <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link titlePropertiesNavbar imgHover" href="/adesaoInstitucional">Adesão Institucional</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link titlePropertiesNavbar imgHover" href="/validarCertificado">Validação de Documentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link titlePropertiesNavbar imgHover" href="/dashboard">Indicadores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link titlePropertiesNavbar imgHover" href="/faleConosco">Fale Conosco</a>
+                        </li>
+                        {% if user.profile %}
+                            {% if user.profile.role == 1 %}
+                                <li class="nav-item">
+                                    <a class="nav-link titlePropertiesNavbar imgHover" href="/administrador">Administrador</a>
+                                </li>
+                            {% else %}
+                                <li class="nav-item">
+                                    <a class="nav-link titlePropertiesNavbar imgHover" href="/baseCursos">Página do Aluno</a>
+                                </li>
+                            {% endif %}
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link titlePropertiesNavbar imgHover"  href="{% url 'oidc_authentication_init' %}">Login</a>
+                            </li>
+                        {% endif %}
+                        {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link titlePropertiesNavbar imgHover" href="{% url 'user_logout' %}">Logout</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
 
 
-
-<nav class="navbar navbar-dark navbarBg">
-    <a style="margin-bottom: auto; margin-top: auto;" href="{% url 'home' %}">
-        <img class="logoProperties" src="../static/img/transparente_bfg.png" alt="EVL">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent22" aria-controls="navbarSupportedContent22"
-            aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon4"><span></span><span></span><span></span></div></button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent22">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link titlePropertiesNavbar" href="/cursos">Catálogo de Cursos <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link titlePropertiesNavbar" href="/adesaoInstitucional">Adesão Institucional</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link titlePropertiesNavbar " href="/validarCertificado">Validação de Documentos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link titlePropertiesNavbar" href="/dashboard">Indicadores</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link titlePropertiesNavbar" href="/faleConosco">Fale Conosco</a>
-            </li>
-            {% if user.profile %}
-              {% if user.profile.role == 1 %}
-              <li class="nav-item">
-                <a class="nav-link titlePropertiesNavbar" href="/administrador">Administrador</a>
-              </li>
-              {% else %}
-              <li class="nav-item">
-                <a class="nav-link titlePropertiesNavbar" href="/baseCursos">Página do Aluno</a>
-              </li>
-              {% endif %}
-            {% else %}
-              <li class="nav-item">
-                  <a class="nav-link titlePropertiesNavbar"  href="{% url 'oidc_authentication_init' %}">Login</a>
-              </li>
-            {% endif %}
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="nav-link titlePropertiesNavbar" href="{% url 'user_logout' %}">Logout</a>
-            </li>
-            {% endif %}
-        </ul>
-    </div>
 </nav>
+ <script>
+     function myFunction() {
+         document.getElementById("myDropdown").classList.toggle("show");
+     }
+ </script>
