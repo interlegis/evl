@@ -259,7 +259,7 @@
         <div style="width: 70%; text-align: right; margin-top: 8px; align-self: end;" class="col">
             <a href="/perfilaluno" style="margin-right: 3%;" class="imgHover">
                 <img src="../static/img/user.svg" class="fas fa-bars" style="color:black; width: 28px;" alt="Usuário">
-                <label style="color: black;">Joaquim</label>
+                <label style="color: black;">{{ user.first_name }}</label>
                 <label class="vl"></label>
             </a>
 
@@ -269,44 +269,45 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent22">
                     <ul class="navbar-nav mr-auto" style="margin-left: -15% !important;">
                         <li class="nav-item active">
-                            <a class="nav-link titlePropertiesNavbar" href="/cursos">Catálogo de Cursos <span class="sr-only">(current)</span></a>
+                            <a class="nav-link titlePropertiesNavbar imgHover" href="/cursos">Catálogo de Cursos <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link titlePropertiesNavbar" href="/adesaoInstitucional">Adesão Institucional</a>
+                            <a class="nav-link titlePropertiesNavbar imgHover" href="/adesaoInstitucional">Adesão Institucional</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link titlePropertiesNavbar " href="/validarCertificado">Validação de Documentos</a>
+                            <a class="nav-link titlePropertiesNavbar imgHover" href="/validarCertificado">Validação de Documentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link titlePropertiesNavbar" href="/dashboard">Indicadores</a>
+                            <a class="nav-link titlePropertiesNavbar imgHover" href="/dashboard">Indicadores</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link titlePropertiesNavbar" href="/faleConosco">Fale Conosco</a>
+                            <a class="nav-link titlePropertiesNavbar imgHover" href="/faleConosco">Fale Conosco</a>
                         </li>
                         {% if user.profile %}
                             {% if user.profile.role == 1 %}
                                 <li class="nav-item">
-                                    <a class="nav-link titlePropertiesNavbar" href="/administrador">Administrador</a>
+                                    <a class="nav-link titlePropertiesNavbar imgHover" href="/administrador">Administrador</a>
                                 </li>
                             {% else %}
                                 <li class="nav-item">
-                                    <a class="nav-link titlePropertiesNavbar" href="/baseCursos">Página do Aluno</a>
+                                    <a class="nav-link titlePropertiesNavbar imgHover" href="/baseCursos">Página do Aluno</a>
                                 </li>
                             {% endif %}
                         {% else %}
                             <li class="nav-item">
-                                <a class="nav-link titlePropertiesNavbar"  href="{% url 'oidc_authentication_init' %}">Login</a>
+                                <a class="nav-link titlePropertiesNavbar imgHover"  href="{% url 'oidc_authentication_init' %}">Login</a>
                             </li>
                         {% endif %}
                         {% if user.is_authenticated %}
                             <li class="nav-item">
-                                <a class="nav-link titlePropertiesNavbar" href="{% url 'user_logout' %}">Logout</a>
+                                <a class="nav-link titlePropertiesNavbar imgHover" href="{% url 'user_logout' %}">Logout</a>
                             </li>
                         {% endif %}
                     </ul>
                 </div>
             </div>
         </div>
+
 
 </nav>
  <script>
