@@ -8,10 +8,11 @@ import json
 from .models import *
 import urllib.parse
 import urllib.request
+from django.conf import settings
 
 
 def cursos(request):
-    response_cursos = requests.get('http://localhost:3000/api/v1/cursos?key=' + request.user.profile.key)
+    response_cursos = requests.get(settings.BASE_URL + '/api/v1/cursos?key=' + request.user.profile.key)
     response_categorias = requests.get('http://localhost:3000/api/v1/categorias_cursos?key=' + request.user.profile.key)
 
     cursos = response_cursos.json()

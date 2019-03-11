@@ -140,6 +140,8 @@ OIDC_RP_SCOPES = 'openid profile email' #Local
 OIDC_VERIFY_JWT = False #Local
 OIDC_USE_NONCE = False #Local
 
+
+BASE_URL = 'http://localhost:3000'
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
