@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+from django.conf import settings
 from django.shortcuts import render, redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
 import xlsxwriter
@@ -14,13 +14,13 @@ import urllib.request
 from django.template import context
 from django.http.response import HttpResponse
 
-#@login_required(login_url='https://escolamodelows.interlegis.leg.br/log_in?return=XXX')
+#@login_required(login_url=settings.BASE_URL + 'log_in?return=XXX')
 def faleConosco(request):
     if request.method == "POST":
         if request.user.is_anonymous:
             formNotLogged = FaleConoscoForm(request.POST)
             if formNotLogged.is_valid():
-                req = urllib.request.Request('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/adicionar')
+                req = urllib.request.Request(settings.BASE_URL + 'api/v1/fale_conosco/adicionar')
                 req.add_header('Content-Type', 'application/json; charset=utf-8')
                 result = urlopen(req, json.dumps(formNotLogged.data).encode('utf-8'))
                 return render(request, 'evl/home.html', context={'messagem_faleConosco': "A mensagem foi enviada com sucesso"})
@@ -34,7 +34,7 @@ def faleConosco(request):
                 formLogged.fields['email'] = request.user.email
                 formLogged.fields['cpf'] = request.user.profile.cpf
                 formLogged.fields['phone_number'] = request.user.profile.phone
-                req = urllib.request.Request('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/adicionar?name=' + request.user.username + "&email="+ request.user.email + "&cpf=" + request.user.profile.cpf )
+                req = urllib.request.Request(settings.BASE_URL + 'api/v1/fale_conosco/adicionar?name=' + request.user.username + "&email="+ request.user.email + "&cpf=" + request.user.profile.cpf )
                 req.add_header('Content-Type', 'application/json; charset=utf-8')
                 result = urlopen(req, json.dumps(formLogged.data).encode('utf-8'))
                 return render(request, 'evl/home.html', context={'messagem_faleConosco': "A mensagem foi enviada com sucesso"})
@@ -49,11 +49,10 @@ def faleConosco(request):
 def mensagensFaleConosco(request):
     if request.method == "POST":
         id = request.POST['id']
-        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/mensagens?conversation_id=' + id)
+        req = requests.post(settings.BASE_URL + 'api/v1/fale_conosco/mensagens?conversation_id=' + id)
         data = req.content.decode(encoding="utf-8")
         return HttpResponse(data, content_type='application/json')
     else:
-        # req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/conversa_usuario?cpf=045.232.691-57')
-        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/fale_conosco/conversa_usuario?cpf=' + request.user.profile.cpf)
+        req = requests.post(settings.BASE_URL + 'api/v1/fale_conosco/conversa_usuario?cpf=' + request.user.username)
         messages = json.loads(req.content)
         return render(request, 'mensagensFaleConosco.html', {'messages': messages})

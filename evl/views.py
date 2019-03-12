@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+from django.conf import settings
 from django.shortcuts import render, redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
 import xlsxwriter
@@ -13,8 +13,8 @@ from administrador import views
 from django.contrib.auth import logout
 
 def home(request):
-    # response_analise = requests.get('https://escolamodelows.interlegis.leg.br/analise')
-    response_analise = requests.get('https://escolamodelows.interlegis.leg.br/analise')
+    # response_analise = requests.get('http://localhost:3000/analise')
+    response_analise = requests.get(settings.BASE_URL + 'analise')
     analises = response_analise.json()
     return render(request, 'evl/home.html', {'analises': analises})
 
@@ -45,4 +45,5 @@ def perfilaluno(request):
 
 def userLogout(request):
     logout(request)
-    return redirect('https://escolamodelows.interlegis.leg.br/log_out?externo=' + 'https://evl.interlegis.leg.br/') #Alterar essa URL para produção
+    # return redirect(settings.BASE_URL + 'log_out?externo=' + 'https://evl.interlegis.leg.br/') #Alterar essa URL para produção
+    return redirect(settings.BASE_URL + 'log_out?externo=' + 'http://localhost:8000/') #Alterar essa URL para produção

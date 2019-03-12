@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.shortcuts import render, redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
 import xlsxwriter
@@ -21,10 +22,10 @@ def administrador(request):
 
 def cursosPendentes(request):
     if request.user.profile.role == 1:
-        req1 = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos?key=' + request.user.profile.key)
+        req1 = requests.get(settings.BASE_URL + 'api/v1/categorias_cursos?key=' + request.user.profile.key)
         categorias = json.loads(req1.content)
         print(categorias)
-        req2 = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/cursos/aprovar?key=' + request.user.profile.key)
+        req2 = requests.get(settings.BASE_URL + 'api/v1/cursos/aprovar?key=' + request.user.profile.key)
         cursos = json.loads(req2.content)
         return render(request, 'cursosPendentes.html', {'cursos': cursos, 'categorias': categorias})
     else:
@@ -32,7 +33,7 @@ def cursosPendentes(request):
 
 def categoriasGestao(request):
     if request.user.profile.role == 1:
-        req1 = requests.get('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos?key=' + request.user.profile.key)
+        req1 = requests.get(settings.BASE_URL + 'api/v1/categorias_cursos?key=' + request.user.profile.key)
         categorias = json.loads(req1.content)
         return render(request, 'categoriasGestao.html', {'categorias': categorias})
     else:
@@ -40,21 +41,21 @@ def categoriasGestao(request):
 
 def criar_categoria(request, nome):
     if request.user.profile.role == 1:
-        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos/adicionar?key=' + request.user.profile.key, data={'name': nome})
+        req = requests.post(settings.BASE_URL + 'api/v1/categorias_cursos/adicionar?key=' + request.user.profile.key, data={'name': nome})
         return redirect(categoriasGestao)
     else:
         return redirect(views.homeAluno)
 
 def editar_categoria(request, categoria, nome):
     if request.user.profile.role == 1:
-        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/categorias_cursos/atualizar?key=' + request.user.profile.key, data={"id": categoria, "name": nome})
+        req = requests.post(settings.BASE_URL + 'api/v1/categorias_cursos/atualizar?key=' + request.user.profile.key, data={"id": categoria, "name": nome})
         return redirect(categoriasGestao)
     else:
         return redirect(views.homeAluno)
 
 def aprovar_curso(request, curso, categoria):
     if request.user.profile.role == 1:
-        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/cursos/aprovar?key=' + request.user.profile.key, data={"id": curso, "category": categoria, "status": "Aprovado"})
+        req = requests.post(settings.BASE_URL + 'api/v1/cursos/aprovar?key=' + request.user.profile.key, data={"id": curso, "category": categoria, "status": "Aprovado"})
         return redirect(cursosPendentes)
     else:
         return redirect(views.homeAluno)
@@ -62,7 +63,7 @@ def aprovar_curso(request, curso, categoria):
 
 def reprovar_curso(request, curso, categoria):
     if request.user.profile.role == 1:
-        req = requests.post('https://escolamodelows.interlegis.leg.br/api/v1/cursos/aprovar?key=' + request.user.profile.key, data={"id": curso, "category": categoria, "status": "Reprovado"})
+        req = requests.post(settings.BASE_URL + 'api/v1/cursos/aprovar?key=' + request.user.profile.key, data={"id": curso, "category": categoria, "status": "Reprovado"})
         return redirect(cursosPendentes)
     else:
         return redirect(views.homeAluno)
