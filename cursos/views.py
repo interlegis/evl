@@ -12,8 +12,8 @@ from django.conf import settings
 
 
 def cursos(request):
-    response_cursos = requests.get(settings.BASE_URL + '/api/v1/cursos?key=' + request.user.profile.key)
-    response_categorias = requests.get('http://localhost:3000/api/v1/categorias_cursos?key=' + request.user.profile.key)
+    response_cursos = requests.get(settings.BASE_URL + 'api/v1/cursos?key=' + settings.ADMIN_KEY)
+    response_categorias = requests.get(settings.BASE_URL + 'api/v1/categorias_cursos?key=' + settings.ADMIN_KEY)
 
     cursos = response_cursos.json()
     cursos = json.loads(json.dumps(cursos))
@@ -26,7 +26,7 @@ def cursos(request):
     return render(request, 'cursos.html', {'cursos' : cursos, 'categorias' : categorias})
 
 def meusCursos(request):
-    user_cursos = requests.get('http://localhost:3000/api/v1/cursos?key=' + request.user.profile.key)
+    user_cursos = requests.get(settings.BASE_URL + 'api/v1/cursos?key=' + request.user.profile.key)
     cursos = json.loads(user_cursos.content)
     return render(request, 'meusCursos.html', {'cursos': cursos})
 
