@@ -12,8 +12,8 @@ from django.conf import settings
 
 
 def cursos(request):
-    response_cursos = requests.get(settings.BASE_URL + 'api/v1/cursos?key=' + settings.ADMIN_KEY)
-    response_categorias = requests.get(settings.BASE_URL + 'api/v1/categorias_cursos?key=' + settings.ADMIN_KEY)
+    response_cursos = requests.get(settings.BASE_URL + 'api/v1/cursos?key=' + settings.APIKEY)
+    response_categorias = requests.get(settings.BASE_URL + 'api/v1/categorias_cursos?key=' + settings.APIKEY)
 
     cursos = response_cursos.json()
     cursos = json.loads(json.dumps(cursos))

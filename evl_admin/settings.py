@@ -142,7 +142,7 @@ OIDC_USE_NONCE = False #Local
 
 
 BASE_URL = 'http://localhost:3000/'
-ADMIN_KEY = '6iwXud8cubFTlGWgd8FucO6kzT8BAFXRfd7eXlZLMT3bOgPuMg'
+APIKEY = '6iwXud8cubFTlGWgd8FucO6kzT8BAFXRfd7eXlZLMT3bOgPuMg'
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
