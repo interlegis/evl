@@ -1,61 +1,8 @@
 {% extends 'base.html' %}
 {% include 'imports.html' %}
-<link rel="stylesheet" href="../../static/css/perfilAluno.css">
-{# {% load widget_tweaks %} #}
-
 {% block content %}
+    <title>EVL - Perfil Aluno</title>
 
-<style>
-    .containerr {
-        position: relative;
-        width: 150px;
-    }
-
-    .image {
-        opacity: 1;
-        display: block;
-        width: 100%;
-        height: auto;
-        transition: .5s ease;
-        backface-visibility: hidden;
-    }
-
-    .middle {
-        transition: .5s ease;
-        opacity: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        text-align: center;
-    }
-
-    .containerr:hover .image {
-        opacity: 0.3;
-    }
-
-    .containerr:hover .middle {
-        opacity: 1;
-    }
-
-    .fa-camera-retro:hover{
-        opacity: 0.5;
-    }
-    .text {
-        background-color: #e9ecef;
-        color: white;
-        font-size: 12px;
-        padding: 10px 15px;
-    }
-    .photoColor{
-        color: #006400;
-    }
-
-</style>
-
-
-    <title>EVL - Fale Conosco</title>
     <div class="bc-icons-2">
         <ol class="breadcrumb bcAdditionalProperties">
             <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
@@ -134,41 +81,5 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-<script>
-
-    function habilitar() {
-        var objtxt = document.getElementsByClassName("enable_btn");
-        for(var i=0; i<7; i++) {
-            objtxt[i].disabled = false;
-        }
-        var objEditar = document.getElementById("editarDadosBtn");
-        objEditar.hidden = true;
-
-        var objSalvar = document.getElementById("salvarDadosBtn");
-        objSalvar.hidden = false;
-
-        var objPhoto = document.getElementById("userPhoto");
-        objPhoto.classList.remove('disabled');
-    }
-    function salvar() {
-        var objtxt = document.getElementsByClassName("enable_btn");
-        for(var i=0; i<7; i++) {
-            objtxt[i].disabled = true;
-        }
-        var objEditar = document.getElementById("editarDadosBtn");
-        objEditar.hidden = false;
-
-        var objSalvar = document.getElementById("salvarDadosBtn");
-        objSalvar.hidden = true;
-
-        var objPhoto = document.getElementById("userPhoto");
-        objPhoto.classList.add('disabled');
-    }
-</script>
-
+    <script src="../../static/js/perfilAluno.js"></script>
 {% endblock %}
