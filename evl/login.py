@@ -1,5 +1,6 @@
 from mozilla_django_oidc.auth import OIDCAuthenticationBackend
 from evl.models import Profile
+from django.conf import settings
 
 class MyOIDCAB(OIDCAuthenticationBackend):
     def create_user(self, claims):
@@ -8,7 +9,7 @@ class MyOIDCAB(OIDCAuthenticationBackend):
         user.last_name = claims.get('family_name', '')
         user.username=claims.get('username', '')
         user.save()
-        profile = Profile(image=claims.get('profile_image', ''), phone=claims.get('phone', ''), user=user, key=claims.get('access_key', ''), role=claims.get('role', ''))
+        profile = Profile(image=settings.BASE_URL + claims.get('profile_image', ''), phone=claims.get('phone', ''), user=user, key=claims.get('access_key', ''), role=claims.get('role', ''))
         profile.save()
         return user
 
