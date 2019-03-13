@@ -72,10 +72,23 @@
 
     <div class="margin-padding-fale-conosco container">
         <div class="col-md-12">
-            <div class="form-area">
+            <div class="form-area widthTotal">
                 <form method="POST" role="form" novalidate>
+                    <div class="showPicture">
+                        <div class="containerr mrml" style="margin-bottom: 1rem;">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Avatar" class="image img-circle avatar" style="height: 148px;">
+                            <div class="middle">
+                                <div class="text" style="border-radius: 50%;">
+                                    <a class="disabled" id="userPhoto">
+                                        <i class="fas fa-camera-retro fa-3x photoColor"></i>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                         <div class="row">
-                            <div style="width: 150px; margin-right: 1rem;">
+                            <div class="widthTelaGrandePhoto">
                                 <div class="containerr">
                                     <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Avatar" class="image img-circle avatar" style="height: 148px;">
                                     <div class="middle">
@@ -88,9 +101,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div style="width: calc(100% - 150px - 1rem);">
+                            <div class="widthTelaGrandeInput">
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control enable_btn" placeholder="Nome" value="{{user.username}}" id="id_nome" disabled>
+                                    <input type="text" name="name" class="form-control enable_btn" placeholder="Nome" value="{{ user.first_name }}" id="id_nome" disabled>
                                 </div>
                                 <div class="form-group">
                                     <input type="text" name="email" class="form-control enable_btn" placeholder="E-Mail" value="{{user.email}}" id="id_e-mail" disabled>

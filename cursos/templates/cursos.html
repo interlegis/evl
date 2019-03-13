@@ -1,29 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% include 'imports.html' %}
     <script src="/static/js/cursos.js"></script>
-    <script src="/static/js/stars2.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function() {
-
-            jQuery("#subirTopo").hide();
-
-            jQuery('a#subirTopo').click(function() {
-                jQuery('body,html').animate({
-                    scrollTop: 0
-                }, 800);
-                return false;
-            });
-
-            jQuery(window).scroll(function() {
-                if (jQuery(this).scrollTop() > 1000) {
-                    jQuery('#subirTopo').fadeIn();
-                } else {
-                    jQuery('#subirTopo').fadeOut();
-                }
-            });
-        });
-    </script>
     <title>EVL - Catálogo de Cursos</title>
     <div class="bc-icons-2">
         <ol class="breadcrumb bcAdditionalProperties">
@@ -31,7 +8,11 @@
             <li class="breadcrumb-item active">Catálogo de Cursos</li>
         </ol>
     </div>
-    <div class="paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none">
+
+
+
+
+    <div class="paddingDiv gradientBackgroundTitle jumbotron" style="box-shadow: none; margin-bottom: 0px !important;">
         <h1 class="display-4 textBasicOrientation">
             <h1 class="display-4 titleFontProperties2 textBasicOrientation">Catálogo de Cursos</h1>
         </h1>
@@ -40,11 +21,27 @@
         </p>
     </div>
 
+
+
     <div class="container page-content">
+        <div style="margin-bottom: 15px;" class="tamanhoMenuResp showUpperMenu">
+            <div class="list-group menuCoursesColor" id="list-tab" role="tablist">
+                {% for categoria in categorias %}
+                    {% if categoria == categorias.0 %}
+                        <a class="menuCoursesColor list-group-item list-group-item-light active show" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
+                    {% endif %}
+                    {% if categoria != categorias.0 %}
+                        <a class="menuCoursesColor list-group-item list-group-item-light" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+
 
         <div class="row">
-            <div class="sizeCol3">
-                <div style="min-height: 370px;">
+            <div class="sizeCol3 showBigMenu">
+                <div style="min-height: 370px;" class="minWidth">
                     <div class="list-group menuCoursesColor" id="list-tab" role="tablist">
                         {% for categoria in categorias %}
                             {% if categoria == categorias.0 %}
@@ -59,7 +56,7 @@
                 </div>
             </div>
 
-            <div class="sizeCol9">
+            <div class="sizeCol9 mrml">
                 <div class="row" id="nav-tabContent">
                     {% for categoria in categorias %}
                         {% if categoria == categorias.0 %}
@@ -67,7 +64,7 @@
                         {% else %}
                             <div class="tab-pane fade active show" style="display:none" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
                         {% endif %}
-                    <section class="row" style="max-width: 100%; text-align: center; margin-left: auto; margin-right: auto;">
+                    <section class="row" style="max-width: 100%; text-align: center; margin-left: auto; margin-right: auto; padding: 0px !important; justify-content: space-evenly;">
                         {% for curso in cursos %}
                             {% if curso.categoria == categoria.id %}
                                 <ul id="ul-{{ categoria.id }}" class="animated bounceInLeft align">
@@ -151,9 +148,7 @@
             </div>
         </div>
 
-        <a id="subirTopo" class="btn btn-outline-dark">
-            Subir
-        </a>
+
 
 
     </div>
@@ -182,7 +177,6 @@
         }
 
         .marginCards {
-            margin: 4%;
             margin-top: 0px !important;
         }
 
@@ -240,6 +234,5 @@
             font-weight: 900;
             color: #f8ce0b;
         }
-
     </style>
 {% endblock %}

@@ -1,6 +1,9 @@
 @media screen and
 (min-width: 200px) and
 (max-width: 449px){
+    .lineHeight{
+        line-height: 1 !important;
+    }
     .logoProperties {
         min-width: 100px !important;
         min-height: 40px !important;
@@ -62,7 +65,7 @@
         margin-bottom: 19% !important;
     }
     .img-fluid{
-        max-width: 24% !important;
+        max-width: 100% !important;
         height: 80px !important;
     }
     .marginBottomImg{
@@ -82,18 +85,64 @@
         margin-right: 15%;
     }
     .widthCard{
+        width: 250px !important;
+    }
+    .minWidth{
         width: 315px !important;
     }
     .align {
         margin-left: auto !important;
         margin-right: auto !important;
     }
+    .showBigMenu{
+        display: none;
+    }
+    .showBtnMenu{
+        display: initial !important;
+    }
+    .showUpperMenu{
+        display: block !important;
+    }
+    .tamanhoMenuResp{
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .showPicture{
+        display: inline !important;
+    }
+    .widthTelaGrandePhoto{
+        display: none !important;
+    }
+    .widthTelaGrandeInput{
+        width: 100% !important;
+    }
+    .widthTotal{
+        width: 95% !important;
+    }
+
 }
 
 @media screen and
 (min-width: 450px) and
 (max-width: 575px){
+    .widthTotal{
+        width: 95% !important;
+    }
+    .widthTelaGrandeInput{
+        width: 100% !important;
+    }
+    .widthTelaGrandePhoto{
+        display: none !important;
+    }
+
+    .showPicture{
+    display: inline !important;
+    }
     .widthCard{
+        width: 315px !important;
+    }
+    .minWidth{
         width: 315px !important;
     }
     .sizeCol9{
@@ -167,7 +216,7 @@
         margin-bottom: 12% !important;
     }
     .img-fluid{
-        max-width: 18% !important;
+        max-width: 100% !important;
         height: 80px !important;
     }
     .marginBottomImg{
@@ -179,6 +228,20 @@
     .align {
         margin-left: auto !important;
         margin-right: auto !important;
+    }
+    .showBigMenu{
+        display: none;
+    }
+    .showBtnMenu{
+        display: initial !important;
+    }
+    .showUpperMenu{
+        display: block !important;
+    }
+    .tamanhoMenuResp{
+        width: 315px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
@@ -256,11 +319,26 @@
         margin-left: auto !important;
         margin-right: auto !important;
     }
-}
+    .showBigMenu{
+        display: none;
+    }
+    .showBtnMenu{
+        display: initial !important;
+    }
+    .showUpperMenu{
+        display: block !important;
+    }
+    .tamanhoMenuResp{
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+}
 @media screen and
 (min-width: 640px) and
-(max-width: 799px){
+(max-width: 767px){
+
     .logoProperties {
         min-width: 100px !important;
         min-height: 40px !important;
@@ -326,11 +404,213 @@
         margin-left: auto !important;
         margin-right: auto !important;
     }
+    .showBigMenu{
+        display: none;
+    }
+    .showBtnMenu{
+        display: initial !important;
+    }
+    .showUpperMenu{
+        display: block !important;
+    }
+    .tamanhoMenuResp{
+        width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .widthCard {
+        width: 360px !important;
+    }
 }
+@media screen and
+(min-width: 768px) and
+(max-width: 799px){
+    .tamanhoMenuResp{
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
+
+    }
+    .textBasicOrientationNav{
+        text-align: center !important;
+        vertical-align: middle;
+    }
+    .marginTopHome{
+        margin-top: 0px !important;
+    }
+
+    .fixed-top-nav {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .widthItensNavbarInterno{
+        width: 20% !important;
+    }
+
+    .divResolucaoLarge{
+        display: none;
+    }
+    .divResolucaoSmall{
+        display: contents;
+    }
+    .main-div {
+        background: #ffffff none repeat scroll 0 0;
+        border-radius: 2px;
+        margin: 10px auto 30px;
+        max-width: 70% !important;
+        padding: 20px 60px 4px 39px;
+    }
+    .marginBottomBotaoEnviarContact{
+        margin-bottom: 12% !important;
+    }
+    .nomeAluno{
+        margin-top: 8% !important;
+    }
+
+    .marginBottomImg{
+        margin-bottom: 11% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 56% !important;
+    }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .showBigMenu{
+        display: none;
+    }
+    .showBtnMenu{
+        display: initial !important;
+    }
+    .showUpperMenu{
+        display: block !important;
+    }
+}
+
 
 @media screen and
 (min-width: 800px) and
+(max-width: 991px) {
+    .tamanhoMenuResp{
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .showUpperMenu{
+        display: block !important;
+    }
+    .showBigMenu{
+        display: none;
+    }
+    .showBtnMenu{
+        display: initial !important;
+    }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
+
+    }
+    .textBasicOrientationNav{
+        text-align: center !important;
+        vertical-align: middle;
+    }
+    .marginTopHome{
+        margin-top: 0px !important;
+    }
+
+    .fixed-top-nav {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .widthItensNavbarInterno{
+        width: 20% !important;
+    }
+
+    .divResolucaoLarge{
+        display: none;
+    }
+    .divResolucaoSmall{
+        display: contents;
+    }
+    .main-div {
+        background: #ffffff none repeat scroll 0 0;
+        border-radius: 2px;
+        margin: 10px auto 30px;
+        max-width: 70% !important;
+        padding: 20px 60px 4px 39px;
+    }
+    .nomeAluno{
+        margin-top: 7% !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 9% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 49% !important;
+    }
+    .sizeTableCursos{
+        height: 350px !important;
+    }
+}
+
+
+
+@media screen and
+(min-width: 992px) and
 (max-width: 1023px){
+    .tamanhoMenuResp{
+        width: 625px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .showUpperMenu{
+        display: block !important;
+    }
+    .showBigMenu{
+        display: none;
+    }
+    .showBtnMenu{
+        display: initial !important;
+    }
     .align {
         margin-left: auto !important;
         margin-right: auto !important;
@@ -1507,4 +1787,27 @@ a:hover {
     width: 150px;
     height: 50px;
     border-radius: 50%;
+}
+.lineHeight{
+    line-height: 1.3;
+}
+.mrml{
+    margin-left: auto;
+    margin-right: auto;
+}
+.showBtnMenu{
+    display: none;
+}
+.showUpperMenu{
+     display: none;
+ }
+.widthTelaGrandeInput{
+    width: calc(100% - 150px - 1rem)
+}
+.widthTelaGrandePhoto{
+    width: 150px;
+    margin-right: 1rem
+}
+.showPicture{
+    display: none;
 }
