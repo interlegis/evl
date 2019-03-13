@@ -1,54 +1,52 @@
 {% extends 'base.html' %}
+{% include 'imports.html' %}
 {% block content %}
     <title>EVL - Meus Certificados</title>
-
-<body>
-{% include 'imports.html' %}
-<div class="bc-icons-2">
-    <ol class="breadcrumb bcAdditionalProperties">
-        <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
-        <li class="breadcrumb-item"><a class="black-text" href="{% url 'baseCursos' %}">Aluno</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
-        <li class="breadcrumb-item active">Certificados</li>
-    </ol>
-</div>
-    <div class="view hm-white-light jarallax marginTopHome bgCertificados"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
-        <div class="full-bg-img">
-            <div class="container flex-center">
-                <div class="row" style="width: 100% !important; height: 65%; margin-top: -200px;">
-                    <div class="col-md-12 wow fadeIn">
-                        <div class="text-center titleFontProperties">
+    <body>
+        <div class="bc-icons-2">
+            <ol class="breadcrumb bcAdditionalProperties">
+                <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+                <li class="breadcrumb-item"><a class="black-text" href="{% url 'baseCursos' %}">Aluno</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+                <li class="breadcrumb-item active">Certificados</li>
+            </ol>
+        </div>
+        <div class="view hm-white-light jarallax marginTopHome bgCertificados"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
+            <div class="full-bg-img">
+                <div class="container flex-center">
+                    <div class="row" style="width: 100% !important; height: 65%; margin-top: -200px;">
+                        <div class="col-md-12 wow fadeIn">
+                            <div class="text-center titleFontProperties">
                                 <h1 class="display-2-edited mb-2 wow fadeInDown" data-wow-delay="0.3s">Certificados</h1>
-                            <div style="overflow: auto; width: 100% !important;" class="propriedades-tabela">
-                                <table class="table table-hover " id="minhaTabela" style="width: 100% !important;">
-                                    <thead>
-                                    <tr class="table-light">
-                                        <th scope="col">ID</th>
-                                        <th scope="col">Data de Emissão</th>
-                                        <th scope="col">Nota</th>
-                                        <th scope="col">Curso</th>
-                                        <th scope="col">Escola</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    {% for cert in certs.certificados %}
-                                    <tr class="table-light">
-                                        <td>{{ cert.id }}</td>
-                                        <td>{{ cert.data_de_emissao }}</td>
-                                        <td>{{ cert.nota }}</td>
-                                        <td>{{ cert.curso }}</td>
-                                        <td>{{ cert.escola }}</td>
-                                    </tr>
-                                    {% endfor %}
-                                    </tbody>
-                                </table>
-                                    </div>
+                                <div style="overflow: auto; width: 100% !important;" class="propriedades-tabela">
+                                    <table class="table table-hover " id="minhaTabela" style="width: 100% !important;">
+                                        <thead>
+                                            <tr class="table-light">
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Data de Emissão</th>
+                                                <th scope="col">Nota</th>
+                                                <th scope="col">Curso</th>
+                                                <th scope="col">Escola</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for cert in certs.certificados %}
+                                                <tr class="table-light">
+                                                    <td>{{ cert.id }}</td>
+                                                    <td>{{ cert.data_de_emissao }}</td>
+                                                    <td>{{ cert.nota }}</td>
+                                                    <td>{{ cert.curso }}</td>
+                                                    <td>{{ cert.escola }}</td>
+                                                </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-<script src="/static/js/dataTable.js"></script>
-</body>
+    </body>
+    <script src="/static/js/dataTable.js"></script>
 {% endblock %}

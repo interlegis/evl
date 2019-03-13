@@ -1,31 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
     <title>EVL - Página do Administrador</title>
-<body>
-{% include 'imports.html' %}
-<div class="bc-icons-2">
-    <ol class="breadcrumb bcAdditionalProperties">
-        <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
-        <li class="breadcrumb-item active">Administrador</li>
-    </ol>
-</div>
+    <body>
+    {% include 'imports.html' %}
+    <div class="bc-icons-2">
+        <ol class="breadcrumb bcAdditionalProperties">
+            <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+            <li class="breadcrumb-item active">Administrador</li>
+        </ol>
+    </div>
+    <div class="view hm-white-light jarallax marginTopHome bgAdministrador" style="background-size:cover!important;" data-jarallax='{"speed": 0.2}'>
+        <div class="full-bg-img">
+            <div class="container flex-center">
+                <div class="row">
+                    <div class="col-md-12 wow fadeIn">
+                        <div class="text-center titleFontProperties">
+                            <h1 class="display-2 mb-2 wow fadeInDown" data-wow-delay="0.3s">Página do Administrador</h1>
 
-<div class="view hm-white-light jarallax marginTopHome bgAdministrador" style="background-size:cover!important;" data-jarallax='{"speed": 0.2}'>
-    <div class="full-bg-img">
-        <div class="container flex-center">
-            <div class="row">
-                <div class="col-md-12 wow fadeIn">
-                    <div class="text-center titleFontProperties">
-                        <h1 class="display-2 mb-2 wow fadeInDown" data-wow-delay="0.3s">Página do Administrador</h1>
-
-                        <a href="{% url 'cursosPendentes' %}" class="btn btn-primary btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="fa fa-list-ul"></i> Cursos pendentes</a>
-                        <a href="{% url 'categoriasGestao' %}" class="btn btn-success btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="far fa-clipboard"></i> Gestão de categorias</a>
-                        <a href="{% url 'certificados' %}" class="btn btn-danger btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="fa fa-graduation-cap"></i> Certificados</a>
+                            <a href="{% url 'cursosPendentes' %}" class="btn btn-primary btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="fa fa-list-ul"></i> Cursos pendentes</a>
+                            <a href="{% url 'categoriasGestao' %}" class="btn btn-success btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="far fa-clipboard"></i> Gestão de categorias</a>
+                            <a href="{% url 'certificados' %}" class="btn btn-danger btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="fa fa-graduation-cap"></i> Certificados</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
 {% endblock %}

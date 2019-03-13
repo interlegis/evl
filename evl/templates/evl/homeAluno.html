@@ -1,43 +1,37 @@
 {% include 'imports.html' %}
 <html lang="pt-br">
-
-
-
-<head>
-    <header>
-        {% include 'header.html' %}
-    </header>
-    <meta charset="UTF-8">
-    <title>Aluno</title>
-</head>
-<body>
-<nav class="mobile navbar navbar-default sidebar" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+    <head>
+        <header>
+            {% include 'header.html' %}
+        </header>
+        <meta charset="UTF-8">
+        <title>Aluno</title>
+    </head>
+    <body>
+    <nav class="mobile navbar navbar-default sidebar" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+                <ul class="nav navbar-nav tamNavBar">
+                    <li class="active">
+                        <a href="#">Home
+                            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
+                        </a>
+                    </li>
+                    <li><a href="{% url 'meusCursos' %}">Cursos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>
+                    <li><a href="{% url 'comprovantes' %}">Comprovantes<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon far fa-file"></span></a></li>
+                    <li><a href="{% url 'certificados' %}">Certificados<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon fa fa-graduation-cap"></span></a></li>
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-            <ul class="nav navbar-nav tamNavBar">
-                <li class="active">
-                    <a href="#">Home
-                        <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
-                    </a>
-                </li>
-
-                <li ><a href="{% url 'meusCursos' %}">Cursos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>
-                <li ><a href="{% url 'comprovantes' %}">Comprovantes<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon far fa-file"></span></a></li>
-                <li ><a href="{% url 'certificados' %}">Certificados<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon fa fa-graduation-cap"></span></a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-
+    </nav>
     <div class="view hm-white-light jarallax marginTopHome bgHome"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
         <div class="full-bg-img">
             <div class="container flex-center">
@@ -55,10 +49,8 @@
             </div>
         </div>
     </div>
-
-
     <footer>
         {% include 'base.html' %}
     </footer>
-</body>
+    </body>
 </html>
