@@ -6,8 +6,6 @@ $(document).ready(function() {
     $("#nav-tabContent > *").css("display", "none")
     $("#"+id+"").css("display", "block");
   });
-
-
-
 });
+
 

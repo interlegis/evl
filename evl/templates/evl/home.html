@@ -1,76 +1,69 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<script type="text/javascript">
-console.log("AQUIIII");
-console.log(document.cookie);
-</script>
-
-<title>EVL</title>
-{% if messagem_fale_conosco %}
-  <div class="alert alert-success" style="margin: 0 auto;">
-    <strong>{{ messagem_fale_conosco }}</strong>
-  </div>
-{% endif %}
-<!--<h2>{{ csrf_input }}</h2>-->
-    <body>
-    {% include 'imports.html' %}
-    <div class="view hm-white-light jarallax marginTopHome bgHomepage" style="background-size:cover !important;" data-jarallax='{"speed": 0.2}'>
-        <div class="full-bg-img">
-            <div class="container flex-center">
-                <div class="row">
-                    <div class="col-md-12 wow fadeIn">
-                        <div class="text-center titleFontProperties">
-                            <h1 class="display-2 mb-2 wow fadeInDown" data-wow-delay="0.3s">Portal EVL</h1>
-                            <h1 class="mb-2 wow fadeInDown" data-wow-delay="0.3s" style="font-size: 30px;">Escola Virtual do Legislativo</h1>
-                            <hr class="my-4">
-                            <a href="/cursos" class="btn btn-primary btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="fa fa-list-ul"></i> Catálogo de Cursos</a>
-                           </div>
-                    </div>
-                </div>
-            </div>
+{% include 'imports.html' %}
+    <title>EVL</title>
+    {% if messagem_fale_conosco %}
+        <div class="alert alert-success" style="margin: 0 auto;">
+            <strong>{{ messagem_fale_conosco }}</strong>
         </div>
-    </div>
-
-    <div class="card_h col-md-6 mt-5 mb-5">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="100000">
-            <div class="w-100 carousel-inner" role="listbox">
-              {% for analise in analises %}
-                <div class="carousel-item {% if forloop.first %}active {% endif %}">
-                    <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
-                    <div class="carousel-caption">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <img src="/static/img/profile.png" alt="" class="rounded-circle img-fluid"/>
-                            </div>
-                            <div class="col-sm-9">
-                              <div class="corpo_mensagem">
-                                <h3>{{ analise.autor }} ({{analise.cargo}})</h3>
-                                <small>{{ analise.opiniao }}</small>
-                              </div>
-                              <div>
-                                <small class="smallest mute detalhes_mensagem"> {{ analise.cidade }} - {{analise.uf}}</small>
-                              </div>
+    {% endif %}
+    <!--<h2>{{ csrf_input }}</h2>-->
+    <body>
+        <div class="view hm-white-light jarallax marginTopHome bgHomepage" style="background-size:cover !important;" data-jarallax='{"speed": 0.2}'>
+            <div class="full-bg-img">
+                <div class="container flex-center">
+                    <div class="row">
+                        <div class="col-md-12 wow bounceIn">
+                            <div class="text-center titleFontProperties">
+                                <h1 class="display-2 mb-2 wow fadeInDown" data-wow-delay="0.3s">Portal EVL</h1>
+                                <h1 class="mb-2 wow fadeInDown" data-wow-delay="0.3s" style="font-size: 30px;">Escola Virtual do Legislativo</h1>
+                                <hr class="my-4">
+                                <a href="/cursos" class="btn btn-primary btn-lg wow float-shadow" data-wow-delay="0.4s"><i class="fa fa-list-ul"></i> Catálogo de Cursos</a>
                             </div>
                         </div>
                     </div>
                 </div>
-              {% endfor %}
-            </div>
-            <div class="float-right navi">
-                <a class="" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon ico" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon ico" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
         </div>
-    </div>
-
-
+        <div class="card_h col-md-6 mt-5 mb-5">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="100000">
+                <div class="w-100 carousel-inner" role="listbox">
+                    {% for analise in analises %}
+                        <div class="carousel-item {% if forloop.first %}active {% endif %}">
+                            <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
+                            <div class="carousel-caption">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <img src="/static/img/profile.png" alt="" class="rounded-circle img-fluid"/>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="corpo_mensagem">
+                                            <h3>{{ analise.autor }} ({{analise.cargo}})</h3>
+                                            <small>{{ analise.opiniao }}</small>
+                                        </div>
+                                        <div>
+                                            <small class="smallest mute detalhes_mensagem"> {{ analise.cidade }} - {{analise.uf}}</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="float-right navi">
+                    <a class="" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon ico" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon ico" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </body>
-    </html>
-    {% endblock %}
+<script type="text/javascript">
+    console.log(document.cookie);
+</script>
+{% endblock %}

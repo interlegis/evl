@@ -1,50 +1,49 @@
 {% extends 'base.html' %}
 {% block content %}
-<script src="/static/js/administrador.js"></script>
-    <title>EVL - Meus Comprovantes</title>
-
 {% include 'imports.html' %}
-<div class="bc-icons-2">
-    <ol class="bcAdditionalProperties breadcrumb ">
-        <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
-        <li class="breadcrumb-item"><a class="black-text" href="{% url 'administrador' %}">Administrador</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
-        <li class="breadcrumb-item active">Cursos Pendentes</li>
-    </ol>
-</div>
+<script src="/static/js/administrador.js"></script>
+    <title>EVL - Cursos Pendentes</title>
+    <div class="bc-icons-2">
+        <ol class="bcAdditionalProperties breadcrumb ">
+            <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+            <li class="breadcrumb-item"><a class="black-text" href="{% url 'administrador' %}">Administrador</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+            <li class="breadcrumb-item active">Cursos Pendentes</li>
+        </ol>
+    </div>
     <body>
-    <div class="view hm-white-light jarallax marginTopHome bgCursosPendentes"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
+        <div class="view hm-white-light jarallax marginTopHome bgCursosPendentes"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
             <div class="full-bg-img">
                 <div class="container flex-center">
                     <div class="row" style="width: 100% !important; height: 65%; margin-top: -200px;">
                         <div class="col-md-12 wow fadeIn">
                             <div class="text-center titleFontProperties">
                                 <h1 class="display-2-edited mb-2 wow fadeInDown" data-wow-delay="0.3s">Cursos Pendentes</h1>
-                                     <div class="propriedades-tabela" style="overflow: auto">
-                                <table class="table table-hover" id="minhaTabela">
-                                    <thead>
-                                    <tr class="table-light">
-                                        <th scope="col">Escola</th>
-                                        <th scope="col">Curso</th>
-                                        <th scope="col">Descrição</th>
-                                        <th scope="col">Carga Horária</th>
-                                        <th scope="col">Aprovar</th>
-                                        <th scope="col">Reprovar</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    {% for curso in cursos.cursos %}
-                                    <tr class="table-light">
-                                        <th scope="row"><a href={{curso.school_url}}>{{curso.school}}</a></th>
-                                        <th scope="row"><a href={{curso.url}}>{{curso.nome}}</a></th>
-                                        <th scope="row">{{curso.descricao}}</th>
-                                        <th scope="row">{{curso.carga_horaria}}</th>
-                                        <td><a data-toggle="modal" class="click-btn" id="{{curso.id}}" myvalue="{{curso.id}}" data-target="#confirm-submit"><i class="fas fa-check"></i></a></td>
-                                        <td><a href="{% url 'reprovar_curso' curso=curso.id categoria=1%}"><i class="far fa-trash-alt"></i></a></td>
-                                    </tr>
-                                    {% endfor %}
-                                    </tbody>
-                                </table>
-                            </div>
+                                <div class="propriedades-tabela" style="overflow: auto">
+                                    <table class="table table-hover" id="minhaTabela">
+                                        <thead>
+                                            <tr class="table-light">
+                                                <th scope="col">Escola</th>
+                                                <th scope="col">Curso</th>
+                                                <th scope="col">Descrição</th>
+                                                <th scope="col">Carga Horária</th>
+                                                <th scope="col">Aprovar</th>
+                                                <th scope="col">Reprovar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for curso in cursos.cursos %}
+                                            <tr class="table-light">
+                                                <th scope="row"><a href={{curso.school_url}}>{{curso.school}}</a></th>
+                                                <th scope="row"><a href={{curso.url}}>{{curso.nome}}</a></th>
+                                                <th scope="row">{{curso.descricao}}</th>
+                                                <th scope="row">{{curso.carga_horaria}}</th>
+                                                <td><a data-toggle="modal" class="click-btn" id="{{curso.id}}" myvalue="{{curso.id}}" data-target="#confirm-submit"><i class="fas fa-check"></i></a></td>
+                                                <td><a href="{% url 'reprovar_curso' curso=curso.id categoria=1%}"><i class="far fa-trash-alt"></i></a></td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -52,35 +51,34 @@
             </div>
         </div>
         <div class="modal fade" id="confirm-submit" tabindex="-1" style="margin-top: 140px;"role="dialog" aria-hidden="true">
-          <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content" style="border-radius: 25px;">
-              <div class="modal-header">
-                <h3 class="modal-title aviso-titulo" style="color: black;">Escolha uma categoria para aprovar o curso: <small style="color: #306345;">{{curso.nome}}</small></h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <h4 style="text-align: left; margin-bottom:20px;">Categorias</h4>
-                <div class="form-group">
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    {% for categoria in categorias.categorias_cursos %}
-                    <option value={{categoria.id}}>{{categoria.nome}}</option>
-                    {% endfor %}
-                  </select>
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content" style="border-radius: 25px;">
+                    <div class="modal-header">
+                        <h3 class="modal-title aviso-titulo" style="color: black;">Escolha uma categoria para aprovar o curso: <small style="color: #306345;">{{curso.nome}}</small></h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 style="text-align: left; margin-bottom:20px;">Categorias</h4>
+                        <div class="form-group">
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                {% for categoria in categorias.categorias_cursos %}
+                                    <option value={{categoria.id}}>{{categoria.nome}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
+                        <a id="enviar-btn" href="{% url 'aprovar_curso' curso=0 categoria=0 %}">
+                            <button type="button" class="btn btn-success">Enviar</button>
+                        </a>
+                    </div>
                 </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
-                <a id="enviar-btn" href="{% url 'aprovar_curso' curso=0 categoria=0 %}">
-                  <button type="button" class="btn btn-success">Enviar</button>
-                </a>
-              </div>
             </div>
-          </div>
         </div>
-
-</body>
+    </body>
 <script src="/static/js/dataTable.js"></script>
 <style media="screen">
 .modal-backdrop {
