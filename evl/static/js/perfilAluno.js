@@ -11,6 +11,7 @@ function habilitar() {
 
     var objPhoto = document.getElementById("userPhoto");
     objPhoto.classList.remove('disabled');
+
 }
 function salvar() {
     var objtxt = document.getElementsByClassName("enable_btn");

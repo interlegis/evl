@@ -1811,3 +1811,9 @@ a:hover {
 .showPicture{
     display: none;
 }
+.pointer{
+    cursor: pointer;
+}
+.hoverName:hover{
+    font-weight:400 ;
+}
