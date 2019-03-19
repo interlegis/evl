@@ -20,7 +20,7 @@
     </div>
     <div class="container page-content">
         <div style="margin-bottom: 15px;" class="tamanhoMenuResp showUpperMenu">
-            <div class="list-group menuCoursesColor" id="list-tab" role="tablist">
+            <div class="list-group menuCoursesColor radiusBorder" id="list-tab" role="tablist">
                 {% for categoria in categorias %}
                     {% if categoria == categorias.0 %}
                         <a class="menuCoursesColor list-group-item list-group-item-light active show" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>
@@ -34,7 +34,7 @@
         <div class="row">
             <div class="sizeCol3 showBigMenu">
                 <div style="min-height: 370px; min-width: 180px">
-                    <div class="list-group menuCoursesColor" id="list-tab" role="tablist">
+                    <div class="list-group menuCoursesColor radiusBorder" id="list-tab" role="tablist">
                         {% for categoria in categorias %}
                             {% if categoria == categorias.0 %}
                                 <a class="menuCoursesColor list-group-item list-group-item-light active show" id="a-{{ categoria.id }}" data-toggle="list" href="#{{ categoria.id }}" role="tab" aria-controls="home">{{categoria.nome}}</a>

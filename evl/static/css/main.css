@@ -1509,7 +1509,7 @@ tr:nth-child(odd) {background-color: #f2f2f2;}
     transition: all 0.5s linear;
 }
 .list-group-item.active {
-    background-color: #A9A9A9 !important;
+    background-color: #3b424d !important;
     border-color: #696969 !important;
     color: white !important;
     font-weight: bold;
@@ -1584,7 +1584,7 @@ element.style {
     width: 100%;
 }
 .list-group-item-light {
-    color: #818182;
+    color: white !important;
     background-color: #fdfdfe;
 }
 .list-group-item {
@@ -1688,11 +1688,12 @@ a:hover {
     color: black !important;
 }
 .menuCoursesColor{
-    color: #3b3b3b  !important;
-    background-color: white !important;
+    color: white;
+    background-color: #515b6c !important;
 }
 .menuCoursesColor:hover{
-    background-color: #DCDCDC !important;
+    background-color: #3b424d !important;
+    color: white !important;
 }
 .btn-primary:hover{
     color: white !important;
@@ -1816,4 +1817,9 @@ a:hover {
 }
 .hoverName:hover{
     font-weight:400 ;
+}
+.radiusBorder{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
 }
