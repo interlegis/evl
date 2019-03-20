@@ -120,12 +120,17 @@
     .widthTotal{
         width: 95% !important;
     }
-
+    .minHeight{
+        min-height: 150% !important;
+    }
 }
 
 @media screen and
 (min-width: 450px) and
 (max-width: 575px){
+    .minHeight{
+        min-height: 150% !important;
+    }
     .widthTotal{
         width: 95% !important;
     }
@@ -1822,4 +1827,7 @@ a:hover {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
+}
+.minHeight{
+    min-height: 100%;
 }
