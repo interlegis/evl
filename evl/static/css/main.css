@@ -1,6 +1,9 @@
 @media screen and
 (min-width: 200px) and
 (max-width: 449px){
+    .propertiesInputValidarCertificado{
+        width: 80% !important;
+    }
     .fontMobile{
         font-size: 2.5rem !important;
     }
@@ -137,6 +140,9 @@
 @media screen and
 (min-width: 450px) and
 (max-width: 575px){
+    .propertiesInputValidarCertificado{
+        width: 80% !important;
+    }
     .fontMobile{
         font-size: 2.5rem !important;
     }
@@ -1857,4 +1863,10 @@ a:hover {
 }
 .margin1{
     margin: 1% !important;
+}
+.propertiesInputValidarCertificado{
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top:30px
 }
