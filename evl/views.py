@@ -36,6 +36,10 @@ def homeAluno(request):
 def dashboard(request):
     return render(request, 'evl/dashboard.html')
 
+def iFrameDashboard(request):
+    return render(request, 'evl/iFrameDashboard.html')
+
+
 #@login_required(login_url='http://localhost:3000/log_in?return=URL')
 def secret_page(request, *args, **kwargs):
     return HttpResponse('Secret contents!', status=200)
