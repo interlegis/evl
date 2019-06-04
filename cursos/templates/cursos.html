@@ -3,6 +3,7 @@
 {% load staticfiles %}
 <link href="{% static "css/stars.css" %}" rel="stylesheet">
 <script src="../static/js/cursos.js"></script>
+<div>
     <title>EVL - Catálogo de Cursos</title>
     <div class="bc-icons-2">
         <ol class="breadcrumb bcAdditionalProperties">
@@ -54,61 +55,73 @@
                             {% else %}
                             <div class="tab-pane fade active show" style="display:none" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
                         {% endif %}
-                        <section class="row sectionPropertiesCourses">
-                            {% for curso in cursos %}
-                                {% if curso.categoria == categoria.id %}
-                                    <ul id="ul-{{ categoria.id }}" class="animated bounceInLeft align ">
-                                        <div class="col" style="">
-                                            <div class="marginCards widthCard  curl-top-left">
-                                                <div class="">
-                                                    <div class="card hoverable" style="min-height: 500px;">
-                                                        <div style="min-width: 250px; min-height: 90px; padding: 7px;">
-                                                            <img class="img-fluid" src="https://saberes.senado.leg.br/theme/image.php/ilb/theme/1539274492/logo_saberes_xl" alt="Card image cap">
-                                                        </div>
-                                                        <div class="card-body" style="padding: 0px !important;">
-                                                            <h4 class="card-title">{{curso.nome}}</h4>
-                                                            <p class="card-text">{{ curso.descrição }}</p>
-                                                            <dl>
-                                                                <dt>Certificador:</dt>
-                                                                <dd>{{ curso.certificador }}</dd>
-                                                            </dl>
-                                                            <dl>
-                                                                <dt>Conteudista:</dt>
-                                                                <dd>{{ curso.conteudista }}</dd>
-                                                            </dl>
-                                                            <dl>
-                                                                <dt>Carga Horária:</dt>
-                                                                <dd>
-                                                                    <input value="357" hidden="">
-                                                                    {{ curso.carga_horaria }}h
-                                                                </dd>
-                                                            </dl>
-                                                            <dl>
-                                                                <dt>Avaliação:</dt>
-                                                                <dd>
-                                                                    <input value="357" hidden="">
-                                                                    <div class="stars-outer">
-                                                                        <div class="stars-inner" style="width: {{ curso.rating_percentage }}%"></div>
-                                                                    </div>
-                                                                    {{ curso.rating }}
-                                                                    <!-- {{ curso.url }} -->
-                                                                </dd>
-                                                            </dl>
-                                                            <a href='http://localhost:3000/cursos/registro?id={{curso.id}}&redirect={{curso.url}}' class="btn btn-success inscrevase buttonFixedBottom" style="text-align: center">Inscreva-se</a>
+                                <section class="row sectionPropertiesCourses">
+                                    {% for curso in cursos %}
+                                        {% if curso.categoria == categoria.id %}
+                                            <ul id="ul-{{ categoria.id }}" class="animated bounceInLeft align ">
+                                                <div class="col" style="">
+                                                    <div class="marginCards widthCard  curl-top-left">
+                                                        <div class="">
+                                                            <div class="card hoverable" style="min-height: 500px;">
+                                                                <div style="min-width: 250px; min-height: 90px; padding: 7px;">
+                                                                    <img class="img-fluid" src="https://saberes.senado.leg.br/theme/image.php/ilb/theme/1539274492/logo_saberes_xl" alt="Card image cap">
+                                                                </div>
+                                                                <div class="card-body" style="padding: 0px !important;">
+                                                                    <h4 class="card-title">{{curso.nome}}</h4>
+                                                                    <p class="card-text">{{ curso.descrição }}</p>
+                                                                    <dl>
+                                                                        <dt>Certificador:</dt>
+                                                                        <dd>{{ curso.certificador }}</dd>
+                                                                    </dl>
+                                                                    <dl>
+                                                                        <dt>Conteudista:</dt>
+                                                                        <dd>{{ curso.conteudista }}</dd>
+                                                                    </dl>
+                                                                    <dl>
+                                                                        <dt>Carga Horária:</dt>
+                                                                        <dd>
+                                                                            <input value="357" hidden="">
+                                                                            {{ curso.carga_horaria }}h
+                                                                        </dd>
+                                                                    </dl>
+                                                                    <dl>
+                                                                        <dt>Avaliação:</dt>
+                                                                        <dd>
+                                                                            <input value="357" hidden="">
+                                                                            <div class="stars-outer">
+                                                                                <div class="stars-inner" style="width: {{ curso.rating_percentage }}%"></div>
+                                                                            </div>
+                                                                            {{ curso.rating }}
+                                                                            <!-- {{ curso.url }} -->
+                                                                        </dd>
+                                                                    </dl>
+                                                                    <a href='http://localhost:3000/cursos/registro?id={{curso.id}}&redirect={{curso.url}}' class="btn btn-success inscrevase buttonFixedBottom" style="text-align: center">Inscreva-se</a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                {% endif %}
-                            {% endfor %}
-                        </section>
+                                            </ul>
+                                        {% endif %}
+                                    {% endfor %}
+                                </section>
+                            </div>
+                            </div>
                     {% endfor %}
-                    </div>
-                    </div>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
         </div>
     </div>
+</div>
 {% endblock %}
