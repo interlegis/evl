@@ -26,7 +26,7 @@ def login(request):
 def cadastro(request):
     return render(request, 'evl/cadastro.html')
 
-#@login_required(login_url='https://escolamodelows.interlegis.leg.br/log_in?return=URL')
+#@login_required(login_url='http://localhost:3000/log_in?return=URL')
 def homeAluno(request):
     if request.user.profile.role == 1:
         return redirect(views.administrador)
@@ -36,7 +36,11 @@ def homeAluno(request):
 def dashboard(request):
     return render(request, 'evl/dashboard.html')
 
-#@login_required(login_url='https://escolamodelows.interlegis.leg.br/log_in?return=URL')
+def iFrameDashboard(request):
+    return render(request, 'evl/iFrameDashboard.html')
+
+
+#@login_required(login_url='http://localhost:3000/log_in?return=URL')
 def secret_page(request, *args, **kwargs):
     return HttpResponse('Secret contents!', status=200)
 

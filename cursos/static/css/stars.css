@@ -27,7 +27,7 @@
 }
 
 .list-group-item-light:hover {
-    color: black !important;
+    color: white;
     font-weight: bold;
 }
 

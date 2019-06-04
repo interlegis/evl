@@ -1,13 +1,16 @@
-<script type="text/javascript" src="http://10.1.2.234:8080/pentaho/plugin/pentaho-cdf-dd/api/renderer/cde-embed.js"></script>
-<title>EVL - Painel de Indicadores</title>
-<div class="dashboardContainer">
-    <script type="text/javascript">
-      require(['dash!/Steel%20Wheels/Dashboards/CTools_dashboard.wcdf'],
-          function(SampleDash) {
-              var sampleDash = new SampleDash("content1");
-              sampleDash.render();
-          }
-      );
-    </script>
-    <div id="content1"></div>
-  </div>
+{% extends 'base.html' %}
+{% block content %}
+{% include 'imports.html' %}
+
+
+    <div class="bc-icons-2">
+        <ol class="breadcrumb bcAdditionalProperties">
+            <li class="breadcrumb-item"><a class="black-text" href="{% url 'home' %}">Home</a><i class="fa fa-angle-double-right mx-2" aria-hidden="true"></i></li>
+            <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+    </div>
+
+    <iframe src="/iFrameDashboard" height="100%" width="100%" style="border-width: 0px !important;"></iframe>
+
+
+{% endblock %}

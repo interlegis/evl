@@ -18,14 +18,14 @@
             </h1>
             </p>
         </div>
-        <div class="espacamentoProperties">
+        <div class="espacamentoProperties" style="margin-bottom: 5%;">
             <ul class="gallery_box">
             {% for escola in escolas.escolas %}
                     <li class="boxproperties curl-top-left" style="margin: 5px;">
                         <a href="{{escola.url}}">
                             <div class="box_data">
                                 <img src="{{escola.logo}}" class="imgclass pulse" id="imgLogo" style="height: 85% !important;">
-                                <span>{{escola.nome}}</span>
+                                <span class="hoverName">{{escola.nome}}</span>
                             </div>
                         </a>
                     </li>

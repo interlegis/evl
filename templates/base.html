@@ -5,17 +5,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
-  <body>
+
     <!-- Navigation -->
     <header>
         {% include 'header.html' %}
     </header>
+
     {% block content %}
     {% endblock %}
+
     <!-- Footer -->
-    <footer style="padding: 0px !important; width: 100% !important;">
+    <footer style="padding: 0px !important; width: 100% !important;display: block !important;">
         {% include 'footer.html' %}
     </footer>
     <!-- Footer -->
-</body>
+
 </html>

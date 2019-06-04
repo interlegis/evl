@@ -9,14 +9,14 @@
             <li class="breadcrumb-item active">Administrador</li>
         </ol>
     </div>
-    <div class="view hm-white-light jarallax marginTopHome bgAdministrador" style="background-size:cover!important;" data-jarallax='{"speed": 0.2}'>
+
+    <div class="view hm-white-light jarallax marginTopHome bgAdministrador pcScreen" style="background-size:cover!important;" data-jarallax='{"speed": 0.2}'>
         <div class="full-bg-img">
             <div class="container flex-center">
                 <div class="row">
                     <div class="col-md-12 wow fadeIn">
                         <div class="text-center titleFontProperties">
                             <h1 class="display-2 mb-2 wow fadeInDown" data-wow-delay="0.3s">Página do Administrador</h1>
-
                             <a href="{% url 'cursosPendentes' %}" class="btn btn-primary btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="fa fa-list-ul"></i> Cursos pendentes</a>
                             <a href="{% url 'categoriasGestao' %}" class="btn btn-success btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="far fa-clipboard"></i> Gestão de categorias</a>
                             <a href="{% url 'certificados' %}" class="btn btn-danger btn-lg wow fadeInDown" data-wow-delay="0.4s"><i class="fa fa-graduation-cap"></i> Certificados</a>
@@ -26,4 +26,24 @@
             </div>
         </div>
     </div>
+
+    <div class="view hm-white-light jarallax marginTopHome bgAdministrador mobileScreen" style="background-size:cover!important;" data-jarallax='{"speed": 0.2}'>
+        <div class="full-bg-img">
+            <div class="container flex-center">
+                <div class="row">
+                    <div class="col-md-12 wow fadeIn">
+                        <div class="text-center titleFontProperties">
+                            <h3 class="fontMobile display-2 mb-2 wow fadeInDown" data-wow-delay="0.3s">Página do Administrador</h3>
+                            <a href="{% url 'cursosPendentes' %}" class="margin1 btn btn-primary btn-lg wow fadeInDown btn-block" data-wow-delay="0.4s"><i class="fa fa-list-ul"></i> Cursos pendentes</a>
+                            <a href="{% url 'categoriasGestao' %}" class="margin1 btn btn-success btn-lg wow fadeInDown btn-block" data-wow-delay="0.4s"><i class="far fa-clipboard"></i> Gestão de categorias</a>
+                            <a href="{% url 'certificados' %}" class="margin1 btn btn-danger btn-lg wow fadeInDown btn-block" data-wow-delay="0.4s"><i class="fa fa-graduation-cap"></i> Certificados</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 {% endblock %}
