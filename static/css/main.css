@@ -1,0 +1,1872 @@
+@media screen and
+(min-width: 200px) and
+(max-width: 449px){
+    .propertiesInputValidarCertificado{
+        width: 80% !important;
+    }
+    .fontMobile{
+        font-size: 2.5rem !important;
+    }
+    .mobileScreen{
+        display: block !important;
+    }
+    .pcScreen{
+        display:none !important;
+    }
+    .lineHeight{
+        line-height: 1 !important;
+    }
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
+
+    }
+
+    .widthLogoNavbar{
+        width: 100%;
+    }
+
+    .textBasicOrientationNav{
+        text-align: center !important;
+        vertical-align: middle;
+    }
+
+    .marginTopHome{
+        margin-top: 0% !important;
+    }
+
+    .fixed-top-nav {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .widthItensNavbarInterno{
+        width: 20% !important;
+    }
+
+    .divResolucaoLarge{
+        display: none;
+    }
+
+    .divResolucaoSmall{
+        display: contents;
+    }
+
+    .main-div {
+        background: #ffffff none repeat scroll 0 0;
+        border-radius: 2px;
+        margin: 10px auto 30px;
+        max-width: 90% !important;
+        padding: 20px 60px 4px 39px;
+    }
+
+    .marginBottomBotaoEnviarContact{
+        margin-bottom: 19% !important;
+    }
+    .img-fluid{
+        max-width: 100% !important;
+        height: 80px !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 15% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 56% !important;
+    }
+    .sizeCol3{
+        min-width: 70% !important;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .sizeCol9{
+        min-width: 70% !important;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .widthCard{
+        width: 250px !important;
+    }
+    .minWidth{
+        width: 315px !important;
+    }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .showBigMenu{
+        display: none;
+    }
+    .showBtnMenu{
+        display: initial !important;
+    }
+    .showUpperMenu{
+        display: block !important;
+    }
+    .tamanhoMenuResp{
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .showPicture{
+        display: inline !important;
+    }
+    .widthTelaGrandePhoto{
+        display: none !important;
+    }
+    .widthTelaGrandeInput{
+        width: 100% !important;
+    }
+    .widthTotal{
+        width: 95% !important;
+    }
+    .minHeight{
+        min-height: 150% !important;
+    }
+}
+
+@media screen and
+(min-width: 450px) and
+(max-width: 575px){
+    .propertiesInputValidarCertificado{
+        width: 80% !important;
+    }
+    .fontMobile{
+        font-size: 2.5rem !important;
+    }
+    .mobileScreen{
+        display: block !important;
+    }
+    .pcScreen{
+        display:none !important;
+    }
+    .rowMobile{
+        width: 100% !important;
+    }
+    .minHeight{
+        min-height: 150% !important;
+    }
+    .widthTotal{
+        width: 95% !important;
+    }
+    .widthTelaGrandeInput{
+        width: 100% !important;
+    }
+    .widthTelaGrandePhoto{
+        display: none !important;
+    }
+
+    .showPicture{
+    display: inline !important;
+    }
+    .widthCard{
+        width: 315px !important;
+    }
+    .minWidth{
+        width: 315px !important;
+    }
+    .sizeCol9{
+        min-width: 70% !important;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .sizeCol3{
+        min-width: 70% !important;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
+
+    }
+
+    .widthLogoNavbar{
+        width: 100%;
+    }
+
+    .textBasicOrientationNav{
+        text-align: center !important;
+        vertical-align: middle;
+    }
+
+    .marginTopHome{
+        margin-top: 0% !important;
+    }
+
+    .fixed-top-nav {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .widthItensNavbarInterno{
+        width: 20% !important;
+    }
+
+    .divResolucaoLarge{
+        display: none;
+    }
+
+    .divResolucaoSmall{
+        display: contents;
+    }
+
+    .main-div {
+        background: #ffffff none repeat scroll 0 0;
+        border-radius: 2px;
+        margin: 10px auto 30px;
+        max-width: 90% !important;
+        padding: 20px 60px 4px 39px;
+    }
+    .marginBottomBotaoEnviarContact{
+        margin-bottom: 12% !important;
+    }
+    .img-fluid{
+        max-width: 100% !important;
+        height: 80px !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 14% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 56% !important;
+    }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .showBigMenu{
+        display: none;
+    }
+    .showBtnMenu{
+        display: initial !important;
+    }
+    .showUpperMenu{
+        display: block !important;
+    }
+    .tamanhoMenuResp{
+        width: 315px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and
+(min-width: 576px) and
+(max-width: 639px){
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
+
+    }
+
+    .widthLogoNavbar{
+        width: 100%;
+    }
+
+    .textBasicOrientationNav{
+        text-align: center !important;
+        vertical-align: middle;
+    }
+
+    .marginTopHome{
+        margin-top: 0% !important;
+    }
+
+    .fixed-top-nav {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .widthItensNavbarInterno{
+        width: 20% !important;
+    }
+
+    .divResolucaoLarge{
+        display: none;
+    }
+
+    .divResolucaoSmall{
+        display: contents;
+    }
+
+    .main-div {
+        background: #ffffff none repeat scroll 0 0;
+        border-radius: 2px;
+        margin: 10px auto 30px;
+        max-width: 90% !important;
+        padding: 20px 60px 4px 39px;
+    }
+    .marginBottomBotaoEnviarContact{
+        margin-bottom: 12% !important;
+    }
+
+    .marginBottomImg{
+        margin-bottom: 14% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 56% !important;
+    }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .showBigMenu{
+        display: none;
+    }
+    .showBtnMenu{
+        display: initial !important;
+    }
+    .showUpperMenu{
+        display: block !important;
+    }
+    .tamanhoMenuResp{
+        width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+@media screen and
+(min-width: 640px) and
+(max-width: 767px){
+
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
+
+    }
+    .textBasicOrientationNav{
+        text-align: center !important;
+        vertical-align: middle;
+    }
+    .marginTopHome{
+        margin-top: 0px !important;
+    }
+
+    .fixed-top-nav {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .widthItensNavbarInterno{
+        width: 20% !important;
+    }
+
+    .divResolucaoLarge{
+        display: none;
+    }
+    .divResolucaoSmall{
+        display: contents;
+    }
+    .main-div {
+        background: #ffffff none repeat scroll 0 0;
+        border-radius: 2px;
+        margin: 10px auto 30px;
+        max-width: 70% !important;
+        padding: 20px 60px 4px 39px;
+    }
+    .marginBottomBotaoEnviarContact{
+        margin-bottom: 12% !important;
+    }
+    .nomeAluno{
+        margin-top: 8% !important;
+    }
+
+    .marginBottomImg{
+        margin-bottom: 11% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 56% !important;
+    }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .showBigMenu{
+        display: none;
+    }
+    .showBtnMenu{
+        display: initial !important;
+    }
+    .showUpperMenu{
+        display: block !important;
+    }
+    .tamanhoMenuResp{
+        width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .widthCard {
+        width: 360px !important;
+    }
+}
+@media screen and
+(min-width: 768px) and
+(max-width: 799px){
+    .tamanhoMenuResp{
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
+
+    }
+    .textBasicOrientationNav{
+        text-align: center !important;
+        vertical-align: middle;
+    }
+    .marginTopHome{
+        margin-top: 0px !important;
+    }
+
+    .fixed-top-nav {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .widthItensNavbarInterno{
+        width: 20% !important;
+    }
+
+    .divResolucaoLarge{
+        display: none;
+    }
+    .divResolucaoSmall{
+        display: contents;
+    }
+    .main-div {
+        background: #ffffff none repeat scroll 0 0;
+        border-radius: 2px;
+        margin: 10px auto 30px;
+        max-width: 70% !important;
+        padding: 20px 60px 4px 39px;
+    }
+    .marginBottomBotaoEnviarContact{
+        margin-bottom: 12% !important;
+    }
+    .nomeAluno{
+        margin-top: 8% !important;
+    }
+
+    .marginBottomImg{
+        margin-bottom: 11% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 56% !important;
+    }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .showBigMenu{
+        display: none;
+    }
+    .showBtnMenu{
+        display: initial !important;
+    }
+    .showUpperMenu{
+        display: block !important;
+    }
+}
+
+
+@media screen and
+(min-width: 800px) and
+(max-width: 991px) {
+    .tamanhoMenuResp{
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .showUpperMenu{
+        display: block !important;
+    }
+    .showBigMenu{
+        display: none;
+    }
+    .showBtnMenu{
+        display: initial !important;
+    }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
+
+    }
+    .textBasicOrientationNav{
+        text-align: center !important;
+        vertical-align: middle;
+    }
+    .marginTopHome{
+        margin-top: 0px !important;
+    }
+
+    .fixed-top-nav {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .widthItensNavbarInterno{
+        width: 20% !important;
+    }
+
+    .divResolucaoLarge{
+        display: none;
+    }
+    .divResolucaoSmall{
+        display: contents;
+    }
+    .main-div {
+        background: #ffffff none repeat scroll 0 0;
+        border-radius: 2px;
+        margin: 10px auto 30px;
+        max-width: 70% !important;
+        padding: 20px 60px 4px 39px;
+    }
+    .nomeAluno{
+        margin-top: 7% !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 9% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 49% !important;
+    }
+    .sizeTableCursos{
+        height: 350px !important;
+    }
+}
+
+
+
+@media screen and
+(min-width: 992px) and
+(max-width: 1023px){
+    .tamanhoMenuResp{
+        width: 625px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .showUpperMenu{
+        display: block !important;
+    }
+    .showBigMenu{
+        display: none;
+    }
+    .showBtnMenu{
+        display: initial !important;
+    }
+    .align {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
+
+    }
+    .textBasicOrientationNav{
+        text-align: center !important;
+        vertical-align: middle;
+    }
+    .marginTopHome{
+        margin-top: 0px !important;
+    }
+
+    .fixed-top-nav {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .widthItensNavbarInterno{
+        width: 20% !important;
+    }
+
+    .divResolucaoLarge{
+        display: none;
+    }
+    .divResolucaoSmall{
+        display: contents;
+    }
+    .main-div {
+        background: #ffffff none repeat scroll 0 0;
+        border-radius: 2px;
+        margin: 10px auto 30px;
+        max-width: 70% !important;
+        padding: 20px 60px 4px 39px;
+    }
+    .nomeAluno{
+        margin-top: 7% !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 9% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 49% !important;
+    }
+    .sizeTableCursos{
+        height: 350px !important;
+    }
+}
+
+@media screen and
+(min-width: 1024px) and
+(max-width: 1279px){
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
+    }
+
+    .fixed-top-nav {
+        position: fixed !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .nomeAluno{
+        margin-top: 5% !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 7% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 50% !important;
+    }
+    .sizeTableCursos{
+        height: 350px !important;
+    }
+    .alignNavRight{
+        width: 15% !important;
+    }
+    .alignNavLeft{
+        width: 85% !important;
+    }
+}
+
+@media screen and
+(min-width: 1280px) and
+(max-width: 1365px){
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
+    }
+
+    .fixed-top-nav {
+        position: fixed !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .nomeAluno{
+        margin-top: 5% !important;
+    }
+
+    .marginBottomImg{
+        margin-bottom: 7% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 50% !important;
+    }
+    .sizeTableCursos{
+        height: 350px !important;
+    }
+}
+
+@media screen and
+(min-width: 1366px) and
+(max-width: 1439px){
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
+    }
+
+    .fixed-top-nav {
+        position: fixed !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .nomeAluno{
+        margin-top: 5% !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 5% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 50% !important;
+    }
+    .sizeTableCursos{
+        height: 350px !important;
+    }
+}
+
+
+@media screen and
+(min-width: 1440px) and
+(max-width: 1599px){
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
+    }
+
+    .fixed-top-nav {
+        position: fixed !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .nomeAluno{
+        margin-top: 5% !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 5% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 50% !important;
+    }
+    .sizeTableCursos{
+        max-height: 350px !important;
+    }
+}
+
+@media screen and
+(min-width: 1600px) and
+(max-width: 1679px){
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
+    }
+
+    .fixed-top-nav {
+        position: fixed !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .nomeAluno{
+        margin-top: 5% !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 4% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 50% !important;
+    }
+    .sizeTableCursos{
+        max-height: 350px !important;
+    }
+}
+
+@media screen and
+(min-width: 1680px) and
+(max-width: 4080px){
+    .sizeTableCursos{
+        max-height: 350px !important;
+    }
+    .logoProperties {
+        min-width: 100px !important;
+        min-height: 40px !important;
+        max-width: 100px !important;
+        max-height: 40px !important;
+
+    }
+
+    .fixed-top-nav {
+        position: fixed !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .nomeAluno{
+        margin-top: 5% !important;
+    }
+    .marginBottomImg{
+        margin-bottom: 4% !important;
+    }
+    .profile-card-3 .profile {
+        bottom: 50% !important;
+    }
+}
+
+.tamanhoBotoesMeusCursos{
+    width: 200px;
+}
+
+.textBasicOrientationNav{
+    text-align: left;
+}
+
+.containerTamanho {
+    width: 100%;
+}
+
+.texto-cinza{
+    color: #4F4F4F !important;
+}
+
+.texto-cinza-claro{
+    color: #696969 !important;
+}
+
+.layoutBasicOrientation{
+    padding: 1%;
+}
+
+.columnOrientations{
+    max-width: 33%;
+}
+
+.titlePropertiesNavbar{
+    font-size: large;
+    color: black !important;
+    text-shadow: 1px 2px 13px rgba(154, 150, 150, 1);
+    text-align: center;
+}
+
+.textBasicOrientation{
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+.marginTopTextNav{
+    margin-top: 1%;
+}
+
+.titleFontProperties{
+    color: #eff1f3;
+    font-weight: bold;
+    text-shadow: 0 0 30px rgba(0,0,0,.5);
+}
+
+.subtitleFontProperties{
+    color: #eff1f3;
+    font-weight: bold;
+    text-shadow: 0 0 30px rgba(0,0,0,.5);
+    font-size: 1.5rem !important;
+}
+
+.titleFontProperties2{
+    font-weight: bold;
+    text-shadow: 0 0 30px rgba(0,0,0,.5);
+}
+
+.subtitleFontProperties2{
+    font-weight: bold;
+    text-shadow: 0 0 30px rgba(0,0,0,.5);
+    font-size: 1.0rem !important;
+}
+
+.backgroundSmall{
+    background-color: #f5f5f5;
+}
+
+.backgroundGreyGradient{
+    background-image: linear-gradient(grey, white);
+}
+
+.box {
+    margin: 30px;
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+}
+
+.box.horizTranslate {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    margin-left: 50% !important;
+}
+
+.footerTextProperties{
+    font-size: 12px !important;
+    text-align: justify !important;
+}
+
+.footerTitleProperties{
+    font-size: 15px !important;
+}
+
+.botoesMenuAluno{
+    width: 30% !important;
+}
+
+.marginBotoesMenuAluno{
+    margin-right: 5% !important;
+}
+
+.marginBottomPosNav{
+    margin-bottom: 10% !important;
+}
+
+.verticalAlignText{
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
+
+.bgHome{
+    background-image: url(../img/home.jpg) !important;
+}
+
+.bgMeusCursos{
+    background-image: url(../img/meus-cursos.jpg) !important;
+}
+
+.bgHomepage{
+    background-image: url(../img/homepage.jpg) !important;
+}
+
+.bgAdministrador{
+    background-image: url(../img/portfolio/fullsize/5.jpg) !important;
+}
+
+.bgCursosPendentes{
+  background-image: url(../img/portfolio/fullsize/6.jpg) !important;
+}
+
+.bgComprovantes{
+    background-image: url(../img/comprovantes.jpg) !important;
+}
+
+.bgCertificados{
+    background-image: url(../img/certificados.jpg) !important;
+}
+
+.bgFaleConosco{
+    background-image: url(../img/faleConosco.jpg) !important;
+}
+
+
+.display-2-edited {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.container70p{
+    width: 70% !important;
+    margin-left: 15% !important;
+    margin-right: 15% !important;
+}
+
+.display-Inline{
+    display: inline !important;
+}
+
+.visibilityItemMenu{
+    visibility: visible !important;
+}
+
+body,html{
+    height: 100%;
+}
+
+nav.sidebar, .main{
+    -webkit-transition: margin 200ms ease-out;
+    -moz-transition: margin 200ms ease-out;
+    -o-transition: margin 200ms ease-out;
+    transition: margin 200ms ease-out;
+}
+
+.main{
+    padding: 10px 10px 0 10px;
+}
+
+@media (min-width: 765px) {
+
+    .main{
+        position: absolute;
+        width: calc(100% - 40px);
+        margin-left: 40px;
+        float: right;
+    }
+
+    nav.sidebar:hover + .main{
+        margin-left: 200px;
+    }
+
+    nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+        margin-left: 0px;
+    }
+
+    nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+        text-align: center;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    nav.sidebar a{
+        padding-right: 13px;
+    }
+
+    nav.sidebar .navbar-nav > li:first-child{
+        border-top: 1px #e5e5e5 solid;
+    }
+
+    nav.sidebar .navbar-nav > li{
+        border-bottom: 1px #e5e5e5 solid;
+    }
+
+    nav.sidebar .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+        padding: 0 0px 0 0px;
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+        color: #777;
+    }
+
+    nav.sidebar{
+        width: 240px;
+        height: 500px !important;
+        margin-left: -210px;
+        float: left;
+        margin-bottom: 0px;
+    }
+
+    nav.sidebar li {
+        width: 100%;
+    }
+
+    nav.sidebar:hover{
+        margin-left: 0px;
+    }
+
+    .forAnimate{
+        opacity: 0;
+    }
+}
+
+@media (min-width: 1330px) {
+
+    .main{
+        width: calc(100% - 200px);
+        margin-left: 200px;
+    }
+
+    nav.sidebar{
+        margin-left: 0px;
+        float: left;
+    }
+
+    nav.sidebar .forAnimate{
+        opacity: 1;
+    }
+}
+
+nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+    color: #CCC;
+    background-color: transparent;
+}
+
+nav:hover .forAnimate{
+    opacity: 1;
+}
+
+section{
+    padding-left: 15px;
+}
+
+.tamNavBar{
+    width: 90% !important;
+}
+
+.mobile {
+    opacity: 1;
+    height: auto;
+}
+
+@media only screen and (max-width: 765px) {
+    .mobile {
+        display: none !important;
+        opacity: 0;
+        height: 0 !important;
+
+    }
+}
+
+ .textTop{
+     position:relative;
+     top:-50%;
+ }
+
+ .nopaddingFooter{
+     padding: 0px !important;
+ }
+
+
+.gradientBackgroundTitle{
+    background-image: linear-gradient(#e9ecef, white) !important;
+}
+
+body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-26347-27038-hd-wallpapers.jpg"); background-repeat:no-repeat; background-position:center; background-size:cover; padding:10px;}
+
+.form-heading { color:#fff; font-size:23px;}
+.panel h2{ color:#444444; font-size:18px; margin:0 0 8px 0;}
+.panel p { color:#777777; font-size:14px; margin-bottom:30px; line-height:24px;}
+.login-form .form-control {
+    background: #f7f7f7 none repeat scroll 0 0;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 50px;
+}
+.main-div {
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 2px;
+    margin: 10px auto 30px;
+    max-width: 38%;
+    padding: 20px 60px 4px 39px;
+}
+
+.login-form .form-group {
+    margin-bottom:10px;
+}
+
+.login-form{ text-align:center;}
+.forgot a {
+    color: #777777;
+    font-size: 14px;
+    text-decoration: underline;
+}
+.login-form  .btn.btn-primary {
+    background: #4082f0;
+    border-color: #4082f0;
+    color: #ffffff;
+    font-size: 14px;
+    width: 100%;
+    line-height: 50px;
+    padding: 0;
+}
+.forgot {
+    text-align: left; margin-bottom:30px;
+}
+.botto-text {
+    color: #ffffff;
+    font-size: 14px;
+    margin: auto;
+}
+.login-form .btn.btn-primary.reset {
+    background: #ff9900 none repeat scroll 0 0;
+}
+.back { text-align: left; margin-top:10px;}
+.back a {color: #444444; font-size: 13px;text-decoration: none;}
+
+.backgroundForm{
+    background-color: whitesmoke;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+.widthItensNavbarInterno{
+    width: 20% !important;
+}
+.paddingDiv{
+    padding-right: 5%;
+    padding-left: 5%;
+}
+.cards-cursos{
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.course-titulo{
+    font-weight: bold !important;
+}
+
+.margin-padding-fale-conosco{
+    margin-left: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    margin-top: 0px !important;
+    padding-left: 2%;
+    padding-bottom:  2%;
+    padding-right: 2%;
+    padding-top: 0px !important;
+}
+.ajustestitlefaleconosco{
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.loginButton{
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.propriedades-tabela{
+    padding: 2%;
+    background:rgba(255,255,255,0.5);
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    color: black !important;
+}
+.propertiesNavbarAluno{
+    font-family: Roboto,sans-serif !important;
+    color: #000041 !important;
+}
+.containerTamanho{
+    margin: 0 auto;
+    width: 100%;
+}
+.navColor {
+    color: #000000 !important;
+    background-color: whitesmoke !important;
+}
+
+.page-footer {
+    color: #000000 !important;
+    background-color: whitesmoke !important;
+}
+
+.widthItensNavbar{
+    width: 100%;
+    display: inline;
+}
+.divResolucaoLarge{
+    display: contents;
+}
+
+.divResolucaoSmall{
+    display: none;
+}
+
+.bc-icons-2 .breadcrumb-item + .breadcrumb-item::before {
+    content: none;
+}
+
+.bc-icons-2 .breadcrumb-item.active {
+    color: darkgrey;
+}
+
+.bcAdditionalProperties{
+    margin-bottom: 0px !important;
+    background-color: whitesmoke !important;
+}
+
+.marginBottomBotaoEnviarContact{
+    margin-bottom: 7%;
+}
+
+.social{
+    text-align:center;
+    width:70px;
+    height:70px;
+    float:left;
+    background:rgb(255,255,255);
+    border:1px solid rgb(204,204,204);
+    box-shadow:0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+    border-radius:100px;
+    margin:0 10px 10px 0;
+    padding:10px;
+}
+.google-pluse:hover{background:#DD4B39;color:#FFF;}
+.facebook:hover{background:#3b5998;color:#FFF;}
+.twitter:hover{background:#00acee;color:#FFF;}
+
+.or-seperator {
+    margin: 50px 0 15px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+.or-seperator b {
+    padding: 0 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    background: #fff;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    position: relative;
+    top: -22px;
+    z-index: 1;
+}
+.socialMargin{
+    margin-top: 20%;
+}
+.rowSocial{
+    justify-content: center;
+}
+.boxShadowProperties{
+    -webkit-box-shadow: 2px 4px 33px 1px rgba(0,0,0,0.49);
+    -moz-box-shadow: 2px 4px 33px 1px rgba(0,0,0,0.49);
+    box-shadow: 2px 4px 33px 1px rgba(0,0,0,0.49);
+}
+.catalogoCursosBoxProperties{
+    -webkit-box-shadow: 0px 0px 43px -14px rgba(0,0,0,0.66);
+    -moz-box-shadow: 0px 0px 43px -14px rgba(0,0,0,0.66);
+    box-shadow: 0px 0px 43px -14px rgba(0,0,0,0.66);
+}
+
+.card_h {
+    margin: 0 auto;
+}
+.card_h .carousel-item {
+    height: 240px;
+}
+.card_h .carousel-caption {
+    padding: 0;
+    right: 0;
+    left: 0;
+    color: #3d3d3d;
+}
+.card_h .carousel-caption h3 {
+    color: #3d3d3d;
+}
+.card_h .carousel-caption p {
+    line-height: 30px;
+}
+.card_h .carousel-caption .col-sm-3 {
+    display: flex;
+    align-items: center;
+}
+.card_h .carousel-caption .col-sm-9 {
+    text-align: left;
+}
+.navi a {
+    text-decoration:none;
+}
+a > .ico {
+    background-color: grey;
+    padding: 10px;
+
+}
+a:hover > .ico {
+    background-color: #666;
+}
+.quote {
+    color: rgba(0,0,0,.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tab-content-padding {
+  padding: 0px !important;
+}
+
+.nav-tabs-padding {
+  padding: 17px !important;
+  margin-bottom: -60px !important;
+  margin-left: 2rem !important;
+  box-shadow: none !important;
+}
+
+.nav-item-space {
+  padding: 10px;
+}
+
+.tab {
+  color: black;
+}
+
+.corpo_mensagem {
+  margin-bottom: 20px;
+}
+
+.detalhes_mensagem {
+  font-weight: bold;
+}
+.titleCertificados{
+    font-weight: bold;
+    font-size: 20px;
+}
+.tableProperties{
+    padding: 1% !important;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {background-color: #f2f2f2;}
+
+.hoverImg {
+    display: inline-block;
+    background: black;
+    padding: 0;
+}
+
+.hoverImg:hover img {
+    opacity: 0.7;
+}
+.hoverImg img {
+    display: block;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+.list-group-item.active {
+    background-color: #3b424d !important;
+    border-color: #696969 !important;
+    color: white !important;
+    font-weight: bold;
+
+}
+
+element.style {
+}
+.list-group .list-group-item:last-child {
+    -webkit-border-bottom-left-radius: .125rem;
+    border-bottom-left-radius: .125rem;
+    -webkit-border-bottom-right-radius: .125rem;
+    border-bottom-right-radius: .125rem;
+}
+.list-group .list-group-item:last-child {
+    -webkit-border-bottom-left-radius: .125rem;
+    border-bottom-left-radius: .125rem;
+    -webkit-border-bottom-right-radius: .125rem;
+    border-bottom-right-radius: .125rem;
+}
+.list-group .list-group-item:last-child {
+    -webkit-border-bottom-left-radius: .125rem;
+    border-bottom-left-radius: .125rem;
+    -webkit-border-bottom-right-radius: .125rem;
+    border-bottom-right-radius: .125rem;
+}
+.alert, .author-box, .breadcrumb, .card, .card .card-header, .dropdown-menu, .file-custom, .input-group-addon, .jumbotron, .list-group .list-group-item, .modal-content, .nav .nav-link, .nav-tabs, .navbar, .navbar-toggler, .page-item:first-child .page-link, .page-item:last-child .page-link, .pagination-lg .page-item:first-child .page-link, .pagination-lg .page-item:last-child .page-link, .pagination-sm .page-item:first-child .page-link, .pagination-sm .page-item:last-child .page-link, .popover, .tag, .tooltip-inner, img {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+.alert, .author-box, .breadcrumb, .card, .card .card-header, .dropdown-menu, .file-custom, .input-group-addon, .jumbotron, .list-group .list-group-item, .modal-content, .nav .nav-link, .nav-tabs, .navbar, .navbar-toggler, .page-item:first-child .page-link, .page-item:last-child .page-link, .pagination-lg .page-item:first-child .page-link, .pagination-lg .page-item:last-child .page-link, .pagination-sm .page-item:first-child .page-link, .pagination-sm .page-item:last-child .page-link, .popover, .tag, .tooltip-inner, img {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+.list-group a, .list-group a:hover, .list-group button, .list-group button:hover {
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.list-group a, .list-group a:hover, .list-group button, .list-group button:hover {
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.list-group a, .list-group a:hover, .list-group button, .list-group button:hover {
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.list-group-item, textarea {
+    width: 100%;
+}
+.list-group-item-light {
+    color: white !important;
+    background-color: #fdfdfe;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.list-group-item-light {
+    color: #818182;
+    background-color: #fdfdfe;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.list-group-item, textarea {
+    width: 100%;
+}
+.list-group-item-light {
+    color: #818182;
+    background-color: #fdfdfe;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+a, a.disabled:hover, a:disabled:hover {
+    color: #007bff;
+}
+a {
+    color: #0275d8;
+    cursor: pointer;
+}
+.pswp__container, .pswp__img, .waves-effect, a {
+    -webkit-tap-highlight-color: transparent;
+}
+.btn-flat, a, a:focus, a:hover {
+    text-decoration: none;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+a, a.disabled:hover, a:disabled:hover {
+    color: #007bff;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+a, a.disabled:hover, a:disabled:hover {
+    color: #007bff;
+}
+a {
+    color: #0275d8;
+    cursor: pointer;
+}
+.pswp__container, .pswp__img, .waves-effect, a {
+    -webkit-tap-highlight-color: transparent;
+}
+.btn-flat, a, a:focus, a:hover {
+    text-decoration: none;
+}
+a:hover {
+    color: black !important;
+}
+.menuCoursesColor{
+    color: white;
+    background-color: #515b6c !important;
+}
+.menuCoursesColor:hover{
+    background-color: #3b424d !important;
+    color: white !important;
+}
+.btn-primary:hover{
+    color: white !important;
+}
+.btn-success:hover{
+    color: white !important;
+}
+.btn-danger:hover{
+    color: white !important;
+}
+.dataTables_scrollHeadInner{
+    width: 100% !important;
+}
+.dataTable{
+    width: 100% !important;
+}
+.sizeTableCursos{
+    height: 350px;
+}
+
+.sizeCol3{
+    max-width: 25%;
+    margin-bottom: 5%
+}
+.sizeCol9{
+    max-width: 75%;
+}
+.widthCard{
+    width: 250px;
+}
+.align{
+    padding: 0px !important;
+}
+.alignNavRight{
+    width: 50% !important;
+    text-align: right;
+}
+.alignNavLeft{
+    width: 50% !important;
+}
+.panel-shadow {
+    box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+}
+.panel-white {
+    border: 1px solid #dddddd;
+}
+.panel {
+    font-size: 13px;
+    color: #454545;
+    background: #fafafa;
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'Source Sans Pro', 'Oxygen', sans-serif;
+}
+.panel-white  .panel-heading {
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+}
+.panel-white  .panel-footer {
+    background-color: #fff;
+    border-color: #ddd;
+}
+.bg2 {
+    background-image: url('http://lorempixel.com/560/344/sports/1/');
+}
+.profile-widget {
+    position: relative;
+}
+.profile-widget .image-container {
+    background-size: cover;
+    background-position: center;
+    padding: 190px 0 10px;
+}
+.profile-widget .image-container .profile-background {
+    width: 100%;
+    height: auto;
+}
+.profile-widget .image-container .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto -60px;
+    display: block;
+}
+.profile-widget .details {
+    padding: 50px 15px 15px;
+    text-align: center;
+}
+.avatar {
+    vertical-align: middle;
+    width: 150px;
+    height: 50px;
+    border-radius: 50%;
+}
+.lineHeight{
+    line-height: 1.3;
+}
+.mrml{
+    margin-left: auto;
+    margin-right: auto;
+}
+.showBtnMenu{
+    display: none;
+}
+.showUpperMenu{
+     display: none;
+ }
+.widthTelaGrandeInput{
+    width: calc(100% - 150px - 1rem)
+}
+.widthTelaGrandePhoto{
+    width: 150px;
+    margin-right: 1rem
+}
+.showPicture{
+    display: none;
+}
+.pointer{
+    cursor: pointer;
+}
+.hoverName:hover{
+    font-weight:400 ;
+}
+.radiusBorder{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+.minHeight{
+    min-height: 100%;
+}
+.mobileScreen{
+    display: none;
+}
+.margin1{
+    margin: 1% !important;
+}
+.propertiesInputValidarCertificado{
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top:30px
+}
