@@ -130,7 +130,7 @@ OIDC_VERIFY_JWT = False
 OIDC_USE_NONCE = False
 
 APIKEY = os.environ.get('EVL_WS_APIKEY')
-BASE_URL = os.environ.get('EVL_WS_URL')
+BASE_URL = os.environ.get('EVL_WS_URL_BASE')
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
