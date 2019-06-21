@@ -64,7 +64,7 @@
                                                         <div class="">
                                                             <div class="card hoverable" style="min-height: 500px;">
                                                                 <div style="min-width: 250px; min-height: 90px; padding: 7px;">
-                                                                    <img class="img-fluid" src="https://saberes.senado.leg.br/theme/image.php/ilb/theme/1539274492/logo_saberes_xl" alt="Card image cap">
+                                                                    <img class="img-fluid" src="{{curso.logo|default:'https://lh3.googleusercontent.com/qr_ndOzCxMRVszvbTbdaFe8jir086C5AQLMlWwZE2C62pseorkmNQiUR2z0zrcCJlu2u'}}" alt="Card image cap">
                                                                 </div>
                                                                 <div class="card-body" style="padding: 0px !important;">
                                                                     <h4 class="card-title">{{curso.nome}}</h4>
@@ -95,7 +95,7 @@
                                                                             <!-- {{ curso.url }} -->
                                                                         </dd>
                                                                     </dl>
-                                                                    <a href='http://localhost:3000/cursos/registro?id={{curso.id}}&redirect={{curso.url}}' class="btn btn-success inscrevase buttonFixedBottom" style="text-align: center">Inscreva-se</a>
+                                                                    <a href='https://escolamodelows.interlegis.leg.br/cursos/registro?id={{curso.id}}&redirect={{curso.url}}' class="btn btn-success inscrevase buttonFixedBottom" style="text-align: center">Inscreva-se</a>
                                                                 </div>
                                                             </div>
                                                         </div>
