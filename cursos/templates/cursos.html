@@ -52,7 +52,7 @@
                     {% for categoria in categorias %}
                         {% if categoria == categorias.0 %}
                             <div class="tab-pane fade active show" style="display:block" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
-                            {% else %}
+                        {% else %}
                             <div class="tab-pane fade active show" style="display:none" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
                         {% endif %}
                                 <section class="row sectionPropertiesCourses">
@@ -106,8 +106,8 @@
                                     {% endfor %}
                                 </section>
                             </div>
-                            </div>
-                    {% endfor %}
+                            {% endfor %}
+                        </div>
                 </div>
             </div>
 
