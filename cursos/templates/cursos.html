@@ -63,28 +63,53 @@
                                                     <div class="marginCards widthCard  curl-top-left width100">
                                                         <div class="">
                                                             <div class="card hoverable" style="min-height: 500px;">
-                                                                <div style="min-width: 250px; min-height: 90px; padding: 7px;">
-                                                                    <img class="img-fluid" src="https://saberes.senado.leg.br/theme/image.php/ilb/theme/1539274492/logo_saberes_xl" alt="Card image cap">
+                                                                <div class="imgboxresponsive">
+                                                                    <img class="img-fluid imgResponsive" src="https://saberes.senado.leg.br/theme/image.php/ilb/theme/1539274492/logo_saberes_xl" alt="Card image cap">
                                                                 </div>
                                                                 <div class="card-body" style="padding: 0px !important;">
                                                                     <h4 class="card-title">{{curso.nome}}</h4>
                                                                     <p class="card-text">{{ curso.descrição }}</p>
-                                                                    <dl>
-                                                                        <dt>Certificador:</dt>
-                                                                        <dd>{{ curso.certificador }}</dd>
-                                                                    </dl>
-                                                                    <dl>
-                                                                        <dt>Conteudista:</dt>
-                                                                        <dd>{{ curso.conteudista }}</dd>
-                                                                    </dl>
-                                                                    <dl>
+                                                                    <div class="row bottomProprierties2" style="margin-top: 5%;">
+                                                                        <dl style="width: 50%;">
+                                                                            <dt>Certificador:</dt>
+                                                                            <dd>{{ curso.certificador }}</dd>
+                                                                        </dl>
+                                                                        <dl style="width: 50%">
+                                                                            <dt>Conteudista:</dt>
+                                                                            <dd>{{ curso.conteudista }}</dd>
+                                                                        </dl>
+                                                                    </div>
+
+
+                                                                    <div class="row bottomProprierties1 rowBigScreen" style="margin-top: 5%;">
+                                                                        <dl style="width: 50%;">
+                                                                            <dt>Carga Horária:</dt>
+                                                                            <dd>
+                                                                                <input value="357" hidden="">
+                                                                                {{ curso.carga_horaria }}h
+                                                                            </dd>
+                                                                        </dl>
+                                                                        <dl style="width: 50%;">
+                                                                            <dt>Avaliação:</dt>
+                                                                            <dd>
+                                                                                <input value="357" hidden="">
+                                                                                <div class="stars-outer">
+                                                                                    <div class="stars-inner" style="width: {{ curso.rating_percentage }}%"></div>
+                                                                                </div>
+                                                                                {{ curso.rating }}
+                                                                                <!-- {{ curso.url }} -->
+                                                                            </dd>
+                                                                        </dl>
+                                                                    </div>
+
+                                                                    <dl class="smallScreen bottomPropriertiesSmall1" style="margin-left: 5%;">
                                                                         <dt>Carga Horária:</dt>
                                                                         <dd>
                                                                             <input value="357" hidden="">
                                                                             {{ curso.carga_horaria }}h
                                                                         </dd>
                                                                     </dl>
-                                                                    <dl>
+                                                                    <dl class="smallScreen bottomPropriertiesSmall2" style="margin-left: 5%;">
                                                                         <dt>Avaliação:</dt>
                                                                         <dd>
                                                                             <input value="357" hidden="">
@@ -95,6 +120,11 @@
                                                                             <!-- {{ curso.url }} -->
                                                                         </dd>
                                                                     </dl>
+
+
+
+
+
                                                                     <a href='http://localhost:3000/cursos/registro?id={{curso.id}}&redirect={{curso.url}}' class="btn btn-success inscrevase buttonFixedBottom" style="text-align: center">Inscreva-se</a>
                                                                 </div>
                                                             </div>
