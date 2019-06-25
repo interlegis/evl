@@ -135,6 +135,9 @@
     .minHeight{
         min-height: 150% !important;
     }
+    .width50{
+        width:100% !important;
+    }
 }
 
 @media screen and
@@ -275,6 +278,9 @@
         margin-left: auto;
         margin-right: auto;
     }
+    .width50{
+        width:100% !important;
+    }
 
 }
 
@@ -365,6 +371,9 @@
         margin-left: auto;
         margin-right: auto;
     }
+    .width50{
+        width:100% !important;
+    }
 
 }
 @media screen and
@@ -453,6 +462,9 @@
     .widthCard {
         width: 360px !important;
     }
+    .width50{
+        width:100% !important;
+    }
 }
 @media screen and
 (min-width: 768px) and
@@ -536,6 +548,7 @@
     .showUpperMenu{
         display: block !important;
     }
+
 }
 
 
@@ -622,6 +635,7 @@
     .sizeTableCursos{
         height: 350px !important;
     }
+
 }
 
 
@@ -629,6 +643,7 @@
 @media screen and
 (min-width: 992px) and
 (max-width: 1023px){
+
     .tamanhoMenuResp{
         width: 625px;
         margin-left: auto;
@@ -1869,4 +1884,11 @@ a:hover {
     margin: 0 auto;
     margin-bottom: 30px;
     margin-top:30px
+}
+
+.width50{
+    width:50%;
+   }
+.width100{
+    width: 100%;
 }
