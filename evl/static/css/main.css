@@ -391,7 +391,7 @@
         max-height: 70px !important;
     }
     .minHeightResponsive{
-        min-height: 680px !important;
+        min-height: 700px !important;
     }
     .sizeCol9{
         max-width: 80% !important;
@@ -498,7 +498,7 @@
         max-height: 80px !important;
     }
     .minHeightResponsive{
-        min-height: 680px !important;
+        min-height: 700px !important;
     }
     .sizeCol9{
         max-width: 100% !important;
@@ -601,7 +601,7 @@
         max-height: 90px !important;
     }
     .minHeightResponsive{
-        min-height: 680px !important;
+        min-height: 700px !important;
     }
 }
 @media screen and
@@ -696,7 +696,7 @@
         max-height: 110px !important;
     }
     .minHeightResponsive{
-        min-height: 680px !important;
+        min-height: 700px !important;
     }
 
 }
@@ -2006,6 +2006,7 @@ a:hover {
     padding-left: 10%;
     text-align: justify;
     line-height: 30px;
+    overflow: hidden !important;
 }
 .titlePropertiesCourses{
     text-transform: uppercase;
