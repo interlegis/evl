@@ -123,38 +123,32 @@
     .minHeight{
         min-height: 150% !important;
     }
-    .width50{
-        width:100% !important;
-    }
-    .imgResponsive{
-        min-width: 235px !important;
-        min-height: 100px !important;
-    }
-    .imgboxresponsive{
-        min-width: 235px !important;
-    }
     .smallScreen{
-        display: flex !important;
+        display: block !important;
     }
-    .rowBigScreen{
+    .bigScreen{
         display: none !important;
+    }
+    .textCoursesDescription{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .imgResponsiveSmall{
+        max-height: 60px !important;
+    }
+    .minHeightResponsive{
+        min-height: 820px !important;
+    }
+    .sizeCol9{
+        max-width: 80% !important;
+    }
+    .widthCard {
+        width: 100% !important;
     }
 }
 @media screen and
 (min-width: 450px) and
 (max-width: 575px){
-    .smallScreen{
-        display: none !important;
-    }
-    .rowBigScreen{
-        display: flex !important;
-    }
-    .imgResponsive{
-        min-width: 305px !important;
-    }
-    .imgboxresponsive{
-        min-width: 315px !important;
-    }
     .propertiesInputValidarCertificado{
         width: 80% !important;
     }
@@ -280,16 +274,32 @@
     .width50{
         width:100% !important;
     }
+    .smallScreen{
+        display: block !important;
+    }
+    .bigScreen{
+        display: none !important;
+    }
+    .textCoursesDescription{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .imgResponsiveSmall{
+        max-height: 60px !important;
+    }
+    .minHeightResponsive{
+        min-height: 770px !important;
+    }
+    .sizeCol9{
+        max-width: 80% !important;
+    }
+    .widthCard {
+        width: 100% !important;
+    }
 }
 @media screen and
 (min-width: 576px) and
 (max-width: 639px){
-    .smallScreen{
-        display: none !important;
-    }
-    .rowBigScreen{
-        display: flex !important;
-    }
     .logoProperties {
         min-width: 100px !important;
         min-height: 40px !important;
@@ -367,23 +377,32 @@
     .width50{
         width:100% !important;
     }
-
+    .smallScreen{
+        display: block !important;
+    }
+    .bigScreen{
+        display: none !important;
+    }
+    .textCoursesDescription{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .imgResponsiveSmall{
+        max-height: 70px !important;
+    }
+    .minHeightResponsive{
+        min-height: 680px !important;
+    }
+    .sizeCol9{
+        max-width: 80% !important;
+    }
+    .widthCard {
+        width: 100% !important;
+    }
 }
 @media screen and
 (min-width: 640px) and
 (max-width: 767px){
-    .smallScreen{
-        display: none !important;
-    }
-    .rowBigScreen{
-        display: flex !important;
-    }
-    .imgResponsive{
-        min-width: 330px !important;
-    }
-    .imgboxresponsive{
-        min-width: 340px !important;
-    }
     .logoProperties {
         min-width: 100px !important;
         min-height: 40px !important;
@@ -465,16 +484,32 @@
     .width50{
         width:100% !important;
     }
+    .smallScreen{
+        display: block !important;
+    }
+    .bigScreen{
+        display: none !important;
+    }
+    .textCoursesDescription{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .imgResponsiveSmall{
+        max-height: 80px !important;
+    }
+    .minHeightResponsive{
+        min-height: 680px !important;
+    }
+    .sizeCol9{
+        max-width: 100% !important;
+    }
+    .widthCard {
+        width: 100% !important;
+    }
 }
 @media screen and
 (min-width: 768px) and
 (max-width: 799px){
-    .smallScreen{
-        display: none !important;
-    }
-    .rowBigScreen{
-        display: flex !important;
-    }
     .tamanhoMenuResp{
         width: 540px;
         margin-left: auto;
@@ -552,16 +587,26 @@
     .width50{
         width:100% !important;
     }
+    .smallScreen{
+        display: block !important;
+    }
+    .bigScreen{
+        display: none !important;
+    }
+    .textCoursesDescription{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .imgResponsiveSmall{
+        max-height: 90px !important;
+    }
+    .minHeightResponsive{
+        min-height: 680px !important;
+    }
 }
 @media screen and
 (min-width: 800px) and
 (max-width: 991px) {
-    .smallScreen{
-        display: none !important;
-    }
-    .rowBigScreen{
-        display: flex !important;
-    }
     .tamanhoMenuResp{
         width: 540px;
         margin-left: auto;
@@ -637,22 +682,29 @@
     .width50{
         width:100% !important;
     }
+    .smallScreen{
+        display: block !important;
+    }
+    .bigScreen{
+        display: none !important;
+    }
+    .textCoursesDescription{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .imgResponsiveSmall{
+        max-height: 110px !important;
+    }
+    .minHeightResponsive{
+        min-height: 680px !important;
+    }
+
 }
 @media screen and
 (min-width: 992px) and
 (max-width: 1023px){
-    .smallScreen{
-        display: none !important;
-    }
-    .rowBigScreen{
-        display: flex !important;
-    }
-    .imgResponsive{
-
-        min-width: 330px !important;
-    }
-    .imgboxresponsive{
-        min-width: 340px !important;
+    .differentWidth{
+        width: 75% !important;
     }
     .tamanhoMenuResp{
         width: 625px;
@@ -730,22 +782,26 @@
     .sizeTableCursos{
         height: 350px !important;
     }
+    .smallScreen{
+        display: block !important;
+    }
+    .bigScreen{
+        display: none !important;
+    }
+    .textCoursesDescription{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .imgResponsiveSmall{
+        max-height: 120px !important;
+    }
+    .minHeightResponsive{
+        min-height: 650px !important;
+    }
 }
 @media screen and
 (min-width: 1024px) and
 (max-width: 1279px){
-    .smallScreen{
-        display: none !important;
-    }
-    .rowBigScreen{
-        display: flex !important;
-    }
-    .imgResponsive{
-        min-width: 330px !important;
-    }
-    .imgboxresponsive{
-        min-width: 340px !important;
-    }
     .logoProperties {
         min-width: 100px !important;
         min-height: 40px !important;
@@ -778,16 +834,14 @@
     .alignNavLeft{
         width: 85% !important;
     }
+    .textCoursesDescription{
+        border-right-style: solid !important;
+        border-right-width: 1px !important;
+    }
 }
 @media screen and
 (min-width: 1280px) and
 (max-width: 1365px){
-    .smallScreen{
-        display: none !important;
-    }
-    .rowBigScreen{
-        display: flex !important;
-    }
     .logoProperties {
         min-width: 100px !important;
         min-height: 40px !important;
@@ -814,16 +868,14 @@
     .sizeTableCursos{
         height: 350px !important;
     }
+    .textCoursesDescription{
+        border-right-style: solid !important;
+        border-right-width: 1px !important;
+    }
 }
 @media screen and
 (min-width: 1366px) and
 (max-width: 1439px){
-    .smallScreen{
-        display: none !important;
-    }
-    .rowBigScreen{
-        display: flex !important;
-    }
     .logoProperties {
         min-width: 100px !important;
         min-height: 40px !important;
@@ -850,16 +902,14 @@
     .sizeTableCursos{
         height: 350px !important;
     }
+    .textCoursesDescription{
+        border-right-style: solid !important;
+        border-right-width: 1px !important;
+    }
 }
 @media screen and
 (min-width: 1440px) and
 (max-width: 1599px){
-    .smallScreen{
-        display: none !important;
-    }
-    .rowBigScreen{
-        display: flex !important;
-    }
     .logoProperties {
         min-width: 100px !important;
         min-height: 40px !important;
@@ -886,16 +936,14 @@
     .sizeTableCursos{
         max-height: 350px !important;
     }
+    .textCoursesDescription{
+        border-right-style: solid !important;
+        border-right-width: 1px !important;
+    }
 }
 @media screen and
 (min-width: 1600px) and
 (max-width: 1679px){
-    .smallScreen{
-        display: none !important;
-    }
-    .rowBigScreen{
-        display: flex !important;
-    }
     .logoProperties {
         min-width: 100px !important;
         min-height: 40px !important;
@@ -921,17 +969,15 @@
     }
     .sizeTableCursos{
         max-height: 350px !important;
+    }
+    .textCoursesDescription{
+        border-right-style: solid !important;
+        border-right-width: 1px !important;
     }
 }
 @media screen and
 (min-width: 1680px) and
 (max-width: 4080px){
-    .smallScreen{
-        display: none !important;
-    }
-    .rowBigScreen{
-        display: flex !important;
-    }
     .sizeTableCursos{
         max-height: 350px !important;
     }
@@ -957,6 +1003,10 @@
     }
     .profile-card-3 .profile {
         bottom: 50% !important;
+    }
+    .textCoursesDescription{
+        border-right-style: solid !important;
+        border-right-width: 1px !important;
     }
 }
 .tamanhoBotoesMeusCursos{
@@ -1700,11 +1750,11 @@ a:hover {
     height: 350px;
 }
 .sizeCol3{
-    max-width: 25%;
+    max-width: 35%;
     margin-bottom: 5%
 }
 .sizeCol9{
-    max-width: 75%;
+    max-width: 65%;
 }
 .widthCard{
     width: 250px;
@@ -1862,4 +1912,124 @@ a:hover {
     left: 0;
     position: absolute;
     bottom: 95px;
+}
+.p100{
+    width: 100%;
+}
+.textRevealContainer {
+
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 1.5em; /*adjust according to your need*/
+    text-align: center; /*in case you write multiline text*/
+}
+
+.textReveal {
+    overflow: hidden;
+    animation: textRevealAnim 2s ease 0.5s forwards;
+}
+
+.textReveal > div {
+    padding: 8px 16px;
+    transform: translateX(100%);
+    border-left: 2px solid red;
+    overflow: hidden;
+    animation: textRevealAnim 2s ease 0.5s forwards,
+    borderOpacityAnim 2s ease 0.5s forwards;
+}
+
+.textReveal > div > div {
+    transform: translateX(-100%);
+    animation: textRevealAnim 2s ease 0.5s forwards;
+}
+
+@keyframes textRevealAnim {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes borderOpacityAnim {
+    50% {
+        border-left: 2px solid red;
+    }
+    100% {
+        border-left: 2px solid transparent;
+    }
+}
+
+.textReveal.x50 {
+    transform: translateX(-50%);
+}
+
+.textReveal.x100 {
+    transform: translateX(-100%);
+}
+
+.textReveal.zoom > div {
+    transform: translateX(100%) scale(0.5, 0.5);
+}
+
+.textReveal.rotateY {
+    perspective: 100px; /*adjust according to your need*/
+}
+
+.textReveal.rotateY > div {
+    transform: translateX(100%) rotateY(20deg);
+}
+
+.textReveal.color > div > div {
+    background: linear-gradient(
+            to right,
+            red,
+            red 45%,
+            orange 45%,
+            orange 55%,
+            red 55%,
+            red
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-size: 300%;
+    animation: textRevealAnim 2s ease 0.5s forwards,
+    bgShiftAnim 3s ease 0.5s forwards;
+}
+
+@keyframes bgShiftAnim {
+    to {
+        background-position: 100%;
+    }
+}
+
+.textCoursesDescription{
+    padding-top: 3%;
+    padding-right: 10%;
+    padding-left: 10%;
+    text-align: justify;
+    line-height: 30px;
+}
+.titlePropertiesCourses{
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 5px;
+}
+.smallScreen{
+    display: none;
+}
+.bigScreen{
+    display: block;
+}
+.noMarginSmall{
+    margin: 0px !important;
+}
+.imgResponsiveSmall{
+    min-width: 100%;
+    min-height: 150px
+}
+.minHeightResponsive{
+    min-height: 500px;
+}
+.differentWidth{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
