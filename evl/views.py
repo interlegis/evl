@@ -49,5 +49,4 @@ def perfilaluno(request):
 
 def userLogout(request):
     logout(request)
-    # return redirect(settings.BASE_URL + 'log_out?externo=' + 'https://evl.interlegis.leg.br/') #Alterar essa URL para produção
-    return redirect(settings.BASE_URL + 'log_out?externo=' + 'http://localhost:8000/') #Alterar essa URL para produção
+    return redirect(settings.BASE_URL + 'log_out?externo=' + 'https://evl.interlegis.leg.br/') #Alterar essa URL para produção
