@@ -2073,3 +2073,43 @@ a:hover {
     0% {transform: translateX(0)}
     100% {transform: translateX(200%)}
 }
+
+
+.text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    list-style: none;
+    border-bottom: 0;
+}
+
+.text.hidden {
+    border-bottom: 0;
+}
+
+.text li {
+    text-shadow: 2px 2px 15px #000000;
+    display: inline-block;
+    float: left;
+    font-weight: lighter;
+    color: #fff;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    max-width: 2em;
+}
+.text.hidden li.spaced {
+    padding-left: 0;
+}
+.text li.spaced {
+    padding-left: 0.5em;
+}
+
+.text.hidden li.ghost {
+    opacity: 0;
+    max-width: 0;
+}
+
+
+
+
