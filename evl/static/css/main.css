@@ -834,10 +834,6 @@
     .alignNavLeft{
         width: 85% !important;
     }
-    .textCoursesDescription{
-        border-right-style: solid !important;
-        border-right-width: 1px !important;
-    }
 }
 @media screen and
 (min-width: 1280px) and
@@ -867,10 +863,6 @@
     }
     .sizeTableCursos{
         height: 350px !important;
-    }
-    .textCoursesDescription{
-        border-right-style: solid !important;
-        border-right-width: 1px !important;
     }
 }
 @media screen and
@@ -902,10 +894,6 @@
     .sizeTableCursos{
         height: 350px !important;
     }
-    .textCoursesDescription{
-        border-right-style: solid !important;
-        border-right-width: 1px !important;
-    }
 }
 @media screen and
 (min-width: 1440px) and
@@ -935,10 +923,6 @@
     }
     .sizeTableCursos{
         max-height: 350px !important;
-    }
-    .textCoursesDescription{
-        border-right-style: solid !important;
-        border-right-width: 1px !important;
     }
 }
 @media screen and
@@ -970,10 +954,6 @@
     .sizeTableCursos{
         max-height: 350px !important;
     }
-    .textCoursesDescription{
-        border-right-style: solid !important;
-        border-right-width: 1px !important;
-    }
 }
 @media screen and
 (min-width: 1680px) and
@@ -1003,10 +983,6 @@
     }
     .profile-card-3 .profile {
         bottom: 50% !important;
-    }
-    .textCoursesDescription{
-        border-right-style: solid !important;
-        border-right-width: 1px !important;
     }
 }
 .tamanhoBotoesMeusCursos{
@@ -1925,7 +1901,7 @@ a:hover {
 
 .textReveal {
     overflow: hidden;
-    animation: textRevealAnim 2s ease 0.5s forwards;
+    animation: textRevealAnim 1s ease 0.4s forwards;
 }
 
 .textReveal > div {
@@ -1933,13 +1909,13 @@ a:hover {
     transform: translateX(100%);
     border-left: 2px solid red;
     overflow: hidden;
-    animation: textRevealAnim 2s ease 0.5s forwards,
-    borderOpacityAnim 2s ease 0.5s forwards;
+    animation: textRevealAnim 1s ease 0.4s forwards,
+    borderOpacityAnim 1s ease 0.4s forwards;
 }
 
 .textReveal > div > div {
     transform: translateX(-100%);
-    animation: textRevealAnim 2s ease 0.5s forwards;
+    animation: textRevealAnim 1s ease 0.4s forwards;
 }
 
 @keyframes textRevealAnim {
@@ -1990,8 +1966,8 @@ a:hover {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-size: 300%;
-    animation: textRevealAnim 2s ease 0.5s forwards,
-    bgShiftAnim 3s ease 0.5s forwards;
+    animation: textRevealAnim 1s ease 0.4s forwards,
+    bgShiftAnim 2s ease 0.4s forwards;
 }
 
 @keyframes bgShiftAnim {
@@ -2011,7 +1987,7 @@ a:hover {
 .titlePropertiesCourses{
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
 }
 .smallScreen{
     display: none;
