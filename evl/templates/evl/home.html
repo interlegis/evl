@@ -8,23 +8,28 @@
         </div>
     {% endif %}
     <!--<h2>{{ csrf_input }}</h2>-->
-    <body>
+    <body onLoad="setTimeout(carregar, 3000);">
         <div class="view hm-white-light jarallax marginTopHome bgHomepage" style="background-size:cover !important;" data-jarallax='{"speed": 0.2}'>
             <div class="full-bg-img">
-                <div class="container flex-center">
-                    <div class="row">
-                        <div class="col-md-12 wow bounceIn">
-                            <div class="text-center titleFontProperties">
-                                <h1 class="display-2 mb-2 wow fadeInDown" data-wow-delay="0.3s">Portal EVL</h1>
-                                <h1 class="mb-2 wow fadeInDown" data-wow-delay="0.3s" style="font-size: 30px;">Escola Virtual do Legislativo</h1>
-                                <hr class="my-4">
-                                <a href="/cursos" class="btn btn-primary btn-lg wow float-shadow" data-wow-delay="0.4s"><i class="fa fa-list-ul"></i> Catálogo de Cursos</a>
+                <div class="container flex-center" >
+                    <div class="row" >
+                        <div class="col-md-12 wow" >
+                            <div class="text-center titleFontProperties ">
+
+                                <h1 class="home-title" >
+                                    <span style="font-weight: 40; font-size: 110px; text-shadow: 2px 2px 8px #000000; letter-spacing: 10;">Portal EVL</span>
+                                    <span>
+                                        <div style="text-shadow: 2px 2px 15px #000000;">Escola Virtual do Legislativo</div><br>
+                                        <a href="/cursos" class="btn btn-primary btn-lg wow float-shadow" data-wow-delay="0.4s" id="buttonCourses" style="display:none;"><i class="fa fa-list-ul"></i> Catálogo de Cursos</a>
+                                    </span>
+                                </h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="card_h col-md-6 mt-5 mb-5">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="100000">
                 <div class="w-100 carousel-inner" role="listbox">
@@ -66,4 +71,10 @@
 <script type="text/javascript">
     console.log(document.cookie);
 </script>
+    <script>
+
+        function carregar() {
+            document.getElementById("buttonCourses").style.display="inline-table";
+        }
+    </script>
 {% endblock %}
