@@ -32,9 +32,9 @@ def faleConosco(request):
             if formLogged.is_valid():
                 formLogged.fields['name'] = request.user.username
                 formLogged.fields['email'] = request.user.email
-                formLogged.fields['cpf'] = request.user.profile.cpf
+                formLogged.fields['cpf'] = request.user.username
                 formLogged.fields['phone_number'] = request.user.profile.phone
-                req = urllib.request.Request(settings.BASE_URL + 'api/v1/fale_conosco/adicionar?name=' + request.user.username + "&email="+ request.user.email + "&cpf=" + request.user.profile.cpf )
+                req = urllib.request.Request(settings.BASE_URL + 'api/v1/fale_conosco/adicionar?name=' + request.user.username + "&email="+ request.user.email + "&cpf=" + request.user.username )
                 req.add_header('Content-Type', 'application/json; charset=utf-8')
                 result = urlopen(req, json.dumps(formLogged.data).encode('utf-8'))
                 return render(request, 'evl/home.html', context={'messagem_faleConosco': "A mensagem foi enviada com sucesso"})
