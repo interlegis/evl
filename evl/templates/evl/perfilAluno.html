@@ -23,7 +23,11 @@
                 <form method="POST" role="form" novalidate>
                     <div class="showPicture">
                         <div class="containerr mrml" style="margin-bottom: 1rem;">
-                            <img src="http://barcarena.pa.gov.br/portal/img/perfil/padrao.jpg" alt="Avatar" class="image img-circle avatar" style="height: 148px;">
+                            {% if user.profile.image %}
+                                <image src=http://localhost:3000{{user.profile.image}}   alt="Avatar" class="image img-circle avatar" style="height: 148px;">
+                            {% else %}
+                                <img src="http://barcarena.pa.gov.br/portal/img/perfil/padrao.jpg" alt="Avatar" class="image img-circle avatar" style="height: 148px;">
+                            {% endif %}
                             <div class="middle">
                                 <div class="text" style="border-radius: 50%;"  id="changePhoto">
                                     <a class="disabled" id="userPhoto">
@@ -37,7 +41,11 @@
                         <div class="row">
                             <div class="widthTelaGrandePhoto hover">
                                 <div class="containerr">
-                                    <img src="http://barcarena.pa.gov.br/portal/img/perfil/padrao.jpg" alt="Avatar" class="image img-circle avatar" style="height: 148px;">
+                                    {% if user.profile.image %}
+                                        <image src="http://localhost:3000{{user.profile.image}}"   alt="Avatar" class="image img-circle avatar" style="height: 148px;">
+                                    {% else %}
+                                        <img src="http://barcarena.pa.gov.br/portal/img/perfil/padrao.jpg" alt="Avatar" class="image img-circle avatar" style="height: 148px;">
+                                    {% endif %}
                                     <div class="middle">
                                         <div class="text" style="border-radius: 50%;" id="changePhoto">
                                             <a class="disabled" id="userPhoto">
@@ -56,7 +64,7 @@
                                     <input type="text" name="email" class="form-control enable_btn" placeholder="E-Mail" value="{{user.email}}" id="id_e-mail" disabled>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="phone" class="form-control enable_btn" placeholder="CPF" value="{{user.profile.cpf}}" id="id_cpf" disabled>
+                                    <input type="text" name="phone" class="form-control enable_btn" placeholder="CPF" value="{{user.username}}" id="id_cpf" disabled>
                                 </div>
                             </div>
                         </div>
