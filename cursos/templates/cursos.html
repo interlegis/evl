@@ -34,7 +34,7 @@
         </div>
         <div class="row">
             <div class="sizeCol3 showBigMenu">
-                <div style="min-height: 370px; min-width: 180px">
+                <div style="min-height: 370px; min-width: 240px">
                     <div class="list-group menuCoursesColor radiusBorder" id="list-tab" role="tablist">
                         {% for categoria in categorias %}
                             {% if categoria == categorias.0 %}
@@ -52,44 +52,95 @@
                     {% for categoria in categorias %}
                         {% if categoria == categorias.0 %}
                             <div class="tab-pane fade active show" style="display:block" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
-                            {% else %}
+                        {% else %}
                             <div class="tab-pane fade active show" style="display:none" id="{{ categoria.id }}" role="tabpanel" aria-labelledby="list-profile-list">
                         {% endif %}
                                 <section class="row sectionPropertiesCourses">
                                     {% for curso in cursos %}
                                         {% if curso.categoria == categoria.id %}
-                                            <ul id="ul-{{ categoria.id }}" class="animated bounceInLeft align ">
+                                            <ul id="ul-{{ categoria.id }}" class="animated bounceInLeft align p100">
                                                 <div class="col" style="">
-                                                    <div class="marginCards widthCard  curl-top-left">
+                                                    <div class="marginCards widthCard  curl-top-left width100">
                                                         <div class="">
+<<<<<<< HEAD
                                                             <div class="card hoverable" style="min-height: 500px;">
                                                                 <div style="min-width: 250px; min-height: 90px; padding: 7px;">
                                                                     <img class="img-fluid" src="{{curso.logo|default:'https://lh3.googleusercontent.com/qr_ndOzCxMRVszvbTbdaFe8jir086C5AQLMlWwZE2C62pseorkmNQiUR2z0zrcCJlu2u'}}" alt="Card image cap">
                                                                 </div>
+=======
+                                                            <div class="card hoverable minHeightResponsive">
+
+>>>>>>> origin/development
                                                                 <div class="card-body" style="padding: 0px !important;">
-                                                                    <h4 class="card-title">{{curso.nome}}</h4>
-                                                                    <p class="card-text">{{ curso.descrição }}</p>
-                                                                    <dl>
-                                                                        <dt>Certificador:</dt>
-                                                                        <dd>{{ curso.certificador }}</dd>
-                                                                    </dl>
-                                                                    <dl>
-                                                                        <dt>Conteudista:</dt>
-                                                                        <dd>{{ curso.conteudista }}</dd>
-                                                                    </dl>
-                                                                    <dl>
-                                                                        <dt>Carga Horária:</dt>
-                                                                        <dd>
-                                                                            <input value="357" hidden="">
-                                                                            {{ curso.carga_horaria }}h
-                                                                        </dd>
-                                                                    </dl>
-                                                                    <dl>
-                                                                        <dt>Avaliação:</dt>
-                                                                        <dd>
-                                                                            <input value="357" hidden="">
-                                                                            <div class="stars-outer">
-                                                                                <div class="stars-inner" style="width: {{ curso.rating_percentage }}%"></div>
+                                                                    <div class="textRevealContainer" style="margin-bottom: 40px;">
+                                                                        <div class="textReveal rotateY">
+                                                                            <div>
+                                                                                <div class="titlePropertiesCourses">
+                                                                                    {{curso.nome}}
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                    <div class="row" style="padding: 10px;">
+
+
+                                                                        <div class="smallScreen column" style="overflow: hidden;">
+
+                                                                            <div class="differentWidth">
+                                                                                <img class="img-fluid imgResponsiveSmall" src="https://saberes.senado.leg.br/pluginfile.php/2273557/course/overviewfiles/Cerimonial%20no%20Ambiente%20Legislativo-min.png" alt="Card image cap">
+                                                                            </div>
+                                                                            <div class="row noMarginSmall" style="width: 100%;">
+                                                                                <p class="card-text textCoursesDescription" style="overflow: hidden">{{ curso.description }}
+                                                                                    O curso Cidadania Fiscal - Uma Receita para o Brasil foi produzido por meio de parceria entre a Escola de Administração Fazendária - ESAF e a Receita Federal do Brasil - RFB. Sua estrutura está configurada em 3 (três) módulos que abordam conhecimentos relacionados a Educação Fiscal e sua implantação nas áreas da Receita Federal que são contatadas pelo cidadão.
+                                                                                </p>
+                                                                            </div>
+
+                                                                            <div class="column noMarginSmall" style="width: 100%;">
+
+                                                                                <div class="row">
+                                                                                    <dl style="width: 50%;">
+                                                                                        <dt>Certificador:</dt>
+                                                                                        <dd>{{ curso.certificador }}</dd>
+                                                                                    </dl>
+                                                                                    <dl style="width: 50%">
+                                                                                        <dt>Conteudista:</dt>
+                                                                                        <dd>{{ curso.conteudista }}</dd>
+                                                                                    </dl>
+                                                                                </div>
+
+                                                                                <div class="row">
+                                                                                    <dl style="width: 50%;">
+                                                                                        <dt>Carga Horária:</dt>
+                                                                                        <dd>
+                                                                                            <input value="357" hidden="">
+                                                                                            {{ curso.carga_horaria }}h
+                                                                                        </dd>
+                                                                                    </dl>
+                                                                                    <dl style="width: 50%;">
+                                                                                        <dt>Avaliação:</dt>
+                                                                                        <dd>
+                                                                                            <input value="357" hidden="">
+                                                                                            <div class="stars-outer">
+                                                                                                <div class="stars-inner" style="width: {{ curso.rating_percentage }}%"></div>
+                                                                                            </div>
+                                                                                            <!-- {{ curso.rating }}-->
+                                                                                            <!-- {{ curso.url }} -->
+                                                                                        </dd>
+                                                                                    </dl>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div style="width: 60%; max-height: 440px; overflow: hidden;" class="bigScreen">
+                                                                            <p class="card-text textCoursesDescription testeee " style="max-height: 290px;">{{ curso.description }}
+                                                                                O curso Cidadania Fiscal - Uma Receita para o Brasil foi produzido por meio de parceria entre a Escola de Administração Fazendária - ESAF e a Receita Federal do Brasil - RFB. Sua estrutura está configurada em 3 (três) módulos que abordam conhecimentos relacionados a Educação Fiscal e sua implantação nas áreas da Receita Federal que são contatadas pelo cidadão. TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE TESTE DE TEXTO GRANDE
+                                                                            </p>
+                                                                        </div>
+                                                                        <div style="width: 40%; overflow: hidden;" class="bigScreen">
+                                                                            <div style="max-width: 90%;margin-left: auto; margin-right: auto;">
+                                                                                <img style="min-width: 100%; min-height: 150px" class="img-fluid" src="https://saberes.senado.leg.br/pluginfile.php/2273557/course/overviewfiles/Cerimonial%20no%20Ambiente%20Legislativo-min.png" alt="Card image cap">
                                                                             </div>
                                                                             {{ curso.rating }}
                                                                             <!-- {{ curso.url }} -->
@@ -106,21 +157,10 @@
                                     {% endfor %}
                                 </section>
                             </div>
-                            </div>
-                    {% endfor %}
+                            {% endfor %}
+                        </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
         </div>
     </div>
 </div>

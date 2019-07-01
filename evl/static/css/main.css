@@ -21,30 +21,23 @@
         min-height: 40px !important;
         max-width: 100px !important;
         max-height: 40px !important;
-
     }
-
     .navbar-expand-lg .navbar-collapse {
         display: -ms-flexbox !important;
         display: flex !important;
         -ms-flex-preferred-size: auto !important;
         flex-basis: auto !important;
-
     }
-
     .widthLogoNavbar{
         width: 100%;
     }
-
     .textBasicOrientationNav{
         text-align: center !important;
         vertical-align: middle;
     }
-
     .marginTopHome{
         margin-top: 0% !important;
     }
-
     .fixed-top-nav {
         position: absolute !important;
         top: 0;
@@ -52,19 +45,15 @@
         left: 0;
         z-index: 1030;
     }
-
     .widthItensNavbarInterno{
         width: 20% !important;
     }
-
     .divResolucaoLarge{
         display: none;
     }
-
     .divResolucaoSmall{
         display: contents;
     }
-
     .main-div {
         background: #ffffff none repeat scroll 0 0;
         border-radius: 2px;
@@ -72,7 +61,6 @@
         max-width: 90% !important;
         padding: 20px 60px 4px 39px;
     }
-
     .marginBottomBotaoEnviarContact{
         margin-bottom: 19% !important;
     }
@@ -135,8 +123,29 @@
     .minHeight{
         min-height: 150% !important;
     }
+    .smallScreen{
+        display: block !important;
+    }
+    .bigScreen{
+        display: none !important;
+    }
+    .textCoursesDescription{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .imgResponsiveSmall{
+        max-height: 60px !important;
+    }
+    .minHeightResponsive{
+        min-height: 820px !important;
+    }
+    .sizeCol9{
+        max-width: 80% !important;
+    }
+    .widthCard {
+        width: 100% !important;
+    }
 }
-
 @media screen and
 (min-width: 450px) and
 (max-width: 575px){
@@ -167,7 +176,6 @@
     .widthTelaGrandePhoto{
         display: none !important;
     }
-
     .showPicture{
     display: inline !important;
     }
@@ -187,36 +195,28 @@
         margin-left: 15%;
         margin-right: 15%;
     }
-
     .logoProperties {
         min-width: 100px !important;
         min-height: 40px !important;
         max-width: 100px !important;
         max-height: 40px !important;
-
     }
-
     .navbar-expand-lg .navbar-collapse {
         display: -ms-flexbox !important;
         display: flex !important;
         -ms-flex-preferred-size: auto !important;
         flex-basis: auto !important;
-
     }
-
     .widthLogoNavbar{
         width: 100%;
     }
-
     .textBasicOrientationNav{
         text-align: center !important;
         vertical-align: middle;
     }
-
     .marginTopHome{
         margin-top: 0% !important;
     }
-
     .fixed-top-nav {
         position: absolute !important;
         top: 0;
@@ -224,19 +224,15 @@
         left: 0;
         z-index: 1030;
     }
-
     .widthItensNavbarInterno{
         width: 20% !important;
     }
-
     .divResolucaoLarge{
         display: none;
     }
-
     .divResolucaoSmall{
         display: contents;
     }
-
     .main-div {
         background: #ffffff none repeat scroll 0 0;
         border-radius: 2px;
@@ -275,9 +271,32 @@
         margin-left: auto;
         margin-right: auto;
     }
-
+    .width50{
+        width:100% !important;
+    }
+    .smallScreen{
+        display: block !important;
+    }
+    .bigScreen{
+        display: none !important;
+    }
+    .textCoursesDescription{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .imgResponsiveSmall{
+        max-height: 60px !important;
+    }
+    .minHeightResponsive{
+        min-height: 770px !important;
+    }
+    .sizeCol9{
+        max-width: 80% !important;
+    }
+    .widthCard {
+        width: 100% !important;
+    }
 }
-
 @media screen and
 (min-width: 576px) and
 (max-width: 639px){
@@ -288,7 +307,6 @@
         max-height: 40px !important;
 
     }
-
     .navbar-expand-lg .navbar-collapse {
         display: -ms-flexbox !important;
         display: flex !important;
@@ -296,20 +314,16 @@
         flex-basis: auto !important;
 
     }
-
     .widthLogoNavbar{
         width: 100%;
     }
-
     .textBasicOrientationNav{
         text-align: center !important;
         vertical-align: middle;
     }
-
     .marginTopHome{
         margin-top: 0% !important;
     }
-
     .fixed-top-nav {
         position: absolute !important;
         top: 0;
@@ -317,19 +331,15 @@
         left: 0;
         z-index: 1030;
     }
-
     .widthItensNavbarInterno{
         width: 20% !important;
     }
-
     .divResolucaoLarge{
         display: none;
     }
-
     .divResolucaoSmall{
         display: contents;
     }
-
     .main-div {
         background: #ffffff none repeat scroll 0 0;
         border-radius: 2px;
@@ -340,7 +350,6 @@
     .marginBottomBotaoEnviarContact{
         margin-bottom: 12% !important;
     }
-
     .marginBottomImg{
         margin-bottom: 14% !important;
     }
@@ -365,12 +374,35 @@
         margin-left: auto;
         margin-right: auto;
     }
-
+    .width50{
+        width:100% !important;
+    }
+    .smallScreen{
+        display: block !important;
+    }
+    .bigScreen{
+        display: none !important;
+    }
+    .textCoursesDescription{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .imgResponsiveSmall{
+        max-height: 70px !important;
+    }
+    .minHeightResponsive{
+        min-height: 700px !important;
+    }
+    .sizeCol9{
+        max-width: 80% !important;
+    }
+    .widthCard {
+        width: 100% !important;
+    }
 }
 @media screen and
 (min-width: 640px) and
 (max-width: 767px){
-
     .logoProperties {
         min-width: 100px !important;
         min-height: 40px !important;
@@ -378,7 +410,6 @@
         max-height: 40px !important;
 
     }
-
     .navbar-expand-lg .navbar-collapse {
         display: -ms-flexbox !important;
         display: flex !important;
@@ -393,7 +424,6 @@
     .marginTopHome{
         margin-top: 0px !important;
     }
-
     .fixed-top-nav {
         position: absolute !important;
         top: 0;
@@ -401,11 +431,9 @@
         left: 0;
         z-index: 1030;
     }
-
     .widthItensNavbarInterno{
         width: 20% !important;
     }
-
     .divResolucaoLarge{
         display: none;
     }
@@ -453,6 +481,31 @@
     .widthCard {
         width: 360px !important;
     }
+    .width50{
+        width:100% !important;
+    }
+    .smallScreen{
+        display: block !important;
+    }
+    .bigScreen{
+        display: none !important;
+    }
+    .textCoursesDescription{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .imgResponsiveSmall{
+        max-height: 80px !important;
+    }
+    .minHeightResponsive{
+        min-height: 700px !important;
+    }
+    .sizeCol9{
+        max-width: 100% !important;
+    }
+    .widthCard {
+        width: 100% !important;
+    }
 }
 @media screen and
 (min-width: 768px) and
@@ -469,7 +522,6 @@
         max-height: 40px !important;
 
     }
-
     .navbar-expand-lg .navbar-collapse {
         display: -ms-flexbox !important;
         display: flex !important;
@@ -484,7 +536,6 @@
     .marginTopHome{
         margin-top: 0px !important;
     }
-
     .fixed-top-nav {
         position: absolute !important;
         top: 0;
@@ -492,11 +543,9 @@
         left: 0;
         z-index: 1030;
     }
-
     .widthItensNavbarInterno{
         width: 20% !important;
     }
-
     .divResolucaoLarge{
         display: none;
     }
@@ -516,7 +565,6 @@
     .nomeAluno{
         margin-top: 8% !important;
     }
-
     .marginBottomImg{
         margin-bottom: 11% !important;
     }
@@ -536,9 +584,26 @@
     .showUpperMenu{
         display: block !important;
     }
+    .width50{
+        width:100% !important;
+    }
+    .smallScreen{
+        display: block !important;
+    }
+    .bigScreen{
+        display: none !important;
+    }
+    .textCoursesDescription{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .imgResponsiveSmall{
+        max-height: 90px !important;
+    }
+    .minHeightResponsive{
+        min-height: 700px !important;
+    }
 }
-
-
 @media screen and
 (min-width: 800px) and
 (max-width: 991px) {
@@ -547,8 +612,6 @@
         margin-left: auto;
         margin-right: auto;
     }
-
-
     .showUpperMenu{
         display: block !important;
     }
@@ -567,15 +630,12 @@
         min-height: 40px !important;
         max-width: 100px !important;
         max-height: 40px !important;
-
     }
-
     .navbar-expand-lg .navbar-collapse {
         display: -ms-flexbox !important;
         display: flex !important;
         -ms-flex-preferred-size: auto !important;
         flex-basis: auto !important;
-
     }
     .textBasicOrientationNav{
         text-align: center !important;
@@ -584,7 +644,6 @@
     .marginTopHome{
         margin-top: 0px !important;
     }
-
     .fixed-top-nav {
         position: absolute !important;
         top: 0;
@@ -592,11 +651,9 @@
         left: 0;
         z-index: 1030;
     }
-
     .widthItensNavbarInterno{
         width: 20% !important;
     }
-
     .divResolucaoLarge{
         display: none;
     }
@@ -622,13 +679,33 @@
     .sizeTableCursos{
         height: 350px !important;
     }
+    .width50{
+        width:100% !important;
+    }
+    .smallScreen{
+        display: block !important;
+    }
+    .bigScreen{
+        display: none !important;
+    }
+    .textCoursesDescription{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .imgResponsiveSmall{
+        max-height: 110px !important;
+    }
+    .minHeightResponsive{
+        min-height: 700px !important;
+    }
+
 }
-
-
-
 @media screen and
 (min-width: 992px) and
 (max-width: 1023px){
+    .differentWidth{
+        width: 75% !important;
+    }
     .tamanhoMenuResp{
         width: 625px;
         margin-left: auto;
@@ -654,7 +731,6 @@
         max-height: 40px !important;
 
     }
-
     .navbar-expand-lg .navbar-collapse {
         display: -ms-flexbox !important;
         display: flex !important;
@@ -669,7 +745,6 @@
     .marginTopHome{
         margin-top: 0px !important;
     }
-
     .fixed-top-nav {
         position: absolute !important;
         top: 0;
@@ -707,8 +782,23 @@
     .sizeTableCursos{
         height: 350px !important;
     }
+    .smallScreen{
+        display: block !important;
+    }
+    .bigScreen{
+        display: none !important;
+    }
+    .textCoursesDescription{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .imgResponsiveSmall{
+        max-height: 120px !important;
+    }
+    .minHeightResponsive{
+        min-height: 650px !important;
+    }
 }
-
 @media screen and
 (min-width: 1024px) and
 (max-width: 1279px){
@@ -719,7 +809,6 @@
         max-height: 40px !important;
 
     }
-
     .fixed-top-nav {
         position: fixed !important;
         top: 0;
@@ -746,7 +835,6 @@
         width: 85% !important;
     }
 }
-
 @media screen and
 (min-width: 1280px) and
 (max-width: 1365px){
@@ -757,7 +845,6 @@
         max-height: 40px !important;
 
     }
-
     .fixed-top-nav {
         position: fixed !important;
         top: 0;
@@ -768,7 +855,6 @@
     .nomeAluno{
         margin-top: 5% !important;
     }
-
     .marginBottomImg{
         margin-bottom: 7% !important;
     }
@@ -779,7 +865,6 @@
         height: 350px !important;
     }
 }
-
 @media screen and
 (min-width: 1366px) and
 (max-width: 1439px){
@@ -790,7 +875,6 @@
         max-height: 40px !important;
 
     }
-
     .fixed-top-nav {
         position: fixed !important;
         top: 0;
@@ -811,8 +895,6 @@
         height: 350px !important;
     }
 }
-
-
 @media screen and
 (min-width: 1440px) and
 (max-width: 1599px){
@@ -823,7 +905,6 @@
         max-height: 40px !important;
 
     }
-
     .fixed-top-nav {
         position: fixed !important;
         top: 0;
@@ -844,7 +925,6 @@
         max-height: 350px !important;
     }
 }
-
 @media screen and
 (min-width: 1600px) and
 (max-width: 1679px){
@@ -855,7 +935,6 @@
         max-height: 40px !important;
 
     }
-
     .fixed-top-nav {
         position: fixed !important;
         top: 0;
@@ -876,7 +955,6 @@
         max-height: 350px !important;
     }
 }
-
 @media screen and
 (min-width: 1680px) and
 (max-width: 4080px){
@@ -890,7 +968,6 @@
         max-height: 40px !important;
 
     }
-
     .fixed-top-nav {
         position: fixed !important;
         top: 0;
@@ -908,90 +985,72 @@
         bottom: 50% !important;
     }
 }
-
 .tamanhoBotoesMeusCursos{
     width: 200px;
 }
-
 .textBasicOrientationNav{
     text-align: left;
 }
-
 .containerTamanho {
     width: 100%;
 }
-
 .texto-cinza{
     color: #4F4F4F !important;
 }
-
 .texto-cinza-claro{
     color: #696969 !important;
 }
-
 .layoutBasicOrientation{
     padding: 1%;
 }
-
 .columnOrientations{
     max-width: 33%;
 }
-
 .titlePropertiesNavbar{
     font-size: large;
     color: black !important;
     text-shadow: 1px 2px 13px rgba(154, 150, 150, 1);
     text-align: center;
 }
-
 .textBasicOrientation{
     text-align: center;
     vertical-align: middle !important;
 }
-
 .marginTopTextNav{
     margin-top: 1%;
 }
-
 .titleFontProperties{
     color: #eff1f3;
     font-weight: bold;
     text-shadow: 0 0 30px rgba(0,0,0,.5);
 }
-
 .subtitleFontProperties{
     color: #eff1f3;
     font-weight: bold;
     text-shadow: 0 0 30px rgba(0,0,0,.5);
     font-size: 1.5rem !important;
 }
-
 .titleFontProperties2{
     font-weight: bold;
     text-shadow: 0 0 30px rgba(0,0,0,.5);
 }
-
 .subtitleFontProperties2{
     font-weight: bold;
     text-shadow: 0 0 30px rgba(0,0,0,.5);
     font-size: 1.0rem !important;
 }
-
 .backgroundSmall{
     background-color: #f5f5f5;
 }
-
 .backgroundGreyGradient{
     background-image: linear-gradient(grey, white);
 }
-
 .box {
     margin: 30px;
     height: 50px;
     width: 50px;
     background-color: blue;
 }
-
 .box.horizTranslate {
     -webkit-transition: 3s;
     -moz-transition: 3s;
@@ -1000,136 +1059,105 @@
     transition: 3s;
     margin-left: 50% !important;
 }
-
 .footerTextProperties{
     font-size: 12px !important;
     text-align: justify !important;
 }
-
 .footerTitleProperties{
     font-size: 15px !important;
 }
-
 .botoesMenuAluno{
     width: 30% !important;
 }
-
 .marginBotoesMenuAluno{
     margin-right: 5% !important;
 }
-
 .marginBottomPosNav{
     margin-bottom: 10% !important;
 }
-
 .verticalAlignText{
     margin-top: auto !important;
     margin-bottom: auto !important;
 }
-
 .bgHome{
     background-image: url(../img/home.jpg) !important;
 }
-
 .bgMeusCursos{
     background-image: url(../img/meus-cursos.jpg) !important;
 }
-
 .bgHomepage{
     background-image: url(../img/homepage.jpg) !important;
 }
-
 .bgAdministrador{
     background-image: url(../img/portfolio/fullsize/5.jpg) !important;
 }
-
 .bgCursosPendentes{
   background-image: url(../img/portfolio/fullsize/6.jpg) !important;
 }
-
 .bgComprovantes{
     background-image: url(../img/comprovantes.jpg) !important;
 }
-
 .bgCertificados{
     background-image: url(../img/certificados.jpg) !important;
 }
-
 .bgFaleConosco{
     background-image: url(../img/faleConosco.jpg) !important;
 }
-
-
 .display-2-edited {
     font-size: 2.5rem;
     font-weight: 300;
     line-height: 1.2;
 }
-
 .container70p{
     width: 70% !important;
     margin-left: 15% !important;
     margin-right: 15% !important;
 }
-
 .display-Inline{
     display: inline !important;
 }
-
 .visibilityItemMenu{
     visibility: visible !important;
 }
-
 body,html{
     height: 100%;
 }
-
 nav.sidebar, .main{
     -webkit-transition: margin 200ms ease-out;
     -moz-transition: margin 200ms ease-out;
     -o-transition: margin 200ms ease-out;
     transition: margin 200ms ease-out;
 }
-
 .main{
     padding: 10px 10px 0 10px;
 }
-
 @media (min-width: 765px) {
-
     .main{
         position: absolute;
         width: calc(100% - 40px);
         margin-left: 40px;
         float: right;
     }
-
     nav.sidebar:hover + .main{
         margin-left: 200px;
     }
-
     nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
         margin-left: 0px;
     }
-
     nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
         text-align: center;
         width: 100%;
         margin-left: 0px;
     }
-
     nav.sidebar a{
         padding-right: 13px;
     }
-
     nav.sidebar .navbar-nav > li:first-child{
         border-top: 1px #e5e5e5 solid;
     }
-
     nav.sidebar .navbar-nav > li{
         border-bottom: 1px #e5e5e5 solid;
     }
-
     nav.sidebar .navbar-nav .open .dropdown-menu {
         position: static;
         float: none;
@@ -1140,15 +1168,12 @@ nav.sidebar, .main{
         -webkit-box-shadow: none;
         box-shadow: none;
     }
-
     nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
         padding: 0 0px 0 0px;
     }
-
     .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
         color: #777;
     }
-
     nav.sidebar{
         width: 240px;
         height: 500px !important;
@@ -1156,46 +1181,36 @@ nav.sidebar, .main{
         float: left;
         margin-bottom: 0px;
     }
-
     nav.sidebar li {
         width: 100%;
     }
-
     nav.sidebar:hover{
         margin-left: 0px;
     }
-
     .forAnimate{
         opacity: 0;
     }
 }
-
 @media (min-width: 1330px) {
-
     .main{
         width: calc(100% - 200px);
         margin-left: 200px;
     }
-
     nav.sidebar{
         margin-left: 0px;
         float: left;
     }
-
     nav.sidebar .forAnimate{
         opacity: 1;
     }
 }
-
 nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
     color: #CCC;
     background-color: transparent;
 }
-
 nav:hover .forAnimate{
     opacity: 1;
 }
-
 section{
     padding-left: 15px;
 }
@@ -1203,12 +1218,10 @@ section{
 .tamNavBar{
     width: 90% !important;
 }
-
 .mobile {
     opacity: 1;
     height: auto;
 }
-
 @media only screen and (max-width: 765px) {
     .mobile {
         display: none !important;
@@ -1217,23 +1230,17 @@ section{
 
     }
 }
-
  .textTop{
      position:relative;
      top:-50%;
  }
-
  .nopaddingFooter{
      padding: 0px !important;
  }
-
-
 .gradientBackgroundTitle{
     background-image: linear-gradient(#e9ecef, white) !important;
 }
-
 body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-26347-27038-hd-wallpapers.jpg"); background-repeat:no-repeat; background-position:center; background-size:cover; padding:10px;}
-
 .form-heading { color:#fff; font-size:23px;}
 .panel h2{ color:#444444; font-size:18px; margin:0 0 8px 0;}
 .panel p { color:#777777; font-size:14px; margin-bottom:30px; line-height:24px;}
@@ -1251,11 +1258,9 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
     max-width: 38%;
     padding: 20px 60px 4px 39px;
 }
-
 .login-form .form-group {
     margin-bottom:10px;
 }
-
 .login-form{ text-align:center;}
 .forgot a {
     color: #777777;
@@ -1284,7 +1289,6 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
 }
 .back { text-align: left; margin-top:10px;}
 .back a {color: #444444; font-size: 13px;text-decoration: none;}
-
 .backgroundForm{
     background-color: whitesmoke;
     -webkit-border-radius: 9px;
@@ -1302,11 +1306,9 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
     padding: 2%;
     margin-bottom: 2%;
 }
-
 .course-titulo{
     font-weight: bold !important;
 }
-
 .margin-padding-fale-conosco{
     margin-left: 2%;
     margin-bottom: 2%;
@@ -1321,12 +1323,10 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
     margin-bottom: 0px !important;
     padding-bottom: 0px !important;
 }
-
 .loginButton{
     background-color: transparent !important;
     border-color: transparent !important;
 }
-
 .propriedades-tabela{
     padding: 2%;
     background:rgba(255,255,255,0.5);
@@ -1347,12 +1347,10 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
     color: #000000 !important;
     background-color: whitesmoke !important;
 }
-
 .page-footer {
     color: #000000 !important;
     background-color: whitesmoke !important;
 }
-
 .widthItensNavbar{
     width: 100%;
     display: inline;
@@ -1360,28 +1358,22 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
 .divResolucaoLarge{
     display: contents;
 }
-
 .divResolucaoSmall{
     display: none;
 }
-
 .bc-icons-2 .breadcrumb-item + .breadcrumb-item::before {
     content: none;
 }
-
 .bc-icons-2 .breadcrumb-item.active {
     color: darkgrey;
 }
-
 .bcAdditionalProperties{
     margin-bottom: 0px !important;
     background-color: whitesmoke !important;
 }
-
 .marginBottomBotaoEnviarContact{
     margin-bottom: 7%;
 }
-
 .social{
     text-align:center;
     width:70px;
@@ -1434,7 +1426,6 @@ body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-2
     -moz-box-shadow: 0px 0px 43px -14px rgba(0,0,0,0.66);
     box-shadow: 0px 0px 43px -14px rgba(0,0,0,0.66);
 }
-
 .card_h {
     margin: 0 auto;
 }
@@ -1476,30 +1467,24 @@ a:hover > .ico {
     text-align: center;
     margin-bottom: 30px;
 }
-
 .tab-content-padding {
   padding: 0px !important;
 }
-
 .nav-tabs-padding {
   padding: 17px !important;
   margin-bottom: -60px !important;
   margin-left: 2rem !important;
   box-shadow: none !important;
 }
-
 .nav-item-space {
   padding: 10px;
 }
-
 .tab {
   color: black;
 }
-
 .corpo_mensagem {
   margin-bottom: 20px;
 }
-
 .detalhes_mensagem {
   font-weight: bold;
 }
@@ -1510,17 +1495,14 @@ a:hover > .ico {
 .tableProperties{
     padding: 1% !important;
 }
-
 table {
     border-collapse: collapse;
     width: 100%;
 }
-
 th, td {
     text-align: left;
     padding: 8px;
 }
-
 tr:nth-child(odd) {background-color: #f2f2f2;}
 
 .hoverImg {
@@ -1528,7 +1510,6 @@ tr:nth-child(odd) {background-color: #f2f2f2;}
     background: black;
     padding: 0;
 }
-
 .hoverImg:hover img {
     opacity: 0.7;
 }
@@ -1547,7 +1528,6 @@ tr:nth-child(odd) {background-color: #f2f2f2;}
     font-weight: bold;
 
 }
-
 element.style {
 }
 .list-group .list-group-item:last-child {
@@ -1745,13 +1725,12 @@ a:hover {
 .sizeTableCursos{
     height: 350px;
 }
-
 .sizeCol3{
-    max-width: 25%;
+    max-width: 35%;
     margin-bottom: 5%
 }
 .sizeCol9{
-    max-width: 75%;
+    max-width: 65%;
 }
 .widthCard{
     width: 250px;
@@ -1870,3 +1849,267 @@ a:hover {
     margin-bottom: 30px;
     margin-top:30px
 }
+.width50{
+    width:50%;
+   }
+.width100{
+    width: 100%;
+}
+.bottomProprierties1{
+    right: 0;
+    left: 0;
+    position: absolute;
+    bottom: 60px;
+}
+.bottomProprierties2{
+    right: 0;
+    left: 0;
+    position: absolute;
+    bottom: 145px;
+}
+.imgResponsive{
+    min-width: 400px;
+    min-height: 130px;
+}
+.imgboxresponsive{
+    min-width: 400px;
+    min-height: 130px;
+    padding: 7px;
+    margin-bottom: 20px;
+}
+.bottomPropriertiesSmall1{
+    right: 0;
+    left: 0;
+    position: absolute;
+    bottom: 50px;
+}
+.bottomPropriertiesSmall2{
+    right: 0;
+    left: 0;
+    position: absolute;
+    bottom: 95px;
+}
+.p100{
+    width: 100%;
+}
+.textRevealContainer {
+
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 1.5em; /*adjust according to your need*/
+    text-align: center; /*in case you write multiline text*/
+}
+
+.textReveal {
+    overflow: hidden;
+    animation: textRevealAnim 1s ease 0.4s forwards;
+}
+
+.textReveal > div {
+    padding: 8px 16px;
+    transform: translateX(100%);
+    border-left: 2px solid red;
+    overflow: hidden;
+    animation: textRevealAnim 1s ease 0.4s forwards,
+    borderOpacityAnim 1s ease 0.4s forwards;
+}
+
+.textReveal > div > div {
+    transform: translateX(-100%);
+    animation: textRevealAnim 1s ease 0.4s forwards;
+}
+
+@keyframes textRevealAnim {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes borderOpacityAnim {
+    50% {
+        border-left: 2px solid red;
+    }
+    100% {
+        border-left: 2px solid transparent;
+    }
+}
+
+.textReveal.x50 {
+    transform: translateX(-50%);
+}
+
+.textReveal.x100 {
+    transform: translateX(-100%);
+}
+
+.textReveal.zoom > div {
+    transform: translateX(100%) scale(0.5, 0.5);
+}
+
+.textReveal.rotateY {
+    perspective: 100px; /*adjust according to your need*/
+}
+
+.textReveal.rotateY > div {
+    transform: translateX(100%) rotateY(20deg);
+}
+
+.textReveal.color > div > div {
+    background: linear-gradient(
+            to right,
+            red,
+            red 45%,
+            orange 45%,
+            orange 55%,
+            red 55%,
+            red
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-size: 300%;
+    animation: textRevealAnim 1s ease 0.4s forwards,
+    bgShiftAnim 2s ease 0.4s forwards;
+}
+
+@keyframes bgShiftAnim {
+    to {
+        background-position: 100%;
+    }
+}
+
+.textCoursesDescription{
+    padding-top: 3%;
+    padding-right: 10%;
+    padding-left: 10%;
+    text-align: justify;
+    line-height: 30px;
+    overflow: hidden !important;
+}
+.titlePropertiesCourses{
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 2px;
+}
+.smallScreen{
+    display: none;
+}
+.bigScreen{
+    display: block;
+}
+.noMarginSmall{
+    margin: 0px !important;
+}
+.imgResponsiveSmall{
+    min-width: 100%;
+    min-height: 150px
+}
+.minHeightResponsive{
+    min-height: 500px;
+}
+.differentWidth{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Basic styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #D8D8D8;
+}
+
+/* title styles */
+.home-title span{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    line-height: 1.2;
+}
+
+.home-title span::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.5);
+    animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(-101%);
+}
+
+.home-title span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(0);
+}
+
+.home-title span:nth-of-type(1)::before,
+.home-title span:nth-of-type(1)::after{
+    animation-delay: 1s;
+}
+
+.home-title span:nth-of-type(2)::before,
+.home-title span:nth-of-type(2)::after{
+    animation-delay: 1.5s;
+}
+
+@keyframes a-ltr-after{
+    0% {transform: translateX(-100%)}
+    100% {transform: translateX(101%)}
+}
+
+@keyframes a-ltr-before{
+    0% {transform: translateX(0)}
+    100% {transform: translateX(200%)}
+}
+
+
+.text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    list-style: none;
+    border-bottom: 0;
+}
+
+.text.hidden {
+    border-bottom: 0;
+}
+
+.text li {
+    text-shadow: 2px 2px 15px #000000;
+    display: inline-block;
+    float: left;
+    font-weight: lighter;
+    color: #fff;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    max-width: 2em;
+}
+.text.hidden li.spaced {
+    padding-left: 0;
+}
+.text li.spaced {
+    padding-left: 0.5em;
+}
+
+.text.hidden li.ghost {
+    opacity: 0;
+    max-width: 0;
+}
+
+
+
+
