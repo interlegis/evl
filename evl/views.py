@@ -9,7 +9,7 @@ import urllib.parse
 import urllib.request
 from django.http.response import HttpResponse
 from administrador import views
-
+from .forms import PerfilForm
 from django.contrib.auth import logout
 
 def home(request):
@@ -45,7 +45,21 @@ def secret_page(request, *args, **kwargs):
     return HttpResponse('Secret contents!', status=200)
 
 def perfilaluno(request):
-    return render(request, 'evl/perfilAluno.html')
+    form = PerfilForm(
+        initial={
+            'name': request.user.first_name,
+            'email': request.user.email,
+            'cpf': request.user.username,
+            'phone': request.user.profile.phone,
+        }
+    )
+    if request.method == "POST":
+        form = PerfilForm(request.POST)
+        if form.is_valid():
+            print("VALIDOOOOO\n\n\n")
+        else:
+            return render(request, 'evl/perfilAluno.html', {'form': form})
+    return render(request, 'evl/perfilAluno.html', {'form': form})
 
 def userLogout(request):
     logout(request)

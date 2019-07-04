@@ -1,9 +1,11 @@
 function habilitar() {
     var objtxt = document.getElementsByClassName("enable_btn");
-    for(var i=0; i<7; i++) {
+    for(var i=0; i<9; i++) {
         objtxt[i].disabled = false;
     }
+
     var objEditar = document.getElementById("editarDadosBtn");
+    console.log(objEditar)
     objEditar.hidden = true;
 
     var objSalvar = document.getElementById("salvarDadosBtn");
@@ -15,7 +17,7 @@ function habilitar() {
 }
 function salvar() {
     var objtxt = document.getElementsByClassName("enable_btn");
-    for(var i=0; i<7; i++) {
+    for(var i=0; i<9; i++) {
         objtxt[i].disabled = true;
     }
     var objEditar = document.getElementById("editarDadosBtn");
