@@ -27,15 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-# Email configurations
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'matheus456456@gmail.com'
-EMAIL_HOST_PASSWORD = ''
-EMAIL_PORT = 587
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -109,12 +100,12 @@ WSGI_APPLICATION = 'evl_admin.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'moodlews',
+        'NAME': os.environ.get('EVL_DB_NAME'),
         # 'NAME': os.path.join(BASE_DIR, 'mydb'),
-        'USER': 'escolamodelows',
-        'PASSWORD': 'escolamodelo',
-        'HOST': 'campeirohsabereslb.interlegis.leg.br',
-        'PORT': '5432', # 8000 is default
+        'USER': os.environ.get('EVL_DB_USER'),
+        'PASSWORD': os.environ.get('EVL_DB_PASS'),
+        'HOST': os.environ.get('EVL_DB_HOST'),
+        'PORT': os.environ.get('EVL_DB_PORT'), # 8000 is default
     }
 }
 
@@ -125,24 +116,22 @@ AUTHENTICATION_BACKENDS = (
     'evl.login.MyOIDCAB',
 )
 
-# DEVELOPMENT
+OIDC_RP_CLIENT_ID = str(os.environ.get('EVL_TOKEN_APPLICATION_ID'))
+OIDC_RP_CLIENT_SECRET = str(os.environ.get('EVL_TOKEN_SECRET'))
+OIDC_OP_AUTHORIZATION_ENDPOINT = str(os.environ.get('EVL_WS_URL_BASE')) + '/oauth/authorize'
+OIDC_OP_TOKEN_ENDPOINT = str(os.environ.get('EVL_WS_URL_BASE')) + '/oauth/token'
+OIDC_OP_USER_ENDPOINT = str(os.environ.get('EVL_WS_URL_BASE')) + '/oauth/userinfo'
+OIDC_RP_SIGN_ALGO = 'RS256'
+OIDC_OP_JWKS_ENDPOINT = str(os.environ.get('EVL_WS_URL_BASE')) + '/oauth/discovery/keys'
+LOGIN_REDIRECT_URL = '/aluno'
+LOGOUT_REDIRECT_URL = '/'
+OIDC_RP_SCOPES = 'openid profile email'
+OIDC_VERIFY_JWT = False
+OIDC_USE_NONCE = False
 
-OIDC_RP_CLIENT_ID = '0949df8a7aaa7fc0a0ddcc290b5a6b9227bc1993536f6afadb7676a740115765' #Local
-OIDC_RP_CLIENT_SECRET = '8f2e3a51e74c484aa8a5526d2a0b780d593f5f990ad38a33a708105fa1e6c2f4' #Local
-OIDC_OP_AUTHORIZATION_ENDPOINT = 'http://localhost:3000/oauth/authorize' #Local
-OIDC_OP_TOKEN_ENDPOINT = 'http://localhost:3000/oauth/token' #Local
-OIDC_OP_USER_ENDPOINT = 'http://localhost:3000/oauth/userinfo' #Local
-OIDC_RP_SIGN_ALGO = 'RS256' #Local
-OIDC_OP_JWKS_ENDPOINT = 'http://localhost:3000/oauth/discovery/keys' #Local
-LOGIN_REDIRECT_URL = '/baseCursos' #Local
-LOGOUT_REDIRECT_URL = '/' #Local
-OIDC_RP_SCOPES = 'openid profile email' #Local
-OIDC_VERIFY_JWT = False #Local
-OIDC_USE_NONCE = False #Local
+APIKEY = os.environ.get('EVL_WS_APIKEY')
+BASE_URL = os.environ.get('EVL_WS_URL_BASE')
 
-
-BASE_URL = 'http://localhost:3000/'
-APIKEY = '6iwXud8cubFTlGWgd8FucO6kzT8BAFXRfd7eXlZLMT3bOgPuMg'
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 

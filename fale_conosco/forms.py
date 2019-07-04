@@ -100,7 +100,7 @@ class FaleConoscoForm(forms.Form):
         #Categoria
         lista_categorias = [('-1', 'Selecione uma categoria')]
         try:
-            requisicao_categoria = urlopen("http://localhost:3000/api/v1/categorias_cursos?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z")
+            requisicao_categoria = urlopen(settings.BASE_URL + "api/v1/categorias_cursos?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z")
             response_categorias = json.load(requisicao_categoria)
             categorias = response_categorias['categorias_cursos']
         except:
@@ -114,7 +114,7 @@ class FaleConoscoForm(forms.Form):
         #Cursos
         lista_cursos = [('-1', 'Selecione um curso')]
         try:
-            requisicao_curso = urlopen("http://localhost:3000/api/v1/cursos?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z")
+            requisicao_curso = urlopen(settings.BASE_URL + "api/v1/cursos?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z")
             response_cursos = json.load(requisicao_curso)
             cursos = response_cursos['cursos']
         except:
@@ -129,7 +129,7 @@ class FaleConoscoForm(forms.Form):
         #Escola
         lista_escolas = [('-1', 'Selecione uma escola')]
         try:
-            requisicao_escola = urlopen("http://localhost:3000/api/v1/escolas?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z")
+            requisicao_escola = urlopen(settings.BASE_URL + "api/v1/escolas?key=k4B5YcbKa619ohu3wxk2xXbmtoxFuQqrwcKEOTAnZi7iy4tl9z")
             response_escolas = json.load(requisicao_escola)
             escolas = response_escolas['escolas']
         except:
