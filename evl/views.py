@@ -13,7 +13,7 @@ from administrador import views
 from django.contrib.auth import logout
 
 def home(request):
-    # response_analise = requests.get('http://localhost:3000/analise')
+    # response_analise = requests.get('https://escolamodelows.interlegis.leg.br/analise')
     response_analise = requests.get(settings.BASE_URL + 'analise')
     analises = response_analise.json()
     return render(request, 'evl/home.html', {'analises': analises})
@@ -26,7 +26,7 @@ def login(request):
 def cadastro(request):
     return render(request, 'evl/cadastro.html')
 
-#@login_required(login_url='http://localhost:3000/log_in?return=URL')
+#@login_required(login_url='https://escolamodelows.interlegis.leg.br/log_in?return=URL')
 def homeAluno(request):
     if request.user.profile.role == 1:
         return redirect(views.administrador)
@@ -40,7 +40,7 @@ def iFrameDashboard(request):
     return render(request, 'evl/iFrameDashboard.html')
 
 
-#@login_required(login_url='http://localhost:3000/log_in?return=URL')
+#@login_required(login_url='https://escolamodelows.interlegis.leg.br/log_in?return=URL')
 def secret_page(request, *args, **kwargs):
     return HttpResponse('Secret contents!', status=200)
 

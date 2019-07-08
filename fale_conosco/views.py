@@ -14,7 +14,7 @@ import urllib.request
 from django.template import context
 from django.http.response import HttpResponse
 
-#@login_required(login_url='http://localhost:3000/log_in?return=XXX')
+#@login_required(login_url='https://escolamodelows.interlegis.leg.br/log_in?return=XXX')
 def faleConosco(request):
     if request.method == "POST":
         if request.user.is_anonymous:
