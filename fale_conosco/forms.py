@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from urllib.request import urlopen
-from localflavor.br.forms import BRCPFField
+# from localflavor.br.forms import BRCPFField
 import json
 
 class FaleConoscoForm(forms.Form):
@@ -23,7 +23,8 @@ class FaleConoscoForm(forms.Form):
             }
         )
     )
-    cpf = BRCPFField(
+    # cpf = BRCPFField(
+    cpf = forms.CharField(
         error_messages={'required': 'Este campo é obrigatório! Preencha este campo com o seu cpf.'},
         widget=forms.TextInput(
             attrs={
@@ -167,5 +168,6 @@ class FaleConoscoForm(forms.Form):
 class FaleConoscoLoggedForm(FaleConoscoForm):
     name = forms.CharField(required = False)
     email = forms.EmailField(required = False)
-    cpf = BRCPFField(required = False)
+    # cpf = BRCPFField(required = False)
+    cpf = forms.CharField(required=False)
     phone_number = forms.CharField(required = False)

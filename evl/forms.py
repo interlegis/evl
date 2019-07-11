@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from urllib.request import urlopen
-from localflavor.br.forms import BRCPFField
+# from localflavor.br.forms import BRCPFField
 import json
 from datetime import datetime
 
@@ -26,7 +26,8 @@ class PerfilForm(forms.Form):
             }
         )
     )
-    cpf = BRCPFField(
+    # cpf = BRCPFField(
+    cpf = forms.CharField(
         error_messages={'required': 'Este campo é obrigatório! Preencha este campo com o seu cpf.'},
         widget=forms.TextInput(
             attrs={
