@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% include 'imports.html' %}
 {% block content %}
+{% load static %}
     <title>EVL - Perfil Aluno</title>
 
     <div class="bc-icons-2">
@@ -25,7 +26,7 @@
                     <div class="showPicture">
                         <div class="containerr mrml" style="margin-bottom: 1rem;">
                             {% if user.profile.image %}
-                                <image src=http://localhost:3000{{user.profile.image}}   alt="Avatar" class="image img-circle avatar" style="height: 148px;">
+                                <image src={{user.profile.image}}   alt="Avatar" class="image img-circle avatar" style="height: 148px;">
                             {% else %}
                                 <img src="http://barcarena.pa.gov.br/portal/img/perfil/padrao.jpg" alt="Avatar" class="image img-circle avatar" style="height: 148px;">
                             {% endif %}
@@ -43,7 +44,7 @@
                             <div class="widthTelaGrandePhoto hover">
                                 <div class="containerr">
                                     {% if user.profile.image %}
-                                        <image src="http://localhost:3000{{user.profile.image}}"   alt="Avatar" class="image img-circle avatar" style="height: 148px;">
+                                        <image src="{{user.profile.image}}"   alt="Avatar" class="image img-circle avatar" style="height: 148px;">
                                     {% else %}
                                         <img src="http://barcarena.pa.gov.br/portal/img/perfil/padrao.jpg" alt="Avatar" class="image img-circle avatar" style="height: 148px;">
                                     {% endif %}
@@ -117,5 +118,6 @@
             </div>
         </div>
     </div>
+    <script src="{% static 'js/jquery-3.3.1/jquery-mask-1-14-10.js' %}"></script>
     <script src="../../static/js/perfilAluno.js"></script>
 {% endblock %}

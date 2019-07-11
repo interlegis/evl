@@ -3,6 +3,7 @@ from django import forms
 from urllib.request import urlopen
 from localflavor.br.forms import BRCPFField
 import json
+from datetime import datetime
 
 class PerfilForm(forms.Form):
     name = forms.CharField(
@@ -46,13 +47,14 @@ class PerfilForm(forms.Form):
         )
     )
 
-    birth_date = forms.DateField(
+    birth_date = forms.CharField(
         label='Data de nascimento', 
-        widget=forms.SelectDateWidget(
+        widget=forms.TextInput(
             attrs={
-                'class' : 'enable_btn',
+                'class' : 'form-control enable_btn',
                 'placeholder' : 'Data de Nascimento',
                 'disabled' : 'disabled',
+                'data-mask': "00/00/0000"
             }
         ))
     
@@ -80,8 +82,15 @@ class PerfilForm(forms.Form):
         cleaned_data = super(PerfilForm, self).clean()
         password = cleaned_data.get("password")
         confirm_password = cleaned_data.get("confirm_password")
-
         if password != confirm_password:
             raise forms.ValidationError(
                 "Senha e confirmação de senha inválidas"
             )
+
+    def clean_birth_date(self):
+        cleaned_data = super(PerfilForm, self).clean()
+        birth_date = datetime.strptime(cleaned_data.get("birth_date"), '%d/%m/%Y')
+        if datetime.now() <= birth_date or birth_date.year <= 1800:
+            raise forms.ValidationError(u'Data inválida!')
+        else:
+            return birth_date

@@ -1,6 +1,14 @@
 function habilitar() {
+    $('input[name="birth_date"]').mask('20/30/1000', {'translation': {
+        0: {pattern: /[0-9*]/},
+        1: {pattern: /[1-2*]/},
+        2: {pattern: /[0-3]/},
+        3: {pattern: /[0-1]/}
+    }});
+    $('input[name="cpf"]').mask('000.000.000-00');
+
     var objtxt = document.getElementsByClassName("enable_btn");
-    for(var i=0; i<9; i++) {
+    for(var i=0; i<7; i++) {
         objtxt[i].disabled = false;
     }
 
@@ -17,7 +25,7 @@ function habilitar() {
 }
 function salvar() {
     var objtxt = document.getElementsByClassName("enable_btn");
-    for(var i=0; i<9; i++) {
+    for(var i=0; i<7; i++) {
         objtxt[i].disabled = true;
     }
     var objEditar = document.getElementById("editarDadosBtn");

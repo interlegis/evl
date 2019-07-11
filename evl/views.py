@@ -11,6 +11,7 @@ from django.http.response import HttpResponse
 from administrador import views
 from .forms import PerfilForm
 from django.contrib.auth import logout
+from urllib.request import urlopen
 
 def home(request):
     # response_analise = requests.get('http://localhost:3000/analise')
@@ -56,7 +57,20 @@ def perfilaluno(request):
     if request.method == "POST":
         form = PerfilForm(request.POST)
         if form.is_valid():
-            print("VALIDOOOOO\n\n\n")
+            payload = {
+                'user': {
+                    'birth': str(form.cleaned_data['birth_date'].date()),
+                    'email': form.cleaned_data['email'],
+                    'cpf': request.user.username,
+                    'phone': '33756315',
+                }
+            }
+
+            req = urllib.request.Request(settings.BASE_URL + 'users/?cpf_antigo=' + request.user.username) 
+            req.add_header('Content-Type', 'application/json; charset=utf-8')
+            req.get_method = lambda: 'PATCH'
+            result = urlopen(req, json.dumps(payload).encode('utf-8'))
+            return render(request, 'evl/perfilAluno.html', {'form': form})
         else:
             return render(request, 'evl/perfilAluno.html', {'form': form})
     return render(request, 'evl/perfilAluno.html', {'form': form})
