@@ -25,7 +25,6 @@ def faleConosco(request):
                 result = urlopen(req, json.dumps(formNotLogged.data).encode('utf-8'))
                 return render(request, 'evl/home.html', context={'messagem_faleConosco': "A mensagem foi enviada com sucesso"})
             else:
-                print("ERROS =", formNotLogged.errors)
                 return render(request, 'faleConosco.html', {'form': formNotLogged})
         else:
             formLogged = FaleConoscoLoggedForm(request.POST)
@@ -39,9 +38,7 @@ def faleConosco(request):
                 result = urlopen(req, json.dumps(formLogged.data).encode('utf-8'))
                 return render(request, 'evl/home.html', context={'messagem_faleConosco': "A mensagem foi enviada com sucesso"})
             else:
-                print("ERROS =", form.errors)
                 return render(request, 'faleConosco.html', {'form': formLogged})
-
     else:
         form = FaleConoscoForm()
         return render(request, 'faleConosco.html', {'form': form})

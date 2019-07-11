@@ -9,8 +9,9 @@ import urllib.parse
 import urllib.request
 from django.http.response import HttpResponse
 from administrador import views
-
+from .forms import PerfilForm
 from django.contrib.auth import logout
+from urllib.request import urlopen
 
 def home(request):
     # response_analise = requests.get('https://escolamodelows.interlegis.leg.br/analise')
@@ -45,9 +46,35 @@ def secret_page(request, *args, **kwargs):
     return HttpResponse('Secret contents!', status=200)
 
 def perfilaluno(request):
-    return render(request, 'evl/perfilAluno.html')
+    form = PerfilForm(
+        initial={
+            'name': request.user.first_name,
+            'email': request.user.email,
+            'cpf': request.user.username,
+            'phone': request.user.profile.phone,
+        }
+    )
+    if request.method == "POST":
+        form = PerfilForm(request.POST)
+        if form.is_valid():
+            payload = {
+                'user': {
+                    'birth': str(form.cleaned_data['birth_date'].date()),
+                    'email': form.cleaned_data['email'],
+                    'cpf': request.user.username,
+                    'phone': '33756315',
+                }
+            }
+
+            req = urllib.request.Request(settings.BASE_URL + 'users/?cpf_antigo=' + request.user.username) 
+            req.add_header('Content-Type', 'application/json; charset=utf-8')
+            req.get_method = lambda: 'PATCH'
+            result = urlopen(req, json.dumps(payload).encode('utf-8'))
+            return render(request, 'evl/perfilAluno.html', {'form': form})
+        else:
+            return render(request, 'evl/perfilAluno.html', {'form': form})
+    return render(request, 'evl/perfilAluno.html', {'form': form})
 
 def userLogout(request):
     logout(request)
-    # return redirect(settings.BASE_URL + 'log_out?externo=' + 'https://evl.interlegis.leg.br/') #Alterar essa URL para produção
-    return redirect(settings.BASE_URL + 'log_out?externo=' + 'http://localhost:8000/') #Alterar essa URL para produção
+    return redirect(settings.BASE_URL + 'log_out?externo=' + 'https://evl.interlegis.leg.br/') #Alterar essa URL para produção

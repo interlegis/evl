@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% include 'imports.html' %}
 {% block content %}
+{% load static %}
     <title>EVL - Perfil Aluno</title>
 
     <div class="bc-icons-2">
@@ -20,7 +21,8 @@
     <div class="margin-padding-fale-conosco container">
         <div class="col-md-12">
             <div class="form-area widthTotal">
-                <form method="POST" role="form" novalidate>
+                <form method="POST" role="form" id="perfil-form" novalidate>
+                    {% csrf_token %}
                     <div class="showPicture">
                         <div class="containerr mrml" style="margin-bottom: 1rem;">
                             {% if user.profile.image %}
@@ -42,7 +44,7 @@
                             <div class="widthTelaGrandePhoto hover">
                                 <div class="containerr">
                                     {% if user.profile.image %}
-                                        <image src="https://escolamodelows.interlegis.leg.br{{user.profile.image}}"   alt="Avatar" class="image img-circle avatar" style="height: 148px;">
+                                        <image src="{{user.profile.image}}"   alt="Avatar" class="image img-circle avatar" style="height: 148px;">
                                     {% else %}
                                         <img src="http://barcarena.pa.gov.br/portal/img/perfil/padrao.jpg" alt="Avatar" class="image img-circle avatar" style="height: 148px;">
                                     {% endif %}
@@ -58,35 +60,64 @@
                             </div>
                             <div class="widthTelaGrandeInput">
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control enable_btn" placeholder="Nome" value="{{ user.first_name }}" id="id_nome" disabled>
+                                    <small class="text-danger">
+                                        {{ form.name.errors.as_text }}
+                                    </small>
+                                    {{form.name}}
+                                    <!-- <input type="text" name="name" class="form-control enable_btn" placeholder="Nome" value="{{ user.first_name }}" id="id_nome" disabled> -->
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="email" class="form-control enable_btn" placeholder="E-Mail" value="{{user.email}}" id="id_e-mail" disabled>
+                                    <small class="text-danger">
+                                        {{ form.email.errors.as_text }}
+                                    </small>
+                                    {{form.email}}
+                                    <!-- <input type="text" name="email" class="form-control enable_btn" placeholder="E-Mail" value="{{user.email}}" id="id_e-mail" disabled> -->
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="phone" class="form-control enable_btn" placeholder="CPF" value="{{user.username}}" id="id_cpf" disabled>
+                                    <small class="text-danger">
+                                        {{ form.cpf.errors.as_text }}
+                                    </small>
+                                    {{form.cpf}}
+                                    <!-- <input type="text" name="phone" class="form-control enable_btn" placeholder="CPF" value="{{user.username}}" id="id_cpf" disabled> -->
                                 </div>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <input type="text" name="cpf" class="form-control enable_btn" placeholder="Data de Nascimento" id="id_datanasc" disabled>
+                            <small class="text-danger">
+                                {{ form.birth_date.errors.as_text }}
+                            </small>
+                            {{form.birth_date}}
+                            <!-- <input type="text" name="cpf" class="form-control enable_btn" placeholder="Data de Nascimento" id="id_datanasc" disabled> -->
                         </div>
                         <div class="form-group row">
-                            <input type="text" name="phone" class="form-control enable_btn" placeholder="Telefone" value="{{user.profile.phone}}" id="id_telefone" disabled>
+                                <small class="text-danger">
+                                    {{ form.phone.errors.as_text }}
+                                </small>
+                                {{form.phone}}
+                            <!-- <input type="text" name="phone" class="form-control enable_btn" placeholder="Telefone" value="{{user.profile.phone}}" id="id_telefone" disabled> -->
                         </div>
                         <div class="form-group row">
-                            <input type="text" name="phone" class="form-control enable_btn" placeholder="Senha" id="id_senha" disabled>
+                            <small class="text-danger">
+                                {{ form.password.errors.as_text }}
+                            </small>
+                            {{form.password}}
+                            <!-- <input type="text" name="phone" class="form-control enable_btn" placeholder="Senha" id="id_senha" disabled> -->
                         </div>
                         <div class="form-group row">
-                            <input type="text" name="phone" class="form-control enable_btn" placeholder="Confirmação da Senha" id="id_senhaconf" disabled>
+                            <small class="text-danger">
+                                {{ form.confirm_password.errors.as_text }}
+                            </small>
+                            {{form.confirm_password}}
+                            <!-- <input type="text" name="phone" class="form-control enable_btn" placeholder="Confirmação da Senha" id="id_senhaconf" disabled> -->
                         </div>
                         <div class="marginBottomBotaoEnviarContact row">
                             <a onClick="habilitar()" class="pull-right btn btn-success" id="editarDadosBtn">Editar Dados</a>
-                            <a onClick="salvar()" class="pull-right btn btn-success" id="salvarDadosBtn" hidden>Salvar Dados</a>
+                            <a onclick="document.forms['perfil-form'].submit();" type="submit" name="submit" class="pull-right btn btn-success" id="salvarDadosBtn" hidden>Salvar Dados</a>
                         </div>
                 </form>
             </div>
         </div>
     </div>
+    <script src="{% static 'js/jquery-3.3.1/jquery-mask-1-14-10.js' %}"></script>
     <script src="../../static/js/perfilAluno.js"></script>
 {% endblock %}

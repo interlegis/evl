@@ -101,7 +101,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.environ.get('EVL_DB_NAME'),
-        # 'NAME': os.path.join(BASE_DIR, 'mydb'),
         'USER': os.environ.get('EVL_DB_USER'),
         'PASSWORD': os.environ.get('EVL_DB_PASS'),
         'HOST': os.environ.get('EVL_DB_HOST'),
@@ -159,7 +158,8 @@ OAUTH2_PROVIDER = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
 
