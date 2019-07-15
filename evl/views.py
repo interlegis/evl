@@ -10,6 +10,7 @@ import urllib.request
 from django.http.response import HttpResponse
 from administrador import views
 from .forms import PerfilForm
+from evl.models import User
 from django.contrib.auth import logout
 from urllib.request import urlopen
 
@@ -46,7 +47,7 @@ def secret_page(request, *args, **kwargs):
     return HttpResponse('Secret contents!', status=200)
 
 def perfilaluno(request):
-    form = PerfilForm(
+    form = PerfilForm(request.user,
         initial={
             'name': request.user.first_name,
             'email': request.user.email,
@@ -55,7 +56,7 @@ def perfilaluno(request):
         }
     )
     if request.method == "POST":
-        form = PerfilForm(request.POST)
+        form = PerfilForm(request.user, request.POST)
         if form.is_valid():
             payload = {
                 'user': {
@@ -65,11 +66,14 @@ def perfilaluno(request):
                     'phone': '33756315',
                 }
             }
-
             req = urllib.request.Request(settings.BASE_URL + 'users/?cpf_antigo=' + request.user.username) 
             req.add_header('Content-Type', 'application/json; charset=utf-8')
             req.get_method = lambda: 'PATCH'
             result = urlopen(req, json.dumps(payload).encode('utf-8'))
+            if result.getcode() == 200:
+                user = User.objects.get(username=request.user.username)
+                user.email = payload['user']['email']
+                user.save()
             return render(request, 'evl/perfilAluno.html', {'form': form})
         else:
             return render(request, 'evl/perfilAluno.html', {'form': form})
