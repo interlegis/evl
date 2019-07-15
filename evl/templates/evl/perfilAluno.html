@@ -25,7 +25,7 @@
                     {% csrf_token %}
                     <div class="showPicture">
                         <div class="containerr mrml" style="margin-bottom: 1rem;">
-                            {% if user.profile.image %}
+                            {% if user.profile.image != "http://localhost:3000/" %}
                                 <image src={{user.profile.image}}   alt="Avatar" class="image img-circle avatar" style="height: 148px;">
                             {% else %}
                                 <img src="http://barcarena.pa.gov.br/portal/img/perfil/padrao.jpg" alt="Avatar" class="image img-circle avatar" style="height: 148px;">
@@ -43,7 +43,7 @@
                         <div class="row">
                             <div class="widthTelaGrandePhoto hover">
                                 <div class="containerr">
-                                    {% if user.profile.image %}
+                                    {% if user.profile.image != "http://localhost:3000/" %}
                                         <image src="{{user.profile.image}}"   alt="Avatar" class="image img-circle avatar" style="height: 148px;">
                                     {% else %}
                                         <img src="http://barcarena.pa.gov.br/portal/img/perfil/padrao.jpg" alt="Avatar" class="image img-circle avatar" style="height: 148px;">
