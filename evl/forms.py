@@ -3,7 +3,9 @@ from django import forms
 from urllib.request import urlopen
 # from localflavor.br.forms import BRCPFField
 import json
+from evl.models import User
 from datetime import datetime
+from django.contrib.auth.hashers import check_password
 
 class PerfilForm(forms.Form):
     name = forms.CharField(
@@ -79,6 +81,10 @@ class PerfilForm(forms.Form):
         )
     )
 
+    def __init__(self, user, *args, **kwargs):
+        self.user = user
+        super(PerfilForm, self).__init__(*args, **kwargs)
+
     def clean(self):
         cleaned_data = super(PerfilForm, self).clean()
         password = cleaned_data.get("password")
@@ -87,6 +93,17 @@ class PerfilForm(forms.Form):
             raise forms.ValidationError(
                 "Senha e confirmação de senha inválidas"
             )
+
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        try:
+            if self.user.email!=email:
+                match = User.objects.get(email=email)
+            else:
+                return email
+        except User.DoesNotExist:
+            return email
+        raise forms.ValidationError('Este email já está sendo utilizado.')
 
     def clean_birth_date(self):
         cleaned_data = super(PerfilForm, self).clean()
