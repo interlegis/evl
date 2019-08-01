@@ -115,13 +115,14 @@ AUTHENTICATION_BACKENDS = (
     'evl.login.MyOIDCAB',
 )
 
+URL_CENTRAL = os.environ.get('EVL_CENTRAL_URL_BASE')
 OIDC_RP_CLIENT_ID = str(os.environ.get('EVL_TOKEN_APPLICATION_ID'))
 OIDC_RP_CLIENT_SECRET = str(os.environ.get('EVL_TOKEN_SECRET'))
-OIDC_OP_AUTHORIZATION_ENDPOINT = str(os.environ.get('EVL_WS_URL_BASE')) + '/oauth/authorize'
-OIDC_OP_TOKEN_ENDPOINT = str(os.environ.get('EVL_WS_URL_BASE')) + '/oauth/token'
-OIDC_OP_USER_ENDPOINT = str(os.environ.get('EVL_WS_URL_BASE')) + '/oauth/userinfo'
+OIDC_OP_AUTHORIZATION_ENDPOINT = str(os.environ.get('EVL_CENTRAL_URL_BASE')) + '/oauth/authorize'
+OIDC_OP_TOKEN_ENDPOINT = str(os.environ.get('EVL_CENTRAL_URL_BASE')) + '/oauth/token'
+OIDC_OP_USER_ENDPOINT = str(os.environ.get('EVL_CENTRAL_URL_BASE')) + '/oauth/userinfo'
 OIDC_RP_SIGN_ALGO = 'RS256'
-OIDC_OP_JWKS_ENDPOINT = str(os.environ.get('EVL_WS_URL_BASE')) + '/oauth/discovery/keys'
+OIDC_OP_JWKS_ENDPOINT = str(os.environ.get('EVL_CENTRAL_URL_BASE')) + '/oauth/discovery/keys'
 LOGIN_REDIRECT_URL = '/aluno'
 LOGOUT_REDIRECT_URL = '/'
 OIDC_RP_SCOPES = 'openid profile email'
