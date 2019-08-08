@@ -127,13 +127,13 @@ AUTHENTICATION_BACKENDS = (
 
 # DEVELOPMENT
 
-OIDC_RP_CLIENT_ID = '1f289285edb77417c69ac5d9c53ff14cc638da3a0fc31e6053763fba26cc1366' #Local
-OIDC_RP_CLIENT_SECRET = '4f8397d6b8221c0ad59f009a8d9a130d99d26167487939291d093cc130524f61' #Local
-OIDC_OP_AUTHORIZATION_ENDPOINT = 'http://localhost:10524/oauth/authorize' #Local
-OIDC_OP_TOKEN_ENDPOINT = 'http://localhost:10524/oauth/token' #Local
-OIDC_OP_USER_ENDPOINT = 'http://localhost:10524/oauth/userinfo' #Local
+OIDC_RP_CLIENT_ID = 'eac22a3a5bf1e50d06ef79cdf35096ce230c982225053235cb3ec5a11d7ac836' #Local
+OIDC_RP_CLIENT_SECRET = 'd5e9c35a78875673e7d780394903175ee128f78fd7bf5d3976bf474e896a7796' #Local
+OIDC_OP_AUTHORIZATION_ENDPOINT = 'http://localhost:3001/oauth/authorize' #Local
+OIDC_OP_TOKEN_ENDPOINT = 'http://localhost:3001/oauth/token' #Local
+OIDC_OP_USER_ENDPOINT = 'http://localhost:3001/oauth/userinfo' #Local
 OIDC_RP_SIGN_ALGO = 'RS256' #Local
-OIDC_OP_JWKS_ENDPOINT = 'http://localhost:10524/oauth/discovery/keys' #Local
+OIDC_OP_JWKS_ENDPOINT = 'http://localhost:3001/oauth/discovery/keys' #Local
 LOGIN_REDIRECT_URL = '/baseCursos' #Local
 LOGOUT_REDIRECT_URL = '/' #Local
 OIDC_RP_SCOPES = 'openid profile email' #Local

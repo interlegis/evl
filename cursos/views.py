@@ -33,3 +33,8 @@ def meusCursos(request):
 
 def baseCursos(request):
     return render(request, 'baseCursos.html')
+
+def registroCurso(request):
+    response_quiz = requests.get(settings.BASE_URL + 'cursos/registro?id=1&key=' + settings.APIKEY) # TODO alterar para chave do usuário
+    quiz = json.loads(response_quiz.content)
+    return render(request, 'registro_curso.html', {'quiz': quiz})
