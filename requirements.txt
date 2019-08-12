@@ -27,3 +27,4 @@ localflavor==1.8
 oauth2_provider
 django-cors-middleware
 django-oauth-toolkit 
+Weasyprint
