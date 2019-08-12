@@ -15,12 +15,10 @@ from django.contrib.auth import logout
 from urllib.request import urlopen
 
 def home(request):
-    # response_analise = requests.get('https://escolamodelows.interlegis.leg.br/analise')
     response_analise = requests.get(settings.BASE_URL + 'analise')
     analises = response_analise.json()
     return render(request, 'evl/home.html', {'analises': analises})
 
-#@login_required()
 def login(request):
     return render(request, 'evl/login.html')
     #return HttpResponse('Secret contents!', status=200)
@@ -28,7 +26,6 @@ def login(request):
 def cadastro(request):
     return render(request, 'evl/cadastro.html')
 
-#@login_required(login_url='https://escolamodelows.interlegis.leg.br/log_in?return=URL')
 def homeAluno(request):
     if request.user.profile.role == 1:
         return redirect(views.administrador)
@@ -42,7 +39,6 @@ def iFrameDashboard(request):
     return render(request, 'evl/iFrameDashboard.html')
 
 
-#@login_required(login_url='https://escolamodelows.interlegis.leg.br/log_in?return=URL')
 def secret_page(request, *args, **kwargs):
     return HttpResponse('Secret contents!', status=200)
 

@@ -1,0 +1,195 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>CERTIFICADO</title>
+        <style type="text/css">
+            @page { 
+                size: landscape;
+                margin: 0.0cm
+            }
+            body {
+                margin: 0px;
+                /* font-weight: 200;
+                font-size: 14px; */
+            }
+            .title {
+                font-family: 'FreeSans';
+                text-align: center !important;
+                margin: 0px;
+                font-size: 25px;
+                font-weight: 400;
+                line-height: 1.5;
+                margin-bottom: 10px;
+            }
+            .details {
+                margin: 0px;
+                text-align: center !important;
+                /*margin-left: 40%;*/
+            }
+            .details h2 {
+                margin: 0px;
+                font-family: 'FreeSerif';
+                font-size: 23px;
+                font-weight: 400;
+                line-height: 1.8;
+            }
+            .details h3 {
+                margin: 0px;
+                /* margin-top: 10px; */
+                font-family: 'FreeSerif';
+                font-size: 25px;
+                font-weight: 600;
+                /* line-height: 1.8; */
+            }
+            .programa {
+                margin-top: 1%;
+                height: 300px;
+                font-size: 13px;
+            }
+            /* .programa li {
+            } */
+            .tabela {
+                margin: 0px auto;
+            }
+            .validacao {
+                margin-top: 3%;
+                text-align: center !important;
+            }
+            .validacao h2 {
+                font-size: 15px;
+                font-family: 'FreeSerif';
+                margin: 0px;
+            }
+            .validacao h3 {
+                font-size: 14px;
+                font-family: 'FreeSerif';
+                margin: 0px;
+            }
+            .validacao h4 {
+                font-size: 14px;
+                font-family: 'FreeSerif';
+                margin: 0px;
+            }
+            .date {
+                margin: 0px;
+                font-family: 'FreeSansBold';
+                font-size: 15px;
+                float: right;
+                margin-right: 5%;
+                /* text-align: right !important; */
+            }
+            .column {
+                width: 20%;
+                /* margin-left: 30%; */
+                /* margin-right: auto; */
+            }
+
+            /* Clear floats after image containers */
+            .row {
+                margin-left: 30%;
+                display: flex;
+                justify-items: center;
+            }
+            div {
+                width: 100%;
+                margin: 0px;
+                display: inline-block;
+                position: relative;
+                z-index : 1;
+            }
+            div img { 
+                display: block;
+            }
+            div + img { 
+                position: absolute;
+                z-index: 1; 
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                top: 43.9px; 
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div>
+                <img src="{% static 'images/border.png'%}"style="height: 219px; width: 100%;" />
+            </div>
+            <img src="{% static 'images/fantasma.png'%}" style="height: 189px; width: 160px;" />
+        </div>
+        <h1 class='title'>CERTIFICADO</h1>
+        <div class='details'>
+            <h2>
+                O Instituto Legislativo Brasileiro certifica que<br>
+            </h2>
+            <h3>
+                {{certificado.nome_aluno}}, CPF nº {{certificado.cpf}}<br>
+            </h3>
+            <h2>
+                realizou, na modalidade a distância, o curso sem tutoria<br>
+            </h2>
+            <h3>
+                {{certificado.curso}}<br>
+            </h3>
+            <h2>    
+                no período de 17 de junho de 2014 a 7 de julho de 2014<br>
+                com carga horária de {{certificado.duracao}} horas<br>
+                tendo obtido aprovação com nota: {{certificado.nota}}<br>
+            </h2>
+            <div>
+               <h1 class='date'>
+                   Brasília, 7 de julho de 2014
+               </h1>
+            </div>
+        </div>
+        <div>
+            <img src="{% static 'images/assinatura.png'%}" style="margin: 0px auto; margin-top: 5%;" />
+        </div>
+        <div>
+            <img src="{% static 'images/listra.png'%}" style="height: 13px; width: 100%; margin-top: 3%;" />
+        </div>
+        <div>
+            <img src="{% static 'images/teste.jpg'%}" style="margin: 0px auto;    margin-top: 1.5%; margin-bottom: 0%;" />
+        </div>      
+        <p><!-- pagebreak --></p>      
+        <div>
+            <div>
+                <img src="{% static 'images/border.png'%}"style="height: 219px; width: 100%;" />
+            </div>
+            <img src="{% static 'images/fantasma.png'%}" style="height: 189px; width: 160px;" />
+        </div>
+        <h1 class='title'>PROGRAMA DO CURSO<br>
+            {{certificado.curso}}</h1>
+            <div class='programa'>
+                <TABLE class='tabela'><TR><TD><UL><LI><b>Módulo I</b> - Noções de Direito Administrativo: Contratos</LI><UL><LI>Unidade 1 - Introdução ao Contrato Administrativo</LI><LI>Unidade 2 - Características do Contrato Administrativo</LI><LI>Unidade 3 - Reequilíbrio econômico-financeiro de um contrato</LI><LI>Unidade 4 - Cláusulas exorbitantes em favor da Administração</LI></UL><BR/><LI><b>Módulo III</b> - Noções de Administração Orçamentária</LI><UL><LI>Unidade 1 - O que é Orçamento Público?</LI><LI>Unidade 2 - Dotação Orçamentária X Recursos Financeiros</LI><LI>Unidade 3 - Estágios e execução das despesas orçamentárias</LI><LI>Unidade 4 - Créditos adicionais, restos a pagar e despesas de exercícios anteriores</LI></UL></UL></TD><TD><UL><LI><b>Módulo II</b> - Comentários à Lei 8.666/93</LI><UL><LI>Unidade 1 - Disposições Preliminares</LI><LI>Unidade 2 - Da Formalização dos Contratos e da Alteração dos Contratos</LI><LI>Unidade 3 - Da Execução dos Contratos</LI><LI>Unidade 4 - Da Inexecução e da Rescisão dos Contratos</LI></UL></UL></TD></TR>
+                    <TR>
+                        <TD colspan="2">&nbsp;</TD>
+                    </TR>
+                    <TR>
+                        <TD colspan="2"><UL>
+                            <strong>Fundamentação legal:  art. 281, § 2º, inciso VI do ATC 8\2014 e art. 28 do ATC 10/2011.</strong>
+                        </UL></TD>
+                    </TR>
+                </TABLE>
+                <img src=https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https://evl.interlegis.leg.br/validarCertificado/{{codigo}}" style="width: 150px; height: 150px;" />
+        </div>
+        <div class="validacao">
+            <h3>
+                CÓDIGO DE VALIDAÇÃO
+            </h3>
+            <h2>
+                {{codigo}}
+            </h2>
+            <h4>
+                Para verificar a autenticidade deste certificado, acesse http://saberes.senado.leg.br/ e informe o código acima
+                <img src="{% static 'images/listra.png'%}" style="height: 13px; width: 100%; margin-top: 0.7%; margin-bottom: 2%;" />
+            </h4>
+        </div>
+        <div>
+            <img src="{% static 'images/teste.jpg'%}" style="margin: 0px auto;" />
+        </div>            
+    </body>
+</html>
