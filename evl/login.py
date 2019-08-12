@@ -21,7 +21,7 @@ class MyOIDCAB(OIDCAuthenticationBackend):
             user.last_name = claims.get('last_name', '')
             user.username=claims.get('cpf', '')
             user.save()
-            profile = Profile(phone=claims.get('phone', ''), user=user, role=claims.get('role', ''))
+            profile = Profile(phone=claims.get('phone', ''), user=user, role=claims.get('role', '')['id'])
             profile.save()
             return user
 
@@ -37,13 +37,13 @@ class MyOIDCAB(OIDCAuthenticationBackend):
             user.first_name = claims.get('first_name', '')
             user.last_name = claims.get('last_name', '')
             user.email = claims.get('email', '')
-            user.save()
             user.username=claims.get('cpf', '')
             user.profile.phone=claims.get('phone', '')
             # user.profile.key=claims.get('access_key', '')
-            user.profile.role=claims.get('role','')
+            user.profile.role=claims.get('role','')['id']
             # user.profile.image=settings.BASE_URL + claims.get('profile_image', '')
             user.profile.save()
+            user.save()
         except:
             print("EXCEÇÃO PAI")
             # user = super(MyOIDCAB, self).create_user(claims)
@@ -52,10 +52,10 @@ class MyOIDCAB(OIDCAuthenticationBackend):
             # user.last_name = claims.get('last_name', '')
             # user.username=claims.get('cpf', '')
             # user.save()
-            print(claims.get('role', ''))
+            print(claims.get('role', '')['id'])
             profile = Profile(phone=claims.get('phone', ''), 
                               user=user, 
-                              role=claims.get('role', ''))
+                              role=claims.get('role', '')['id'])
             profile.save()
             print(profile)
         return user

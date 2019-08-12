@@ -26,6 +26,7 @@
                                                 <th scope="col">Nota</th>
                                                 <th scope="col">Curso</th>
                                                 <th scope="col">Escola</th>
+                                                <th scope="col">Pdf</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -35,7 +36,8 @@
                                                     <td>{{ cert.data_de_emissao }}</td>
                                                     <td>{{ cert.nota }}</td>
                                                     <td>{{ cert.curso }}</td>
-                                                    <td>{{ cert.escola }}</td>
+                                                    <td>{{ cert.escola }}</td>  
+                                                    <td><a class="links" href="{% url 'pdf' cert.code_id %}">AQUI</a></td>  
                                                 </tr>
                                             {% endfor %}
                                         </tbody>

@@ -16,9 +16,10 @@ from django.template.loader import render_to_string
 from weasyprint import HTML
 from django.core.files.storage import FileSystemStorage
 
-def pdf(request):
-    paragraphs = ['first paragraph', 'second paragraph', 'third paragraph']
-    html_string = render_to_string('pdf/invoice.html', {'paragraphs': paragraphs})
+def pdf(request, codigoCertificado):
+    req = requests.get(settings.BASE_URL + 'api/v1/certificados/detalhar?code_id=' + codigoCertificado)
+    certificado = json.loads(req.content)  
+    html_string = render_to_string('pdf/invoice.html', {'certificado': certificado['certificado'], 'codigo': codigoCertificado})
     html = HTML(string=html_string, base_url=request.build_absolute_uri())
     pdf_file = html.write_pdf();
     response = HttpResponse(content_type='application/pdf;')
@@ -29,7 +30,9 @@ def pdf(request):
     # return render(request, 'pdf/invoice.html')
 
 def certificados(request):
-    req = requests.get(settings.BASE_URL + 'api/v1/certificados?cpf=' + request.user.profile.cpf)
+    req = requests.get(settings.BASE_URL + 'api/v1/certificados?cpf=' + request.user.profile.user.username)
+    print(request.user.profile.user.username)
+    print(request.user.profile.user.id)
     certs = json.loads(req.content)
     return render(request, 'certificados.html', {'certs': certs})
 
