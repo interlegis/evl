@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from unipath import Path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -174,9 +175,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = '/static/'
+BASE_DIR = Path(__file__).ancestor(1)
+PROJECT_DIR = Path(__file__).ancestor(2)
 
-STATICFILES_DIRS = [
-    os.path.join("static"),
-]
+STATIC_URL = '/static/'
+STATIC_ROOT = PROJECT_DIR.child('collected_static')
+
+STATICFILES_DIRS = (
+    PROJECT_DIR.child('static'),
+    ("administrador", PROJECT_DIR.child('administrador') + "/static"),
+    ("cursos", PROJECT_DIR.child('cursos') + '/static'),
+    ("certificado", PROJECT_DIR.child('certificado') + '/static'),
+    ("fale_conosco", PROJECT_DIR.child('fale_conosco') + '/static'),
+    ("evl", PROJECT_DIR.child('evl') + '/static'),
+    ("comprovante", PROJECT_DIR.child('comprovante') + '/static'),
+    ("adesao_institucional", PROJECT_DIR.child('adesao_institucional') + '/static'),
+)

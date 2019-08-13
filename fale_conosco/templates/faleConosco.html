@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% include 'imports.html' %}
+{% load static %}
 {# {% load widget_tweaks %} #}
-<script src="/static/js/jquery.mask.js"></script>
+<script src="{% static 'js/jquery.mask.js' %}"></script>
 {% block content %}
     <title>EVL - Fale Conosco</title>
     <div class="bc-icons-2">

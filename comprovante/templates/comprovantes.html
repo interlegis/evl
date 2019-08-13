@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 {% include 'imports.html' %}
+{% load static %}
     <title>EVL - Meus Comprovantes</title>
     <body>
         <div class="bc-icons-2">
@@ -64,7 +65,7 @@
             </div>
         </div>
     </body>
-    <script src="/static/js/dataTable.js"></script>
+    <script src="{% static 'js/dataTable.js' %}"></script>
 {% endblock %}
 
 

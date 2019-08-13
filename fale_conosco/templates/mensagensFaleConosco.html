@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 {% include 'imports.html' %}
+{% load static %}
     <title>EVL - Dúvidas</title>
     <body>
         <div class="view hm-white-light jarallax marginTopHome bgFaleConosco"  style="background-size:cover!important;"  data-jarallax='{"speed": 0.2}'>
@@ -44,9 +45,9 @@
             </div>
         </div>
     </body>
-    <script src="../static/js/mensagensFaleConosco.js"></script>
-    <script src="/static/js/jquery-3.3.1.js"></script>
-    <script src="/static/js/dataTable.js"></script>
+    <script src="{% static 'fale_conosco/js/mensagensFaleConosco.js' %}"></script>
+    <script src="{% static 'fale_conosco/js/jquery-3.3.1.js' %}"></script>
+    <script src="{% static 'fale_conosco/js/dataTable.js' %}"></script>
     <script type="text/javascript">
         $.noConflict();
     </script>

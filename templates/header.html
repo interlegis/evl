@@ -6,13 +6,13 @@
 <!-- Material Design Bootstrap -->
 <link rel="stylesheet" href="{% static 'css/header/mdb.min.css' %}">
 <!-- JQuery -->
-<script src="../static/js/header/jquery.min.js"></script>
+<script src="{% static 'js/header/jquery.min.js' %}"></script>
 <!-- Bootstrap tooltips -->
-<script src="../static/js/header/popper.min.js"></script>
+<script src="{% static 'js/header/popper.min.js' %}"></script>
 <!-- Bootstrap core JavaScript -->
-<script src="../static/js/header/bootstrap.min.js"></script>
+<script src="{% static 'js/header/bootstrap.min.js' %}"></script>
 <!-- MDB core JavaScript -->
-<script src="../static/js/header/mdb.min.js"></script>
+<script src="{% static 'js/header/mdb.min.js' %}"></script>
 <style>
 
     /* Icon 1 */
@@ -253,7 +253,7 @@
 <body>
 <nav class="navbar navbar-dark navbarBg row" style="margin: 0px;">
         <a style="margin-top: 5px; width: 20%; align-self: end;" href="{% url 'home' %}">
-            <img class="logoProperties" src="../static/img/transparente_bfg.png" alt="EVL">
+            <img class="logoProperties" src="{% static 'img/transparente_bfg.png' %}" alt="EVL">
         </a>
 
         <div style="width: 70%; text-align: right; margin-top: 8px; align-self: end;" class="col">
@@ -262,11 +262,11 @@
                 {% if user.profile.image != "https://escolamodelows.interlegis.leg.br/" %}
                     <image src="{{user.profile.image}}"  style="border-radius: 50%" width="30px" height="30px">
                 {% else %}
-                    <img src="../static/img/user.svg" class="fas fa-bars" style="color:black; width: 28px;" alt="Usuário">            
+                    <img src="{% static 'img/user.svg' %}" class="fas fa-bars" style="color:black; width: 28px;" alt="Usuário">            
                 {% endif %}
                 {% else %}
                 <a href="{% url 'oidc_authentication_init' %}" style="margin-right: 3%;" class="imgHover">
-                <img src="../static/img/user.svg" class="fas fa-bars" style="color:black; width: 28px;" alt="Usuário">            
+                <img src="{% static 'img/user.svg' %}" class="fas fa-bars" style="color:black; width: 28px;" alt="Usuário">            
             {% endif %}
                 <label style="color: black; cursor: pointer;">{{ user.first_name }}</label>
                 <label class="vl"></label>

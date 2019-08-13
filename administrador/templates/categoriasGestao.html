@@ -1,6 +1,7 @@
+{% load static %}
 {% extends 'base.html' %}
 {% block content %}
-<script src="/static/js/administrador.js"></script>
+<script src="{% static 'administrador/js/administrador.js' %}" ></script>
 {% include 'imports.html' %}
     <title>EVL - Gestão de categorias</title>
     {% if alerta %}
@@ -99,7 +100,7 @@
             </div>
         </div>
     </body>
-    <script src="/static/js/dataTable.js"></script>
+    <script src="{% static 'js/dataTable.js' %}"></script>
     <style media="screen">
     .modal-backdrop {
     z-index: -1;
