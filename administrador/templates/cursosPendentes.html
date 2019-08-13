@@ -1,7 +1,8 @@
+{% load static %}
 {% extends 'base.html' %}
 {% block content %}
 {% include 'imports.html' %}
-<script src="/static/js/administrador.js"></script>
+<script src="{% static 'administrador/js/administrador.js' %}"></script>
     <title>EVL - Cursos Pendentes</title>
     <div class="bc-icons-2">
         <ol class="bcAdditionalProperties breadcrumb ">
@@ -79,7 +80,7 @@
             </div>
         </div>
     </body>
-<script src="/static/js/dataTable.js"></script>
+<script src="{% static 'js/dataTable.js' %}"></script>
 <style media="screen">
 .modal-backdrop {
   z-index: -1;

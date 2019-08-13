@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% include 'imports.html' %}
+{% load static %}
 {% block content %}
     <title>EVL - Meus Certificados</title>
     <body>
@@ -50,5 +51,5 @@
             </div>
         </div>
     </body>
-    <script src="/static/js/dataTable.js"></script>
+    <script src="{% static 'js/dataTable.js' %}"></script>
 {% endblock %}

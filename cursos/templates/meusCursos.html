@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% include 'imports.html' %}
 {% block content %}
+{% load static %}
+
     <title>EVL - Meus Cursos</title>
     <body>
         <div class="bc-icons-2">
@@ -62,5 +64,5 @@
             </div>
         </div>
     </body>
-<script type="text/javascript" src="../static/js/meusCursos.js"></script>
+<script type="text/javascript" src="{% static 'cursos/js/meusCursos.js' %}"></script>
 {% endblock %}
