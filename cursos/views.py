@@ -12,8 +12,8 @@ from django.conf import settings
 
 
 def cursos(request):
-    response_cursos = requests.get(settings.BASE_URL + 'api/v1/cursos?key=' + settings.APIKEY)
-    response_categorias = requests.get(settings.BASE_URL + 'api/v1/categorias_cursos?key=' + settings.APIKEY)
+    response_cursos = requests.get(settings.BASE_URL + '/api/v1/cursos?key=' + settings.APIKEY)
+    response_categorias = requests.get(settings.BASE_URL + '/api/v1/categorias_cursos?key=' + settings.APIKEY)
 
     cursos = response_cursos.json()
     cursos = json.loads(json.dumps(cursos))
@@ -26,7 +26,7 @@ def cursos(request):
     return render(request, 'cursos.html', {'cursos' : cursos, 'categorias' : categorias})
 
 def meusCursos(request):
-    user_cursos = requests.get(settings.BASE_URL + 'api/v1/cursos?key=' + request.user.profile.key)
+    user_cursos = requests.get(settings.BASE_URL + '/api/v1/cursos?key=' + request.user.profile.key)
     cursos = json.loads(user_cursos.content)
     return render(request, 'meusCursos.html', {'cursos': cursos})
 
@@ -35,6 +35,6 @@ def baseCursos(request):
     return render(request, 'baseCursos.html')
 
 def registroCurso(request):
-    response_quiz = requests.get(settings.BASE_URL + 'cursos/registro?id=1&key=' + settings.APIKEY) # TODO alterar para chave do usuário
+    response_quiz = requests.get(settings.BASE_URL + '/cursos/registro?id=1&key=' + settings.APIKEY) # TODO alterar para chave do usuário
     quiz = json.loads(response_quiz.content)
     return render(request, 'registro_curso.html', {'quiz': quiz})

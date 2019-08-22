@@ -20,7 +20,7 @@ def faleConosco(request):
         if request.user.is_anonymous:
             formNotLogged = FaleConoscoForm(request.POST)
             if formNotLogged.is_valid():
-                req = urllib.request.Request(settings.BASE_URL + 'api/v1/fale_conosco/adicionar')
+                req = urllib.request.Request(settings.BASE_URL + '/api/v1/fale_conosco/adicionar')
                 req.add_header('Content-Type', 'application/json; charset=utf-8')
                 result = urlopen(req, json.dumps(formNotLogged.data).encode('utf-8'))
                 return render(request, 'evl/home.html', context={'messagem_faleConosco': "A mensagem foi enviada com sucesso"})
@@ -33,7 +33,7 @@ def faleConosco(request):
                 formLogged.fields['email'] = request.user.email
                 formLogged.fields['cpf'] = request.user.username
                 formLogged.fields['phone_number'] = request.user.profile.phone
-                req = urllib.request.Request(settings.BASE_URL + 'api/v1/fale_conosco/adicionar?name=' + request.user.username + "&email="+ request.user.email + "&cpf=" + request.user.username )
+                req = urllib.request.Request(settings.BASE_URL + '/api/v1/fale_conosco/adicionar?name=' + request.user.username + "&email="+ request.user.email + "&cpf=" + request.user.username )
                 req.add_header('Content-Type', 'application/json; charset=utf-8')
                 result = urlopen(req, json.dumps(formLogged.data).encode('utf-8'))
                 return render(request, 'evl/home.html', context={'messagem_faleConosco': "A mensagem foi enviada com sucesso"})
@@ -46,10 +46,10 @@ def faleConosco(request):
 def mensagensFaleConosco(request):
     if request.method == "POST":
         id = request.POST['id']
-        req = requests.post(settings.BASE_URL + 'api/v1/fale_conosco/mensagens?conversation_id=' + id)
+        req = requests.post(settings.BASE_URL + '/api/v1/fale_conosco/mensagens?conversation_id=' + id)
         data = req.content.decode(encoding="utf-8")
         return HttpResponse(data, content_type='application/json')
     else:
-        req = requests.post(settings.BASE_URL + 'api/v1/fale_conosco/conversa_usuario?cpf=' + request.user.username)
+        req = requests.post(settings.BASE_URL + '/api/v1/fale_conosco/conversa_usuario?cpf=' + request.user.username)
         messages = json.loads(req.content)
         return render(request, 'mensagensFaleConosco.html', {'messages': messages})

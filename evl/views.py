@@ -15,7 +15,7 @@ from django.contrib.auth import logout
 from urllib.request import urlopen
 
 def home(request):
-    response_analise = requests.get(settings.BASE_URL + 'analise')
+    response_analise = requests.get(settings.BASE_URL + '/analise')
     analises = response_analise.json()
     return render(request, 'evl/home.html', {'analises': analises})
 
@@ -62,7 +62,7 @@ def perfilaluno(request):
                     'phone': '33756315',
                 }
             }
-            req = urllib.request.Request(settings.BASE_URL + 'users/?cpf_antigo=' + request.user.username) 
+            req = urllib.request.Request(settings.BASE_URL + '/users/?cpf_antigo=' + request.user.username) 
             req.add_header('Content-Type', 'application/json; charset=utf-8')
             req.get_method = lambda: 'PATCH'
             result = urlopen(req, json.dumps(payload).encode('utf-8'))
