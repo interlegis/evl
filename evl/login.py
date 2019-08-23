@@ -28,7 +28,7 @@ class MyOIDCAB(OIDCAuthenticationBackend):
             user.profile.phone=claims.get('phone', '')
             user.profile.key=claims.get('key', '')
             user.profile.role=claims.get('role','')['id']
-            user.profile.image=settings.URL_CENTRAL + claims.get('profile_image', '')
+            user.profile.image=claims.get('profile_image', '')
             user.profile.save()
             user.save()
         except:
