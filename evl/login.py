@@ -15,7 +15,7 @@ class MyOIDCAB(OIDCAuthenticationBackend):
             user.last_name = claims.get('last_name', '')
             user.username=claims.get('cpf', '')
             user.save()
-            profile = Profile(phone=claims.get('phone', ''), user=user, role=claims.get('role', '')['id'])
+            profile = Profile(phone=claims.get('phone', ''), user=user, role=claims.get('role', '')['id'], key=claims.get['key', ''])    
             profile.save()
             return user
 
@@ -26,7 +26,7 @@ class MyOIDCAB(OIDCAuthenticationBackend):
             user.email = claims.get('email', '')
             user.username=claims.get('cpf', '')
             user.profile.phone=claims.get('phone', '')
-            # user.profile.key=claims.get('access_key', '')
+            user.profile.key=claims.get('key', '')
             user.profile.role=claims.get('role','')['id']
             user.profile.image=settings.URL_CENTRAL + claims.get('profile_image', '')
             user.profile.save()
