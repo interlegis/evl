@@ -17,7 +17,7 @@ from weasyprint import HTML
 from django.core.files.storage import FileSystemStorage
 
 def pdf(request, codigoCertificado):
-    req = requests.get(settings.BASE_URL + '/api/v1/certificados/detalhar?code_id=' + codigoCertificado)
+    req = requests.get(settings.BASE_URL + '/api/v1/certificados/detalhar?code_id=' + codigoCertificado + "&key=" + request.user.profile.key)
     certificado = json.loads(req.content)  
     html_string = render_to_string('pdf/invoice.html', {'certificado': certificado['certificado'], 'codigo': codigoCertificado})
     html = HTML(string=html_string, base_url=request.build_absolute_uri())
@@ -30,9 +30,7 @@ def pdf(request, codigoCertificado):
     # return render(request, 'pdf/invoice.html')
 
 def certificados(request):
-    req = requests.get(settings.BASE_URL + '/api/v1/certificados?cpf=' + request.user.profile.user.username)
-    print(request.user.profile.user.username)
-    print(request.user.profile.user.id)
+    req = requests.get(settings.BASE_URL + '/api/v1/certificados?cpf=' + request.user.profile.user.username + '&key=' + request.user.profile.key)
     certs = json.loads(req.content)
     return render(request, 'certificados.html', {'certs': certs})
 
@@ -40,7 +38,7 @@ def validarCertificado(request):
     if request.method == "POST":
         form = ValidarCertificadoForm(request.POST)
         if form.is_valid():
-            req = requests.get(settings.BASE_URL + '/api/v1/certificados/detalhar?code_id=' + request.POST['code_id'])
+            req = requests.get(settings.BASE_URL + '/api/v1/certificados/detalhar?code_id=' + request.POST['code_id'] + "&key=" + request.user.profile.key)
             certificado = json.loads(req.content)
             try:
                 print(certificado["message"])
@@ -55,6 +53,6 @@ def validarCertificado(request):
 
 def validacaoQrCode(request, code):
     if code:
-        req = requests.get(settings.BASE_URL + '/api/v1/certificados/detalhar?code_id=' + code)
+        req = requests.get(settings.BASE_URL + '/api/v1/certificados/detalhar?code_id=' + code + "&key=" + request.user.profile.key)
         certificado = json.loads(req.content)
         return render(request, 'certificado.html', {'certificado': certificado['certificado']})

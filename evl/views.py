@@ -41,4 +41,5 @@ def secret_page(request, *args, **kwargs):
 
 def userLogout(request):
     logout(request)
-    return redirect(settings.BASE_URL + 'log_out?externo=' + 'https://evl.interlegis.leg.br/') #Alterar essa URL para produção
+    print(settings.URL_CENTRAL + 'logout?return=' + 'http://localhost:8000')
+    return redirect(settings.URL_CENTRAL + '/logout?return=' + 'http://localhost:8000') #Alterar essa URL para produção
