@@ -23,9 +23,6 @@ def login(request):
     return render(request, 'evl/login.html')
     #return HttpResponse('Secret contents!', status=200)
 
-def cadastro(request):
-    return render(request, 'evl/cadastro.html')
-
 def homeAluno(request):
     if request.user.profile.role == 1:
         return redirect(views.administrador)
@@ -41,39 +38,6 @@ def iFrameDashboard(request):
 
 def secret_page(request, *args, **kwargs):
     return HttpResponse('Secret contents!', status=200)
-
-def perfilaluno(request):
-    form = PerfilForm(request.user,
-        initial={
-            'name': request.user.first_name,
-            'email': request.user.email,
-            'cpf': request.user.username,
-            'phone': request.user.profile.phone,
-        }
-    )
-    if request.method == "POST":
-        form = PerfilForm(request.user, request.POST)
-        if form.is_valid():
-            payload = {
-                'user': {
-                    'birth': str(form.cleaned_data['birth_date'].date()),
-                    'email': form.cleaned_data['email'],
-                    'cpf': request.user.username,
-                    'phone': '33756315',
-                }
-            }
-            req = urllib.request.Request(settings.BASE_URL + '/users/?cpf_antigo=' + request.user.username) 
-            req.add_header('Content-Type', 'application/json; charset=utf-8')
-            req.get_method = lambda: 'PATCH'
-            result = urlopen(req, json.dumps(payload).encode('utf-8'))
-            if result.getcode() == 200:
-                user = User.objects.get(username=request.user.username)
-                user.email = payload['user']['email']
-                user.save()
-            return render(request, 'evl/perfilAluno.html', {'form': form})
-        else:
-            return render(request, 'evl/perfilAluno.html', {'form': form})
-    return render(request, 'evl/perfilAluno.html', {'form': form})
 
 def userLogout(request):
     logout(request)
